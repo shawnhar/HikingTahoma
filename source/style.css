@@ -1,0 +1,61 @@
+body {
+  font-family:Tahoma;
+  background-color: #D0D0D0;
+}
+
+.title {
+  width: 560;
+  padding: 20;
+  margin-bottom: 32;
+  background-color: #A0A0A0;
+}
+
+.backlink {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.about {
+  font-size: 12px;
+  font-style: italic;
+  float: right;
+}
+
+.stats {
+  padding: 20;
+}
+
+.hikename {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.description {
+  width: 600;
+  padding: 12;
+  color: #808080;
+}
+
+.photos {
+  width: 600;
+  background-color: #A0A0A0;
+}
+
+.photos td {
+  padding: 16;
+  text-align: center;
+  vertical-align: top;
+}
+
+.photos img {
+  height: 190;
+}
+
+.photos p {
+  font-style: italic;
+}
+
+a:link, a:visited {
+  color: #606060;
+  text-decoration: none;
+}
