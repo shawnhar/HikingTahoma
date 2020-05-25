@@ -1,4 +1,3 @@
-* Shared header across pages
 * About site page
 * About Rainier page
 * Index page

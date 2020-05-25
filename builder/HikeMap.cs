@@ -27,15 +27,15 @@ namespace builder
         }
 
 
-        public async Task WriteThumbnail(string folder, string filename)
+        public async Task WriteTrailMaps(string folder, string mapName, string mapThumbnail)
         {
+            const int mapSize = 1024;
             const int thumbnailSize = 256;
-            const float thumbnailPadding = 0.25f;
-            
-            const float vignetteAmount = 0.333f;
-            const float vignetteCurve = 1f;
 
-            const int routeDilation = 3;
+            const int mapDilation = 6;
+            const int thumbnailDilation = 3;
+
+            const float padding = 0.25f;
 
             var bounds = GetUsedBounds(myMap);
 
@@ -52,11 +52,11 @@ namespace builder
             }
 
             // Add some padding.
-            bounds.X -= bounds.Width * thumbnailPadding;
-            bounds.Y -= bounds.Height * thumbnailPadding;
+            bounds.X -= bounds.Width * padding;
+            bounds.Y -= bounds.Height * padding;
 
-            bounds.Width *= 1 + thumbnailPadding * 2;
-            bounds.Height *= 1 + thumbnailPadding * 2;
+            bounds.Width *= 1 + padding * 2;
+            bounds.Height *= 1 + padding * 2;
 
             // Clamp to within the image.
             if (bounds.X < 0)
@@ -71,31 +71,48 @@ namespace builder
             if (bounds.Bottom > myMap.Size.Height)
                 bounds.Y = myMap.Size.Height - bounds.Height;
 
+            // Write two sizes of map.
+            await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName);
+            await WriteTrailMap(bounds, thumbnailSize, thumbnailDilation, true, folder, mapThumbnail);
+        }
+
+
+        async Task WriteTrailMap(Rect bounds, int outputSize, int dilation, bool vignette, string folder, string filename)
+        {
+            const float vignetteAmount = 0.333f;
+            const float vignetteCurve = 1f;
+
             // Transform chosen image region to output coordinates.
             var transform = Matrix3x2.CreateTranslation(-(float)bounds.X,
-                                                        -(float)bounds.Y) *
-                            Matrix3x2.CreateScale(thumbnailSize / (float)bounds.Width,
-                                                  thumbnailSize / (float)bounds.Height);
+                                                        -(float)bounds.Y);
 
-            // Crop, scale, and vignette the background image.
-            var background = new VignetteEffect
+            transform *= Matrix3x2.CreateScale(outputSize / (float)bounds.Width,
+                                               outputSize / (float)bounds.Height);
+
+            // Crop, scale, and optionally vignette the background image.
+            ICanvasEffect background = new Transform2DEffect
             {
-                Amount = vignetteAmount,
-                Curve = vignetteCurve,
-                Color = Color.FromArgb(0xFF, 0xD0, 0xD0, 0xD0),
+                TransformMatrix = transform,
+                InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
-                Source = new Transform2DEffect
+                Source = new CropEffect
                 {
-                    TransformMatrix = transform,
-                    InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
-
-                    Source = new CropEffect
-                    {
-                        SourceRectangle = bounds,
-                        Source = imageProcessor.MasterMap,
-                    },
+                    SourceRectangle = bounds,
+                    Source = imageProcessor.MasterMap,
                 },
             };
+
+            if (vignette)
+            {
+                background = new VignetteEffect
+                {
+                    Amount = vignetteAmount,
+                    Curve = vignetteCurve,
+                    Color = Color.FromArgb(0xFF, 0xD0, 0xD0, 0xD0),
+
+                    Source = background,
+                };
+            }
 
             // Crop, scale, dilate, and tint the hike overlay.
             var route = new Transform2DEffect
@@ -109,15 +126,15 @@ namespace builder
                     GreenSlope = 0,
                     BlueSlope = 0,
 
-                    RedOffset = 1, 
-                    GreenOffset = 0, 
-                    BlueOffset = 0, 
+                    RedOffset = 0,
+                    GreenOffset = 0,
+                    BlueOffset = 1,
 
                     Source = new MorphologyEffect
                     {
                         Mode = MorphologyEffectMode.Dilate,
-                        Width = (int)(routeDilation * bounds.Width / thumbnailSize),
-                        Height = (int)(routeDilation * bounds.Height / thumbnailSize),
+                        Width = (int)(dilation * bounds.Width / outputSize),
+                        Height = (int)(dilation * bounds.Height / outputSize),
 
                         Source = new CropEffect
                         {
@@ -129,7 +146,7 @@ namespace builder
             };
 
             // Adjust relevant region of master map to desired output size and overlay the hike route.
-            using (var result = new CanvasRenderTarget(imageProcessor.Device, thumbnailSize, thumbnailSize, 96))
+            using (var result = new CanvasRenderTarget(imageProcessor.Device, outputSize, outputSize, 96))
             {
                 using (var drawingSession = result.CreateDrawingSession())
                 {

@@ -10,6 +10,7 @@ namespace builder
     {
         public string FolderName => Path.GetFileName(sourcePath);
         public string MapName => FolderName + "-map.jpg";
+        public string MapThumbnail => FolderName + "-map-small.jpg";
 
         string sourcePath;
         string hikeName;
@@ -133,7 +134,7 @@ namespace builder
 
             WriteHtml(outPath);
 
-            await map.WriteThumbnail(outPath, MapName);
+            await map.WriteTrailMaps(outPath, MapName, MapThumbnail);
 
             foreach (var photo in photos)
             {
@@ -170,7 +171,9 @@ namespace builder
                 writer.WriteLine("<table>");
                 writer.WriteLine("  <tr>");
                 writer.WriteLine("    <td>");
-                writer.WriteLine("      <img src=\"{0}\"/>", this.MapName);
+                writer.WriteLine("      <a href=\"{0}\"/>", this.MapName);
+                writer.WriteLine("        <img src=\"{0}\"/>", this.MapThumbnail);
+                writer.WriteLine("      </a>");
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");
                 writer.WriteLine("      <p class=\"hikename\">{0}</p>", this.hikeName);
