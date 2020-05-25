@@ -27,18 +27,18 @@ a:link, a:visited {
 }
 
 .stats {
-  padding: 20;
+  padding: 32;
 }
 
 .stats .hikename {
   font-size: 23px;
   font-weight: bold;
-  margin-bottom: 16;
+  margin-bottom: 20;
 }
 
 .stats .detail {
-  margin-top: 4;
-  margin-bottom: 4;
+  margin-top: 6;
+  margin-bottom: 6;
 }
 
 .description {

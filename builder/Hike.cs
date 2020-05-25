@@ -133,7 +133,7 @@ namespace builder
 
             WriteHtml(outPath);
 
-            await map.WriteThumbnail(Path.Combine(outPath, MapName));
+            await map.WriteThumbnail(outPath, MapName);
 
             foreach (var photo in photos)
             {
@@ -179,7 +179,7 @@ namespace builder
                 writer.WriteLine("      <p class=\"detail\">{0} miles</p>", this.distance);
                 writer.WriteLine("      <p class=\"detail\">Elevation gain: {0}'</p>", this.elevationGain);
                 writer.WriteLine("      <p class=\"detail\">Max elevation: {0}'</p>", this.maxElevation);
-                writer.WriteLine("      <p class=\"detail\">First hiked by me{0}</p>", this.firstHiked);
+                writer.WriteLine("      <p class=\"detail\">First hiked by me: {0}</p>", this.firstHiked);
                 writer.WriteLine("    </td>");
                 writer.WriteLine("  </tr>");
                 writer.WriteLine("</table>");

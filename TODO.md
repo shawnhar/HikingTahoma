@@ -1,4 +1,3 @@
-* Per hike maps
 * Shared header across pages
 * About site page
 * About Rainier page
