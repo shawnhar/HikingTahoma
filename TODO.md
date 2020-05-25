@@ -13,3 +13,4 @@
 * Sort by region
 * Sort by difficulty
 * Sort by date
+* Coming soon
