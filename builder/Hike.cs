@@ -18,7 +18,7 @@ namespace builder
         string maxElevation;
 
         List<Photo> photos;
-        List<string> description;
+        List<string> descriptions;
 
         HikeMap map;
 
@@ -65,9 +65,20 @@ namespace builder
                               .ToList();
 
             // Rest of the file is a text description;
-            remainder = remainder.Skip(photos.Count);
+            remainder = remainder.Skip(photos.Count)
+                                 .SkipWhile(string.IsNullOrEmpty);
 
-            description = remainder.Where(line => !string.IsNullOrEmpty(line)).ToList();
+            descriptions = new List<string>();
+
+            while (remainder.Any())
+            {
+                var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
+
+                descriptions.Add(string.Join(' ', descs.Select(s => s.Trim())));
+
+                remainder = remainder.Skip(descs.Count())
+                                     .SkipWhile(string.IsNullOrEmpty);
+            }
         }
 
 
@@ -137,7 +148,12 @@ namespace builder
                 writer.WriteLine("<body>");
 
                 writer.WriteLine("<div class=\"title\">");
-                writer.WriteLine("  <div class=\"about\"><a href = \"../about.html\">about this site</a></div>");
+
+                writer.WriteLine("  <div class=\"about\">");
+                writer.WriteLine("    <a href = \".. /AboutRainier.html\">about Mount Rainier</a><br>");
+                writer.WriteLine("    <a href = \".. /AboutThisSite.html\">about this site</a><br>");
+                writer.WriteLine("    <a href = \".. /FuturePlans.html\">future plans</a>");
+                writer.WriteLine("  </div>");
                 writer.WriteLine("  <div class=\"backlink\"><a href = \"..\">Hiking Tahoma</a></div>");
                 writer.WriteLine("</div>");
 
@@ -157,7 +173,7 @@ namespace builder
 
                 writer.WriteLine("<div class=\"description\">");
 
-                foreach (var line in this.description)
+                foreach (var line in this.descriptions)
                 {
                     writer.WriteLine("  <p>{0}</p>", line);
                 }
