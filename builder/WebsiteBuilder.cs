@@ -27,13 +27,13 @@ namespace builder
             StorageFolder outFolder = await cacheFolder.CreateFolderAsync("out", CreationCollisionOption.ReplaceExisting);
 
             // Load the master map. 
-            var mapRenderer = new MapRenderer();
+            var imageProcessor = new ImageProcessor();
 
-            await mapRenderer.LoadMap(sourceFolder.Path);
+            await imageProcessor.Initialize(sourceFolder.Path);
 
             // Process all the hikes.
             var hikes = (await sourceFolder.GetFoldersAsync())
-                        .Select(folder => new Hike(folder.Path, mapRenderer))
+                        .Select(folder => new Hike(folder.Path, imageProcessor))
                         .ToList();
 
             foreach (var hike in hikes)

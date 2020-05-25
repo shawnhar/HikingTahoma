@@ -23,14 +23,16 @@ namespace builder
         List<Photo> photos;
         List<string> descriptions;
 
+        ImageProcessor imageProcessor;
         HikeMap map;
 
 
-        public Hike(string sourcePath, MapRenderer mapRenderer)
+        public Hike(string sourcePath, ImageProcessor imageProcessor)
         {
             this.sourcePath = sourcePath;
+            this.imageProcessor = imageProcessor;
 
-            map = new HikeMap(mapRenderer);
+            map = new HikeMap(imageProcessor);
         }
 
 
@@ -129,14 +131,14 @@ namespace builder
 
             Directory.CreateDirectory(outPath);
 
-            foreach (var photo in photos)
-            {
-                File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
-            }
-
             WriteHtml(outPath);
 
             await map.WriteThumbnail(Path.Combine(outPath, MapName));
+
+            foreach (var photo in photos)
+            {
+                await WritePhoto(photo, outPath);
+            }
         }
 
 
@@ -209,7 +211,7 @@ namespace builder
 
                     writer.WriteLine("    <td>");
                     writer.WriteLine("      <a href=\"{0}\">", photo.Filename);
-                    writer.WriteLine("        <img src=\"{0}\"/>", photo.Filename);
+                    writer.WriteLine("        <img src=\"{0}\"/>", photo.Thumbnail);
                     writer.WriteLine("        <p>{0}</p>", photo.Description);
                     writer.WriteLine("      </a>");
                     writer.WriteLine("    </td>");
@@ -226,6 +228,21 @@ namespace builder
 
                 writer.WriteLine("</body>");
                 writer.WriteLine("</html>");
+            }
+        }
+
+
+        async Task WritePhoto(Photo photo, string outPath)
+        {
+            const int maxPhotoSize = 2048;
+            const int thumbnailHeight = 190;
+
+            using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
+            using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+            using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
+            {
+                await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
+                await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
             }
         }
     }

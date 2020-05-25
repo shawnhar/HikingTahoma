@@ -1,5 +1,3 @@
-* Photo thumbnails
-* Process and resize all photos
 * Per hike maps
 * Shared header across pages
 * About site page
