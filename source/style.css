@@ -5,7 +5,7 @@ body {
 }
 
 a:link, a:visited {
-    color: #606060;
+  color: #606060;
 }
 
 .title {
@@ -39,6 +39,15 @@ a:link, a:visited {
 .stats .detail {
   margin-top: 6;
   margin-bottom: 6;
+}
+
+.heading {
+  width: 600;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 40;
+  margin-bottom: 0;
 }
 
 .description {

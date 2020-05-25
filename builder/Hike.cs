@@ -161,9 +161,9 @@ namespace builder
                 writer.WriteLine("<div class=\"title\">");
 
                 writer.WriteLine("  <div class=\"about\">");
-                writer.WriteLine("    <a href = \".. /AboutRainier.html\">about Mount Rainier</a><br>");
-                writer.WriteLine("    <a href = \".. /AboutThisSite.html\">about this site</a><br>");
-                writer.WriteLine("    <a href = \".. /FuturePlans.html\">future plans</a>");
+                writer.WriteLine("    <a href = \"../AboutRainier.html\">about Mount Rainier</a><br>");
+                writer.WriteLine("    <a href = \"../AboutThisSite.html\">about this site</a><br>");
+                writer.WriteLine("    <a href = \"../FuturePlans.html\">future plans</a>");
                 writer.WriteLine("  </div>");
                 writer.WriteLine("  <div class=\"backlink\"><a href = \"..\">Hiking Tahoma</a></div>");
                 writer.WriteLine("</div>");

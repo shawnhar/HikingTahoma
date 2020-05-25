@@ -43,6 +43,9 @@ namespace builder
 
             // Copy root files.
             CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
+            CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
+            CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
+            CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
 
             return outFolder.Path;
         }
