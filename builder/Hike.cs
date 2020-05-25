@@ -13,9 +13,12 @@ namespace builder
 
         string sourcePath;
         string hikeName;
+        string region;
+        string difficulty;
         string distance;
         string elevationGain;
         string maxElevation;
+        string firstHiked;
 
         List<Photo> photos;
         List<string> descriptions;
@@ -46,17 +49,22 @@ namespace builder
         {
             var lines = File.ReadAllLines(Path.Combine(sourcePath, "report.txt"));
 
-            // First line is the hike name.
+            // First three lines are the hike name, region, and difficulty.
             hikeName = lines[0];
+            region = lines[1];
+            difficulty = lines[2];
 
-            // Second line is distance elevationGain maxElevation
-            var split = lines[1].Split(' ');
+            // Fourth line is 'distance elevationGain maxElevation'
+            var split = lines[3].Split(' ');
 
             distance = split[0];
             elevationGain = split[1];
             maxElevation = split[2];
 
-            var remainder = lines.Skip(2)
+            // Fifth line is when I first hiked it.
+            firstHiked = lines[4];
+
+            var remainder = lines.Skip(5)
                                  .SkipWhile(line => string.IsNullOrEmpty(line));
 
             // Set of photos in the form: [filename.jpg] description.
@@ -164,9 +172,12 @@ namespace builder
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");
                 writer.WriteLine("      <p class=\"hikename\">{0}</p>", this.hikeName);
-                writer.WriteLine("      <p>{0} miles</p>", this.distance);
-                writer.WriteLine("      <p>Elevation gain: {0}'</p>", this.elevationGain);
-                writer.WriteLine("      <p>Max elevation: {0}'</p>", this.maxElevation);
+                writer.WriteLine("      <p class=\"detail\">{0} region</p>", this.region);
+                writer.WriteLine("      <p class=\"detail\">Difficulty: {0}</p>", this.difficulty);
+                writer.WriteLine("      <p class=\"detail\">{0} miles</p>", this.distance);
+                writer.WriteLine("      <p class=\"detail\">Elevation gain: {0}'</p>", this.elevationGain);
+                writer.WriteLine("      <p class=\"detail\">Max elevation: {0}'</p>", this.maxElevation);
+                writer.WriteLine("      <p class=\"detail\">First hiked by me{0}</p>", this.firstHiked);
                 writer.WriteLine("    </td>");
                 writer.WriteLine("  </tr>");
                 writer.WriteLine("</table>");

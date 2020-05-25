@@ -8,7 +8,5 @@
 * Combined map on index
 * Highlight selected hike?
 * Image click regions?
-* Sort by region
-* Sort by difficulty
-* Sort by date
+* Sort by region/difficulty/date
 * Coming soon
