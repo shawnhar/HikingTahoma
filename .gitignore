@@ -1,5 +1,6 @@
-todo/
-builder/bin/
-builder/obj/
-builder/.vs/
+/out
+/todo
+/builder/bin/
+/builder/obj/
+/builder/.vs/
 *.user
