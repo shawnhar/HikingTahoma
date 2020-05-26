@@ -14,6 +14,8 @@ namespace builder
 
         CanvasBitmap myMap;
 
+        Rect usedBounds;
+
 
         public HikeMap(ImageProcessor imageProcessor)
         {
@@ -24,6 +26,8 @@ namespace builder
         public async Task Load(string sourceFolder)
         {
             myMap = await imageProcessor.LoadImage(sourceFolder, "map.png");
+        
+            usedBounds = GetUsedBounds(myMap);
         }
 
 
@@ -37,9 +41,9 @@ namespace builder
 
             const float padding = 0.25f;
 
-            var bounds = GetUsedBounds(myMap);
-
             // Make it square.
+            var bounds = usedBounds;
+
             if (bounds.Width > bounds.Height)
             {
                 bounds.Y -= (bounds.Width - bounds.Height) / 2;
@@ -156,6 +160,58 @@ namespace builder
 
                 await imageProcessor.SaveImage(result, folder, filename);
             }
+        }
+
+
+        public async Task WriteTrailOverlay(string folder, string filename)
+        {
+            const int overlayDilation = 48;
+
+            var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
+
+            using (var result = new CanvasRenderTarget(imageProcessor.Device, ImageProcessor.MapWidth, imageProcessor.MapHeight, 96))
+            {
+                using (var drawingSession = result.CreateDrawingSession())
+                {
+                    drawingSession.DrawImage(trailOverlay);
+                }
+
+                await imageProcessor.SaveImage(result, folder, filename);
+            }
+        }
+
+
+        ICanvasEffect GetTrailOverlay(Color color, int dilation)
+        {
+            return new Transform2DEffect
+            {
+                TransformMatrix = Matrix3x2.CreateScale((float)ImageProcessor.MapWidth / (float)myMap.SizeInPixels.Width),
+                InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
+
+                Source = new LinearTransferEffect
+                {
+                    RedSlope = 0,
+                    GreenSlope = 0,
+                    BlueSlope = 0,
+
+                    RedOffset = color.R / 255.0f,
+                    GreenOffset = color.G / 255.0f,
+                    BlueOffset = color.B / 255.0f,
+
+                    Source = new MorphologyEffect
+                    {
+                        Mode = MorphologyEffectMode.Dilate,
+                        Width = dilation,
+                        Height = dilation,
+
+                        Source = new CropEffect
+                        {
+                            SourceRectangle = usedBounds,
+                            Source = myMap,
+                        },
+                    },
+                },
+            };
         }
 
 

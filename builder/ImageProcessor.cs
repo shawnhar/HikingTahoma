@@ -11,6 +11,10 @@ namespace builder
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
 
+        public const int MapWidth = 600;
+        
+        public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
+
 
         public async Task Initialize(string sourceFolder)
         {
@@ -28,7 +32,7 @@ namespace builder
 
         public async Task SaveImage(CanvasBitmap bitmap, string folder, string filename)
         {
-            await bitmap.SaveAsync(Path.Combine(folder, filename), CanvasBitmapFileFormat.Jpeg);
+            await bitmap.SaveAsync(Path.Combine(folder, filename));
         }
 
 

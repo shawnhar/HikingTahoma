@@ -8,12 +8,13 @@ namespace builder
 {
     class Hike
     {
+        public string HikeName { get; private set; }
         public string FolderName => Path.GetFileName(sourcePath);
         public string MapName => FolderName + "-map.jpg";
         public string MapThumbnail => FolderName + "-map-small.jpg";
+        public string OverlayName => FolderName + "-overlay.png";
 
         string sourcePath;
-        string hikeName;
         string region;
         string difficulty;
         string distance;
@@ -53,7 +54,7 @@ namespace builder
             var lines = File.ReadAllLines(Path.Combine(sourcePath, "report.txt"));
 
             // First three lines are the hike name, region, and difficulty.
-            hikeName = lines[0];
+            HikeName = lines[0];
             region = lines[1];
             difficulty = lines[2];
 
@@ -136,6 +137,8 @@ namespace builder
 
             await map.WriteTrailMaps(outPath, MapName, MapThumbnail);
 
+            await map.WriteTrailOverlay(outPath, OverlayName);
+
             foreach (var photo in photos)
             {
                 await WritePhoto(photo, outPath);
@@ -148,25 +151,7 @@ namespace builder
             using (var file = File.OpenWrite(Path.Combine(outPath, FolderName + ".html")))
             using (var writer = new StreamWriter(file))
             {
-                writer.WriteLine("<html>");
-
-                writer.WriteLine("<title> Hiking Tahoma: {0}</title>", this.hikeName);
-
-                writer.WriteLine("<head>");
-                writer.WriteLine("  <link rel=\"stylesheet\" href=\"../style.css\">");
-                writer.WriteLine("</head>");
-
-                writer.WriteLine("<body>");
-
-                writer.WriteLine("<div class=\"title\">");
-
-                writer.WriteLine("  <div class=\"about\">");
-                writer.WriteLine("    <a href = \"../AboutRainier.html\">about Mount Rainier</a><br>");
-                writer.WriteLine("    <a href = \"../AboutThisSite.html\">about this site</a><br>");
-                writer.WriteLine("    <a href = \"../FuturePlans.html\">future plans</a>");
-                writer.WriteLine("  </div>");
-                writer.WriteLine("  <div class=\"backlink\"><a href = \"..\">Hiking Tahoma</a></div>");
-                writer.WriteLine("</div>");
+                WebsiteBuilder.WriteHtmlHeader(writer, this.HikeName, "../");
 
                 writer.WriteLine("<table>");
                 writer.WriteLine("  <tr>");
@@ -176,7 +161,7 @@ namespace builder
                 writer.WriteLine("      </a>");
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");
-                writer.WriteLine("      <p class=\"hikename\">{0}</p>", this.hikeName);
+                writer.WriteLine("      <p class=\"hikename\">{0}</p>", this.HikeName);
                 writer.WriteLine("      <p class=\"detail\">{0} region</p>", this.region);
                 writer.WriteLine("      <p class=\"detail\">Difficulty: {0}</p>", this.difficulty);
                 writer.WriteLine("      <p class=\"detail\">{0} miles</p>", this.distance);

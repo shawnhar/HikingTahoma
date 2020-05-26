@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -41,6 +43,9 @@ namespace builder
                 await hike.Process(outFolder.Path);
             }
 
+            // Generate the index page.
+            WriteIndex(outFolder.Path, hikes);
+
             // Copy root files.
             CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
             CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
@@ -53,8 +58,73 @@ namespace builder
 
         void CopyFile(string sourcePath, string outPath, string name)
         {
-            File.Copy(Path.Combine(sourcePath, name), 
+            File.Copy(Path.Combine(sourcePath, name),
                       Path.Combine(outPath, name));
+        }
+
+
+        void WriteIndex(string outPath, List<Hike> hikes)
+        {
+            using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
+            using (var writer = new StreamWriter(file))
+            {
+                WebsiteBuilder.WriteHtmlHeader(writer, "Index", "./");
+
+                writer.WriteLine("<div class=\"map\">");
+                writer.WriteLine("  <img src=\"map.jpg\" />");
+
+                foreach (var hike in hikes)
+                {
+                    writer.WriteLine("  <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" />", hike.FolderName, hike.OverlayName);
+                }
+
+                writer.WriteLine("</div>");
+
+                writer.WriteLine("<ul class=\"hikelist\">");
+
+                foreach (var hike in hikes)
+                {
+                    writer.WriteLine("  <li onMouseOver=\" document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                }
+
+                writer.WriteLine("  <li>Ipsut Falls</li>");
+                writer.WriteLine("  <li>Carbon Glacier</li>");
+                writer.WriteLine("  <li>Spray Park</li>");
+                writer.WriteLine("  <li>Spray Park Loop</li>");
+                writer.WriteLine("  <li>Tolmie Peak</li>");
+                writer.WriteLine("  <li>Indian Henry's (from Longmire)</li>");
+                writer.WriteLine("  <li>Indian Henry's (from Kautz Creek)</li>");
+                writer.WriteLine("  <li>Panhandle Gap</li>");
+                writer.WriteLine("  <li>Indian Bar</li>");
+                writer.WriteLine("</ul>");
+
+                writer.WriteLine("</body>");
+                writer.WriteLine("</html>");
+            }
+        }
+
+
+        public static void WriteHtmlHeader(StreamWriter writer, string title, string rootPrefix)
+        {
+            writer.WriteLine("<html>");
+
+            writer.WriteLine("<title> Hiking Tahoma: {0}</title>", title);
+
+            writer.WriteLine("<head>");
+            writer.WriteLine("  <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
+            writer.WriteLine("</head>");
+
+            writer.WriteLine("<body>");
+
+            writer.WriteLine("<div class=\"title\">");
+
+            writer.WriteLine("  <div class=\"about\">");
+            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br>");
+            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br>");
+            writer.WriteLine("    <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
+            writer.WriteLine("  </div>");
+            writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "\">Hiking Tahoma</a></div>");
+            writer.WriteLine("</div>");
         }
     }
 }

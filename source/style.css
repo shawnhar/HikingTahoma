@@ -26,6 +26,25 @@ a:link, a:visited {
   float: right;
 }
 
+.map {
+  height: 520;
+}
+
+.map img {
+  position: absolute;
+}
+
+.maplayer {
+  visibility: hidden;
+}
+
+.hikelist {
+  width: 600;
+  padding-left: 10;
+  column-count: 3;
+  list-style-type: none;
+}
+
 .stats {
   padding: 32;
 }
