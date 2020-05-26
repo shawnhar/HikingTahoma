@@ -123,7 +123,7 @@ namespace builder
             writer.WriteLine("    <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br>");
             writer.WriteLine("    <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
             writer.WriteLine("  </div>");
-            writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "\">Hiking Tahoma</a></div>");
+            writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
             writer.WriteLine("</div>");
         }
     }
