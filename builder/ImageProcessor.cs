@@ -1,8 +1,10 @@
 ﻿using Microsoft.Graphics.Canvas;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
 using System.Threading.Tasks;
+using Windows.UI;
 
 namespace builder
 {
@@ -53,6 +55,29 @@ namespace builder
             }
 
             return result;
+        }
+
+
+        public async Task WriteMasterMap(string outPath, List<Hike> hikes)
+        {
+            const int overlayDilation = 24;
+
+            using (var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
+            {
+                using (var drawingSession = result.CreateDrawingSession())
+                {
+                    drawingSession.DrawImage(MasterMap, result.Bounds, MasterMap.Bounds, 1, CanvasImageInterpolation.HighQualityCubic);
+
+                    foreach (var hike in hikes)
+                    {
+                        var overlay = hike.Map.GetTrailOverlay(Colors.Green, overlayDilation);
+
+                        drawingSession.DrawImage(overlay);
+                    }
+                }
+
+                await SaveImage(result, outPath, "map.jpg");
+            }
         }
     }
 }

@@ -26,7 +26,8 @@ namespace builder
         List<string> descriptions;
 
         ImageProcessor imageProcessor;
-        HikeMap map;
+
+        public readonly HikeMap Map;
 
 
         public Hike(string sourcePath, ImageProcessor imageProcessor)
@@ -34,7 +35,7 @@ namespace builder
             this.sourcePath = sourcePath;
             this.imageProcessor = imageProcessor;
 
-            map = new HikeMap(imageProcessor);
+            Map = new HikeMap(imageProcessor);
         }
 
 
@@ -43,7 +44,7 @@ namespace builder
             ParseReport();
             ValidatePhotos();
 
-            await map.Load(sourcePath);
+            await Map.Load(sourcePath);
             
             await WriteOutput(outPath);
         }
@@ -135,9 +136,9 @@ namespace builder
 
             WriteHtml(outPath);
 
-            await map.WriteTrailMaps(outPath, MapName, MapThumbnail);
+            await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
 
-            await map.WriteTrailOverlay(outPath, OverlayName);
+            await Map.WriteTrailOverlay(outPath, OverlayName);
 
             foreach (var photo in photos)
             {

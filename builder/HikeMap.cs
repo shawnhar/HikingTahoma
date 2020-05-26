@@ -181,7 +181,7 @@ namespace builder
         }
 
 
-        ICanvasEffect GetTrailOverlay(Color color, int dilation)
+        public ICanvasEffect GetTrailOverlay(Color color, int dilation)
         {
             return new Transform2DEffect
             {

@@ -46,6 +46,8 @@ namespace builder
             // Generate the index page.
             WriteIndex(outFolder.Path, hikes);
 
+            await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
+
             // Copy root files.
             CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
             CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
