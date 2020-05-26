@@ -89,15 +89,6 @@ namespace builder
                     writer.WriteLine("  <li onMouseOver=\" document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
                 }
 
-                writer.WriteLine("  <li>Ipsut Falls</li>");
-                writer.WriteLine("  <li>Carbon Glacier</li>");
-                writer.WriteLine("  <li>Spray Park</li>");
-                writer.WriteLine("  <li>Spray Park Loop</li>");
-                writer.WriteLine("  <li>Tolmie Peak</li>");
-                writer.WriteLine("  <li>Indian Henry's (from Longmire)</li>");
-                writer.WriteLine("  <li>Indian Henry's (from Kautz Creek)</li>");
-                writer.WriteLine("  <li>Panhandle Gap</li>");
-                writer.WriteLine("  <li>Indian Bar</li>");
                 writer.WriteLine("</ul>");
 
                 writer.WriteLine("</body>");
