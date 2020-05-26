@@ -67,6 +67,8 @@ namespace builder
 
         void WriteIndex(string outPath, List<Hike> hikes)
         {
+            var sortedHikes = hikes.OrderBy(hike => hike.HikeName);
+
             using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
             using (var writer = new StreamWriter(file))
             {
@@ -75,7 +77,7 @@ namespace builder
                 writer.WriteLine("<div class=\"map\">");
                 writer.WriteLine("  <img src=\"map.jpg\" />");
 
-                foreach (var hike in hikes)
+                foreach (var hike in sortedHikes)
                 {
                     writer.WriteLine("  <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" />", hike.FolderName, hike.OverlayName);
                 }
@@ -84,7 +86,7 @@ namespace builder
 
                 writer.WriteLine("<ul class=\"hikelist\">");
 
-                foreach (var hike in hikes)
+                foreach (var hike in sortedHikes)
                 {
                     writer.WriteLine("  <li onMouseOver=\" document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
                 }
