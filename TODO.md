@@ -1,5 +1,3 @@
-* vertical spacing on about links
-* better formatting for long hike list
 * proofread about pages
 
 Hikes:

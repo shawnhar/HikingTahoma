@@ -12,7 +12,7 @@ a:link, a:visited {
   width: 560;
   padding: 20;
   margin-bottom: 32;
-  background-color: #B0B0B0;
+  background-color: #95C0E0;
 }
 
 .backlink {
@@ -23,6 +23,8 @@ a:link, a:visited {
 .about {
   font-size: 13px;
   font-style: italic;
+  line-height: 1.4;
+  margin-top: -7;
   float: right;
 }
 
@@ -32,6 +34,7 @@ a:link, a:visited {
 
 .map img {
   position: absolute;
+  border: 1px solid #95C0E0;
 }
 
 .maplayer {
@@ -39,10 +42,17 @@ a:link, a:visited {
 }
 
 .hikelist {
-  width: 600;
   padding-left: 10;
-  column-count: 3;
+  column-width: 250px;
   list-style-type: none;
+}
+
+.hikelist a:link, a:visited {
+  text-decoration: none;
+}
+
+.hikelist a:hover {
+  text-decoration: underline;
 }
 
 .stats {
@@ -76,13 +86,16 @@ a:link, a:visited {
 
 .photos {
   width: 600;
-  background-color: #B0B0B0;
 }
 
 .photos td {
   padding: 16;
   text-align: center;
   vertical-align: top;
+}
+
+.photos img {
+  border: 1px solid black;
 }
 
 .photos p {
