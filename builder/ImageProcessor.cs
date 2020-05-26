@@ -1,10 +1,14 @@
 ﻿using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Text;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
+using Windows.Foundation;
 using Windows.UI;
+using Windows.UI.Text;
 
 namespace builder
 {
@@ -62,21 +66,77 @@ namespace builder
         {
             const int overlayDilation = 24;
 
+            var yearColors = new Dictionary<string, Color>
+            {
+                { "older", Color.FromArgb(0xFF, 0x00, 0x80, 0x00) },
+                { "2019",  Color.FromArgb(0xFF, 0x00, 0xFF, 0x00) },
+                { "2020",  Color.FromArgb(0xFF, 0xFF, 0xFF, 0x00) },
+            };
+
             using (var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
             {
                 using (var drawingSession = result.CreateDrawingSession())
                 {
+                    // Draw the main map.
                     drawingSession.DrawImage(MasterMap, result.Bounds, MasterMap.Bounds, 1, CanvasImageInterpolation.HighQualityCubic);
 
-                    foreach (var hike in hikes)
-                    {
-                        var overlay = hike.Map.GetTrailOverlay(Colors.Green, overlayDilation);
+                    // Overlay trail routes, sorted by year.
+                    var hikesByYear = from hike in hikes
+                                      group hike by hike.FirstHiked into years
+                                      orderby char.IsDigit(years.Key[0]) ? years.Key : "0" descending
+                                      select years;
 
-                        drawingSession.DrawImage(overlay);
+                    foreach (var year in hikesByYear)
+                    {
+                        Color color;
+
+                        if (!yearColors.TryGetValue(year.Key, out color))
+                        {
+                            throw new Exception("Unknown year " + year.Key);
+                        }
+
+                        foreach (var hike in year)
+                        {
+                            var overlay = hike.Map.GetTrailOverlay(color, overlayDilation);
+
+                            drawingSession.DrawImage(overlay);
+                        }
                     }
+
+                    // Draw a text key.
+                    var textFormat = new CanvasTextFormat
+                    {
+                        FontFamily = "Tahoma",
+                        FontSize = 16,
+                        HorizontalAlignment = CanvasHorizontalAlignment.Right,
+                        VerticalAlignment = CanvasVerticalAlignment.Bottom,
+                    };
+
+                    var textRect = result.Bounds;
+
+                    textRect.Width -= 12;
+                    textRect.Height -= 12;
+
+                    var borderRect = textRect;
+
+                    borderRect.X = borderRect.Right - 48;
+                    borderRect.Y = borderRect.Bottom - 28 - yearColors.Count * 23;
+
+                    drawingSession.FillRectangle(borderRect, Color.FromArgb(0x80, 0xB0, 0xB0, 0xB0));
+                    drawingSession.DrawRectangle(borderRect, Colors.Gray);
+
+                    foreach (var year in hikesByYear)
+                    {
+                        drawingSession.DrawText(year.Key, textRect, yearColors[year.Key], textFormat);
+
+                        textRect.Height -= 23;
+                    }
+
+                    textFormat.FontStyle = FontStyle.Italic;
+                    drawingSession.DrawText("key", textRect, Colors.Gray, textFormat);
                 }
 
-                await SaveImage(result, outPath, "map.jpg");
+                await SaveImage(result, outPath, "map.png");
             }
         }
     }

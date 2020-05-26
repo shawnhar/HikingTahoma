@@ -8,19 +8,19 @@ namespace builder
 {
     class Hike
     {
-        public string HikeName { get; private set; }
+        public string HikeName      { get; private set; }
+        public string Difficulty    { get; private set; }
+        public string Distance      { get; private set; }
+        public string ElevationGain { get; private set; }
+        public string MaxElevation  { get; private set; }
+        public string FirstHiked    { get; private set; }
+
         public string FolderName => Path.GetFileName(sourcePath);
         public string MapName => FolderName + "-map.jpg";
         public string MapThumbnail => FolderName + "-map-small.jpg";
         public string OverlayName => FolderName + "-overlay.png";
 
         string sourcePath;
-        string region;
-        string difficulty;
-        string distance;
-        string elevationGain;
-        string maxElevation;
-        string firstHiked;
 
         List<Photo> photos;
         List<string> descriptions;
@@ -54,22 +54,21 @@ namespace builder
         {
             var lines = File.ReadAllLines(Path.Combine(sourcePath, "report.txt"));
 
-            // First three lines are the hike name, region, and difficulty.
+            // First two lines are the hike name and difficulty.
             HikeName = lines[0];
-            region = lines[1];
-            difficulty = lines[2];
+            Difficulty = lines[1];
 
-            // Fourth line is 'distance elevationGain maxElevation'
-            var split = lines[3].Split(' ');
+            // Third line is 'distance elevationGain maxElevation'
+            var split = lines[2].Split(' ');
 
-            distance = split[0];
-            elevationGain = split[1];
-            maxElevation = split[2];
+            Distance = split[0];
+            ElevationGain = split[1];
+            MaxElevation = split[2];
 
-            // Fifth line is when I first hiked it.
-            firstHiked = lines[4];
+            // Fourth line is when I first hiked it.
+            FirstHiked = lines[3];
 
-            var remainder = lines.Skip(5)
+            var remainder = lines.Skip(4)
                                  .SkipWhile(line => string.IsNullOrEmpty(line));
 
             // Set of photos in the form: [filename.jpg] description.
@@ -163,12 +162,11 @@ namespace builder
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");
                 writer.WriteLine("      <p class=\"hikename\">{0}</p>", this.HikeName);
-                writer.WriteLine("      <p class=\"detail\">{0} region</p>", this.region);
-                writer.WriteLine("      <p class=\"detail\">Difficulty: {0}</p>", this.difficulty);
-                writer.WriteLine("      <p class=\"detail\">{0} miles</p>", this.distance);
-                writer.WriteLine("      <p class=\"detail\">Elevation gain: {0}'</p>", this.elevationGain);
-                writer.WriteLine("      <p class=\"detail\">Max elevation: {0}'</p>", this.maxElevation);
-                writer.WriteLine("      <p class=\"detail\">First hiked by me: {0}</p>", this.firstHiked);
+                writer.WriteLine("      <p class=\"detail\">Difficulty: {0}</p>", this.Difficulty);
+                writer.WriteLine("      <p class=\"detail\">{0} miles</p>", this.Distance);
+                writer.WriteLine("      <p class=\"detail\">Elevation gain: {0}'</p>", this.ElevationGain);
+                writer.WriteLine("      <p class=\"detail\">Max elevation: {0}'</p>", this.MaxElevation);
+                writer.WriteLine("      <p class=\"detail\">First hiked by me: {0}</p>", this.FirstHiked);
                 writer.WriteLine("    </td>");
                 writer.WriteLine("  </tr>");
                 writer.WriteLine("</table>");

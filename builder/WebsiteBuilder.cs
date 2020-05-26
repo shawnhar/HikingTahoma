@@ -75,7 +75,7 @@ namespace builder
                 WebsiteBuilder.WriteHtmlHeader(writer, "Index", "./");
 
                 writer.WriteLine("<div class=\"map\">");
-                writer.WriteLine("  <img src=\"map.jpg\" />");
+                writer.WriteLine("  <img src=\"map.png\" />");
 
                 foreach (var hike in sortedHikes)
                 {
