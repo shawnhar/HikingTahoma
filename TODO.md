@@ -23,3 +23,4 @@
 * Summerland and Panhandle Gap
 * Tolmie Peak
 * Van Trump Park and Mildred Point via Comet Falls
+* White River to Sunrise
