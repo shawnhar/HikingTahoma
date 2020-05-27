@@ -1,7 +1,3 @@
-* proofread about pages
-
-Hikes:
-
 * Burroughs Mountain
 * Camp Muir
 * Carbon Glacier
