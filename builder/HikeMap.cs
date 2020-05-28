@@ -3,7 +3,6 @@ using Microsoft.Graphics.Canvas.Effects;
 using System.Numerics;
 using System.Threading.Tasks;
 using Windows.Foundation;
-using Windows.Networking.BackgroundTransfer;
 using Windows.UI;
 
 namespace builder

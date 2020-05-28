@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,7 +39,12 @@ namespace builder
 
             foreach (var hike in hikes)
             {
-                await hike.Process(outFolder.Path);
+                await hike.Load();
+            }
+
+            foreach (var hike in hikes)
+            {
+                await hike.WriteOutput(hikes, outFolder.Path);
             }
 
             // Generate the index page.

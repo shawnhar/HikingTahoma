@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace builder
@@ -39,14 +40,12 @@ namespace builder
         }
 
 
-        public async Task Process(string outPath)
+        public async Task Load()
         {
             ParseReport();
             ValidatePhotos();
 
             await Map.Load(sourcePath);
-            
-            await WriteOutput(outPath);
         }
 
 
@@ -125,15 +124,15 @@ namespace builder
                 throw new Exception("Unreferenced photos in " + FolderName + ": " + string.Join(", ", unreferenced));
             }
         }
+            
 
-
-        async Task WriteOutput(string dir)
+        public async Task WriteOutput(IEnumerable<Hike> hikes, string dir)
         {
             var outPath = Path.Combine(dir, FolderName);
 
             Directory.CreateDirectory(outPath);
 
-            WriteHtml(outPath);
+            WriteHtml(hikes, outPath);
 
             await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
 
@@ -146,7 +145,7 @@ namespace builder
         }
 
 
-        void WriteHtml(string outPath)
+        void WriteHtml(IEnumerable<Hike> hikes, string outPath)
         {
             using (var file = File.OpenWrite(Path.Combine(outPath, FolderName + ".html")))
             using (var writer = new StreamWriter(file))
@@ -175,7 +174,9 @@ namespace builder
 
                 foreach (var line in this.descriptions)
                 {
-                    writer.WriteLine("  <p>{0}</p>", line);
+                    var expandedLinks = ExpandLinks(line, hikes);
+
+                    writer.WriteLine("  <p>{0}</p>", expandedLinks);
                 }
 
                 writer.WriteLine("</div>");
@@ -216,6 +217,35 @@ namespace builder
                 writer.WriteLine("</body>");
                 writer.WriteLine("</html>");
             }
+        }
+
+
+        static Regex linkRegex = new Regex(@"\[(\w+)\]");
+
+
+        static string ExpandLinks(string line, IEnumerable<Hike> hikes)
+        {
+            for (var match = linkRegex.Match(line); match.Success; match = linkRegex.Match(line))
+            {
+                line = line.Substring(0, match.Index) +
+                       ExpandLink(match.Groups[1].Value, hikes) +
+                       line.Substring(match.Index + match.Length);
+            }
+
+            return line;
+        }
+
+
+        static string ExpandLink(string name, IEnumerable<Hike> hikes)
+        {
+            var target = hikes.FirstOrDefault(hike => hike.FolderName == name);
+
+            if (target == null)
+            {
+                throw new Exception("Unknown link target " + name);
+            }
+
+            return string.Format("<a href=\"../{0}/{0}.html\">{1}</a>", target.FolderName, target.HikeName);
         }
 
 

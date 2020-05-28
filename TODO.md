@@ -1,6 +1,3 @@
-* Linking between articles
-
-Hikes:
 * Burroughs Mountain
 * Camp Muir
 * Carbon Glacier
