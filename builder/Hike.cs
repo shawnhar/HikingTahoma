@@ -252,7 +252,7 @@ namespace builder
         async Task WritePhoto(Photo photo, string outPath)
         {
             const int maxPhotoSize = 2048;
-            const int thumbnailHeight = 190;
+            const int thumbnailHeight = 380;
 
             using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
             {
@@ -261,7 +261,7 @@ namespace builder
                     // Resize if the source is excessively large.
                     using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
                     {
-                        await imageProcessor.SaveJpeg(sensibleSize, outPath, photo.Filename);
+                        await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
                     }
                 }
                 else
@@ -273,7 +273,7 @@ namespace builder
                 // Also create thumbnail versions.
                 using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
                 {
-                    await imageProcessor.SaveJpeg(thumbnail, outPath, photo.Thumbnail, 1);
+                    await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
                 }
             }
         }

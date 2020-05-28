@@ -35,15 +35,9 @@ namespace builder
         }
 
 
-        public async Task SaveJpeg(CanvasBitmap bitmap, string folder, string filename, float quality = 0.9f)
+        public async Task SaveImage(CanvasBitmap bitmap, string folder, string filename)
         {
-            await bitmap.SaveAsync(Path.Combine(folder, filename), CanvasBitmapFileFormat.Jpeg, quality);
-        }
-
-
-        public async Task SavePng(CanvasBitmap bitmap, string folder, string filename)
-        {
-            await bitmap.SaveAsync(Path.Combine(folder, filename), CanvasBitmapFileFormat.Png);
+            await bitmap.SaveAsync(Path.Combine(folder, filename));
         }
 
 
@@ -141,7 +135,7 @@ namespace builder
                     drawingSession.DrawText("key", textRect, Colors.Gray, textFormat);
                 }
 
-                await SavePng(result, outPath, "map.png");
+                await SaveImage(result, outPath, "map.png");
             }
         }
     }

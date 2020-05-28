@@ -95,6 +95,7 @@ a:link, a:visited {
 }
 
 .photos img {
+  height: 190;
   border: 1px solid black;
 }
 
