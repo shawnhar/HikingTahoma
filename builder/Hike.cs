@@ -156,7 +156,7 @@ namespace builder
                 writer.WriteLine("  <tr>");
                 writer.WriteLine("    <td>");
                 writer.WriteLine("      <a href=\"{0}\"/>", this.MapName);
-                writer.WriteLine("        <img src=\"{0}\"/>", this.MapThumbnail);
+                writer.WriteLine("        <img class=\"mapthumbnail\" src=\"{0}\"/>", this.MapThumbnail);
                 writer.WriteLine("      </a>");
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");

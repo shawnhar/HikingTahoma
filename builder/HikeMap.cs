@@ -33,10 +33,10 @@ namespace builder
         public async Task WriteTrailMaps(string folder, string mapName, string mapThumbnail)
         {
             const int mapSize = 1024;
-            const int thumbnailSize = 256;
+            const int thumbnailSize = 512;
 
             const int mapDilation = 6;
-            const int thumbnailDilation = 3;
+            const int thumbnailDilation = 6;
 
             const float padding = 0.25f;
 

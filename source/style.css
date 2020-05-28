@@ -55,6 +55,10 @@ a:link, a:visited {
   text-decoration: underline;
 }
 
+.mapthumbnail {
+  height: 256;
+}
+
 .stats {
   padding: 32;
 }
