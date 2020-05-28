@@ -1,3 +1,5 @@
+# Site
+
 * Fixed image sizes
 * Header subtitle "Documenting my Rainier obsession"
 * Change title on index page
@@ -5,7 +7,8 @@
 * Explain why no ratings?
 * Link to 10 essentials, leave no trace, hiking etiquette
 
-# Hikes
+
+# Hike Descriptions
 
 * Burroughs Mountain
 * Camp Muir

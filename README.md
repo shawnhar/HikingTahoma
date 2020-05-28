@@ -7,11 +7,11 @@ the actual site.
 The workflow is annoying because I wanted to use Win2D in the builder app, but 
 was too lazy to figure out how to make that work with a regular console app. 
 So, the builder is a UWP :-( As a hack until I figure out something better, it 
-reads and writes to its local cache folder. Therefore to build the site the 
+just reads and writes its local cache folder. Therefore to build the site the 
 workflow is:
 
 - Run put.bat
 - Run the builder UWP
 - Run get.bat
 
-Published website files are now in the out folder.
+Published website files will now be in the 'out' folder.
