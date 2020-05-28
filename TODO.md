@@ -1,3 +1,12 @@
+* Fixed image sizes
+* Header subtitle "Documenting my Rainier obsession"
+* Change title on index page
+* Photo of me on Muir
+* Explain why no ratings?
+* Link to 10 essentials, leave no trace, hiking etiquette
+
+# Hikes
+
 * Burroughs Mountain
 * Camp Muir
 * Carbon Glacier
