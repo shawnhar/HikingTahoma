@@ -10,8 +10,11 @@ a:link, a:visited {
 
 .title {
   width: 560;
-  padding: 20;
-  margin-bottom: 32;
+  padding-left: 20;
+  padding-right: 20;
+  padding-top: 4;
+  padding-bottom: 8;
+  margin-bottom: 20;
   background-color: #95C0E0;
 }
 
@@ -24,8 +27,14 @@ a:link, a:visited {
   font-size: 13px;
   font-style: italic;
   line-height: 1.4;
-  margin-top: -7;
+  margin-top: 2;
   float: right;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 2;
 }
 
 .map {

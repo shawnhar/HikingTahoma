@@ -77,7 +77,7 @@ namespace builder
             using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
             using (var writer = new StreamWriter(file))
             {
-                WebsiteBuilder.WriteHtmlHeader(writer, "Index", "./");
+                WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
 
                 writer.WriteLine("<div class=\"map\">");
                 writer.WriteLine("  <img src=\"map.png\" />");
@@ -124,6 +124,8 @@ namespace builder
             writer.WriteLine("    <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
             writer.WriteLine("  </div>");
             writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
+            writer.WriteLine("  <div class=\"subtitle\">Documenting my Rainier obsession</div>");
+
             writer.WriteLine("</div>");
         }
     }
