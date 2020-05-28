@@ -1,5 +1,4 @@
 * Linking between articles
-* Smaller output photos?
 
 Hikes:
 * Burroughs Mountain

@@ -158,7 +158,7 @@ namespace builder
                     drawingSession.DrawImage(route);
                 }
 
-                await imageProcessor.SaveImage(result, folder, filename);
+                await imageProcessor.SaveJpeg(result, folder, filename);
             }
         }
 
@@ -176,7 +176,7 @@ namespace builder
                     drawingSession.DrawImage(trailOverlay);
                 }
 
-                await imageProcessor.SaveImage(result, folder, filename);
+                await imageProcessor.SavePng(result, folder, filename);
             }
         }
 

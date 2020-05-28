@@ -225,11 +225,26 @@ namespace builder
             const int thumbnailHeight = 190;
 
             using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
-            using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
-            using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
             {
-                await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
-                await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
+                if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
+                {
+                    // Resize if the source is excessively large.
+                    using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                    {
+                        await imageProcessor.SaveJpeg(sensibleSize, outPath, photo.Filename);
+                    }
+                }
+                else
+                {
+                    // If the size is ok, just copy it directly over.
+                    File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
+                }
+
+                // Also create thumbnail versions.
+                using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
+                {
+                    await imageProcessor.SaveJpeg(thumbnail, outPath, photo.Thumbnail, 1);
+                }
             }
         }
     }
