@@ -3,4 +3,9 @@ moderate
 todo todo todo
 2019
 
+[ApproachingIndianHenrys.jpg] TODO
+[MirrorLake.jpg] TODO
+[SunsetAmphitheater.jpg] TODO
+[Trail.jpg] TODO
+
 TODO

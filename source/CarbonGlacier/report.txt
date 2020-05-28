@@ -3,4 +3,9 @@ moderate
 todo todo todo
 2019
 
+[Bear.jpg] TODO
+[CarbonGlacier.jpg] TODO
+[SuspensionBridge.jpg] TODO
+[Trail.jpg] TODO
+
 TODO

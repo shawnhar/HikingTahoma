@@ -3,4 +3,8 @@ moderate
 todo todo todo
 older
 
+[FromDegePeak.jpg] TODO
+[SunOnSummit.jpg] TODO
+[Sunrise.jpg] TODO
+
 TODO

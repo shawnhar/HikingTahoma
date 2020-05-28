@@ -3,4 +3,10 @@ moderate
 todo todo todo
 2019
 
+[CometFalls.jpg] TODO
+[FromMildredPoint.jpg] TODO
+[FromVanTrumpPark.jpg] TODO
+[MistyMountains.jpg] TODO
+[VanTrumpPark.jpg] TODO
+
 TODO

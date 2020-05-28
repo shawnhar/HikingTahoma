@@ -3,4 +3,10 @@ moderate
 todo todo todo
 older
 
+[KautzCreek.jpg] TODO
+[NearSquawLake.jpg] TODO
+[NearTheCabin.jpg] TODO
+[PatrolCabin.jpg] TODO
+[PyramidCreek.jpg] TODO
+
 TODO

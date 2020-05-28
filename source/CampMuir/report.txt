@@ -3,4 +3,11 @@ moderate
 todo todo todo
 older
 
+[CampMuir.jpg] TODO
+[NearlyThere.jpg] TODO
+[NisquallyCrevasses.jpg] TODO
+[Onwards.jpg] TODO
+[SolidEarth.jpg] TODO
+[Upwards.jpg] TODO
+
 TODO

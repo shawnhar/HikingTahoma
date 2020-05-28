@@ -3,4 +3,8 @@ moderate
 todo todo todo
 2020
 
+[Creek.jpg] TODO
+[MowichLakeRoad.jpg] TODO
+[RangerCabin.jpg] TODO
+
 TODO

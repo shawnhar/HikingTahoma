@@ -3,4 +3,9 @@ moderate
 todo todo todo
 2019
 
+[FinalClimb.jpg] TODO
+[ForestPath.jpg] TODO
+[MildredPoint.jpg] TODO
+[SnowyPath.jpg] TODO
+
 TODO

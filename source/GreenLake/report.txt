@@ -3,10 +3,9 @@ moderate
 9.4 1800 3200
 2020
 
-[GreenLake.jpg] Reflections in Green Lake. Such a calm, soothing place.
-[RangerFalls.jpg] Ranger Falls.
-[CarbonRiver.jpg] Early morning light along the Carbon River.
-[MineEntrance.jpg] Old exploratory copper mine, up a short (but steep!) spur to the right of the Carbon River trail.
+[GreenLake.jpg] TODO
+[RangerFalls.jpg] TODO
+[Reflection.jpg] TODO
 
 Carbon River status (having hiked there today):
 
@@ -23,3 +22,4 @@ The trail up to Green Lake has a few trees down, but is easily passable. The rai
 My third photo shows a spot where the Carbon River has an active disagreement with the trail, in between the Green Lake and Chenuis Falls turnoffs. So far it looks like the river is winning, as that wet bit right in front of me is supposed to be the main trail! I turned around here, but it seemed passable.
 
 The bridge across the Carbon River to Chenuis Falls is out.
+

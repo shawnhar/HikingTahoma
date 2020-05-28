@@ -3,4 +3,9 @@ moderate
 todo todo todo
 older
 
+[NisquallyValley.jpg] TODO
+[PhotoFrame.jpg] TODO
+[Tatoosh.jpg] TODO
+[Trail.jpg] TODO
+
 TODO

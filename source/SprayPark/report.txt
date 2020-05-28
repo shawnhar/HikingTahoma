@@ -3,4 +3,9 @@ moderate
 todo todo todo
 older
 
+[AvalancheLillies.jpg] TODO
+[EnteringSprayPark.jpg] TODO
+[MotherMountain.jpg] TODO
+[SprayFalls.jpg] TODO
+
 TODO

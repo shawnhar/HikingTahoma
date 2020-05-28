@@ -3,4 +3,8 @@ moderate
 todo todo todo
 2019
 
+[CowlitzDivide.jpg] TODO
+[DescentToIndianBar.jpg] TODO
+[IndianBar.jpg] TODO
+
 TODO

@@ -1,6 +1,5 @@
 * Linking between articles
 * Smaller output photos?
-* https://stackoverflow.com/questions/6693499/how-can-i-set-a-website-image-that-will-show-as-preview-on-facebook
 
 Hikes:
 * Burroughs Mountain

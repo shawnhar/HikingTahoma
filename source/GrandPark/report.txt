@@ -3,4 +3,9 @@ moderate
 todo todo todo
 2019
 
+[BearGrass.jpg] TODO
+[BerkeleyPark.jpg] TODO
+[Elk.jpg] TODO
+[GrandPark.jpg] TODO
+
 TODO
