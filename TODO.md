@@ -1,7 +1,6 @@
 # Site
 
 * Fixed image sizes
-* Photo of me on Muir
 * Explain why no ratings?
 * Link to 10 essentials, leave no trace, hiking etiquette
 
