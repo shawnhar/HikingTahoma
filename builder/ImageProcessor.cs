@@ -16,7 +16,7 @@ namespace builder
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
 
-        public const int MapWidth = 600;
+        public const int MapWidth = 1200;
         
         public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
 
@@ -106,20 +106,20 @@ namespace builder
                     var textFormat = new CanvasTextFormat
                     {
                         FontFamily = "Tahoma",
-                        FontSize = 16,
+                        FontSize = 32,
                         HorizontalAlignment = CanvasHorizontalAlignment.Right,
                         VerticalAlignment = CanvasVerticalAlignment.Bottom,
                     };
 
                     var textRect = result.Bounds;
 
-                    textRect.Width -= 12;
-                    textRect.Height -= 12;
+                    textRect.Width -= 24;
+                    textRect.Height -= 24;
 
                     var borderRect = textRect;
 
-                    borderRect.X = borderRect.Right - 48;
-                    borderRect.Y = borderRect.Bottom - 28 - yearColors.Count * 23;
+                    borderRect.X = borderRect.Right - 96;
+                    borderRect.Y = borderRect.Bottom - 56 - yearColors.Count * 46;
 
                     drawingSession.FillRectangle(borderRect, Color.FromArgb(0x80, 0xB0, 0xB0, 0xB0));
                     drawingSession.DrawRectangle(borderRect, Colors.Gray);
@@ -128,11 +128,10 @@ namespace builder
                     {
                         drawingSession.DrawText(year.Key, textRect, yearColors[year.Key], textFormat);
 
-                        textRect.Height -= 23;
+                        textRect.Height -= 46;
                     }
 
-                    textFormat.FontStyle = FontStyle.Italic;
-                    drawingSession.DrawText("key", textRect, Colors.Gray, textFormat);
+                    drawingSession.DrawText("key:", textRect, Colors.Gray, textFormat);
                 }
 
                 await SaveImage(result, outPath, "map.png");
