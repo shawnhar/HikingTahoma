@@ -1,5 +1,4 @@
 * Burroughs Mountain
-* Camp Muir
 * Carbon Glacier
 * Carbon River to Ipsut Falls
 * Dege Peak
