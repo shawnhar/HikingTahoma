@@ -65,6 +65,7 @@ a:link, a:visited {
 }
 
 .stats {
+  width: 300;
   padding: 32;
 }
 

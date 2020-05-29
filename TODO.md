@@ -17,7 +17,6 @@
 * Panorama Point and Skyline Trail
 * Paradise Glacier
 * Rampart Ridge Loop
-* Sheep Lake and Sourdough Gap
 * Spray Park
 * Spray Park Loop
 * Summerland and Panhandle Gap
