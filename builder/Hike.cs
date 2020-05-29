@@ -132,16 +132,16 @@ namespace builder
 
             Directory.CreateDirectory(outPath);
 
+            foreach (var photo in photos)
+            {
+                await WritePhoto(photo, outPath);
+            }
+
             WriteHtml(hikes, outPath);
 
             await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
 
             await Map.WriteTrailOverlay(outPath, OverlayName);
-
-            foreach (var photo in photos)
-            {
-                await WritePhoto(photo, outPath);
-            }
         }
 
 
@@ -155,8 +155,8 @@ namespace builder
                 writer.WriteLine("<table>");
                 writer.WriteLine("  <tr>");
                 writer.WriteLine("    <td>");
-                writer.WriteLine("      <a href=\"{0}\"/>", this.MapName);
-                writer.WriteLine("        <img class=\"mapthumbnail\" src=\"{0}\"/>", this.MapThumbnail);
+                writer.WriteLine("      <a href=\"{0}\">", this.MapName);
+                writer.WriteLine("        <img src=\"{0}\" width=\"256\" height=\"256\" />", this.MapThumbnail);
                 writer.WriteLine("      </a>");
                 writer.WriteLine("    </td>");
                 writer.WriteLine("    <td class=\"stats\">");
@@ -199,7 +199,7 @@ namespace builder
 
                     writer.WriteLine("    <td>");
                     writer.WriteLine("      <a href=\"{0}\">", photo.Filename);
-                    writer.WriteLine("        <img src=\"{0}\"/>", photo.Thumbnail);
+                    writer.WriteLine("        <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
                     writer.WriteLine("        <p>{0}</p>", photo.Description);
                     writer.WriteLine("      </a>");
                     writer.WriteLine("    </td>");
@@ -274,6 +274,8 @@ namespace builder
                 using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
                 {
                     await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
+
+                    photo.ThumbnailSize = thumbnail.SizeInPixels;
                 }
             }
         }

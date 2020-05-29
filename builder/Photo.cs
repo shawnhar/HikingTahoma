@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Windows.Graphics.Imaging;
 
 namespace builder
 {
@@ -8,6 +9,8 @@ namespace builder
         public readonly string Description;
 
         public string Thumbnail => Path.GetFileName(Filename) + "-small.jpg";
+
+        public BitmapSize ThumbnailSize;
 
 
         public Photo(string filename, string description)

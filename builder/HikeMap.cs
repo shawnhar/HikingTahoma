@@ -168,7 +168,7 @@ namespace builder
 
             var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
 
-            using (var result = new CanvasRenderTarget(imageProcessor.Device, ImageProcessor.MapWidth, imageProcessor.MapHeight, 96))
+            using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
             {
                 using (var drawingSession = result.CreateDrawingSession())
                 {
@@ -184,7 +184,7 @@ namespace builder
         {
             return new Transform2DEffect
             {
-                TransformMatrix = Matrix3x2.CreateScale((float)ImageProcessor.MapWidth / (float)myMap.SizeInPixels.Width),
+                TransformMatrix = Matrix3x2.CreateScale((float)imageProcessor.MapWidth / (float)myMap.SizeInPixels.Width),
                 InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                 Source = new LinearTransferEffect

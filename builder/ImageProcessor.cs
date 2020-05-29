@@ -16,8 +16,7 @@ namespace builder
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
 
-        public const int MapWidth = 1200;
-        
+        public int MapWidth => 1200;
         public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
 
 

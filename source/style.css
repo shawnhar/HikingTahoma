@@ -42,7 +42,6 @@ a:link, a:visited {
 }
 
 .map img {
-  width: 600;
   position: absolute;
   border: 1px solid #95C0E0;
 }
@@ -63,10 +62,6 @@ a:link, a:visited {
 
 .hikelist a:hover {
   text-decoration: underline;
-}
-
-.mapthumbnail {
-  height: 256;
 }
 
 .stats {
@@ -109,7 +104,6 @@ a:link, a:visited {
 }
 
 .photos img {
-  height: 190;
   border: 1px solid black;
 }
 

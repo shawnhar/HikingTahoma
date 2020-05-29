@@ -48,7 +48,7 @@ namespace builder
             }
 
             // Generate the index page.
-            WriteIndex(outFolder.Path, hikes);
+            WriteIndex(outFolder.Path, hikes, imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
 
             await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
 
@@ -70,7 +70,7 @@ namespace builder
         }
 
 
-        void WriteIndex(string outPath, List<Hike> hikes)
+        void WriteIndex(string outPath, List<Hike> hikes, int mapW, int mapH)
         {
             var sortedHikes = hikes.OrderBy(hike => hike.HikeName);
 
@@ -80,11 +80,11 @@ namespace builder
                 WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
 
                 writer.WriteLine("<div class=\"map\">");
-                writer.WriteLine("  <img src=\"map.png\" />");
+                writer.WriteLine("  <img src=\"map.png\" width=\"{0}\" height=\"{1}\" />", mapW, mapH);
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("  <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" />", hike.FolderName, hike.OverlayName);
+                    writer.WriteLine("  <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" width=\"{2}\" height=\"{3}\" />", hike.FolderName, hike.OverlayName, mapW, mapH);
                 }
 
                 writer.WriteLine("</div>");

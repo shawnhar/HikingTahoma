@@ -1,10 +1,3 @@
-# Site
-
-* Fixed image sizes
-
-
-# Hike Descriptions
-
 * Burroughs Mountain
 * Camp Muir
 * Carbon Glacier
