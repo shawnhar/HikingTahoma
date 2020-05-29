@@ -6,6 +6,7 @@ todo todo todo
 [CowlitzDivide.jpg] TODO
 [DescentToIndianBar.jpg] TODO
 [IndianBar.jpg] TODO
+[Adams.jpg] TODO
 
 What could be better than taking a Wednesday off work to go hiking with a friend?
 

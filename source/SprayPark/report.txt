@@ -7,5 +7,7 @@ older
 [EnteringSprayPark.jpg] TODO
 [MotherMountain.jpg] TODO
 [SprayFalls.jpg] TODO
+[Wildflowers.jpg] TODO
+[Summit.jpg] TODO
 
 TODO
