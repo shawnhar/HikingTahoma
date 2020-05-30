@@ -9,7 +9,6 @@
 * Indian Bar
 * Indian Henry's from Kautz Creek
 * Indian Henry's from Longmire
-* Longmire to Reflection Lakes
 * Mildred Point via Rampart Ridge
 * Mowich Lake Snowshoe
 * Rampart Ridge Loop
