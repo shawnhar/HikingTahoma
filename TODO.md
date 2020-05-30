@@ -6,7 +6,6 @@
 * Glacier Basin / Burroughs Loop
 * Grand Park from Sunrise
 * Green Lake
-* Indian Bar
 * Indian Henry's from Kautz Creek
 * Indian Henry's from Longmire
 * Mildred Point via Rampart Ridge
