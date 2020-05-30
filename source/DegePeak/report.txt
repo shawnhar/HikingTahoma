@@ -1,10 +1,20 @@
 Dege Peak
-moderate
-todo todo todo
+easy
+4 1000 6950
 older
 
-[FromDegePeak.jpg] TODO
-[SunOnSummit.jpg] TODO
-[Sunrise.jpg] TODO
+[Sunrise.jpg] "Here comes the sun..."
+[SunOnSummit.jpg] Sunrise hitting the summit of Rainier
+[FromDegePeak.jpg] View from Dege Peak
 
-TODO
+This hike requires you to do something unnatural. Start at Sunrise, head 
+north up to Sourdough Ridge, but then turn your back on the stunning summit 
+views and hike <i>away</i> from the mountain. The 360 degree views from Dege 
+Peak are totally worth it though. Craggy volcanic rock formations and 
+panoramic vistas in a condensed, easy-to-access format.
+
+Bonus points if you have the mental fortitude to set your alarm clock for 
+crazy early and arrive at Sunrise before the actual sun has risen. I've done 
+this twice now, and both times it was an experience I'll never forget.
+
+Dege Peak can also be reached via a trail from Sunrise Point to the east.

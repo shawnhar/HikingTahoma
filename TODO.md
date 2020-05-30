@@ -1,7 +1,6 @@
 * Burroughs Mountain
 * Carbon Glacier
 * Carbon River to Ipsut Falls
-* Dege Peak
 * Glacier Basin
 * Glacier Basin / Burroughs Loop
 * Grand Park from Sunrise
