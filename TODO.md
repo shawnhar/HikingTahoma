@@ -13,7 +13,6 @@
 * Longmire to Reflection Lakes
 * Mildred Point via Rampart Ridge
 * Mowich Lake Snowshoe
-* Panorama Point and Skyline Trail
 * Paradise Glacier
 * Rampart Ridge Loop
 * Spray Park
