@@ -1,3 +1,6 @@
+# Site
+* Calibrate difficulty ratings
+
 # Northwest
 * Carbon Glacier
 * Carbon River to Ipsut Falls
