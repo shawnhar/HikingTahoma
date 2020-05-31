@@ -16,6 +16,3 @@
 * Mildred Point via Rampart Ridge
 * Rampart Ridge Loop
 * Van Trump Park and Mildred Point via Comet Falls
-
-# Other
-* Summerland and Panhandle Gap
