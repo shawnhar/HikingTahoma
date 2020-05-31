@@ -1,6 +1,5 @@
 * Carbon Glacier
 * Carbon River to Ipsut Falls
-* Glacier Basin / Burroughs Loop
 * Grand Park from Sunrise
 * Green Lake
 * Indian Henry's from Kautz Creek
