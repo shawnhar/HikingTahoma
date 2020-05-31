@@ -1,11 +1,39 @@
 Grand Park from Sunrise
-moderate
-todo todo todo
+strenuous
+14 2780 6800
 2019
 
-[BearGrass.jpg] TODO
-[BerkeleyPark.jpg] TODO
-[Elk.jpg] TODO
-[GrandPark.jpg] TODO
+[BerkeleyPark.jpg] Descending through Berkeley Park
+[BearGrass.jpg] Bear grass along the climb toward Grand Park
+[GrandPark.jpg] Rainier view from Grand Park
+[Elk.jpg] A family of elk runs across Grand Park
 
-TODO
+Grand Park is a unique geological formation created by [something mumble 
+lava flow ok I admit I don't really know]. It's a large (1 mile by 0.5 mile) 
+open space, perfectly flat and devoid of trees. It looks manicured, like a 
+Jane Austen character might appear at any moment taking their promenade 
+around the manor grounds.
+
+At the right time of year this park is full of wildflowers. When the weather 
+cooperates it provides beautifully framed Rainier summit views. It's also 
+famous for wildlife sightings (in my case, a family of elk).
+
+The hike starts Sunrise. Head along Sourdough Ridge to Frozen Lake, then 
+along a section of the Wonderland Trail through a desolate alpine tundra 
+landscape below the cliffs of Burroughs Mountain. Slightly under a mile from 
+Frozen Lake, turn north onto the Northern Loop trail, which descends through 
+the delightful and lush Berkeley Park. Here there are wildflowers earlier in 
+the year, berries later on, and a correspondingly good chance of seeing 
+bears. The trail parallels the babbling Lodi Creek, eventually dropping 
+below the treeline near the Berkeley Park backcountry campsite. Be sure to 
+refill waterbottles before leaving Lodi Creek, as there is no reliable water 
+source at Grand Park. After more descent through forest, the trail climbs 
+through an area that was overflowing with ridiculous amounts of bear grass 
+when I hiked it. Finally the forest gives way to meadows, with a spur trail 
+to the right taking you into the center of Grand Park.
+
+(if you go left here instead, that's the Northern Loop, which is a story for 
+another day)
+
+You can also reach Grand Park from the north via Lake Eleanor, which is 
+shorter but less scenic than the route I took from Sunrise.

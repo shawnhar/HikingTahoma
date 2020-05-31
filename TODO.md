@@ -15,5 +15,4 @@
 * Van Trump Park and Mildred Point via Comet Falls
 
 # Other
-* Grand Park from Sunrise
 * Summerland and Panhandle Gap
