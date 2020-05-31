@@ -1,14 +1,19 @@
+# Northwest
 * Carbon Glacier
 * Carbon River to Ipsut Falls
-* Grand Park from Sunrise
 * Green Lake
+* Mowich Lake Snowshoe
+* Spray Park
+* Spray Park Loop
+* Tolmie Peak
+
+# Longmire
 * Indian Henry's from Kautz Creek
 * Indian Henry's from Longmire
 * Mildred Point via Rampart Ridge
-* Mowich Lake Snowshoe
 * Rampart Ridge Loop
-* Spray Park
-* Spray Park Loop
-* Summerland and Panhandle Gap
-* Tolmie Peak
 * Van Trump Park and Mildred Point via Comet Falls
+
+# Other
+* Grand Park from Sunrise
+* Summerland and Panhandle Gap
