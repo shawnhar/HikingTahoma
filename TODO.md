@@ -1,6 +1,5 @@
 * Carbon Glacier
 * Carbon River to Ipsut Falls
-* Glacier Basin
 * Glacier Basin / Burroughs Loop
 * Grand Park from Sunrise
 * Green Lake
