@@ -3,12 +3,14 @@ moderate to hard (depending on route)
 9.8 2880 6650
 older
 
-[Trail.jpg] Heading upward along the trail to Glacier Basin
-[GlacierBasin.jpg] Glacier Basin, just past the campsite, on a day with too much cloud to see the peaks that surround it
-[Moraine.jpg] Further up Glacier Basin, following the climbers trail along a glacial moraine
-[InterGlacier.jpg] Up close and personal with the Inter Glacier
-[EmmonsGlacier.jpg] Snout of the Emmons Glacier, viewed from the Emmons Moraine side spur
+[EmmonsMoraine.jpg] Along the Emmons Moraine side spur (moraine on the right, glacier to the left)
+[EmmonsGlacier.jpg] Snout of the Emmons Glacier
 [EmmonsMeltwater.jpg] Unnamed lake filled and colored by glacial meltwater
+[Trail.jpg] Heading upward along the trail
+[GlacierBasin.jpg] The official trail ends at the entrance to Glacier Basin, but don't stop here!
+[GlacierBasinLookingBack.jpg] Looking back downhill from the middle of Glacier Basin
+[GlacierBasinFurtherUp.jpg] Further up Glacier Basin, following the climbers trail past a small moraine, with the Inter Glacier visible at the top left
+[InterGlacier.jpg] Up close and personal with the Inter Glacier
 
 This hike is reported elsewhere as being significantly shorter than the 
 numbers I'm giving above. Usually more like 6 miles with 1600' elevation 
@@ -18,27 +20,27 @@ That's what happens if you start at the White River campsite, hike up
 alongside the Inter Fork of the White River, and turn around at the 'End of 
 Maintained Trail' sign by the Glacier Basin backcountry camp. It's a 
 pleasant enough hike, through varied forest with occasional more open views, 
-and the high basin that you enter at the end of the trail is quite beautiful.
+and the high basin at the end of the trail is quite beautiful.
 
-You're really missing the point if this is all you hike, though. Far greater 
-rewards are to be had by going further.
+You're really missing the point if this is all you do here, though. Far 
+greater rewards are to be had by going further.
 
-First off, a mile from the trailhead there's a side spur to the left 
-signposted Emmons Moraine. This adds 2 miles and 500' elevation gain, and is 
-well worth taking. Emmons Glacier is a monster (largest surface area of any 
-glacier in the contiguous United States!) and this is a great place to see 
-it from. You can usually also see a lake filled by its meltwater, which is 
-colored turquoise by suspended glacial silt. I find it amazing to think how 
-this water was only recently liberated from hundreds of years deep freeze 
-within a glacier, during which time it was grinding this rock down to an 
-ever finer grade of silt.
+A mile from the trailhead there's a side spur to the left signposted Emmons 
+Moraine. This adds 2 miles and 500' elevation gain, and is well worth 
+taking. Emmons Glacier is a monster (largest surface area of any glacier in 
+the contiguous United States!) and this is the perfect place to see it from. 
+You can usually also see a lake filled by Emmons meltwater, which is colored 
+turquoise by suspended glacial silt. I find it amazing to think how this 
+water was only recently liberated from hundreds of years of deep freeze 
+within a glacier, during which time it was slowly grinding rock down to ever 
+finer grades of silt.
 
-Better still, when you reach the end of the official trail at the entrance 
+Better still, after you reach the end of the official trail at the entrance 
 to Glacier Basin, an unofficial but easy to follow climbers trail continues 
-upward through the basin. It ascends a glacial moraine to the base of the 
-Inter Glacier, at which point this becomes a climbing route to the summit 
-which requires special equipment and skills. Don't venture onto the glacier 
-if you lack these, but do continue up the basin as far as you want. It's 
-super cool, my favorite part of this trail.
+upward through the basin. It passes a small moraine on its way to the base 
+of the Inter Glacier, at which point it becomes a summit climbing route 
+requiring special equipment and skills. Don't venture onto the glacier if 
+you lack these, but do continue up the basin as far as you want. It's super 
+cool: my favorite part of this trail.
 
 The Glacier Basin trail also forms part of the [GlacierBasinLoop].
