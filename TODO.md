@@ -1,4 +1,3 @@
-* Burroughs Mountain
 * Carbon Glacier
 * Carbon River to Ipsut Falls
 * Glacier Basin

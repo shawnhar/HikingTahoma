@@ -1,12 +1,52 @@
 Burroughs Mountain
-moderate
-todo todo todo
+moderate to hard
+9.2 2840 7800
 older
 
-[AncientLava.jpg] TODO
-[Burroughs.jpg] TODO
-[Meadows.jpg] TODO
-[MorningLight.jpg] TODO
-[Summit.jpg] TODO
+[MorningLight.jpg] Otherworldly mountain in the early morning light
+[Burroughs.jpg] Burroughs Mountain
+[AncientLava.jpg] Old lava flows created dramatic rock formations
+[Summit.jpg] The summit felt so close you could almost reach out and touch it
+[Meadows.jpg] Meadows along the southerly route option
 
-TODO
+I have yet to hike on the Moon, but the otherworldly top of Burroughs Mountain 
+is close to how I imagine that might feel. It's a giant ridge formed by an 
+ancient lava flow, high on the northeast flank of Rainier. The combination of 
+altitude and rain shadow dryness creates a fragile alpine tundra (it's extra 
+important to stay on the trail here, to avoid damaging plants that grow very 
+slowly in this harsh environment!) with barren areas of dusty volcanic rock and 
+pumice.
+
+There are three separate summits along the ridge. The figures shown above are 
+for Third Burroughs, but many people choose to turn around at Second Burroughs 
+instead, cutting 3.2 miles and 1300' of climbing.
+
+From the trailhead at Sunrise you have multiple route options. Take the high 
+road, or the low road, or go one way and come back the other to make a partial 
+loop.
+
+For the (northerly) high road, take your choice of several trails to the five 
+way junction by Frozen Lake, then follow the one signposted Burroughs Mountain. 
+This is a steep and potentially dangerous traverse across the north side of 
+First Burroughs, often snow covered until late in the summer. Watch your 
+footing and turn back if it's icy. The green of Berkeley Park, below you to the 
+north, makes a sharp contrast with the volcanic rock formations you are hiking 
+over.
+
+For the (southerly) low road, head west from Sunrise, then turn south onto a 
+short section of the Wonderland, then west again near Shadow Lake. This route 
+is slightly longer, trading the dramatic rocks of the northerly option for lush 
+meadows.
+
+These two routes meet up shortly past First Burroughs, after which the combined 
+trail heads up the ridge to Second Burroughs. This is a wide plateau surrounded 
+by a circle of rocks, with a superb view of Rainier's summit.
+
+If your legs and lungs have enough juice left, the trail continues downhill and 
+then back up again (plus some) to Third Burroughs. At this point the summit 
+views get truly silly, and you'll start thinking the top of Rainier seems so 
+close, surely another half hour and you could just nip on up there? Then you'll 
+get distracted gazing down onto the Winthrop Glacier, 2000 vertical feet below 
+you.
+
+This trail also forms part of the [GlacierBasinLoop].
