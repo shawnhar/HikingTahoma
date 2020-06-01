@@ -1,12 +1,64 @@
 Indian Henry's from Longmire
-moderate
-todo todo todo
+strenuous
+12 3420 5370
 older
 
-[KautzCreek.jpg] TODO
-[NearSquawLake.jpg] TODO
-[NearTheCabin.jpg] TODO
-[PatrolCabin.jpg] TODO
-[PyramidCreek.jpg] TODO
+[KautzCreek.jpg] Erosion along Kautz Creek
+[PyramidCreek.jpg] Bridge over Pyramid Creek
+[NearSquawLake.jpg] Water is everywhere near Squaw Lake
+[NearTheCabin.jpg] Lake near Indian Henry's
+[PatrolCabin.jpg] The Little Patrol Cabin That Could, at Indian Henry's Hunting Grounds
 
-TODO
+For me at least, Indian Henry's Hunting Grounds is a place of romance and 
+mystery.
+
+It's on the remote west side of Mount Rainier, which is largely accessible only 
+to backpackers. This is one of the few reasonable day hike destinations between 
+Longmire and Mowich Lake.
+
+It's also the first segment of the Wonderland Trail to be experienced by many 
+backpackers, as clockwise-starting-at-Longmire is the most popular itinerary. I 
+find it impossible to hike this trail without imagining the many Wonderland 
+adventures that have started here, and dreaming of the day when I too will take 
+on that epic challenge. As the trail hits its first serious uphill, I think of 
+the countless backpackers who have settled into this first challenge, or 
+perhaps found themselves wondering, did I really need to bring that extra 
+foldable camp chair? :-)
+
+And then there's the history. The destination of this hike is named after a 
+Native American guide who assisted early white folks including John Muir, James 
+Longmire and Philemon van Trump. His name was So-To-Lick, not Henry. He was 
+most likely Nisqually, Cowlitz or Klickitat: definitely not from India. He may 
+well have hunted here, but there were also rumors that he had a secret gold 
+mine in the area. No sign of it has ever been found though. The story that his 
+wives used to rest by the offensively named Squaw Lake while he hunted in the 
+meadows above doesn't sit well with my modern sensibilities, plus who in their 
+right mind would choose to rest there? It's pretty and all, but SO many 
+mosquitos...
+
+Anyways. The trail starts at Longmire: best to park in the lot to the right of 
+the road shortly after the main Longmire complex. Cross the road, and head 
+north along the Wonderland Trail signposted Pyramid Creek and Devils Dream (ah, 
+the romance of these names). Climb up to Rampart Ridge, ignoring the Van Trump 
+trail turnoff on the right and Rampart Ridge trail on the left. Descend to the 
+Kautz Creek river valley, which (each time I've been here at least) is a small 
+trickle in the middle of a giant swathe of destruction that testifies to how 
+not-small it can become when in the right mood. Follow cairns to find your way 
+across the valley floor, then pass Pyramid Creek Camp and the use the log 
+bridges to cross Pyramid Creek. Now comes a serious climb, switchbacking up 
+through forest, crossing Hornpipe Creek, switchbacking up some more through 
+different forest, and eventually arriving at Devils Dream Camp, which turns out 
+to be just a few flat spaces to pitch tents in the middle of the forest.
+
+Shortly past this camp, though, things get interesting. Views start to open up 
+at Squaw Lake, which is a lovely area of trees and water and frogs and 
+mosquitos. A little more climbing, and you arrive at Indian Henry's Hunting 
+Grounds. This is an area of open meadow, containing a historic patrol cabin 
+(built in 1915, and the porch is still a great place to eat when it's raining) 
+framed in front of a Rainier perspective that you just can't get anywhere else.
+
+If you have any gumption left, continue 0.2 miles to a turnoff on the right, 
+which is a 0.5 mile spur to the photogenic Mirror Lakes.
+
+Indian Henry's Hunting Grounds can also be reached via 
+[IndianHenrysFromKautzCreek].

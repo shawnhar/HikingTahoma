@@ -12,4 +12,3 @@
 
 # Longmire
 * Indian Henry's from Kautz Creek
-* Indian Henry's from Longmire
