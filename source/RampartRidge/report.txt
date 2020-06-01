@@ -1,18 +1,28 @@
 Rampart Ridge Loop
-moderate
-todo todo todo
+easy
+4.8 1470 4100
 2019
 
-[Viewpoint.jpg] TODO
+[Viewpoint.jpg] View from the open section along Rampart Ridge
 
-I hiked the Rampart Ridge loop in a clockwise direction, crossed over the Wonderland intersection, along the Van Trump trail to Mildred Point, back down Van Trump trail, and down the Wonderland to Longmire.   Total about 12 miles and 3,000ish elevation gain. Strangely WTA appears to be lacking an entry for the Van Trump trail connecting Wonderland and Mildred Point, so I'm unable to tag this report entirely correctly.
+Rampart Ridge is a straightforward loop hike starting from Longmire. Its 
+eastern side is also the start of the [IndianHenrysFromLongmire] Wonderland 
+Trail section, plus [MildredPoint].
 
-Much less snow than I was expecting.  The Rampart Ridge loop is entirely snow free!   Patchy snow started about halfway from Wonderland to Mildred Point, becoming deep in the last mile.  Good boot path, easily hiked without snowshoes and I didn't bother to put my spikes on.
+Most of the trail is through forest, which is splendidly lush and 
+rainforesty at the lower elevations. Along the way there's a nice overlook 
+of the buildings at Longmire, and a short open section with a great view up 
+the valley of Kautz Creek toward Rainier's summit. I recommend hiking the 
+loop in a clockwise direction, so you'll be facing toward the mountain at 
+this point.
 
-Compared to the more typical way to reach Mildred Point via Comet falls, this route is:
+Due to its lower altitude, this hike is sometimes accessible during the 
+off-season when higher trails are snowed in. It also makes a good snowshoe 
+route: just beware avalanche risk across the short open section.
 
-Longer
-More elevation gain
-Less pretty stuff to look at along the way
-Does not cross any avalanche chutes (which is a major issue for the Comet falls route in winter)
-This was my first time doing the Rampart Ridge loop.  It should absolutely be hiked in a clockwise direction, so you're facing all the best views of the mountain.
+The start of the Rampart Ridge trail doubles as the beginning of the 2/3 
+mile Trail of the Shadows, which circles around a marsh past several mineral 
+springs and remnants of the historical Longmire Springs Hotel. This was 
+constructed in 1890 before the creation of the National Park, and largely 
+dismantled in 1920. Leftovers include an old log cabin, and rock walls built 
+around several of the hot springs.
