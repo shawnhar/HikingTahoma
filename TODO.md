@@ -13,4 +13,3 @@
 # Longmire
 * Indian Henry's from Kautz Creek
 * Indian Henry's from Longmire
-* Van Trump Park and Mildred Point via Comet Falls
