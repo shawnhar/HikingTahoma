@@ -1,21 +1,28 @@
 Mildred Point via Rampart Ridge
-moderate
-todo todo todo
+hard
+8.5 3350 5900
 2019
 
-[FinalClimb.jpg] TODO
-[ForestPath.jpg] TODO
-[MildredPoint.jpg] TODO
-[SnowyPath.jpg] TODO
+[ForestPath.jpg] Most of this trail is through forest
+[SnowyPath.jpg] Views started to open up as I reached the snow
+[FinalClimb.jpg] Looking back down the final climb toward Mildred Point
+[MildredPoint.jpg] End of the trail at Mildred Point
 
-I hiked the Rampart Ridge loop in a clockwise direction, crossed over the Wonderland intersection, along the Van Trump trail to Mildred Point, back down Van Trump trail, and down the Wonderland to Longmire.   Total about 12 miles and 3,000ish elevation gain. Strangely WTA appears to be lacking an entry for the Van Trump trail connecting Wonderland and Mildred Point, so I'm unable to tag this report entirely correctly.
+This is an alternative way to reach Mildred Point, longer and less scenic than 
+the more common [VanTrumpPark] route, but with the advantage of avoiding the 
+avalanche chutes which make the trail to Comet Falls dangerous in snowy 
+conditions. I hiked it in October, when there was snow at the top but most of 
+the way up was still bare.
 
-Much less snow than I was expecting.  The Rampart Ridge loop is entirely snow free!   Patchy snow started about halfway from Wonderland to Mildred Point, becoming deep in the last mile.  Good boot path, easily hiked without snowshoes and I didn't bother to put my spikes on.
+Starting at Longmire, head north along the Wonderland Trail (which is also part 
+of [IndianHenrysFromLongmire] and [RampartRidge]). At the top of Rampart Ridge, 
+turn right onto the Van Trump Trail and hike up a forested ridge for 2.5 miles. 
+Views open up in the last quarter mile, after which you turn left onto a spur 
+that climbs steeply to Mildred Point.
 
-Compared to the more typical way to reach Mildred Point via Comet falls, this route is:
+Be sure to stop walking when you reach Mildred Point, because this is a steep 
+drop off! And beware of cornices near the edge if you visit here in the snow.
 
-Longer
-More elevation gain
-Less pretty stuff to look at along the way
-Does not cross any avalanche chutes (which is a major issue for the Comet falls route in winter)
-This was my first time doing the Rampart Ridge loop.  It should absolutely be hiked in a clockwise direction, so you're facing all the best views of the mountain.
+For a longer hike you could continue past the Mildred Point spur, up into Van 
+Trump Park. Or, if you can arrange a car shuttle, you could combine this with 
+the Comet Falls route (the two trailheads are separated by 4 miles of road).
