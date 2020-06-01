@@ -9,6 +9,3 @@
 * Spray Park
 * Spray Park Loop
 * Tolmie Peak
-
-# Longmire
-* Indian Henry's from Kautz Creek
