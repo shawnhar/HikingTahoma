@@ -94,6 +94,14 @@ a:link, a:visited {
   padding: 12;
 }
 
+.description li {
+  margin-top: 12;
+}
+
+.tight li {
+  margin-top: 0;
+}
+
 .photos {
   width: 600;
 }

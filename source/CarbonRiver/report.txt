@@ -1,17 +1,73 @@
 Carbon River to Ipsut Falls
-moderate
-todo todo todo
+easy (but long)
+10.3 690 2380
 2019
 
-[CarbonRiver.jpg] TODO
-[ChenuisFalls.jpg] TODO
-[MineEntrance.jpg] TODO
-[Rainforest.jpg] TODO
+[CarbonRiver.jpg] Early light along the Carbon River
+[Rainforest.jpg] All the shades of green at once in a temperate rainforest
+[ChenuisFalls.jpg] Chenuis Falls
+[MineEntrance.jpg] Abandoned mine entrance - or is it Gollum's cave?
 
-I hiked from the Carbon River entrance up to the foot of the Carbon Glacier, and across the suspension bridge to Carbon River Camp where I had lunch, then back to Ipsut Creek Camp where I spent the night.  Perfect weather, and the trails were all in good condition with well maintained bridges where needed (and in many cases where not, as water flow wasn't particularly high this weekend).
+This used to be a road, leading to a car camp at Ipsut Creek. But the Carbon 
+River is subtle and quick to anger. Over many years it fought a series of 
+skirmishes with the road, winning some, losing others, until during the 
+floods of 2006 the river achieved a resounding victory that settled the 
+issue once and for all. The road was defeated! The Park Service gave up, 
+declaring this to be a trail henceforth, and Ipsut Creek was converted to a 
+backcountry campsite.
 
-I've seen many comments about the lower section of this trail (which used to be a road up until the 2006 floods) being boring, but cannot agree.  This is not panoramic vistas, but gorgeous lush rainforest.  Lovers of green will find much to appreciate here.  I found the stark contrasts between verdant foliage and the rocky destruction of the Carbon River valley particularly appealing.
+Interesting fact: although most mountain rivers erode their valleys ever 
+deeper over time, the glacier-fed rivers of Mount Rainier are undergoing a 
+process called aggradation, where their bed is <i>increasing</i> due to very 
+high amounts of sediment from all the rocks and silt that get mixed up with 
+glacier ice. This means the rivers are constantly braiding and changing 
+their path, which is not good news for anyone hoping to maintain a road next 
+to them.
 
-The first five miles of ex-road is fast hiking.  Higher up, gradient increases, speed decreases correspondingly, occasional views open up, and wildflowers are out near the glacier.  Saw a bear near the suspension bridge.
+I foolishly resisted exploring this area for years, thinking it's just a 
+road, and roads are boring. I could not have been more wrong! After the 
+first quarter mile the road is sufficiently eroded that it feels like an 
+unusually wide trail. There are intermittent views over the rocky Carbon 
+River valley, but that's not why you should come here. The reason to visit 
+is the TREES.
 
-Strongly recommend finding time for the side trip to Chenuis Falls - stunning!
+The high rainfall and low altitude of this area combine to create a lush 
+temperate rainforest, the closest thing to Fangorn Forest this side of the 
+Olympic Mountains. There are nursery logs, and giant ferns, and 
+moss-festooned branches, and so many shades of green that your eyes will 
+forget the existence of other colors. It's probably just in my head, but the 
+air even feels more oxygenated than usual. It puts a spring in my step and a 
+sparkle in my soul.
+
+The trail is long but level. Shortly past Ipsut Creek Camp (where the road 
+used to end, so the trail narrows after this point) a short spur to the 
+right leads to Ipsut Falls.
+
+There are three side trips (shown on the map above but not included in the 
+mileage) that can be added to this hike, or make worthy turnaround points 
+for shorter hikes:
+
+<ul>
+<li>
+Right by the trailhead, the concisely named Carbon River Rain Forest Nature 
+Trail is an easy (but worthwhile) 0.5 mile interpretive loop.
+</li>
+<li>
+One mile in, a sign on the right says 0.3 miles to Washington Milling and 
+Mining Company. This spur is short but very steep. It leads to an 
+exploratory copper mine that was never commercialized. You can look into the 
+mine entrance, but there's a grate to prevent venturing inside.
+</li>
+<li>
+3.5 miles in, turn left for a 0.2 mile spur that crosses the Carbon River to 
+Chenuis Falls. Assuming the footbridges are in, anyway. They wash away 
+often. It's quite a river, that Carbon!
+</li>
+</ul>
+
+Bicycles are allowed on the Carbon River trail (but not the side spurs) as 
+far as Ipsut Creek, if you're the sort of person who likes that sort of 
+thing.
+
+This trail also forms the first part of the [GreenLake] and [CarbonGlacier] 
+hikes.
