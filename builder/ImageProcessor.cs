@@ -67,7 +67,7 @@ namespace builder
             var yearColors = new Dictionary<string, Color>
             {
                 { "older", Color.FromArgb(0xFF, 0x00, 0x80, 0x00) },
-                { "2019",  Color.FromArgb(0xFF, 0x00, 0xFF, 0x00) },
+                { "2019",  Color.FromArgb(0xFF, 0x00, 0xD0, 0x00) },
                 { "2020",  Color.FromArgb(0xFF, 0xFF, 0xFF, 0x00) },
             };
 
@@ -123,7 +123,7 @@ namespace builder
                     drawingSession.FillRectangle(borderRect, Color.FromArgb(0x80, 0xB0, 0xB0, 0xB0));
                     drawingSession.DrawRectangle(borderRect, Colors.Gray);
 
-                    foreach (var year in hikesByYear)
+                    foreach (var year in hikesByYear.Reverse())
                     {
                         drawingSession.DrawText(year.Key, textRect, yearColors[year.Key], textFormat);
 
