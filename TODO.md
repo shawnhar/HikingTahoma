@@ -1,6 +1,5 @@
 # Site
 * Calibrate difficulty ratings
-* 3-line title formats poorly (see Van Trump Park)
 
 # Northwest
 * Carbon Glacier
