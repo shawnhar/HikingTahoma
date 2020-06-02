@@ -11,7 +11,7 @@ This loop combines the [GlacierBasin], [BurroughsMountain], and
 <ul>
 <li>Start at White River.</li>
 <li>Hike up the trail to Glacier Basin.</li>
-<li>Before reaching the Glacier Basin campsite, turn right onto a 1.5 mile connecting trail, climbing steeply to the saddle in between Second Burroughs and Third Burroughs.</li>
+<li>Before reaching Glacier Basin proper, turn right onto a 1.5 mile connecting trail, climbing steeply to the saddle in between Second Burroughs and Third Burroughs.</li>
 <li>Turn right onto the Burroughs Mountain trail, heading toward Sunrise.</li>
 <li>When this intersects the Wonderland Trail, pass Shadow Lake and drop steeply down the Wonderland back to White River.</li>
 </ul>
