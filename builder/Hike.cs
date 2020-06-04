@@ -16,15 +16,15 @@ namespace builder
         public string MaxElevation  { get; private set; }
         public string FirstHiked    { get; private set; }
 
+        public List<Photo> Photos { get; private set; }
+        public List<string> Descriptions { get; private set; }
+
         public string FolderName => Path.GetFileName(sourcePath);
         public string MapName => FolderName + "-map.jpg";
         public string MapThumbnail => FolderName + "-map-small.jpg";
         public string OverlayName => FolderName + "-overlay.png";
 
         string sourcePath;
-
-        List<Photo> photos;
-        List<string> descriptions;
 
         ImageProcessor imageProcessor;
 
@@ -71,21 +71,21 @@ namespace builder
                                  .SkipWhile(line => string.IsNullOrEmpty(line));
 
             // Set of photos in the form: [filename.jpg] description.
-            photos = remainder.TakeWhile(line => line.StartsWith('['))
+            Photos = remainder.TakeWhile(line => line.StartsWith('['))
                               .Select(ParsePhoto)
                               .ToList();
 
             // Rest of the file is a text description;
-            remainder = remainder.Skip(photos.Count)
+            remainder = remainder.Skip(Photos.Count)
                                  .SkipWhile(string.IsNullOrEmpty);
 
-            descriptions = new List<string>();
+            Descriptions = new List<string>();
 
             while (remainder.Any())
             {
                 var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
 
-                descriptions.Add(string.Join(' ', descs.Select(s => s.Trim())));
+                Descriptions.Add(string.Join(' ', descs.Select(s => s.Trim())));
 
                 remainder = remainder.Skip(descs.Count())
                                      .SkipWhile(string.IsNullOrEmpty);
@@ -106,7 +106,7 @@ namespace builder
 
         void ValidatePhotos()
         {
-            var photoNames = photos.Select(photo => photo.Filename);
+            var photoNames = Photos.Select(photo => photo.Filename);
 
             var jpegs = Directory.GetFiles(sourcePath, "*.jpg").Select(Path.GetFileName);
             
@@ -132,7 +132,7 @@ namespace builder
 
             Directory.CreateDirectory(outPath);
 
-            foreach (var photo in photos)
+            foreach (var photo in Photos)
             {
                 await WritePhoto(photo, outPath);
             }
@@ -172,7 +172,7 @@ namespace builder
 
                 writer.WriteLine("<div class=\"description\">");
 
-                foreach (var line in this.descriptions)
+                foreach (var line in this.Descriptions)
                 {
                     var expandedLinks = ExpandLinks(line, hikes);
 
@@ -185,7 +185,7 @@ namespace builder
 
                 int photoCount = 0;
 
-                foreach (var photo in this.photos)
+                foreach (var photo in this.Photos)
                 {
                     if ((photoCount & 1) == 0)
                     {
