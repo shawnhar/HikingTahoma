@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -58,6 +59,9 @@ namespace builder
             CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
             CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
             CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
+
+            // Debug .csv output can be pasted into Excel for analysis.
+            LogHikeLengthsAndDifficulties(hikes);
 
             return outFolder.Path;
         }
@@ -127,6 +131,15 @@ namespace builder
             writer.WriteLine("  <div class=\"subtitle\">Documenting my Rainier obsession</div>");
 
             writer.WriteLine("</div>");
+        }
+
+
+        void LogHikeLengthsAndDifficulties(IEnumerable<Hike> hikes)
+        {
+            foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
+            {
+                Debug.WriteLine("{0}, {1}, {2}, {3}", hike.HikeName, hike.Distance, hike.ElevationGain, hike.Difficulty);
+            }
         }
     }
 }
