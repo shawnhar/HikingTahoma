@@ -51,6 +51,7 @@
     </Compile>
     <Compile Include="Hike.cs" />
     <Compile Include="HikeMap.cs" />
+    <Compile Include="HikeSection.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

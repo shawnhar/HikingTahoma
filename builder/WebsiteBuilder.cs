@@ -100,7 +100,7 @@ namespace builder
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("  <li onMouseOver=\" document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                    writer.WriteLine("  <li onMouseOver=\"document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
                 }
 
                 writer.WriteLine("</ul>");
@@ -115,9 +115,8 @@ namespace builder
         {
             writer.WriteLine("<html>");
 
-            writer.WriteLine("<title> Hiking Tahoma: {0}</title>", title);
-
             writer.WriteLine("<head>");
+            writer.WriteLine("  <title>Hiking Tahoma: {0}</title>", title);
             writer.WriteLine("  <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
             writer.WriteLine("</head>");
 
