@@ -86,26 +86,28 @@ namespace builder
             {
                 WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
 
-                writer.WriteLine("<div class=\"map\">");
-                writer.WriteLine("  <img src=\"map.png\" width=\"{0}\" height=\"{1}\" />", mapW, mapH);
+                // Trails map.
+                writer.WriteLine("    <div class=\"map\">");
+                writer.WriteLine("      <img class=\"mapbase\" src=\"map.png\" width=\"{0}\" height=\"{1}\" />", mapW, mapH);
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("  <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" width=\"{2}\" height=\"{3}\" />", hike.FolderName, hike.OverlayName, mapW, mapH);
+                    writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" width=\"{2}\" height=\"{3}\" />", hike.FolderName, hike.OverlayName, mapW, mapH);
                 }
 
-                writer.WriteLine("</div>");
+                writer.WriteLine("    </div>");
 
-                writer.WriteLine("<ul class=\"hikelist\">");
+                // Trail names.
+                writer.WriteLine("    <ul class=\"hikelist\">");
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("  <li onMouseOver=\"document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                    writer.WriteLine("      <li onMouseOver=\"document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
                 }
 
-                writer.WriteLine("</ul>");
+                writer.WriteLine("    </ul>");
 
-                writer.WriteLine("</body>");
+                writer.WriteLine("  </body>");
                 writer.WriteLine("</html>");
             }
         }
@@ -115,24 +117,25 @@ namespace builder
         {
             writer.WriteLine("<html>");
 
-            writer.WriteLine("<head>");
-            writer.WriteLine("  <title>Hiking Tahoma: {0}</title>", title);
-            writer.WriteLine("  <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
-            writer.WriteLine("</head>");
+            writer.WriteLine("  <head>");
+            writer.WriteLine("    <title>Hiking Tahoma: {0}</title>", title);
+            writer.WriteLine("    <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
+            writer.WriteLine("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+            writer.WriteLine("  </head>");
 
-            writer.WriteLine("<body>");
+            writer.WriteLine("  <body>");
 
-            writer.WriteLine("<div class=\"title\">");
-
-            writer.WriteLine("  <div class=\"about\">");
-            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
-            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
-            writer.WriteLine("    <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
-            writer.WriteLine("  </div>");
-            writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
-            writer.WriteLine("  <div class=\"subtitle\">Documenting my Rainier obsession</div>");
-
-            writer.WriteLine("</div>");
+            writer.WriteLine("    <div class=\"fixedwidth\">");
+            writer.WriteLine("      <div class=\"title\">");
+            writer.WriteLine("        <div class=\"about\">");
+            writer.WriteLine("          <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
+            writer.WriteLine("          <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
+            writer.WriteLine("          <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
+            writer.WriteLine("        </div>");
+            writer.WriteLine("        <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
+            writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
+            writer.WriteLine("      </div>");
+            writer.WriteLine("    </div>");
         }
 
 

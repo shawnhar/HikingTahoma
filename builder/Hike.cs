@@ -166,32 +166,34 @@ namespace builder
             {
                 WebsiteBuilder.WriteHtmlHeader(writer, HikeName, "../");
 
-                writer.WriteLine("<table>");
-                writer.WriteLine("  <tr>");
-                writer.WriteLine("    <td>");
-                writer.WriteLine("      <a href=\"{0}\">", MapName);
-                writer.WriteLine("        <img src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
-                writer.WriteLine("      </a>");
-                writer.WriteLine("    </td>");
-                writer.WriteLine("    <td class=\"stats\">");
-                writer.WriteLine("      <p class=\"hikename\">{0}</p>", HikeName);
-                writer.WriteLine("      <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
-                writer.WriteLine("      <p class=\"detail\">{0} miles</p>", Distance);
-                writer.WriteLine("      <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
-                writer.WriteLine("      <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
-                writer.WriteLine("      <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
-                writer.WriteLine("    </td>");
-                writer.WriteLine("  </tr>");
-                writer.WriteLine("</table>");
+                writer.WriteLine("    <table>");
+                writer.WriteLine("      <tr>");
+                writer.WriteLine("        <td>");
+                writer.WriteLine("          <a href=\"{0}\">", MapName);
+                writer.WriteLine("            <img class=\"hikemap\" src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
+                writer.WriteLine("          </a>");
+                writer.WriteLine("        </td>");
+                writer.WriteLine("        <td class=\"stats\">");
+                writer.WriteLine("          <p class=\"hikename\">{0}</p>", HikeName);
+                writer.WriteLine("          <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
+                writer.WriteLine("          <p class=\"detail\">{0} miles</p>", Distance);
+                writer.WriteLine("          <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
+                writer.WriteLine("          <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
+                writer.WriteLine("          <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
+                writer.WriteLine("        </td>");
+                writer.WriteLine("      </tr>");
+                writer.WriteLine("    </table>");
+
+                writer.WriteLine("    <div class=\"fixedwidth\">");
 
                 foreach (var section in Sections)
                 {
-                    writer.WriteLine("<div class=\"description\">");
+                    writer.WriteLine("      <div class=\"description\">");
 
                     // Section title?
                     if (!string.IsNullOrEmpty(section.Title))
                     {
-                        writer.WriteLine("  <p class=\"heading\">{0}</p>", section.Title);
+                        writer.WriteLine("        <p class=\"heading\">{0}</p>", section.Title);
                     }
 
                     // Section text.
@@ -199,15 +201,15 @@ namespace builder
                     {
                         var expandedLinks = ExpandLinks(line, hikes);
 
-                        writer.WriteLine("  <p>{0}</p>", expandedLinks);
+                        writer.WriteLine("        <p>{0}</p>", expandedLinks);
                     }
 
-                    writer.WriteLine("</div>");
+                    writer.WriteLine("      </div>");
 
                     // Photos.
                     if (section.Photos.Any())
                     {
-                        writer.WriteLine("<table class=\"photos\">");
+                        writer.WriteLine("      <table class=\"photos\">");
 
                         int photoCount = 0;
 
@@ -217,32 +219,33 @@ namespace builder
                             {
                                 if (photoCount > 0)
                                 {
-                                    writer.WriteLine("  </tr>");
+                                    writer.WriteLine("        </tr>");
                                 }
 
-                                writer.WriteLine("  <tr>");
+                                writer.WriteLine("        <tr>");
                             }
 
-                            writer.WriteLine("    <td>");
-                            writer.WriteLine("      <a href=\"{0}\">", photo.Filename);
-                            writer.WriteLine("        <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
-                            writer.WriteLine("        <p>{0}</p>", photo.Description);
-                            writer.WriteLine("      </a>");
-                            writer.WriteLine("    </td>");
+                            writer.WriteLine("          <td>");
+                            writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
+                            writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
+                            writer.WriteLine("              <p>{0}</p>", photo.Description);
+                            writer.WriteLine("            </a>");
+                            writer.WriteLine("          </td>");
 
                             photoCount++;
                         }
 
                         if (photoCount > 0)
                         {
-                            writer.WriteLine("  </tr>");
+                            writer.WriteLine("        </tr>");
                         }
 
-                        writer.WriteLine("</table>");
+                        writer.WriteLine("      </table>");
                     }
                 }
 
-                writer.WriteLine("</body>");
+                writer.WriteLine("    </div>");
+                writer.WriteLine("  </body>");
                 writer.WriteLine("</html>");
             }
         }

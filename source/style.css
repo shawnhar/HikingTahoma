@@ -4,12 +4,16 @@ body {
   color: #808080;
 }
 
+.fixedwidth {
+  width: 600;
+  max-width: 100%;
+}
+
 a:link, a:visited {
   color: #606060;
 }
 
 .title {
-  width: 560;
   padding-left: 20;
   padding-right: 20;
   padding-top: 4;
@@ -38,15 +42,24 @@ a:link, a:visited {
 }
 
 .map {
-  height: 520;
+  position: relative;
+  padding-bottom: 12;
 }
 
 .map img {
-  position: absolute;
+  max-width: 100%;
+  height: auto;
+  left: -1;
+  top: -1;
   border: 1px solid #95C0E0;
 }
 
+.mapbase {
+  position: relative;
+}
+
 .maplayer {
+  position: absolute;
   visibility: hidden;
 }
 
@@ -62,6 +75,20 @@ a:link, a:visited {
 
 .hikelist a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .hikemap {
+    width: 192;
+    height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .hikemap {
+    width: 128;
+    height: auto;
+  }
 }
 
 .stats {
@@ -80,17 +107,7 @@ a:link, a:visited {
   margin-bottom: 6;
 }
 
-.heading {
-  width: 600;
-  text-align: center;
-  font-size: 23px;
-  font-weight: bold;
-  margin-top: 40;
-  margin-bottom: 0;
-}
-
 .description {
-  width: 600;
   padding: 12;
 }
 
@@ -102,8 +119,12 @@ a:link, a:visited {
   margin-top: 0;
 }
 
-.photos {
-  width: 600;
+.heading {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 40;
+  margin-bottom: 0;
 }
 
 .photos td {
@@ -116,10 +137,31 @@ a:link, a:visited {
   border: 1px solid black;
 }
 
+@media (max-width: 480px) {
+  .photos img {
+    width: 160;
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .photos img {
+    width: 120;
+    height: auto;
+  }
+}
+
 .photos p {
   font-style: italic;
 }
 
 .photos a:link, a:visited {
   text-decoration: none;
+}
+
+.mugshot {
+  float: right;
+  padding: 23;
+  padding-right: 0;
+  max-width: 40%;
 }
