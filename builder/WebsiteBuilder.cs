@@ -125,8 +125,8 @@ namespace builder
             writer.WriteLine("<div class=\"title\">");
 
             writer.WriteLine("  <div class=\"about\">");
-            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br>");
-            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br>");
+            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
+            writer.WriteLine("    <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
             writer.WriteLine("    <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
             writer.WriteLine("  </div>");
             writer.WriteLine("  <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
