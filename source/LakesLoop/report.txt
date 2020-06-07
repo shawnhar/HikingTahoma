@@ -1,6 +1,7 @@
 Lakes Loop
 easy
 5.4 1450 5800
+none
 older
 
 [Tatoosh.jpg] A snowy hike south from Paradise, with the Tatoosh Range in the background

@@ -1,6 +1,7 @@
 Green Lake
 moderate
 9.1 1580 3230
+none
 2020
 
 [RangerFalls.jpg] Ranger Falls

@@ -1,6 +1,7 @@
 Rampart Ridge Loop
 easy
 4.8 1470 4100
+none
 2019
 
 [Viewpoint.jpg] View from the open section along Rampart Ridge

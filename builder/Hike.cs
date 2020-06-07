@@ -14,6 +14,7 @@ namespace builder
         public string Distance      { get; private set; }
         public string ElevationGain { get; private set; }
         public string MaxElevation  { get; private set; }
+        public string CampSites     { get; private set; }
         public string FirstHiked    { get; private set; }
 
         readonly List<HikeSection> Sections = new List<HikeSection>();
@@ -63,10 +64,13 @@ namespace builder
             ElevationGain = split[1];
             MaxElevation = split[2];
 
-            // Fourth line is when I first hiked it.
-            FirstHiked = lines[3];
+            // Fourth line is campsites along this trail.
+            CampSites = lines[3];
 
-            var remainder = lines.Skip(4)
+            // Fourth line is when I first hiked it.
+            FirstHiked = lines[4];
+
+            var remainder = lines.Skip(5)
                                  .SkipWhile(string.IsNullOrEmpty);
 
             while (remainder.Any())
@@ -181,6 +185,7 @@ namespace builder
                 writer.WriteLine("            <p class=\"detail\">{0} miles</p>", Distance);
                 writer.WriteLine("            <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
                 writer.WriteLine("            <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
+                writer.WriteLine("            <p class=\"detail\">Camps: {0}</p>", CampSites);
                 writer.WriteLine("            <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
                 writer.WriteLine("          </td>");
                 writer.WriteLine("        </tr>");

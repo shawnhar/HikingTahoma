@@ -1,6 +1,7 @@
 Glacier Basin
 moderate
 9.8 2880 6650
+White River, Glacier Basin
 older
 
 [EmmonsMoraine.jpg] Along the Emmons Moraine side spur (moraine on the right, glacier to the left)

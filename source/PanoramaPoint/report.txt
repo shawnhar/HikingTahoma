@@ -1,6 +1,7 @@
 Panorama Point and Skyline Trail
 moderate
 5.5 1850 7000
+none
 older
 
 [Tatoosh.jpg] Mount Adams peeking over the Tatoosh Range, right by the parking lot at Paradise

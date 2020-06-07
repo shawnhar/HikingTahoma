@@ -1,6 +1,7 @@
 Dege Peak
 easy
 4 1000 6950
+none
 older
 
 [Sunrise.jpg] "Here comes the sun..."
