@@ -1,7 +1,7 @@
 body {
   font-family:Tahoma;
   background-color: #D0D0D0;
-  color: #808080;
+  color: #606060;
 }
 
 .fixedwidth {
@@ -19,6 +19,7 @@ a:link, a:visited {
   padding-top: 4;
   padding-bottom: 8;
   margin-bottom: 20;
+  min-height: 55;
   background-color: #95C0E0;
 }
 
@@ -27,11 +28,18 @@ a:link, a:visited {
   font-weight: bold;
 }
 
+@media (max-width: 480px) {
+  .backlink {
+    font-size: 18px;
+  }
+}
+
 .about {
   font-size: 13px;
   font-style: italic;
   line-height: 1.4;
   margin-top: 2;
+  margin-left: 8;
   float: right;
 }
 
@@ -79,12 +87,12 @@ a:link, a:visited {
 
 @media (max-width: 480px) {
   .hikemap {
-    width: 192;
+    width: 160;
     height: auto;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .hikemap {
     width: 128;
     height: auto;
@@ -92,14 +100,23 @@ a:link, a:visited {
 }
 
 .stats {
-  width: 300;
   padding-left: 32;
 }
 
 .stats .hikename {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 20;
+}
+
+@media (max-width: 480px) {
+  .stats {
+    padding-left: 16;
+  }
+
+  .stats .hikename {
+    font-size: 16px;
+  }
 }
 
 .stats .detail {
@@ -137,7 +154,7 @@ a:link, a:visited {
   border: 1px solid black;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .photos img {
     width: 160;
     height: auto;

@@ -166,25 +166,25 @@ namespace builder
             {
                 WebsiteBuilder.WriteHtmlHeader(writer, HikeName, "../");
 
-                writer.WriteLine("    <table>");
-                writer.WriteLine("      <tr>");
-                writer.WriteLine("        <td>");
-                writer.WriteLine("          <a href=\"{0}\">", MapName);
-                writer.WriteLine("            <img class=\"hikemap\" src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
-                writer.WriteLine("          </a>");
-                writer.WriteLine("        </td>");
-                writer.WriteLine("        <td class=\"stats\">");
-                writer.WriteLine("          <p class=\"hikename\">{0}</p>", HikeName);
-                writer.WriteLine("          <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
-                writer.WriteLine("          <p class=\"detail\">{0} miles</p>", Distance);
-                writer.WriteLine("          <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
-                writer.WriteLine("          <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
-                writer.WriteLine("          <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
-                writer.WriteLine("        </td>");
-                writer.WriteLine("      </tr>");
-                writer.WriteLine("    </table>");
-
                 writer.WriteLine("    <div class=\"fixedwidth\">");
+
+                writer.WriteLine("      <table>");
+                writer.WriteLine("        <tr>");
+                writer.WriteLine("          <td>");
+                writer.WriteLine("            <a href=\"{0}\">", MapName);
+                writer.WriteLine("              <img class=\"hikemap\" src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
+                writer.WriteLine("            </a>");
+                writer.WriteLine("          </td>");
+                writer.WriteLine("          <td class=\"stats\">");
+                writer.WriteLine("            <p class=\"hikename\">{0}</p>", HikeName);
+                writer.WriteLine("            <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
+                writer.WriteLine("            <p class=\"detail\">{0} miles</p>", Distance);
+                writer.WriteLine("            <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
+                writer.WriteLine("            <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
+                writer.WriteLine("            <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
+                writer.WriteLine("          </td>");
+                writer.WriteLine("        </tr>");
+                writer.WriteLine("      </table>");
 
                 foreach (var section in Sections)
                 {
