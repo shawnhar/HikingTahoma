@@ -1,5 +1,6 @@
 ﻿using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Effects;
+using System;
 using System.Numerics;
 using System.Threading.Tasks;
 using Windows.Foundation;
@@ -35,8 +36,8 @@ namespace builder
             const int mapSize = 1024;
             const int thumbnailSize = 512;
 
-            const int mapDilation = 6;
-            const int thumbnailDilation = 6;
+            const int mapDilation = 4;
+            const int thumbnailDilation = 5;
 
             const float padding = 0.25f;
 
@@ -60,6 +61,18 @@ namespace builder
 
             bounds.Width *= 1 + padding * 2;
             bounds.Height *= 1 + padding * 2;
+
+            // Don't exceed the total map size.
+            if (bounds.Width > myMap.Size.Width || bounds.Height > myMap.Size.Height)
+            {
+                var shrink = Math.Min(myMap.Size.Width / bounds.Width, myMap.Size.Height / bounds.Height);
+
+                bounds.X += bounds.Width * (1 - shrink) / 2;
+                bounds.Y += bounds.Height * (1 - shrink) / 2;
+
+                bounds.Width *= shrink;
+                bounds.Height *= shrink;
+            }
 
             // Clamp to within the image.
             if (bounds.X < 0)
