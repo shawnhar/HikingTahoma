@@ -1,6 +1,9 @@
 ﻿using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Effects;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
 using Windows.Foundation;
@@ -12,9 +15,13 @@ namespace builder
     {
         readonly ImageProcessor imageProcessor;
 
-        CanvasBitmap myMap;
+        readonly Dictionary<string, CanvasBitmap> myMaps = new Dictionary<string, CanvasBitmap>();
+
+        CanvasBitmap combinedMap;
 
         Rect usedBounds;
+
+        public IEnumerable<string> YearsHiked => myMaps.Keys;
 
 
         public HikeMap(ImageProcessor imageProcessor)
@@ -23,11 +30,45 @@ namespace builder
         }
 
 
-        public async Task Load(string sourceFolder)
+        public async Task Load(string sourceFolder, string firstHiked)
         {
-            myMap = await imageProcessor.LoadImage(sourceFolder, "map.png");
-        
-            usedBounds = GetUsedBounds(myMap);
+            myMaps[firstHiked] = await imageProcessor.LoadImage(sourceFolder, "map.png");
+
+            // Some hikes have additional map overlays, if pieces of them were first hiked in a different year from the main trail.
+            var layerFilenames = Directory.GetFiles(sourceFolder, "map-*.png").Select(Path.GetFileName);
+
+            foreach (var layerFilename in layerFilenames)
+            {
+                var year = Path.GetFileNameWithoutExtension(layerFilename).Substring(4);
+                var layerImage = await imageProcessor.LoadImage(sourceFolder, layerFilename);
+
+                myMaps.Add(year, layerImage);
+            }
+
+            // If there are multiple layers, flatten them to create a combined map.
+            if (myMaps.Count == 1)
+            {
+                combinedMap = myMaps[firstHiked];
+            }
+            else
+            {
+                var size = myMaps[firstHiked].SizeInPixels;
+                var combined = new CanvasRenderTarget(imageProcessor.Device, size.Width, size.Height, 96);
+
+                using (var ds = combined.CreateDrawingSession())
+                {
+                    ds.Clear(Colors.Transparent);
+
+                    foreach (var layer in myMaps.Values)
+                    {
+                        ds.DrawImage(layer);
+                    }
+                }
+
+                combinedMap = combined;
+            }
+
+            usedBounds = GetUsedBounds(combinedMap);
         }
 
 
@@ -63,9 +104,9 @@ namespace builder
             bounds.Height *= 1 + padding * 2;
 
             // Don't exceed the total map size.
-            if (bounds.Width > myMap.Size.Width || bounds.Height > myMap.Size.Height)
+            if (bounds.Width > combinedMap.Size.Width || bounds.Height > combinedMap.Size.Height)
             {
-                var shrink = Math.Min(myMap.Size.Width / bounds.Width, myMap.Size.Height / bounds.Height);
+                var shrink = Math.Min(combinedMap.Size.Width / bounds.Width, combinedMap.Size.Height / bounds.Height);
 
                 bounds.X += bounds.Width * (1 - shrink) / 2;
                 bounds.Y += bounds.Height * (1 - shrink) / 2;
@@ -81,11 +122,11 @@ namespace builder
             if (bounds.Y < 0)
                 bounds.Y = 0;
 
-            if (bounds.Right > myMap.Size.Width)
-                bounds.X = myMap.Size.Width - bounds.Width;
+            if (bounds.Right > combinedMap.Size.Width)
+                bounds.X = combinedMap.Size.Width - bounds.Width;
 
-            if (bounds.Bottom > myMap.Size.Height)
-                bounds.Y = myMap.Size.Height - bounds.Height;
+            if (bounds.Bottom > combinedMap.Size.Height)
+                bounds.Y = combinedMap.Size.Height - bounds.Height;
 
             // Write two sizes of map.
             await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName);
@@ -155,7 +196,7 @@ namespace builder
                         Source = new CropEffect
                         {
                             SourceRectangle = bounds,
-                            Source = myMap,
+                            Source = combinedMap,
                         },
                     },
                 },
@@ -193,11 +234,11 @@ namespace builder
         }
 
 
-        public ICanvasEffect GetTrailOverlay(Color color, int dilation)
+        public ICanvasEffect GetTrailOverlay(Color color, int dilation, string year = null)
         {
             return new Transform2DEffect
             {
-                TransformMatrix = Matrix3x2.CreateScale((float)imageProcessor.MapWidth / (float)myMap.SizeInPixels.Width),
+                TransformMatrix = Matrix3x2.CreateScale((float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width),
                 InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                 Source = new LinearTransferEffect
@@ -219,7 +260,7 @@ namespace builder
                         Source = new CropEffect
                         {
                             SourceRectangle = usedBounds,
-                            Source = myMap,
+                            Source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year],
                         },
                     },
                 },

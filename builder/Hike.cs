@@ -45,7 +45,7 @@ namespace builder
             ParseReport();
             ValidatePhotos();
 
-            await Map.Load(sourcePath);
+            await Map.Load(sourcePath, FirstHiked);
         }
 
 

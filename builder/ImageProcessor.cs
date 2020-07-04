@@ -80,7 +80,8 @@ namespace builder
 
                     // Overlay trail routes, sorted by year.
                     var hikesByYear = from hike in hikes
-                                      group hike by hike.FirstHiked into years
+                                      from year in hike.Map.YearsHiked
+                                      group hike by year into years
                                       orderby char.IsDigit(years.Key[0]) ? years.Key : "0" descending
                                       select years;
 
@@ -95,7 +96,7 @@ namespace builder
 
                         foreach (var hike in year)
                         {
-                            var overlay = hike.Map.GetTrailOverlay(color, overlayDilation);
+                            var overlay = hike.Map.GetTrailOverlay(color, overlayDilation, year.Key);
 
                             drawingSession.DrawImage(overlay);
                         }
