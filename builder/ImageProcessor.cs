@@ -1,4 +1,5 @@
 ﻿using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Effects;
 using Microsoft.Graphics.Canvas.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
 using Windows.UI;
-using Windows.UI.Text;
 
 namespace builder
 {
@@ -57,6 +57,91 @@ namespace builder
             }
 
             return result;
+        }
+
+
+        public async Task<(float DistanceHiked, float CompletionRatio)> MeasureProgressTowardGoal(List<Hike> hikes, string sourceFolder, string outPath)
+        {
+            const int todoDilation = 24;
+
+            // Compare the alltrails map, which includes every Rainier trail, with the individual maps of hikes done so far.
+            using (var allTrails = await LoadImage(sourceFolder, "alltrails.png"))
+            using (var trailsHiked = new CanvasRenderTarget(allTrails, allTrails.Size))
+            using (var trailsTodo = new CanvasRenderTarget(allTrails, allTrails.Size))
+            {
+                float distanceHiked = 0;
+                float pixelsHiked = 0;
+
+                foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
+                {
+                    // How many pixels does the map of this trail cover?
+                    var hikeMap = hike.Map.RawOverlay;
+                    var hikePixels = CountPixels(hikeMap);
+
+                    // How many pixels have all the trails we've looked at so far covered?
+                    using (var drawingSession = trailsHiked.CreateDrawingSession())
+                    {
+                        drawingSession.DrawImage(hikeMap);
+                    }
+
+                    var cumulativeHikePixels = CountPixels(trailsHiked);
+
+                    // Ratio between this hike in isolation vs. increase in total pixel count indicates what portion of the current trail is unique.
+                    var uniquePortion = (cumulativeHikePixels - pixelsHiked) / hikePixels;
+                    var hikeDistance = float.Parse(hike.Distance);
+                    var adjustedDistance = hikeDistance * uniquePortion;
+
+                    distanceHiked += adjustedDistance;
+                    pixelsHiked = cumulativeHikePixels;
+                }
+
+                // Subtract out trails already hiked from the allTrails map, leaving only the sections that are still to be hiked.
+                using (var drawingSession = trailsTodo.CreateDrawingSession())
+                {
+                    drawingSession.DrawImage(allTrails);
+
+                    // Expand slightly to avoid partial alpha artifacts along edges.
+                    var dilate = new MorphologyEffect
+                    {
+                        Source = trailsHiked,
+                        Mode = MorphologyEffectMode.Dilate,
+                        Width = 6,
+                        Height = 6,
+                    };
+
+                    drawingSession.DrawImage(dilate, trailsTodo.Bounds, trailsTodo.Bounds, 1, CanvasImageInterpolation.Linear, CanvasComposite.DestinationOut);
+                }
+
+                // What portion of the total set of trails has been hiked so far?
+                var todoPixels = CountPixels(trailsTodo);
+
+                var completionRatio = pixelsHiked / (pixelsHiked + todoPixels);
+
+                // Write out an overlay showing trails that are still to be hiked.
+                var scale = (float)MapWidth / (float)trailsTodo.SizeInPixels.Width;
+
+                using (var todo = new CanvasRenderTarget(Device, (float)trailsTodo.Size.Width * scale, (float)trailsTodo.Size.Height * scale, 96))
+                {
+                    var todoOverlay = HikeMap.GetTrailOverlay(trailsTodo, trailsTodo.Bounds, scale, Colors.Red, todoDilation);
+
+                    using (var drawingSession = todo.CreateDrawingSession())
+                    {
+                        drawingSession.DrawImage(todoOverlay);
+                    }
+
+                    await SaveImage(todo, outPath, "todo.png");
+                }
+
+                return (distanceHiked, completionRatio);
+            }
+        }
+
+
+        static float CountPixels(CanvasBitmap bitmap)
+        {
+            var bins = CanvasImage.ComputeHistogram(bitmap, bitmap.Bounds, bitmap.Device, EffectChannelSelect.Alpha, 2);
+
+            return bins[1];
         }
 
 

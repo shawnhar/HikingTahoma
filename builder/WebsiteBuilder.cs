@@ -48,8 +48,10 @@ namespace builder
                 await hike.WriteOutput(hikes, outFolder.Path);
             }
 
+            var progress = await imageProcessor.MeasureProgressTowardGoal(hikes, sourceFolder.Path, outFolder.Path);
+
             // Generate the index page.
-            WriteIndex(outFolder.Path, hikes, imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
+            WriteIndex(outFolder.Path, hikes, imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2, progress.DistanceHiked, progress.CompletionRatio);
 
             await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
 
@@ -77,7 +79,7 @@ namespace builder
         }
 
 
-        void WriteIndex(string outPath, List<Hike> hikes, int mapW, int mapH)
+        void WriteIndex(string outPath, List<Hike> hikes, int mapW, int mapH, float distanceHiked, float completionRatio)
         {
             var sortedHikes = hikes.OrderBy(hike => hike.HikeName);
 
@@ -95,6 +97,7 @@ namespace builder
                     writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" width=\"{2}\" height=\"{3}\" />", hike.FolderName, hike.OverlayName, mapW, mapH);
                 }
 
+                writer.WriteLine("      <img class=\"maplayer\" id=\"todo\" src=\"todo.png\" width=\"600\" height=\"506\" />");
                 writer.WriteLine("    </div>");
 
                 // Trail names.
@@ -106,6 +109,8 @@ namespace builder
                 }
 
                 writer.WriteLine("    </ul>");
+
+                writer.WriteLine("    <p class=\"progress\" onMouseOver=\"document.getElementById('todo').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('todo').style.visibility = 'hidden'\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
 
                 writer.WriteLine("  </body>");
                 writer.WriteLine("</html>");
@@ -141,10 +146,12 @@ namespace builder
 
         void PrintHikeLengthsAndDifficulties(IEnumerable<Hike> hikes)
         {
+#if false
             foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
             {
                 Debug.WriteLine("{0},{1},{2},{3}", hike.HikeName, hike.Distance, hike.ElevationGain, hike.Difficulty);
             }
+#endif
         }
 
 

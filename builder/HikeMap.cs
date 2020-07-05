@@ -14,14 +14,12 @@ namespace builder
     class HikeMap
     {
         readonly ImageProcessor imageProcessor;
-
         readonly Dictionary<string, CanvasBitmap> myMaps = new Dictionary<string, CanvasBitmap>();
-
         CanvasBitmap combinedMap;
-
         Rect usedBounds;
 
         public IEnumerable<string> YearsHiked => myMaps.Keys;
+        public CanvasBitmap RawOverlay => combinedMap;
 
 
         public HikeMap(ImageProcessor imageProcessor)
@@ -218,7 +216,7 @@ namespace builder
 
         public async Task WriteTrailOverlay(string folder, string filename)
         {
-            const int overlayDilation = 48;
+            const int overlayDilation = 40;
 
             var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
 
@@ -234,11 +232,20 @@ namespace builder
         }
 
 
-        public ICanvasEffect GetTrailOverlay(Color color, int dilation, string year = null)
+        public ICanvasImage GetTrailOverlay(Color color, int dilation, string year = null)
+        {
+            var source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year];
+            var scale = (float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width;
+
+            return GetTrailOverlay(source, usedBounds, scale, color, dilation);        
+        }
+
+
+        public static ICanvasImage GetTrailOverlay(ICanvasImage source, Rect bounds, float scale, Color color, int dilation)
         {
             return new Transform2DEffect
             {
-                TransformMatrix = Matrix3x2.CreateScale((float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width),
+                TransformMatrix = Matrix3x2.CreateScale(scale),
                 InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                 Source = new LinearTransferEffect
@@ -259,8 +266,8 @@ namespace builder
 
                         Source = new CropEffect
                         {
-                            SourceRectangle = usedBounds,
-                            Source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year],
+                            Source = source,
+                            SourceRectangle = bounds,
                         },
                     },
                 },
