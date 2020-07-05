@@ -67,7 +67,7 @@ namespace builder
             // Fourth line is campsites along this trail.
             CampSites = lines[3];
 
-            // Fourth line is when I first hiked it.
+            // Fifth line is when I first hiked it.
             FirstHiked = lines[4];
 
             var remainder = lines.Skip(5)
