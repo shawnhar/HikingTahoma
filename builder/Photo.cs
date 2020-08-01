@@ -8,6 +8,8 @@ namespace builder
         public readonly string Filename;
         public readonly string Description;
 
+        public readonly bool IsPanorama;
+
         public string Thumbnail => Path.GetFileName(Filename) + "-small.jpg";
 
         public BitmapSize ThumbnailSize;
@@ -15,6 +17,12 @@ namespace builder
 
         public Photo(string filename, string description)
         {
+            if (filename.StartsWith('-'))
+            {
+                IsPanorama = true;
+                filename = filename.Substring(1);
+            }
+
             Filename = filename;
             Description = description;
         }

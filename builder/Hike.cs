@@ -230,7 +230,16 @@ namespace builder
                                 writer.WriteLine("        <tr>");
                             }
 
-                            writer.WriteLine("          <td>");
+                            if (photo.IsPanorama)
+                            {
+                                writer.WriteLine("          <td colspan=\"2\">");
+                                photoCount++;
+                            }
+                            else
+                            {
+                                writer.WriteLine("          <td>");
+                            }
+
                             writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
                             writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
                             writer.WriteLine("              <p>{0}</p>", photo.Description);
