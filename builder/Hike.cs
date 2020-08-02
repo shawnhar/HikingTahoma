@@ -232,7 +232,7 @@ namespace builder
 
                             if (photo.IsPanorama)
                             {
-                                writer.WriteLine("          <td colspan=\"2\">");
+                                writer.WriteLine("          <td class=\"panorama\" colspan=\"2\">");
                                 photoCount++;
                             }
                             else
@@ -296,8 +296,9 @@ namespace builder
 
         async Task WritePhoto(Photo photo, string outPath)
         {
-            const int maxPhotoSize = 2048;
             const int thumbnailHeight = 380;
+
+            int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
 
             using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
             {

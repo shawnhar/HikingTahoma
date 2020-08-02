@@ -165,11 +165,21 @@ a:link, a:visited {
     width: 160;
     height: auto;
   }
+
+  .photos .panorama img {
+    width: 320;
+    height: auto;
+  }
 }
 
 @media (max-width: 400px) {
   .photos img {
     width: 120;
+    height: auto;
+  }
+
+  .photos .panorama img {
+    width: 240;
     height: auto;
   }
 }
