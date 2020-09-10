@@ -150,6 +150,11 @@ a:link, a:visited {
   margin-bottom: 0;
 }
 
+.subheading {
+  text-align: center;
+  font-style: italic;
+}
+
 .photos td {
   padding: 16;
   text-align: center;

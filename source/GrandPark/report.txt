@@ -32,7 +32,7 @@ overflowing with ridiculous amounts of bear grass when I hiked it. The
 forest gives way to meadows, with a spur trail to the right taking you into 
 the center of Grand Park.
 
-(if you go left here instead, that's the Northern Loop, which is a story for 
+(if you go left here instead, that's the [NorthernLoop], which is a story for 
 another day)
 
 You can also reach Grand Park from the north via Lake Eleanor, which is 
