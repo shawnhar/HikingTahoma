@@ -193,30 +193,27 @@ namespace builder
                         FontFamily = "Tahoma",
                         FontSize = 32,
                         HorizontalAlignment = CanvasHorizontalAlignment.Right,
-                        VerticalAlignment = CanvasVerticalAlignment.Bottom,
+                        VerticalAlignment = CanvasVerticalAlignment.Top,
                     };
 
                     var textRect = result.Bounds;
-
-                    textRect.Width -= 24;
-                    textRect.Height -= 24;
-
                     var borderRect = textRect;
 
-                    borderRect.X = borderRect.Right - 96;
-                    borderRect.Y = borderRect.Bottom - 56 - yearColors.Count * 46;
+                    textRect.Width -= 16;
+                    textRect.Y += 16;
+
+                    borderRect.X = borderRect.Right - 104;
+                    borderRect.Height = 26 + yearColors.Count * 46;
 
                     drawingSession.FillRectangle(borderRect, Color.FromArgb(0x80, 0xB0, 0xB0, 0xB0));
-                    drawingSession.DrawRectangle(borderRect, Colors.Gray);
-
-                    foreach (var year in hikesByYear.Reverse())
+                    drawingSession.DrawRectangle(borderRect, Color.FromArgb(0xFF, 0x95, 0xC0, 0xE0));
+                    
+                    foreach (var year in hikesByYear)
                     {
                         drawingSession.DrawText(year.Key, textRect, yearColors[year.Key], textFormat);
 
-                        textRect.Height -= 46;
+                        textRect.Y += 46;
                     }
-
-                    drawingSession.DrawText("key:", textRect, Colors.Gray, textFormat);
                 }
 
                 await SaveImage(result, outPath, "map.png");
