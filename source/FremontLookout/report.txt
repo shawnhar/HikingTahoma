@@ -4,12 +4,41 @@ moderate
 none
 2020
 
-[Dawn.jpg] Dawn light hits the mountain
-[FrozenLake.jpg] Frozen Lake
-[FremontTrail.jpg] Along the trail to the Fremont Lookout
+[Dawn.jpg] Dawn light hits the mountain (from Sourdough Ridge)
+[FrozenLake.jpg] Frozen Lake, with Mount Fremont behind it
+[FremontTrail.jpg] Along the trail to the Fremont Lookout, with the West Fork White River visible below, and Puget Sound in the far distance
 [Rainier.jpg] Looking back at Rainier (center) and Little Tahoma (left), with Burroughs Mountain hulking in shadow below them
 [Lookout.jpg] Approaching the lookout
-[Baker.jpg] I can see Mount Baker! (not to mention a goodly chunk of the Cascades in between)
-[RainierFromLookout.jpg] Rainier from the Fremont Lookout
+[Baker.jpg] I can see Mount Baker! Not to mention a goodly chunk of the Cascades, and Grand Park right below me
+[RainierFromLookout.jpg] Rainier, from the Fremont Lookout
 
-TODO
+This is the easiest to reach of Rainier's four remaining fire lookouts (the others being 
+[GobblersKnob], [ShrinerPeak], and [TolmiePeak]) and I think offers the best views of 
+them all. It's correspondingly popular and busy. Possible strategies for avoiding crowds 
+include:
+
+<ul>
+<li>Come on a weekday.</li>
+<li>Arrive early (it makes a great dawn hike).</li>
+<li>Visit while SR410 is closed due to wildfires, so getting here from the Seattle urban area requires driving the long way all around the mountain.</li>
+</ul>
+
+I combined all three, and there were <i>still</i> a few people ahead of me on the trail!
+
+Starting from Sunrise, you have multiple options for getting to the five way junction at 
+Frozen Lake. Head north and then west along Sourdough Ridge for the most dramatic views, 
+or south and then west joining the Wonderland Trail and passing Shadow Lake for a bit 
+more distance through mellow meadows, or due west for the easiest hike partially along a 
+road. Of course you can make a loop of this part (I went out along Sourdough Ridge, then 
+returned past Shadow Lake).
+
+At Frozen Lake you will see Mount Fremont looming above you to the north, with the trail 
+traversing up its western side. It's a gradual climb, skirting below the summit of Mount 
+Fremont, becoming rocky as you cross steep scree slopes (the path is solid and well made, 
+but exposed enough that I would not enjoy this in windy or icy conditions), and then 
+arriving on top of the ridge where the lookout is located.
+
+There are great views the whole way along this hike, but those from the lookout are just 
+silly. There's Rainier behind you of course, but also Grand Park and the valley of the 
+West Fork White River spread out below, and on a clear day you can see all of Mount 
+Baker, the North Cascades, Puget Sound, and the Olympic Mountains.
