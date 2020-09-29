@@ -23,6 +23,7 @@ namespace builder
         public string MapName => FolderName + "-map.jpg";
         public string MapThumbnail => FolderName + "-map-small.jpg";
         public string OverlayName => FolderName + "-overlay.png";
+        public bool IsHidden => HikeName == "misc";
 
         public readonly HikeMap Map;
 

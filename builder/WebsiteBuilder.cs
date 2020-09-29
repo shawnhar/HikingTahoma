@@ -43,7 +43,7 @@ namespace builder
                 await hike.Load();
             }
 
-            foreach (var hike in hikes)
+            foreach (var hike in hikes.Where(hike => !hike.IsHidden))
             {
                 await hike.WriteOutput(hikes, outFolder.Path);
             }
@@ -81,7 +81,8 @@ namespace builder
 
         void WriteIndex(string outPath, List<Hike> hikes, int mapW, int mapH, float distanceHiked, float completionRatio)
         {
-            var sortedHikes = hikes.OrderBy(hike => hike.HikeName);
+            var sortedHikes = hikes.Where(hike => !hike.IsHidden)
+                                   .OrderBy(hike => hike.HikeName);
 
             using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
             using (var writer = new StreamWriter(file))
