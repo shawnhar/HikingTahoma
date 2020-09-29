@@ -78,7 +78,9 @@ namespace builder
             const int mapDilation = 4;
             const int thumbnailDilation = 5;
 
-            const float padding = 0.25f;
+            const int minBoundsSize = 256;
+
+            float padding = 0.25f;
 
             // Make it square.
             var bounds = usedBounds;
@@ -92,6 +94,12 @@ namespace builder
             {
                 bounds.X -= (bounds.Height - bounds.Width) / 2;
                 bounds.Width = bounds.Height;
+            }
+
+            // Expand super-tiny maps.
+            if (bounds.Width < minBoundsSize)
+            {
+                padding = Math.Max((float)((minBoundsSize - bounds.Width) / (bounds.Width * 2)), padding);
             }
 
             // Add some padding.
