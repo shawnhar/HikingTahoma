@@ -188,8 +188,8 @@ namespace builder
                     Source = new MorphologyEffect
                     {
                         Mode = MorphologyEffectMode.Dilate,
-                        Width = (int)(dilation * bounds.Width / outputSize),
-                        Height = (int)(dilation * bounds.Height / outputSize),
+                        Width = (int)Math.Max(dilation * bounds.Width / outputSize, 1),
+                        Height = (int)Math.Max(dilation * bounds.Height / outputSize, 1),
 
                         Source = new CropEffect
                         {
