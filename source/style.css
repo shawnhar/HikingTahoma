@@ -51,15 +51,17 @@ a:link, a:visited {
 
 .map {
   position: relative;
-  padding-bottom: 12;
+  width: fit-content;
+  height: fit-content;
+  max-width: 600;
+  left: -1;
+  top: -1;
+  border: 1px solid #95C0E0;
 }
 
 .map img {
   max-width: 100%;
   height: auto;
-  left: -1;
-  top: -1;
-  border: 1px solid #95C0E0;
 }
 
 .mapbase {
@@ -68,10 +70,17 @@ a:link, a:visited {
 
 .maplayer {
   position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden;
 }
 
+.imagemap {
+  position: absolute;
+}
+
 .hikelist {
+  padding-top: 12;
   padding-left: 10;
   column-width: 250px;
   list-style-type: none;
@@ -83,6 +92,7 @@ a:link, a:visited {
 
 .hikelist a:hover {
   text-decoration: underline;
+  color: #0000FF;
 }
 
 .progress {

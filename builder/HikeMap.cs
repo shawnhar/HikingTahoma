@@ -310,5 +310,36 @@ namespace builder
 
             return new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1);
         }
+
+
+        public byte[] GetImageMap(int subdiv)
+        {
+            using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
+            {
+                var effect = new Transform2DEffect
+                {
+                    TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)combinedMap.Bounds.Width, subdiv / (float)combinedMap.Bounds.Height),
+                    InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
+
+                    Source = new MorphologyEffect
+                    {
+                        Mode = MorphologyEffectMode.Dilate,
+                        Width = 100,
+                        Height = 100,
+
+                        Source = combinedMap,
+                    },
+                };
+
+                using (var drawingSession = result.CreateDrawingSession())
+                {
+                    drawingSession.DrawImage(effect);
+                }
+
+                var colors = result.GetPixelColors();
+
+                return colors.Select(color => color.A).ToArray();
+            }
+        }
     }
 }

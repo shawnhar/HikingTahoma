@@ -51,7 +51,7 @@ namespace builder
             var progress = await imageProcessor.MeasureProgressTowardGoal(hikes, sourceFolder.Path, outFolder.Path);
 
             // Generate the index page.
-            WriteIndex(outFolder.Path, hikes, imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2, progress.DistanceHiked, progress.CompletionRatio);
+            WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
 
             await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
 
@@ -79,7 +79,7 @@ namespace builder
         }
 
 
-        void WriteIndex(string outPath, List<Hike> hikes, int mapW, int mapH, float distanceHiked, float completionRatio)
+        void WriteIndex(string outPath, List<Hike> hikes, float distanceHiked, float completionRatio, ImageProcessor imageProcessor)
         {
             var sortedHikes = hikes.Where(hike => !hike.IsHidden)
                                    .OrderBy(hike => hike.HikeName);
@@ -90,15 +90,23 @@ namespace builder
                 WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
 
                 // Trails map.
+                var imgSize = string.Format("width=\"{0}\" height=\"{1}\"", imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
+
                 writer.WriteLine("    <div class=\"map\">");
-                writer.WriteLine("      <img class=\"mapbase\" src=\"map.png\" width=\"{0}\" height=\"{1}\" />", mapW, mapH);
+                writer.WriteLine("      <img class=\"mapbase\" src=\"map.png\" {0} />", imgSize);
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" width=\"{2}\" height=\"{3}\" />", hike.FolderName, hike.OverlayName, mapW, mapH);
+                    writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
                 }
 
-                writer.WriteLine("      <img class=\"maplayer\" id=\"todo\" src=\"todo.png\" width=\"600\" height=\"506\" />");
+                writer.WriteLine("      <img class=\"maplayer\" id=\"hike-todo\" src=\"todo.png\" {0} />", imgSize);
+
+                // Overlay clickable and focusable regions to create an image map.
+                var imageMap = new ImageMap(sortedHikes);
+
+                imageMap.Write(writer);
+
                 writer.WriteLine("    </div>");
 
                 // Trail names.
@@ -106,12 +114,39 @@ namespace builder
 
                 foreach (var hike in sortedHikes)
                 {
-                    writer.WriteLine("      <li onMouseOver=\"document.getElementById('hike-{0}').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('hike-{0}').style.visibility = 'hidden'\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                    writer.WriteLine("      <li id=\"link-{0}\" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
                 }
 
                 writer.WriteLine("    </ul>");
 
-                writer.WriteLine("    <p class=\"progress\" onMouseOver=\"document.getElementById('todo').style.visibility = 'visible'\" onMouseOut=\"document.getElementById('todo').style.visibility = 'hidden'\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
+                writer.WriteLine("    <p class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
+
+                // Helper functions.
+                writer.WriteLine(@"
+                    <script>
+                      function OnEnterImage(document, hikename) {
+                        document.getElementById('hike-' + hikename).style.visibility = 'visible';
+                        document.getElementById('link-' + hikename).style.textDecoration = 'underline';
+                        document.getElementById('link-' + hikename).firstElementChild.style.color = '#0000FF';
+                      }
+
+                      function OnLeaveImage(document, hikename) {
+                        document.getElementById('hike-' + hikename).style.visibility = 'hidden';
+                        document.getElementById('link-' + hikename).style.textDecoration = '';
+                        document.getElementById('link-' + hikename).firstElementChild.style.color = null;
+                      }
+
+                      function OnEnterLink(document, hikename) {
+                        document.getElementById('hike-' + hikename).style.visibility = 'visible';
+                      }
+
+                      function OnLeaveLink(document, hikename) {
+                        document.getElementById('hike-' + hikename).style.visibility = 'hidden';
+                      }
+                    </script>"
+                    .TrimStart('\r', '\n')
+                    .Replace("                ", "")
+                );
 
                 writer.WriteLine("  </body>");
                 writer.WriteLine("</html>");
@@ -134,11 +169,11 @@ namespace builder
             writer.WriteLine("    <div class=\"fixedwidth\">");
             writer.WriteLine("      <div class=\"title\">");
             writer.WriteLine("        <div class=\"about\">");
-            writer.WriteLine("          <a href = \"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
-            writer.WriteLine("          <a href = \"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
-            writer.WriteLine("          <a href = \"" + rootPrefix + "FuturePlans.html\">future plans</a>");
+            writer.WriteLine("          <a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
+            writer.WriteLine("          <a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
+            writer.WriteLine("          <a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a>");
             writer.WriteLine("        </div>");
-            writer.WriteLine("        <div class=\"backlink\"><a href = \"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
+            writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
             writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
             writer.WriteLine("      </div>");
             writer.WriteLine("    </div>");
