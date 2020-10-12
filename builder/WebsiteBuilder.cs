@@ -93,7 +93,7 @@ namespace builder
                 var imgSize = string.Format("width=\"{0}\" height=\"{1}\"", imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
 
                 writer.WriteLine("    <div class=\"map\">");
-                writer.WriteLine("      <img class=\"mapbase\" src=\"map.png\" {0} />", imgSize);
+                writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
 
                 foreach (var hike in sortedHikes)
                 {

@@ -216,7 +216,7 @@ namespace builder
                     }
                 }
 
-                await SaveImage(result, outPath, "map.png");
+                await SaveImage(result, outPath, "map.jpg");
             }
         }
     }
