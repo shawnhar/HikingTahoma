@@ -65,7 +65,16 @@ namespace builder
             if (previousHike.Coverage > coverage * 3 / 2)
                 return false;
 
-            return float.Parse(hike.Distance) < float.Parse(previousHike.Hike.Distance);
+            return CombineDistanceAndElevation(hike) < CombineDistanceAndElevation(previousHike.Hike);
+        }
+
+
+        static float CombineDistanceAndElevation(Hike hike)
+        {
+            var distance = float.Parse(hike.Distance);
+            var elevation = float.Parse(hike.ElevationGain);
+
+            return distance * (elevation + 3000);
         }
 
 

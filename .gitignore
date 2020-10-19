@@ -3,3 +3,4 @@
 /builder/obj/
 /builder/.vs/
 *.user
+debug.log
