@@ -52,59 +52,62 @@ namespace builder
 
         void ParseReport()
         {
-            var lines = File.ReadAllLines(Path.Combine(sourcePath, "report.txt"));
-
-            // First two lines are the hike name and difficulty.
-            HikeName = lines[0];
-            Difficulty = lines[1];
-
-            // Third line is 'distance elevationGain maxElevation'
-            var split = lines[2].Split(' ');
-
-            Distance = split[0];
-            ElevationGain = split[1];
-            MaxElevation = split[2];
-
-            // Fourth line is campsites along this trail.
-            CampSites = lines[3];
-
-            // Fifth line is when I first hiked it.
-            FirstHiked = lines[4];
-
-            var remainder = lines.Skip(5)
-                                 .SkipWhile(string.IsNullOrEmpty);
-
-            while (remainder.Any())
+            using (new Profiler("Hike.ParseReport"))
             {
-                var currentSection = new HikeSection();
+                var lines = File.ReadAllLines(Path.Combine(sourcePath, "report.txt"));
 
-                Sections.Add(currentSection);
+                // First two lines are the hike name and difficulty.
+                HikeName = lines[0];
+                Difficulty = lines[1];
 
-                // Optional section title.
-                if (remainder.First().StartsWith("# "))
-                {
-                    currentSection.Title = remainder.First().Substring(2).Trim();
+                // Third line is 'distance elevationGain maxElevation'
+                var split = lines[2].Split(' ');
 
-                    remainder = remainder.Skip(1)
-                                         .SkipWhile(string.IsNullOrEmpty);
-                }
+                Distance = split[0];
+                ElevationGain = split[1];
+                MaxElevation = split[2];
 
-                // Set of photos in the form: [filename.jpg] description.
-                currentSection.Photos.AddRange(remainder.TakeWhile(line => line.StartsWith('['))
-                                                        .Select(ParsePhoto));
+                // Fourth line is campsites along this trail.
+                CampSites = lines[3];
 
-                remainder = remainder.Skip(currentSection.Photos.Count)
+                // Fifth line is when I first hiked it.
+                FirstHiked = lines[4];
+
+                var remainder = lines.Skip(5)
                                      .SkipWhile(string.IsNullOrEmpty);
 
-                // Rest of the file is a text description;
-                while (remainder.Any() && !remainder.First().StartsWith("# "))
+                while (remainder.Any())
                 {
-                    var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
+                    var currentSection = new HikeSection();
 
-                    currentSection.Descriptions.Add(string.Join(' ', descs.Select(s => s.Trim())));
+                    Sections.Add(currentSection);
 
-                    remainder = remainder.Skip(descs.Count())
+                    // Optional section title.
+                    if (remainder.First().StartsWith("# "))
+                    {
+                        currentSection.Title = remainder.First().Substring(2).Trim();
+
+                        remainder = remainder.Skip(1)
+                                             .SkipWhile(string.IsNullOrEmpty);
+                    }
+
+                    // Set of photos in the form: [filename.jpg] description.
+                    currentSection.Photos.AddRange(remainder.TakeWhile(line => line.StartsWith('['))
+                                                            .Select(ParsePhoto));
+
+                    remainder = remainder.Skip(currentSection.Photos.Count)
                                          .SkipWhile(string.IsNullOrEmpty);
+
+                    // Rest of the file is a text description;
+                    while (remainder.Any() && !remainder.First().StartsWith("# "))
+                    {
+                        var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
+
+                        currentSection.Descriptions.Add(string.Join(' ', descs.Select(s => s.Trim())));
+
+                        remainder = remainder.Skip(descs.Count())
+                                             .SkipWhile(string.IsNullOrEmpty);
+                    }
                 }
             }
         }
@@ -123,145 +126,154 @@ namespace builder
 
         void ValidatePhotos()
         {
-            var photoNames = from section in Sections
-                             from photo in section.Photos
-                             select photo.Filename;
-
-            var jpegs = Directory.GetFiles(sourcePath, "*.jpg").Select(Path.GetFileName);
-            
-            var missing = photoNames.Except(jpegs);
-
-            if (missing.Any())
+            using (new Profiler("Hike.ValidatePhotos"))
             {
-                throw new Exception("Missing photos in " + FolderName + ": " + string.Join(", ", missing));
-            }
+                var photoNames = from section in Sections
+                                 from photo in section.Photos
+                                 select photo.Filename;
 
-            var unreferenced = jpegs.Except(photoNames);
+                var jpegs = Directory.GetFiles(sourcePath, "*.jpg").Select(Path.GetFileName);
 
-            if (unreferenced.Any())
-            {
-                throw new Exception("Unreferenced photos in " + FolderName + ": " + string.Join(", ", unreferenced));
+                var missing = photoNames.Except(jpegs);
+
+                if (missing.Any())
+                {
+                    throw new Exception("Missing photos in " + FolderName + ": " + string.Join(", ", missing));
+                }
+
+                var unreferenced = jpegs.Except(photoNames);
+
+                if (unreferenced.Any())
+                {
+                    throw new Exception("Unreferenced photos in " + FolderName + ": " + string.Join(", ", unreferenced));
+                }
             }
         }
-            
+
 
         public async Task WriteOutput(IEnumerable<Hike> hikes, string dir)
         {
-            var outPath = Path.Combine(dir, FolderName);
-
-            Directory.CreateDirectory(outPath);
-
-            foreach (var photo in Sections.SelectMany(section => section.Photos))
+            using (new Profiler("Hike.WriteOutput"))
             {
-                await WritePhoto(photo, outPath);
+                var outPath = Path.Combine(dir, FolderName);
+
+                Directory.CreateDirectory(outPath);
+
+                foreach (var photo in Sections.SelectMany(section => section.Photos))
+                {
+                    await WritePhoto(photo, outPath);
+                }
+
+                WriteHtml(hikes, outPath);
+
+                await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
+
+                await Map.WriteTrailOverlay(outPath, OverlayName);
             }
-
-            WriteHtml(hikes, outPath);
-
-            await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
-
-            await Map.WriteTrailOverlay(outPath, OverlayName);
         }
 
 
         void WriteHtml(IEnumerable<Hike> hikes, string outPath)
         {
-            using (var file = File.OpenWrite(Path.Combine(outPath, FolderName + ".html")))
-            using (var writer = new StreamWriter(file))
+            using (new Profiler("Hike.WriteHtml"))
             {
-                WebsiteBuilder.WriteHtmlHeader(writer, HikeName, "../");
-
-                writer.WriteLine("    <div class=\"fixedwidth\">");
-
-                writer.WriteLine("      <table>");
-                writer.WriteLine("        <tr>");
-                writer.WriteLine("          <td>");
-                writer.WriteLine("            <a href=\"{0}\">", MapName);
-                writer.WriteLine("              <img class=\"hikemap\" src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
-                writer.WriteLine("            </a>");
-                writer.WriteLine("          </td>");
-                writer.WriteLine("          <td class=\"stats\">");
-                writer.WriteLine("            <p class=\"hikename\">{0}</p>", HikeName);
-                writer.WriteLine("            <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
-                writer.WriteLine("            <p class=\"detail\">{0} miles</p>", Distance);
-                writer.WriteLine("            <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
-                writer.WriteLine("            <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
-                writer.WriteLine("            <p class=\"detail\">Camps: {0}</p>", CampSites);
-                writer.WriteLine("            <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
-                writer.WriteLine("          </td>");
-                writer.WriteLine("        </tr>");
-                writer.WriteLine("      </table>");
-
-                foreach (var section in Sections)
+                using (var file = File.OpenWrite(Path.Combine(outPath, FolderName + ".html")))
+                using (var writer = new StreamWriter(file))
                 {
-                    writer.WriteLine("      <div class=\"description\">");
+                    WebsiteBuilder.WriteHtmlHeader(writer, HikeName, "../");
 
-                    // Section title?
-                    if (!string.IsNullOrEmpty(section.Title))
+                    writer.WriteLine("    <div class=\"fixedwidth\">");
+
+                    writer.WriteLine("      <table>");
+                    writer.WriteLine("        <tr>");
+                    writer.WriteLine("          <td>");
+                    writer.WriteLine("            <a href=\"{0}\">", MapName);
+                    writer.WriteLine("              <img class=\"hikemap\" src=\"{0}\" width=\"256\" height=\"256\" />", MapThumbnail);
+                    writer.WriteLine("            </a>");
+                    writer.WriteLine("          </td>");
+                    writer.WriteLine("          <td class=\"stats\">");
+                    writer.WriteLine("            <p class=\"hikename\">{0}</p>", HikeName);
+                    writer.WriteLine("            <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
+                    writer.WriteLine("            <p class=\"detail\">{0} miles</p>", Distance);
+                    writer.WriteLine("            <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
+                    writer.WriteLine("            <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
+                    writer.WriteLine("            <p class=\"detail\">Camps: {0}</p>", CampSites);
+                    writer.WriteLine("            <p class=\"detail\">First hiked by me: {0}</p>", FirstHiked);
+                    writer.WriteLine("          </td>");
+                    writer.WriteLine("        </tr>");
+                    writer.WriteLine("      </table>");
+
+                    foreach (var section in Sections)
                     {
-                        writer.WriteLine("        <p class=\"heading\">{0}</p>", section.Title);
-                    }
+                        writer.WriteLine("      <div class=\"description\">");
 
-                    // Section text.
-                    foreach (var line in section.Descriptions)
-                    {
-                        var expandedLinks = ExpandLinks(line, hikes);
-
-                        writer.WriteLine("        <p>{0}</p>", expandedLinks);
-                    }
-
-                    writer.WriteLine("      </div>");
-
-                    // Photos.
-                    if (section.Photos.Any())
-                    {
-                        writer.WriteLine("      <table class=\"photos\">");
-
-                        int photoCount = 0;
-
-                        foreach (var photo in section.Photos)
+                        // Section title?
+                        if (!string.IsNullOrEmpty(section.Title))
                         {
-                            if ((photoCount & 1) == 0)
+                            writer.WriteLine("        <p class=\"heading\">{0}</p>", section.Title);
+                        }
+
+                        // Section text.
+                        foreach (var line in section.Descriptions)
+                        {
+                            var expandedLinks = ExpandLinks(line, hikes);
+
+                            writer.WriteLine("        <p>{0}</p>", expandedLinks);
+                        }
+
+                        writer.WriteLine("      </div>");
+
+                        // Photos.
+                        if (section.Photos.Any())
+                        {
+                            writer.WriteLine("      <table class=\"photos\">");
+
+                            int photoCount = 0;
+
+                            foreach (var photo in section.Photos)
                             {
-                                if (photoCount > 0)
+                                if ((photoCount & 1) == 0)
                                 {
-                                    writer.WriteLine("        </tr>");
+                                    if (photoCount > 0)
+                                    {
+                                        writer.WriteLine("        </tr>");
+                                    }
+
+                                    writer.WriteLine("        <tr>");
                                 }
 
-                                writer.WriteLine("        <tr>");
-                            }
+                                if (photo.IsPanorama)
+                                {
+                                    writer.WriteLine("          <td class=\"panorama\" colspan=\"2\">");
+                                    photoCount++;
+                                }
+                                else
+                                {
+                                    writer.WriteLine("          <td>");
+                                }
 
-                            if (photo.IsPanorama)
-                            {
-                                writer.WriteLine("          <td class=\"panorama\" colspan=\"2\">");
+                                writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
+                                writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
+                                writer.WriteLine("              <p>{0}</p>", photo.Description);
+                                writer.WriteLine("            </a>");
+                                writer.WriteLine("          </td>");
+
                                 photoCount++;
                             }
-                            else
+
+                            if (photoCount > 0)
                             {
-                                writer.WriteLine("          <td>");
+                                writer.WriteLine("        </tr>");
                             }
 
-                            writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
-                            writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
-                            writer.WriteLine("              <p>{0}</p>", photo.Description);
-                            writer.WriteLine("            </a>");
-                            writer.WriteLine("          </td>");
-
-                            photoCount++;
+                            writer.WriteLine("      </table>");
                         }
-
-                        if (photoCount > 0)
-                        {
-                            writer.WriteLine("        </tr>");
-                        }
-
-                        writer.WriteLine("      </table>");
                     }
-                }
 
-                writer.WriteLine("    </div>");
-                writer.WriteLine("  </body>");
-                writer.WriteLine("</html>");
+                    writer.WriteLine("    </div>");
+                    writer.WriteLine("  </body>");
+                    writer.WriteLine("</html>");
+                }
             }
         }
 
@@ -297,32 +309,35 @@ namespace builder
 
         async Task WritePhoto(Photo photo, string outPath)
         {
-            const int thumbnailHeight = 380;
-
-            int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
-
-            using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
+            using (new Profiler("Hike.WritePhoto"))
             {
-                if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
+                const int thumbnailHeight = 380;
+
+                int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
+
+                using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
                 {
-                    // Resize if the source is excessively large.
-                    using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                    if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
                     {
-                        await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
+                        // Resize if the source is excessively large.
+                        using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                        {
+                            await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
+                        }
                     }
-                }
-                else
-                {
-                    // If the size is ok, just copy it directly over.
-                    File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
-                }
+                    else
+                    {
+                        // If the size is ok, just copy it directly over.
+                        File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
+                    }
 
-                // Also create thumbnail versions.
-                using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
-                {
-                    await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
+                    // Also create thumbnail versions.
+                    using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
+                    {
+                        await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
 
-                    photo.ThumbnailSize = thumbnail.SizeInPixels;
+                        photo.ThumbnailSize = thumbnail.SizeInPixels;
+                    }
                 }
             }
         }

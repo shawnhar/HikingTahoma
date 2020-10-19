@@ -71,30 +71,33 @@ namespace builder
 
         void MergeAdjacentCells()
         {
-            for (int y = 0; y < subdiv; y++)
+            using (new Profiler("ImageMap.MergeAdjacentCells"))
             {
-                for (int x = 0; x < subdiv; x++)
+                for (int y = 0; y < subdiv; y++)
                 {
-                    if (cells[x, y] != null)
+                    for (int x = 0; x < subdiv; x++)
                     {
-                        // Expand to the right.
-                        int right = x + 1;
-
-                        while (right < subdiv && IsSameHike(right, right + 1, y, cells[x, y].Hike))
+                        if (cells[x, y] != null)
                         {
-                            cells[x, y].Width++;
-                            ClearCells(right, right + 1, y);
-                            right++;
-                        }
+                            // Expand to the right.
+                            int right = x + 1;
 
-                        // Expand downward.
-                        int bottom = y + 1;
+                            while (right < subdiv && IsSameHike(right, right + 1, y, cells[x, y].Hike))
+                            {
+                                cells[x, y].Width++;
+                                ClearCells(right, right + 1, y);
+                                right++;
+                            }
 
-                        while (bottom < subdiv && IsSameHike(x, right, bottom, cells[x, y].Hike))
-                        {
-                            cells[x, y].Height++;
-                            ClearCells(x, right, bottom);
-                            bottom++;
+                            // Expand downward.
+                            int bottom = y + 1;
+
+                            while (bottom < subdiv && IsSameHike(x, right, bottom, cells[x, y].Hike))
+                            {
+                                cells[x, y].Height++;
+                                ClearCells(x, right, bottom);
+                                bottom++;
+                            }
                         }
                     }
                 }

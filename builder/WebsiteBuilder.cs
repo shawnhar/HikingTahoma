@@ -28,45 +28,50 @@ namespace builder
 
             StorageFolder outFolder = await cacheFolder.CreateFolderAsync("out", CreationCollisionOption.ReplaceExisting);
 
-            // Load the master map. 
-            var imageProcessor = new ImageProcessor();
-
-            await imageProcessor.Initialize(sourceFolder.Path);
-
-            // Process all the hikes.
-            var hikes = (await sourceFolder.GetFoldersAsync())
-                        .Select(folder => new Hike(folder.Path, imageProcessor))
-                        .ToList();
-
-            foreach (var hike in hikes)
+            using (new Profiler("WebsiteBuilder.Build"))
             {
-                await hike.Load();
+                // Load the master map. 
+                var imageProcessor = new ImageProcessor();
+
+                await imageProcessor.Initialize(sourceFolder.Path);
+
+                // Process all the hikes.
+                var hikes = (await sourceFolder.GetFoldersAsync())
+                            .Select(folder => new Hike(folder.Path, imageProcessor))
+                            .ToList();
+
+                foreach (var hike in hikes)
+                {
+                    await hike.Load();
+                }
+
+                foreach (var hike in hikes.Where(hike => !hike.IsHidden))
+                {
+                    await hike.WriteOutput(hikes, outFolder.Path);
+                }
+
+                var progress = await imageProcessor.MeasureProgressTowardGoal(hikes, sourceFolder.Path, outFolder.Path);
+
+                // Generate the index page.
+                WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
+
+                await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
+
+                // Copy root files.
+                CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
+                CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
+
+                // Debug .csv output can be pasted into Excel for length/difficulty analysis.
+                PrintHikeLengthsAndDifficulties(hikes);
+
+                // Combine all the text for all the hikes, so a spell check can easily be run over the whole thing.
+                LogHikeTextForSpellCheck(outFolder.Path, hikes);
             }
 
-            foreach (var hike in hikes.Where(hike => !hike.IsHidden))
-            {
-                await hike.WriteOutput(hikes, outFolder.Path);
-            }
-
-            var progress = await imageProcessor.MeasureProgressTowardGoal(hikes, sourceFolder.Path, outFolder.Path);
-
-            // Generate the index page.
-            WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
-
-            await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
-
-            // Copy root files.
-            CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
-            CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
-            CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
-            CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
-            CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
-
-            // Debug .csv output can be pasted into Excel for length/difficulty analysis.
-            PrintHikeLengthsAndDifficulties(hikes);
-
-            // Combine all the text for all the hikes, so a spell check can easily be run over the whole thing.
-            LogHikeTextForSpellCheck(outFolder.Path, hikes);
+            Profiler.OutputResults();
 
             return outFolder.Path;
         }
@@ -81,48 +86,50 @@ namespace builder
 
         void WriteIndex(string outPath, List<Hike> hikes, float distanceHiked, float completionRatio, ImageProcessor imageProcessor)
         {
-            var sortedHikes = hikes.Where(hike => !hike.IsHidden)
-                                   .OrderBy(hike => hike.HikeName);
-
-            using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
-            using (var writer = new StreamWriter(file))
+            using (new Profiler("WebsiteBuilder.WriteIndex"))
             {
-                WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
+                var sortedHikes = hikes.Where(hike => !hike.IsHidden)
+                                       .OrderBy(hike => hike.HikeName);
 
-                // Trails map.
-                var imgSize = string.Format("width=\"{0}\" height=\"{1}\"", imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
-
-                writer.WriteLine("    <div class=\"map\">");
-                writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
-
-                foreach (var hike in sortedHikes)
+                using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
+                using (var writer = new StreamWriter(file))
                 {
-                    writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
-                }
+                    WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
 
-                writer.WriteLine("      <img class=\"maplayer\" id=\"hike-todo\" src=\"todo.png\" {0} />", imgSize);
+                    // Trails map.
+                    var imgSize = string.Format("width=\"{0}\" height=\"{1}\"", imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
 
-                // Overlay clickable and focusable regions to create an image map.
-                var imageMap = new ImageMap(sortedHikes);
+                    writer.WriteLine("    <div class=\"map\">");
+                    writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
 
-                imageMap.Write(writer);
+                    foreach (var hike in sortedHikes)
+                    {
+                        writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
+                    }
 
-                writer.WriteLine("    </div>");
+                    writer.WriteLine("      <img class=\"maplayer\" id=\"hike-todo\" src=\"todo.png\" {0} />", imgSize);
 
-                // Trail names.
-                writer.WriteLine("    <ul class=\"hikelist\">");
+                    // Overlay clickable and focusable regions to create an image map.
+                    var imageMap = new ImageMap(sortedHikes);
 
-                foreach (var hike in sortedHikes)
-                {
-                    writer.WriteLine("      <li id=\"link-{0}\" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
-                }
+                    imageMap.Write(writer);
 
-                writer.WriteLine("    </ul>");
+                    writer.WriteLine("    </div>");
 
-                writer.WriteLine("    <p class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
+                    // Trail names.
+                    writer.WriteLine("    <ul class=\"hikelist\">");
 
-                // Helper functions.
-                writer.WriteLine(@"
+                    foreach (var hike in sortedHikes)
+                    {
+                        writer.WriteLine("      <li id=\"link-{0}\" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                    }
+
+                    writer.WriteLine("    </ul>");
+
+                    writer.WriteLine("    <p class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
+
+                    // Helper functions.
+                    writer.WriteLine(@"
                     <script>
                       function OnEnterImage(document, hikename) {
                         document.getElementById('hike-' + hikename).style.visibility = 'visible';
@@ -144,12 +151,13 @@ namespace builder
                         document.getElementById('hike-' + hikename).style.visibility = 'hidden';
                       }
                     </script>"
-                    .TrimStart('\r', '\n')
-                    .Replace("                ", "")
-                );
+                        .TrimStart('\r', '\n')
+                        .Replace("                ", "")
+                    );
 
-                writer.WriteLine("  </body>");
-                writer.WriteLine("</html>");
+                    writer.WriteLine("  </body>");
+                    writer.WriteLine("</html>");
+                }
             }
         }
 

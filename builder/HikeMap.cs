@@ -30,113 +30,119 @@ namespace builder
 
         public async Task Load(string sourceFolder, string firstHiked)
         {
-            myMaps[firstHiked] = await imageProcessor.LoadImage(sourceFolder, "map.png");
-
-            // Some hikes have additional map overlays, if pieces of them were first hiked in a different year from the main trail.
-            var layerFilenames = Directory.GetFiles(sourceFolder, "map-*.png").Select(Path.GetFileName);
-
-            foreach (var layerFilename in layerFilenames)
+            using (new Profiler("HikeMap.Load"))
             {
-                var year = Path.GetFileNameWithoutExtension(layerFilename).Substring(4);
-                var layerImage = await imageProcessor.LoadImage(sourceFolder, layerFilename);
+                myMaps[firstHiked] = await imageProcessor.LoadImage(sourceFolder, "map.png");
 
-                myMaps.Add(year, layerImage);
-            }
+                // Some hikes have additional map overlays, if pieces of them were first hiked in a different year from the main trail.
+                var layerFilenames = Directory.GetFiles(sourceFolder, "map-*.png").Select(Path.GetFileName);
 
-            // If there are multiple layers, flatten them to create a combined map.
-            if (myMaps.Count == 1)
-            {
-                combinedMap = myMaps[firstHiked];
-            }
-            else
-            {
-                var size = myMaps[firstHiked].SizeInPixels;
-                var combined = new CanvasRenderTarget(imageProcessor.Device, size.Width, size.Height, 96);
-
-                using (var ds = combined.CreateDrawingSession())
+                foreach (var layerFilename in layerFilenames)
                 {
-                    ds.Clear(Colors.Transparent);
+                    var year = Path.GetFileNameWithoutExtension(layerFilename).Substring(4);
+                    var layerImage = await imageProcessor.LoadImage(sourceFolder, layerFilename);
 
-                    foreach (var layer in myMaps.Values)
-                    {
-                        ds.DrawImage(layer);
-                    }
+                    myMaps.Add(year, layerImage);
                 }
 
-                combinedMap = combined;
-            }
+                // If there are multiple layers, flatten them to create a combined map.
+                if (myMaps.Count == 1)
+                {
+                    combinedMap = myMaps[firstHiked];
+                }
+                else
+                {
+                    var size = myMaps[firstHiked].SizeInPixels;
+                    var combined = new CanvasRenderTarget(imageProcessor.Device, size.Width, size.Height, 96);
 
-            usedBounds = GetUsedBounds(combinedMap);
+                    using (var ds = combined.CreateDrawingSession())
+                    {
+                        ds.Clear(Colors.Transparent);
+
+                        foreach (var layer in myMaps.Values)
+                        {
+                            ds.DrawImage(layer);
+                        }
+                    }
+
+                    combinedMap = combined;
+                }
+
+                usedBounds = GetUsedBounds(combinedMap);
+            }
         }
 
 
         public async Task WriteTrailMaps(string folder, string mapName, string mapThumbnail)
         {
-            const int mapSize = 1024;
-            const int thumbnailSize = 512;
-
-            const int mapDilation = 4;
-            const int thumbnailDilation = 5;
-
-            const int minBoundsSize = 256;
-
-            float padding = 0.25f;
-
-            // Make it square.
-            var bounds = usedBounds;
-
-            if (bounds.Width > bounds.Height)
+            using (new Profiler("HikeMap.WriteTrailMaps"))
             {
-                bounds.Y -= (bounds.Width - bounds.Height) / 2;
-                bounds.Height = bounds.Width;
+                const int mapSize = 1024;
+                const int thumbnailSize = 512;
+
+                const int mapDilation = 4;
+                const int thumbnailDilation = 5;
+
+                const int minBoundsSize = 256;
+
+                float padding = 0.25f;
+
+                // Make it square.
+                var bounds = usedBounds;
+
+                if (bounds.Width > bounds.Height)
+                {
+                    bounds.Y -= (bounds.Width - bounds.Height) / 2;
+                    bounds.Height = bounds.Width;
+                }
+                else
+                {
+                    bounds.X -= (bounds.Height - bounds.Width) / 2;
+                    bounds.Width = bounds.Height;
+                }
+
+                // Expand super-tiny maps.
+                if (bounds.Width < minBoundsSize)
+                {
+                    padding = Math.Max((float)((minBoundsSize - bounds.Width) / (bounds.Width * 2)), padding);
+                }
+
+                // Add some padding.
+                bounds.X -= bounds.Width * padding;
+                bounds.Y -= bounds.Height * padding;
+
+                bounds.Width *= 1 + padding * 2;
+                bounds.Height *= 1 + padding * 2;
+
+                // Don't exceed the total map size.
+                if (bounds.Width > combinedMap.Size.Width || bounds.Height > combinedMap.Size.Height)
+                {
+                    var shrink = Math.Min(combinedMap.Size.Width / bounds.Width, combinedMap.Size.Height / bounds.Height);
+
+                    bounds.X += bounds.Width * (1 - shrink) / 2;
+                    bounds.Y += bounds.Height * (1 - shrink) / 2;
+
+                    bounds.Width *= shrink;
+                    bounds.Height *= shrink;
+                }
+
+                // Clamp to within the image.
+                if (bounds.X < 0)
+                    bounds.X = 0;
+
+                if (bounds.Y < 0)
+                    bounds.Y = 0;
+
+                if (bounds.Right > combinedMap.Size.Width)
+                    bounds.X = combinedMap.Size.Width - bounds.Width;
+
+                if (bounds.Bottom > combinedMap.Size.Height)
+                    bounds.Y = combinedMap.Size.Height - bounds.Height;
+
+                // Write two sizes of map.
+                await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName);
+                await WriteTrailMap(bounds, thumbnailSize, thumbnailDilation, true, folder, mapThumbnail);
             }
-            else
-            {
-                bounds.X -= (bounds.Height - bounds.Width) / 2;
-                bounds.Width = bounds.Height;
-            }
-
-            // Expand super-tiny maps.
-            if (bounds.Width < minBoundsSize)
-            {
-                padding = Math.Max((float)((minBoundsSize - bounds.Width) / (bounds.Width * 2)), padding);
-            }
-
-            // Add some padding.
-            bounds.X -= bounds.Width * padding;
-            bounds.Y -= bounds.Height * padding;
-
-            bounds.Width *= 1 + padding * 2;
-            bounds.Height *= 1 + padding * 2;
-
-            // Don't exceed the total map size.
-            if (bounds.Width > combinedMap.Size.Width || bounds.Height > combinedMap.Size.Height)
-            {
-                var shrink = Math.Min(combinedMap.Size.Width / bounds.Width, combinedMap.Size.Height / bounds.Height);
-
-                bounds.X += bounds.Width * (1 - shrink) / 2;
-                bounds.Y += bounds.Height * (1 - shrink) / 2;
-
-                bounds.Width *= shrink;
-                bounds.Height *= shrink;
-            }
-
-            // Clamp to within the image.
-            if (bounds.X < 0)
-                bounds.X = 0;
-
-            if (bounds.Y < 0)
-                bounds.Y = 0;
-
-            if (bounds.Right > combinedMap.Size.Width)
-                bounds.X = combinedMap.Size.Width - bounds.Width;
-
-            if (bounds.Bottom > combinedMap.Size.Height)
-                bounds.Y = combinedMap.Size.Height - bounds.Height;
-
-            // Write two sizes of map.
-            await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName);
-            await WriteTrailMap(bounds, thumbnailSize, thumbnailDilation, true, folder, mapThumbnail);
         }
 
 
@@ -224,18 +230,21 @@ namespace builder
 
         public async Task WriteTrailOverlay(string folder, string filename)
         {
-            const int overlayDilation = 40;
-
-            var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
-
-            using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
+            using (new Profiler("HikeMap.WriteTrailOverlay"))
             {
-                using (var drawingSession = result.CreateDrawingSession())
-                {
-                    drawingSession.DrawImage(trailOverlay);
-                }
+                const int overlayDilation = 40;
 
-                await imageProcessor.SaveImage(result, folder, filename);
+                var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
+
+                using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
+                {
+                    using (var drawingSession = result.CreateDrawingSession())
+                    {
+                        drawingSession.DrawImage(trailOverlay);
+                    }
+
+                    await imageProcessor.SaveImage(result, folder, filename);
+                }
             }
         }
 
@@ -251,94 +260,103 @@ namespace builder
 
         public static ICanvasImage GetTrailOverlay(ICanvasImage source, Rect bounds, float scale, Color color, int dilation)
         {
-            return new Transform2DEffect
+            using (new Profiler("HikeMap.GetTrailOverlay"))
             {
-                TransformMatrix = Matrix3x2.CreateScale(scale),
-                InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
-
-                Source = new LinearTransferEffect
+                return new Transform2DEffect
                 {
-                    RedSlope = 0,
-                    GreenSlope = 0,
-                    BlueSlope = 0,
+                    TransformMatrix = Matrix3x2.CreateScale(scale),
+                    InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
-                    RedOffset = color.R / 255.0f,
-                    GreenOffset = color.G / 255.0f,
-                    BlueOffset = color.B / 255.0f,
-
-                    Source = new MorphologyEffect
+                    Source = new LinearTransferEffect
                     {
-                        Mode = MorphologyEffectMode.Dilate,
-                        Width = dilation,
-                        Height = dilation,
+                        RedSlope = 0,
+                        GreenSlope = 0,
+                        BlueSlope = 0,
 
-                        Source = new CropEffect
+                        RedOffset = color.R / 255.0f,
+                        GreenOffset = color.G / 255.0f,
+                        BlueOffset = color.B / 255.0f,
+
+                        Source = new MorphologyEffect
                         {
-                            Source = source,
-                            SourceRectangle = bounds,
+                            Mode = MorphologyEffectMode.Dilate,
+                            Width = dilation,
+                            Height = dilation,
+
+                            Source = new CropEffect
+                            {
+                                Source = source,
+                                SourceRectangle = bounds,
+                            },
                         },
                     },
-                },
-            };
+                };
+            }
         }
 
 
         static Rect GetUsedBounds(CanvasBitmap bitmap)
         {
-            int bitmapW = (int)bitmap.SizeInPixels.Width;
-
-            int minX = int.MaxValue;
-            int maxX = int.MinValue;
-            int minY = int.MaxValue;
-            int maxY = int.MinValue;
-
-            var colors = bitmap.GetPixelColors();
-
-            for (int i = 0; i < colors.Length; i++)
+            using (new Profiler("HikeMap.GetUsedBounds"))
             {
-                if (colors[i].A > 0)
+                int bitmapW = (int)bitmap.SizeInPixels.Width;
+
+                int minX = int.MaxValue;
+                int maxX = int.MinValue;
+                int minY = int.MaxValue;
+                int maxY = int.MinValue;
+
+                var colors = bitmap.GetPixelColors();
+
+                for (int i = 0; i < colors.Length; i++)
                 {
-                    int x = i % bitmapW;
-                    int y = i / bitmapW;
+                    if (colors[i].A > 0)
+                    {
+                        int x = i % bitmapW;
+                        int y = i / bitmapW;
 
-                    if (x < minX) minX = x;
-                    if (x > maxX) maxX = x;
-                    if (y < minY) minY = y;
-                    if (y > maxY) maxY = y;
+                        if (x < minX) minX = x;
+                        if (x > maxX) maxX = x;
+                        if (y < minY) minY = y;
+                        if (y > maxY) maxY = y;
+                    }
                 }
-            }
 
-            return new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1);
+                return new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1);
+            }
         }
 
 
         public byte[] GetImageMap(int subdiv)
         {
-            using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
+            using (new Profiler("HikeMap.GetImageMap"))
             {
-                var effect = new Transform2DEffect
+                using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
                 {
-                    TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)combinedMap.Bounds.Width, subdiv / (float)combinedMap.Bounds.Height),
-                    InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
-
-                    Source = new MorphologyEffect
+                    var effect = new Transform2DEffect
                     {
-                        Mode = MorphologyEffectMode.Dilate,
-                        Width = 100,
-                        Height = 100,
+                        TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)combinedMap.Bounds.Width, subdiv / (float)combinedMap.Bounds.Height),
+                        InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
-                        Source = combinedMap,
-                    },
-                };
+                        Source = new MorphologyEffect
+                        {
+                            Mode = MorphologyEffectMode.Dilate,
+                            Width = 100,
+                            Height = 100,
 
-                using (var drawingSession = result.CreateDrawingSession())
-                {
-                    drawingSession.DrawImage(effect);
+                            Source = combinedMap,
+                        },
+                    };
+
+                    using (var drawingSession = result.CreateDrawingSession())
+                    {
+                        drawingSession.DrawImage(effect);
+                    }
+
+                    var colors = result.GetPixelColors();
+
+                    return colors.Select(color => color.A).ToArray();
                 }
-
-                var colors = result.GetPixelColors();
-
-                return colors.Select(color => color.A).ToArray();
             }
         }
     }

@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="ImageProcessor.cs" />
     <Compile Include="Photo.cs" />
+    <Compile Include="Profiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebsiteBuilder.cs" />
   </ItemGroup>
