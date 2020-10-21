@@ -71,39 +71,24 @@ namespace builder
 
         public async Task<(float DistanceHiked, float CompletionRatio)> MeasureProgressTowardGoal(List<Hike> hikes, string sourceFolder, string outPath)
         {
+            // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
+            const float totalLengthOfAllTrails = 286;
+
             using (new Profiler("ImageProcessor.MeasureProgressTowardGoal"))
             {
                 const int todoDilation = 24;
 
-                // Compare the alltrails map, which includes every Rainier trail, with the individual maps of hikes done so far.
                 using (var allTrails = await LoadImage(sourceFolder, "alltrails.png"))
                 using (var trailsHiked = new CanvasRenderTarget(allTrails, allTrails.Size))
                 using (var trailsTodo = new CanvasRenderTarget(allTrails, allTrails.Size))
                 {
-                    float distanceHiked = 0;
-                    float pixelsHiked = 0;
-
-                    foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
+                    // Combine the individual maps of all hikes done so far.
+                    using (var drawingSession = trailsHiked.CreateDrawingSession())
                     {
-                        // How many pixels does the map of this trail cover?
-                        var hikeMap = hike.Map.RawOverlay;
-                        var hikePixels = CountPixels(hikeMap);
-
-                        // How many pixels have all the trails we've looked at so far covered?
-                        using (var drawingSession = trailsHiked.CreateDrawingSession())
+                        foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
                         {
-                            drawingSession.DrawImage(hikeMap);
+                            drawingSession.DrawImage(hike.Map.RawOverlay);
                         }
-
-                        var cumulativeHikePixels = CountPixels(trailsHiked);
-
-                        // Ratio between this hike in isolation vs. increase in total pixel count indicates what portion of the current trail is unique.
-                        var uniquePortion = (cumulativeHikePixels - pixelsHiked) / hikePixels;
-                        var hikeDistance = float.Parse(hike.Distance);
-                        var adjustedDistance = hikeDistance * uniquePortion;
-
-                        distanceHiked += adjustedDistance;
-                        pixelsHiked = cumulativeHikePixels;
                     }
 
                     // Subtract out trails already hiked from the allTrails map, leaving only the sections that are still to be hiked.
@@ -123,11 +108,6 @@ namespace builder
                         drawingSession.DrawImage(dilate, trailsTodo.Bounds, trailsTodo.Bounds, 1, CanvasImageInterpolation.Linear, CanvasComposite.DestinationOut);
                     }
 
-                    // What portion of the total set of trails has been hiked so far?
-                    var todoPixels = CountPixels(trailsTodo);
-
-                    var completionRatio = pixelsHiked / (pixelsHiked + todoPixels);
-
                     // Write out an overlay showing trails that are still to be hiked.
                     var scale = (float)MapWidth / (float)trailsTodo.SizeInPixels.Width;
 
@@ -142,6 +122,14 @@ namespace builder
 
                         await SaveImage(todo, outPath, "todo.png");
                     }
+
+                    // What portion of the total set of trails has been hiked so far?
+                    var pixelsHiked = CountPixels(trailsHiked);
+                    var todoPixels = CountPixels(trailsTodo);
+
+                    var completionRatio = pixelsHiked / (pixelsHiked + todoPixels);
+
+                    var distanceHiked = totalLengthOfAllTrails * completionRatio;
 
                     return (distanceHiked, completionRatio);
                 }
