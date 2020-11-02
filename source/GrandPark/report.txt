@@ -35,5 +35,5 @@ the center of Grand Park.
 (if you go left here instead, that's the [NorthernLoop], which is a story for 
 another day)
 
-You can also reach Grand Park from the north via Lake Eleanor, which is 
-shorter but less scenic than this route from Sunrise.
+You can also reach [GrandParkViaLakeEleanor] from the north, which is shorter 
+but less scenic than this route from Sunrise.
