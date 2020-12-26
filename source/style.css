@@ -245,7 +245,7 @@ a:link, a:visited {
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 40%;
   margin-left: -5;
   border-width: 5;
   border-style: solid;
@@ -280,5 +280,13 @@ a:link, a:visited {
 
   .plannersprayparklabel {
     display: inline;
+  }
+
+  .plannerdistance .tooltip {
+    margin-left: -90;
+  }
+
+  .plannerdistance .tooltip::after {
+    left: 14%;
   }
 }
