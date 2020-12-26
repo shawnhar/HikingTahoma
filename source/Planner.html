@@ -7,32 +7,32 @@
   <body>
     <div class="fixedwidth">
       <div class="title">
-	<div class="about">
-	  <a href="AboutRainier.html">about Mount Rainier</a><br/>
-	  <a href="AboutThisSite.html">about this site</a><br/>
-	  <a href="FuturePlans.html">future plans</a><br/>
-	  <a href="Planner.html">campsite distances</a>
-	</div>
-	<div class="backlink"><a href="./index.html">Hiking Tahoma</a></div>
-	<div class="subtitle">Documenting my Rainier obsession</div>
+        <div class="about">
+          <a href="AboutRainier.html">about Mount Rainier</a><br/>
+          <a href="AboutThisSite.html">about this site</a><br/>
+          <a href="FuturePlans.html">future plans</a><br/>
+          <a href="Planner.html">campsite distances</a>
+        </div>
+        <div class="backlink"><a href="./index.html">Hiking Tahoma</a></div>
+        <div class="subtitle">Documenting my Rainier obsession</div>
       </div>
     </div>
     <p>
       Trip duration: 
       <select id="tripduration" onChange="TripDurationChanged(this.value)">
-	<option value="2">2 days</option>
-	<option value="3">3 days</option>
-	<option value="4">4 days</option>
-	<option value="5">5 days</option>
-	<option value="6">6 days</option>
-	<option value="7">7 days</option>
-	<option value="8">8 days</option>
-	<option value="9">9 days</option>
-	<option value="10" selected>10 days</option>
-	<option value="11">11 days</option>
-	<option value="12">12 days</option>
-	<option value="13">13 days</option>
-	<option value="14">14 days</option>
+        <option value="2">2 days</option>
+        <option value="3">3 days</option>
+        <option value="4">4 days</option>
+        <option value="5">5 days</option>
+        <option value="6">6 days</option>
+        <option value="7">7 days</option>
+        <option value="8">8 days</option>
+        <option value="9">9 days</option>
+        <option value="10" selected>10 days</option>
+        <option value="11">11 days</option>
+        <option value="12">12 days</option>
+        <option value="13">13 days</option>
+        <option value="14">14 days</option>
       </select>
     </p>
     <table id="table" class="planner"></table>
@@ -43,19 +43,19 @@
       <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
       <button onClick="Reset()">Reset</button>
       <p>
-	If there is more than one route between two locations, the system will measure 
-	the shortest one, except for trail segments between Mowich Lake / Eagle's Roost 
-	and Ipsut Creek / Cataract Valley / Carbon River Camp, where choice of route is 
-	determined by the 'via Spray Park' option. To check which way was measured, move 
-	your mouse over or tap on the distance for a day, and you'll see a tooltip 
-	listing all the locations along that day's trail.
+        If there is more than one route between two locations, the system will measure 
+        the shortest one, except for trail segments between Mowich Lake / Eagle's Roost 
+        and Ipsut Creek / Cataract Valley / Carbon River Camp, where choice of route is 
+        determined by the 'via Spray Park' option. To check which way was measured, move 
+        your mouse over or tap on the distance for a day, and you'll see a tooltip 
+        listing all the locations along that day's trail.
       </p>
       <p id="deweylake">
-	Note: Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use 
-	the Rainier campsite reservation system. It's included as an option here because 
-	camping somewhere along this section of the PCT can be useful for making a loop 
-	by connecting the Laughingwater Creek trail at Three Lakes to the northern end of 
-	the Eastside Trail at Tipsoo Lake.
+        Note: Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use 
+        the Rainier campsite reservation system. It's included as an option here because 
+        camping somewhere along this section of the PCT can be useful for making a loop 
+        by connecting the Laughingwater Creek trail at Three Lakes to the northern end of 
+        the Eastside Trail at Tipsoo Lake.
       </p>
     </div>
     <script>
@@ -76,377 +76,377 @@
 
 
       function InitializeDefaults() {
-	tripDuration = 10;
+        tripDuration = 10;
 
-	startTrailhead = 'Longmire';
-	endTrailhead = 'Longmire';
+        startTrailhead = 'Longmire';
+        endTrailhead = 'Longmire';
 
-	selectedCampsites = [
-	  'Devil\'s Dream',
-	  'Klapatche Park',
-	  'Golden Lakes',
-	  'Mowich Lake',
-	  'Carbon River Camp',
-	  'Granite Creek',
-	  'White River',
-	  'Indian Bar',
-	  'Maple Creek',
+        selectedCampsites = [
+          'Devil\'s Dream',
+          'Klapatche Park',
+          'Golden Lakes',
+          'Mowich Lake',
+          'Carbon River Camp',
+          'Granite Creek',
+          'White River',
+          'Indian Bar',
+          'Maple Creek',
 
-	  'Pyramid Creek',
-	  'Pyramid Creek',
-	  'Pyramid Creek',
-	  'Pyramid Creek',
-	];
+          'Pyramid Creek',
+          'Pyramid Creek',
+          'Pyramid Creek',
+          'Pyramid Creek',
+        ];
 
-	viaSprayPark = [];
-	viaSprayParkMaster = false;
+        viaSprayPark = [];
+        viaSprayParkMaster = false;
       }
 
 
       // Static data about available options to be displayed in the UI.
       var placeNames = {
-	'Wonderland Trailheads': [
-	  'Longmire',
-	  'Mowich Lake',
-	  'Sunrise',
-	  'White River',
-	  'Box Canyon'
-	],
+        'Wonderland Trailheads': [
+          'Longmire',
+          'Mowich Lake',
+          'Sunrise',
+          'White River',
+          'Box Canyon'
+        ],
 
-	'Alternative Accesses': [
-	  'Fryingpan Creek',
-	  'Reflection Lakes'
-	],
+        'Alternative Accesses': [
+          'Fryingpan Creek',
+          'Reflection Lakes'
+        ],
 
-	'Eastside Trailheads': [
-	  'G. of Patriarchs trhd',
-	  'Upper Owyhigh trhd',
-	  'Deer Creek trhd',
-	  'Tipsoo Lake',
-	],
+        'Eastside Trailheads': [
+          'G. of Patriarchs trhd',
+          'Upper Owyhigh trhd',
+          'Deer Creek trhd',
+          'Tipsoo Lake',
+        ],
 
-	'Sneaking in the Backdoor': [
-	  'Westside Road',
-	  'Paul Peak trhd',
-	  'Carbon River trhd',
-	  'Lake Eleanor trhd'
-	],
+        'Sneaking in the Backdoor': [
+          'Westside Road',
+          'Paul Peak trhd',
+          'Carbon River trhd',
+          'Lake Eleanor trhd'
+        ],
 
-	'Wonderland Camps': [
-	  'Pyramid Creek',
-	  'Devil\'s Dream',
-	  'South Puyallup River',
-	  'Klapatche Park',
-	  'North Puyallup River',
-	  'Golden Lakes',
-	  'South Mowich River',
-	  'Mowich Lake',
-	  'Ipsut Creek',
-	  'Eagle\'s Roost',
-	  'Cataract Valley',
-	  'Carbon River Camp',
-	  'Dick Creek',
-	  'Mystic Camp',
-	  'Granite Creek',
-	  'Sunrise Camp',
-	  'White River',
-	  'Summerland',
-	  'Indian Bar',
-	  'Nickel Creek',
-	  'Maple Creek',
-	  'Paradise River'
-	],
+        'Wonderland Camps': [
+          'Pyramid Creek',
+          'Devil\'s Dream',
+          'South Puyallup River',
+          'Klapatche Park',
+          'North Puyallup River',
+          'Golden Lakes',
+          'South Mowich River',
+          'Mowich Lake',
+          'Ipsut Creek',
+          'Eagle\'s Roost',
+          'Cataract Valley',
+          'Carbon River Camp',
+          'Dick Creek',
+          'Mystic Camp',
+          'Granite Creek',
+          'Sunrise Camp',
+          'White River',
+          'Summerland',
+          'Indian Bar',
+          'Nickel Creek',
+          'Maple Creek',
+          'Paradise River'
+        ],
 
-	'Northern Loop': [
-	  'Yellowstone Cliffs',
-	  'James Camp',
-	  'Fire Creek',
-	  'Berkeley Park'
-	],
+        'Northern Loop': [
+          'Yellowstone Cliffs',
+          'James Camp',
+          'Fire Creek',
+          'Berkeley Park'
+        ],
 
-	'Eastside Camps': [
-	  'Olallie Creek',
-	  'Tamanos Creek',
-	  'Deer Creek',
-	  'Three Lakes',
-	  'Dewey Lake'
-	],
+        'Eastside Camps': [
+          'Olallie Creek',
+          'Tamanos Creek',
+          'Deer Creek',
+          'Three Lakes',
+          'Dewey Lake'
+        ],
 
-	'Other Camps': [
-	  'Lake George',
-	  'Lake Eleanor',
-	  'Forest Lake',
-	  'Glacier Basin',
-	  'Snow Lake'
-	]
+        'Other Camps': [
+          'Lake George',
+          'Lake Eleanor',
+          'Forest Lake',
+          'Glacier Basin',
+          'Snow Lake'
+        ]
       };
 
       var trailheadCategories = [
-	'Wonderland Trailheads',
-	'Alternative Accesses',
-	'Eastside Trailheads',
-	'Sneaking in the Backdoor'
+        'Wonderland Trailheads',
+        'Alternative Accesses',
+        'Eastside Trailheads',
+        'Sneaking in the Backdoor'
       ];
 
       var campsiteCategories = [
-	'Wonderland Camps',
-	'Northern Loop',
-	'Eastside Camps',
-	'Other Camps'
+        'Wonderland Camps',
+        'Northern Loop',
+        'Eastside Camps',
+        'Other Camps'
       ];
 
 
       // Static map data about trail distances and elevation changes.
       var trailData = {
-	'Longmire': [
-	  { To: 'Pyramid Creek', Distance: 3, Up: 1400, Down: 400 }
-	],
+        'Longmire': [
+          { To: 'Pyramid Creek', Distance: 3, Up: 1400, Down: 400 }
+        ],
 
-	'Pyramid Creek': [
-	  { To: 'Devil\'s Dream', Distance: 2.3, Up: 1400, Down: 100 }
-	],
+        'Pyramid Creek': [
+          { To: 'Devil\'s Dream', Distance: 2.3, Up: 1400, Down: 100 }
+        ],
 
-	'Devil\'s Dream': [
-	  { To: 'South Puyallup River', Distance: 6, Up: 1900, Down: 2700 }
-	],
+        'Devil\'s Dream': [
+          { To: 'South Puyallup River', Distance: 6, Up: 1900, Down: 2700 }
+        ],
 
-	'South Puyallup River': [
-	  { To: 'Klapatche Park', Distance: 3.8, Up: 2100, Down: 800 }
-	],
+        'South Puyallup River': [
+          { To: 'Klapatche Park', Distance: 3.8, Up: 2100, Down: 800 }
+        ],
 
-	'Klapatche Park': [
-	  { To: 'North Puyallup River', Distance: 2.4, Up: 100, Down: 1900 }
-	],
+        'Klapatche Park': [
+          { To: 'North Puyallup River', Distance: 2.4, Up: 100, Down: 1900 }
+        ],
 
-	'North Puyallup River': [
-	  { To: 'Golden Lakes', Distance: 4.7, Up: 1900, Down: 600 }
-	],
+        'North Puyallup River': [
+          { To: 'Golden Lakes', Distance: 4.7, Up: 1900, Down: 600 }
+        ],
 
-	'Golden Lakes': [
-	  { To: 'South Mowich River', Distance: 5.3, Up: 200, Down: 2400 }
-	],
+        'Golden Lakes': [
+          { To: 'South Mowich River', Distance: 5.3, Up: 200, Down: 2400 }
+        ],
 
-	'South Mowich River': [
-	  { To: 'Mowich Lake', Distance: 4.1, Up: 2400, Down: 300 }
-	],
+        'South Mowich River': [
+          { To: 'Mowich Lake', Distance: 4.1, Up: 2400, Down: 300 }
+        ],
 
-	'Mowich Lake': [
-	  { To: 'Ipsut Pass', Distance: 1.3, Up: 400, Down: 300, NotSprayPark: true },
-	  { To: 'Eagle\'s Roost', Distance: 1.8, Up: 500, Down: 600 }
-	],
+        'Mowich Lake': [
+          { To: 'Ipsut Pass', Distance: 1.3, Up: 400, Down: 300, NotSprayPark: true },
+          { To: 'Eagle\'s Roost', Distance: 1.8, Up: 500, Down: 600 }
+        ],
 
-	'Ipsut Pass': [
-	  { To: 'Ipsut Creek', Distance: 3.9, Up: 0, Down: 2700, NotSprayPark: true },
-	  { To: 'Carbon River Camp', Distance: 6.8, Up: 1000, Down: 2800, NotSprayPark: true },
-	],
+        'Ipsut Pass': [
+          { To: 'Ipsut Creek', Distance: 3.9, Up: 0, Down: 2700, NotSprayPark: true },
+          { To: 'Carbon River Camp', Distance: 6.8, Up: 1000, Down: 2800, NotSprayPark: true },
+        ],
 
-	'Ipsut Creek': [
-	  { To: 'Carbon River Camp', Distance: 3.7, Up: 1300, Down: 400 }
-	],
+        'Ipsut Creek': [
+          { To: 'Carbon River Camp', Distance: 3.7, Up: 1300, Down: 400 }
+        ],
 
-	'Eagle\'s Roost': [
-	  { To: 'Spray Park', Distance: 3.2, Up: 1600, Down: 600, IsSprayPark: true }
-	],
+        'Eagle\'s Roost': [
+          { To: 'Spray Park', Distance: 3.2, Up: 1600, Down: 600, IsSprayPark: true }
+        ],
 
-	'Spray Park': [
-	  { To: 'Cataract Valley', Distance: 1.3, Up: 0, Down: 1400, IsSprayPark: true }
-	],
+        'Spray Park': [
+          { To: 'Cataract Valley', Distance: 1.3, Up: 0, Down: 1400, IsSprayPark: true }
+        ],
 
-	'Cataract Valley': [
-	  { To: 'Carbon River Camp', Distance: 1.5, Up: 100, Down: 1300 }
-	],
+        'Cataract Valley': [
+          { To: 'Carbon River Camp', Distance: 1.5, Up: 100, Down: 1300 }
+        ],
 
-	'Carbon River Camp': [
-	  { To: 'Dick Creek', Distance: 1.2, Up: 1000, Down: 100 }
-	],
+        'Carbon River Camp': [
+          { To: 'Dick Creek', Distance: 1.2, Up: 1000, Down: 100 }
+        ],
 
-	'Dick Creek': [
-	  { To: 'Mystic Camp', Distance: 3.4, Up: 2100, Down: 600 }
-	],
+        'Dick Creek': [
+          { To: 'Mystic Camp', Distance: 3.4, Up: 2100, Down: 600 }
+        ],
 
-	'Mystic Camp': [
-	  { To: 'Granite Creek', Distance: 3.8, Up: 1500, Down: 1200 }
-	],
+        'Mystic Camp': [
+          { To: 'Granite Creek', Distance: 3.8, Up: 1500, Down: 1200 }
+        ],
 
-	'Granite Creek': [
-	  { To: 'Frozen Lake', Distance: 3.3, Up: 1400, Down: 500 }
-	],
+        'Granite Creek': [
+          { To: 'Frozen Lake', Distance: 3.3, Up: 1400, Down: 500 }
+        ],
 
-	'Frozen Lake': [
-	  { To: 'Sunrise Camp', Distance: 0.9, Up: 0, Down: 500 }
-	],
+        'Frozen Lake': [
+          { To: 'Sunrise Camp', Distance: 0.9, Up: 0, Down: 500 }
+        ],
 
-	'Sunrise Camp': [
-	  { To: 'White River', Distance: 3.2, Up: 100, Down: 2100 }
-	],
+        'Sunrise Camp': [
+          { To: 'White River', Distance: 3.2, Up: 100, Down: 2100 }
+        ],
 
-	'Sunrise': [
-	  { To: 'White River', Distance: 2.9, Up: 0, Down: 2200 },
-	  { To: 'Sunrise Camp', Distance: 1.3, Up: 200, Down: 400 },
-	  { To: 'Frozen Lake', Distance: 1.5, Up: 400, Down: 100 }
-	],
+        'Sunrise': [
+          { To: 'White River', Distance: 2.9, Up: 0, Down: 2200 },
+          { To: 'Sunrise Camp', Distance: 1.3, Up: 200, Down: 400 },
+          { To: 'Frozen Lake', Distance: 1.5, Up: 400, Down: 100 }
+        ],
 
-	'White River': [
-	  { To: 'Fryingpan Creek', Distance: 2.5, Up: 100, Down: 600 }
-	],
+        'White River': [
+          { To: 'Fryingpan Creek', Distance: 2.5, Up: 100, Down: 600 }
+        ],
 
-	'Fryingpan Creek': [
-	  { To: 'Summerland', Distance: 4, Up: 2200, Down: 100 }
-	],
+        'Fryingpan Creek': [
+          { To: 'Summerland', Distance: 4, Up: 2200, Down: 100 }
+        ],
 
-	'Summerland': [
-	  { To: 'Indian Bar', Distance: 4.3, Up: 1200, Down: 2100 }
-	],
+        'Summerland': [
+          { To: 'Indian Bar', Distance: 4.3, Up: 1200, Down: 2100 }
+        ],
 
-	'Indian Bar': [
-	  { To: 'Nickel Creek', Distance: 6.3, Up: 1400, Down: 3200 }
-	],
+        'Indian Bar': [
+          { To: 'Nickel Creek', Distance: 6.3, Up: 1400, Down: 3200 }
+        ],
 
-	'Nickel Creek': [
-	  { To: 'Box Canyon', Distance: 0.8, Up: 100, Down: 400 }
-	],
+        'Nickel Creek': [
+          { To: 'Box Canyon', Distance: 0.8, Up: 100, Down: 400 }
+        ],
 
-	'Box Canyon': [
-	  { To: 'Maple Creek', Distance: 2.5, Up: 500, Down: 700 }
-	],
+        'Box Canyon': [
+          { To: 'Maple Creek', Distance: 2.5, Up: 500, Down: 700 }
+        ],
 
-	'Maple Creek': [
-	  { To: 'Reflection Lakes', Distance: 4.3, Up: 2300, Down: 200 }
-	],
+        'Maple Creek': [
+          { To: 'Reflection Lakes', Distance: 4.3, Up: 2300, Down: 200 }
+        ],
 
-	'Reflection Lakes': [
-	  { To: 'Paradise River', Distance: 2.4, Up: 200, Down: 1200 }
-	],
+        'Reflection Lakes': [
+          { To: 'Paradise River', Distance: 2.4, Up: 200, Down: 1200 }
+        ],
 
-	'Paradise River': [
-	  { To: 'Longmire', Distance: 3.3, Up: 100, Down: 1200 }
-	],
+        'Paradise River': [
+          { To: 'Longmire', Distance: 3.3, Up: 100, Down: 1200 }
+        ],
 
-	'Westside Road': [
-	  { To: 'Lake George', Distance: 4.4, Up: 1500, Down: 100 },
-	  { To: 'South Puyallup River', Distance: 5.6, Up: 1700, Down: 400 }
-	],
+        'Westside Road': [
+          { To: 'Lake George', Distance: 4.4, Up: 1500, Down: 100 },
+          { To: 'South Puyallup River', Distance: 5.6, Up: 1700, Down: 400 }
+        ],
 
-	'Lake George': [
-	  { To: 'South Puyallup River', Distance: 2.9, Up: 800, Down: 900 }
-	],
+        'Lake George': [
+          { To: 'South Puyallup River', Distance: 2.9, Up: 800, Down: 900 }
+        ],
 
-	'Paul Peak trhd': [
-	  { To: 'Mowich Lake', Distance: 6, Up: 2400, Down: 1200 },
-	  { To: 'South Mowich River', Distance: 3.9, Up: 500, Down: 1400 }
-	],
+        'Paul Peak trhd': [
+          { To: 'Mowich Lake', Distance: 6, Up: 2400, Down: 1200 },
+          { To: 'South Mowich River', Distance: 3.9, Up: 500, Down: 1400 }
+        ],
 
-	'Carbon River trhd': [
-	  { To: 'Ipsut Creek', Distance: 4.9, Up: 700, Down: 100 }
-	],
+        'Carbon River trhd': [
+          { To: 'Ipsut Creek', Distance: 4.9, Up: 700, Down: 100 }
+        ],
 
-	'Forest Lake': [
-	  { To: 'Sunrise', Distance: 2.4, Up: 1300, Down: 500 },
-	  { To: 'Frozen Lake', Distance: 2.6, Up: 1400, Down: 300 }
-	],
+        'Forest Lake': [
+          { To: 'Sunrise', Distance: 2.4, Up: 1300, Down: 500 },
+          { To: 'Frozen Lake', Distance: 2.6, Up: 1400, Down: 300 }
+        ],
 
-	'Glacier Basin': [
-	  { To: 'White River', Distance: 3.3, Up: 100, Down: 1800 },
-	  { To: 'Sunrise Camp', Distance: 4.5, Up: 2000, Down: 1700 },
-	  { To: 'Frozen Lake', Distance: 3.9, Up: 2000, Down: 1200 }
-	],
+        'Glacier Basin': [
+          { To: 'White River', Distance: 3.3, Up: 100, Down: 1800 },
+          { To: 'Sunrise Camp', Distance: 4.5, Up: 2000, Down: 1700 },
+          { To: 'Frozen Lake', Distance: 3.9, Up: 2000, Down: 1200 }
+        ],
 
-	'Snow Lake': [
-	  { To: 'Maple Creek', Distance: 4.6, Up: 500, Down: 2400 },
-	  { To: 'Reflection Lakes', Distance: 2.6, Up: 700, Down: 500 }
-	],
+        'Snow Lake': [
+          { To: 'Maple Creek', Distance: 4.6, Up: 500, Down: 2400 },
+          { To: 'Reflection Lakes', Distance: 2.6, Up: 700, Down: 500 }
+        ],
 
-	'Yellowstone Cliffs': [
-	  { To: 'Ipsut Creek', Distance: 4.9, Up: 300, Down: 3100 },
-	  { To: 'Carbon River Camp', Distance: 3.7, Up: 600, Down: 2500 },
-	  { To: 'Ipsut Pass', Distance: 7.9, Up: 2900, Down: 3000, NotSprayPark: true },
-	  { To: 'James Camp', Distance: 3, Up: 900, Down: 1500 }
-	],
+        'Yellowstone Cliffs': [
+          { To: 'Ipsut Creek', Distance: 4.9, Up: 300, Down: 3100 },
+          { To: 'Carbon River Camp', Distance: 3.7, Up: 600, Down: 2500 },
+          { To: 'Ipsut Pass', Distance: 7.9, Up: 2900, Down: 3000, NotSprayPark: true },
+          { To: 'James Camp', Distance: 3, Up: 900, Down: 1500 }
+        ],
 
-	'James Camp': [
-	  { To: 'Fire Creek', Distance: 4.5, Up: 1700, Down: 1600 },
-	  { To: 'Berkeley Park', Distance: 7.4, Up: 3000, Down: 1900 }
-	],
+        'James Camp': [
+          { To: 'Fire Creek', Distance: 4.5, Up: 1700, Down: 1600 },
+          { To: 'Berkeley Park', Distance: 7.4, Up: 3000, Down: 1900 }
+        ],
 
-	'Fire Creek': [
-	  { To: 'Berkeley Park', Distance: 3.8, Up: 1600, Down: 600 }
-	],
+        'Fire Creek': [
+          { To: 'Berkeley Park', Distance: 3.8, Up: 1600, Down: 600 }
+        ],
 
-	'Berkeley Park': [
-	  { To: 'Granite Creek', Distance: 4.1, Up: 1300, Down: 1000 },
-	  { To: 'Frozen Lake', Distance: 2.3, Up: 1200, Down: 0 }
-	],
+        'Berkeley Park': [
+          { To: 'Granite Creek', Distance: 4.1, Up: 1300, Down: 1000 },
+          { To: 'Frozen Lake', Distance: 2.3, Up: 1200, Down: 0 }
+        ],
 
-	'Lake Eleanor trhd': [
-	  { To: 'Lake Eleanor', Distance: 1, Up: 500, Down: 0 }
-	],
+        'Lake Eleanor trhd': [
+          { To: 'Lake Eleanor', Distance: 1, Up: 500, Down: 0 }
+        ],
 
-	'Lake Eleanor': [
-	  { To: 'Berkeley Park', Distance: 5.3, Up: 1300, Down: 700 },
-	  { To: 'Fire Creek', Distance: 4.8, Up: 1000, Down: 1400 },
-	  { To: 'James Camp', Distance: 8.4, Up: 2300, Down: 2800 }
-	],
+        'Lake Eleanor': [
+          { To: 'Berkeley Park', Distance: 5.3, Up: 1300, Down: 700 },
+          { To: 'Fire Creek', Distance: 4.8, Up: 1000, Down: 1400 },
+          { To: 'James Camp', Distance: 8.4, Up: 2300, Down: 2800 }
+        ],
 
-	'G. of Patriarchs trhd': [
-	  { To: 'Olallie Creek', Distance: 3, Up: 1800, Down: 0 },
-	  { To: 'Deer Creek', Distance: 6.4, Up: 1300, Down: 600 },
-	  { To: 'Three Lakes', Distance: 6, Up: 2800, Down: 400 }
-	],
+        'G. of Patriarchs trhd': [
+          { To: 'Olallie Creek', Distance: 3, Up: 1800, Down: 0 },
+          { To: 'Deer Creek', Distance: 6.4, Up: 1300, Down: 600 },
+          { To: 'Three Lakes', Distance: 6, Up: 2800, Down: 400 }
+        ],
 
-	'Olallie Creek': [
-	  { To: 'Nickel Creek', Distance: 3, Up: 800, Down: 1500 },
-	  { To: 'Indian Bar', Distance: 5.6, Up: 2500, Down: 1400 }
-	],
+        'Olallie Creek': [
+          { To: 'Nickel Creek', Distance: 3, Up: 800, Down: 1500 },
+          { To: 'Indian Bar', Distance: 5.6, Up: 2500, Down: 1400 }
+        ],
 
-	'Upper Owyhigh trhd': [
-	  { To: 'Fryingpan Creek', Distance: 0.8, Up: 200, Down: 100 },
-	  { To: 'Tamanos Creek', Distance: 2.9, Up: 1600, Down: 100 }
-	],
+        'Upper Owyhigh trhd': [
+          { To: 'Fryingpan Creek', Distance: 0.8, Up: 200, Down: 100 },
+          { To: 'Tamanos Creek', Distance: 2.9, Up: 1600, Down: 100 }
+        ],
 
-	'Tamanos Creek': [
-	  { To: 'Deer Creek', Distance: 5.1, Up: 200, Down: 2600 }
-	],
+        'Tamanos Creek': [
+          { To: 'Deer Creek', Distance: 5.1, Up: 200, Down: 2600 }
+        ],
 
-	'Deer Creek': [
-	  { To: 'Tipsoo Lake', Distance: 3.9, Up: 2500, Down: 100 }
-	],
+        'Deer Creek': [
+          { To: 'Tipsoo Lake', Distance: 3.9, Up: 2500, Down: 100 }
+        ],
 
-	'Deer Creek trhd': [
-	  { To: 'Deer Creek', Distance: 0.4, Up: 0, Down: 300 }
-	],
+        'Deer Creek trhd': [
+          { To: 'Deer Creek', Distance: 0.4, Up: 0, Down: 300 }
+        ],
 
-	'Three Lakes': [
-	  { To: 'Dewey Lake', Distance: 8, Up: 2300, Down: 1800 }
-	],
+        'Three Lakes': [
+          { To: 'Dewey Lake', Distance: 8, Up: 2300, Down: 1800 }
+        ],
 
-	'Dewey Lake': [
-	  { To: 'Tipsoo Lake', Distance: 3.8, Up: 900, Down: 700 }
-	],
+        'Dewey Lake': [
+          { To: 'Tipsoo Lake', Distance: 3.8, Up: 900, Down: 700 }
+        ],
 
-	'Tipsoo Lake': []
+        'Tipsoo Lake': []
       };
 
 
       // On load, create reversed copies of all the trail links, to make the graph bidirectional.
       function CreateInverseTrailLinks() {
-	var toReverse = {};
+        var toReverse = {};
 
-	for (var trail in trailData) {
-	  toReverse[trail] = trailData[trail].slice();
-	}
+        for (var trail in trailData) {
+          toReverse[trail] = trailData[trail].slice();
+        }
 
-	for (var fromTrail in toReverse) {
-	  toReverse[fromTrail].forEach(trailLink => {
-	    trailData[trailLink.To].push({
-	      To: fromTrail,
-	      Distance: trailLink.Distance,
-	      Up: trailLink.Down,
-	      Down: trailLink.Up,
-	      IsSprayPark: trailLink.IsSprayPark,
-	      NotSprayPark: trailLink.NotSprayPark
-	    });
-	  });
-	}
+        for (var fromTrail in toReverse) {
+          toReverse[fromTrail].forEach(trailLink => {
+            trailData[trailLink.To].push({
+              To: fromTrail,
+              Distance: trailLink.Distance,
+              Up: trailLink.Down,
+              Down: trailLink.Up,
+              IsSprayPark: trailLink.IsSprayPark,
+              NotSprayPark: trailLink.NotSprayPark
+            });
+          });
+        }
       }
 
       CreateInverseTrailLinks();
@@ -454,387 +454,387 @@
 
       // The core place-to-place distance computation.
       function MeasureDistance(day) {
-	// What two places are we measuring between?
-	var startPlace = (day == 0) ? startTrailhead : selectedCampsites[day - 1];
+        // What two places are we measuring between?
+        var startPlace = (day == 0) ? startTrailhead : selectedCampsites[day - 1];
 
-	var endPlace = (day == tripDuration - 1) ? endTrailhead : selectedCampsites[day];
+        var endPlace = (day == tripDuration - 1) ? endTrailhead : selectedCampsites[day];
 
-	// Seed the search with our starting point.
-	var searchPaths = [ 
-	  {
-	    Place: startPlace,
-	    Route: startPlace,
-	    Distance: 0,
-	    Up: 0,
-	    Down: 0,
-	    Visited: []
-	  }
-	];
+        // Seed the search with our starting point.
+        var searchPaths = [ 
+          {
+            Place: startPlace,
+            Route: startPlace,
+            Distance: 0,
+            Up: 0,
+            Down: 0,
+            Visited: []
+          }
+        ];
 
-	var found;
+        var found;
 
-	// Breadth-first iterative graph traversal.
-	while (searchPaths.length > 0) {
-	  var newPaths = [];
+        // Breadth-first iterative graph traversal.
+        while (searchPaths.length > 0) {
+          var newPaths = [];
 
-	  searchPaths.forEach(searchPath => {
-	    if (searchPath.Place == endPlace) {
-	      // Reached the goal! But is this the shortest path we've found so far?
-	      if (!found || (searchPath.Distance < found.Distance)) {
-		found = searchPath;
-	      }
-	    }
-	    else {
-	      trailData[searchPath.Place].forEach(trailLink => {
-		// Prevent cycles.
-		if (searchPath.Visited.includes(trailLink.To)) {
-		  return;
-		}
+          searchPaths.forEach(searchPath => {
+            if (searchPath.Place == endPlace) {
+              // Reached the goal! But is this the shortest path we've found so far?
+              if (!found || (searchPath.Distance < found.Distance)) {
+                found = searchPath;
+              }
+            }
+            else {
+              trailData[searchPath.Place].forEach(trailLink => {
+                // Prevent cycles.
+                if (searchPath.Visited.includes(trailLink.To)) {
+                  return;
+                }
 
-		// Early-out if we already found a shorter route than the one currently being explored.
-		var newDistance = searchPath.Distance + trailLink.Distance;
+                // Early-out if we already found a shorter route than the one currently being explored.
+                var newDistance = searchPath.Distance + trailLink.Distance;
 
-		if (found && (newDistance >= found.Distance)) {
-		  return;
-		}
+                if (found && (newDistance >= found.Distance)) {
+                  return;
+                }
 
-		// Some links are conditionally valid depending on whether the Spray Park option was selected.
-		if ((viaSprayPark[day] && trailLink.NotSprayPark) || (!viaSprayPark[day] && trailLink.IsSprayPark)) {
-		  return;
-		}
+                // Some links are conditionally valid depending on whether the Spray Park option was selected.
+                if ((viaSprayPark[day] && trailLink.NotSprayPark) || (!viaSprayPark[day] && trailLink.IsSprayPark)) {
+                  return;
+                }
 
-		newPaths.push({
-		  Place: trailLink.To,
-		  Route: searchPath.Route + ' &rarr; ' + trailLink.To,
-		  Distance: newDistance,
-		  Up: searchPath.Up + trailLink.Up,
-		  Down: searchPath.Down + trailLink.Down,
-		  Visited: [...searchPath.Visited, searchPath.Place]
-		});
-	      });
-	    }
-	  });
+                newPaths.push({
+                  Place: trailLink.To,
+                  Route: searchPath.Route + ' &rarr; ' + trailLink.To,
+                  Distance: newDistance,
+                  Up: searchPath.Up + trailLink.Up,
+                  Down: searchPath.Down + trailLink.Down,
+                  Visited: [...searchPath.Visited, searchPath.Place]
+                });
+              });
+            }
+          });
 
-	  searchPaths = newPaths;
-	}
+          searchPaths = newPaths;
+        }
 
-	dayDistances[day] = found;
+        dayDistances[day] = found;
 
-	if (!found) {
-	  return 'error: no route found!';
-	}
+        if (!found) {
+          return 'error: no route found!';
+        }
 
-	var tooltip = '<span class="tooltip">' + ExpandPlaceNames(found.Route) + '</span>';
+        var tooltip = '<span class="tooltip">' + ExpandPlaceNames(found.Route) + '</span>';
 
-	return found.Distance.toFixed(1) + ' miles, &uarr; ' + found.Up + '\' &darr; ' + found.Down + '\'' + tooltip;
+        return found.Distance.toFixed(1) + ' miles, &uarr; ' + found.Up + '\' &darr; ' + found.Down + '\'' + tooltip;
       }
 
 
       function ExpandPlaceNames(name) {
-	return name.replace(/trhd/g, 'trailhead')
-		   .replace(/G. of/g, 'Grove of the');
+        return name.replace(/trhd/g, 'trailhead')
+                   .replace(/G. of/g, 'Grove of the');
       }
 
 
       function EncodePlaceNames(name) {
-	return name.replace(/trailhead/g, 'trhd')
-		   .replace(/Grove of the/g, 'G. of');
+        return name.replace(/trailhead/g, 'trhd')
+                   .replace(/Grove of the/g, 'G. of');
       }
 
 
       // UI code.
       function InitializeUI() {
-	document.getElementById('tripduration').value = tripDuration;
-	RecreateUIElements();
+        document.getElementById('tripduration').value = tripDuration;
+        RecreateUIElements();
       }
 
 
       function CreatePlaceSelector(categories, currentSelection, changeHandler) {
-	var result = '<select onChange="' + changeHandler + '">';
+        var result = '<select onChange="' + changeHandler + '">';
 
-	categories.forEach(category => {
-	  result += '<optgroup label="' + category + '">';
+        categories.forEach(category => {
+          result += '<optgroup label="' + category + '">';
 
-	  placeNames[category].forEach(placeName => {
-	    var selectedAttribute = (placeName == currentSelection) ? ' selected' : '';
-	    result += '<option' + selectedAttribute + '>' + placeName + '</option>';
-	  });
+          placeNames[category].forEach(placeName => {
+            var selectedAttribute = (placeName == currentSelection) ? ' selected' : '';
+            result += '<option' + selectedAttribute + '>' + placeName + '</option>';
+          });
 
-	  result += '</optgroup>';
-	});
+          result += '</optgroup>';
+        });
 
-	return result + '</select>';
+        return result + '</select>';
       }
 
 
       function CreateTableRow(day) {
-	if (day == 0) {
-	  // Starting the first day at trailhead.
-	  var startHtml = CreatePlaceSelector(trailheadCategories, startTrailhead, 'StartTrailheadChanged(this.value)');
-	}
-	else
-	{
-	  // Starting a subsequent day at previous night's camp.
-	  var startHtml = selectedCampsites[day - 1];
-	}
+        if (day == 0) {
+          // Starting the first day at trailhead.
+          var startHtml = CreatePlaceSelector(trailheadCategories, startTrailhead, 'StartTrailheadChanged(this.value)');
+        }
+        else
+        {
+          // Starting a subsequent day at previous night's camp.
+          var startHtml = selectedCampsites[day - 1];
+        }
 
-	if (day == tripDuration - 1) {
-	  // Ending the trip back at a trailhead.
-	  var endHtml = CreatePlaceSelector(trailheadCategories, endTrailhead, 'EndTrailheadChanged(this.value)');
-	}
-	else
-	{
-	  // Ending the day at a campsite.
-	  var endHtml = CreatePlaceSelector(campsiteCategories, selectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
-	}
+        if (day == tripDuration - 1) {
+          // Ending the trip back at a trailhead.
+          var endHtml = CreatePlaceSelector(trailheadCategories, endTrailhead, 'EndTrailheadChanged(this.value)');
+        }
+        else
+        {
+          // Ending the day at a campsite.
+          var endHtml = CreatePlaceSelector(campsiteCategories, selectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
+        }
 
-	var checkboxAttribute = viaSprayPark[day] ? 'checked ' : '';
+        var checkboxAttribute = viaSprayPark[day] ? 'checked ' : '';
 
-	return '<tr>' +
-	       '  <td class="plannerday">Day ' + (day + 1) + '</td>' +
-	       '  <td>' + startHtml + '</td>' +
-	       '  <td>to ' + endHtml + '</td>' +
-	       '  <td><span class="plannersprayparklabel">via Spray Park:</span><input type="checkbox" onChange="ViaSprayParkChanged(' + day + ', this.checked)" ' + checkboxAttribute + '/></td>' +
-	       '  <td class="plannerdistance">' + MeasureDistance(day) + '</td>' +
-	       '</tr>';
+        return '<tr>' +
+               '  <td class="plannerday">Day ' + (day + 1) + '</td>' +
+               '  <td>' + startHtml + '</td>' +
+               '  <td>to ' + endHtml + '</td>' +
+               '  <td><span class="plannersprayparklabel">via Spray Park:</span><input type="checkbox" onChange="ViaSprayParkChanged(' + day + ', this.checked)" ' + checkboxAttribute + '/></td>' +
+               '  <td class="plannerdistance">' + MeasureDistance(day) + '</td>' +
+               '</tr>';
       }
 
 
       function RecreateUIElements() {
-	var table = document.getElementById('table');
+        var table = document.getElementById('table');
 
-	var checkboxAttribute = viaSprayParkMaster ? 'checked ' : '';
+        var checkboxAttribute = viaSprayParkMaster ? 'checked ' : '';
 
-	table.innerHTML = '<tr class="plannerspraymaster">' +
-			  '  <td/>' +
-			  '  <td/>' +
-			  '  <td style="text-align:right">via Spray Park:</td>' +
-			  '  <td><input type="checkbox" onChange="ViaSprayParkMasterChanged(this.checked)" ' + checkboxAttribute + '/></td>' +
-			  '</tr>';
+        table.innerHTML = '<tr class="plannerspraymaster">' +
+                          '  <td/>' +
+                          '  <td/>' +
+                          '  <td style="text-align:right">via Spray Park:</td>' +
+                          '  <td><input type="checkbox" onChange="ViaSprayParkMasterChanged(this.checked)" ' + checkboxAttribute + '/></td>' +
+                          '</tr>';
 
-	for (var day = 0; day < tripDuration; day++) {
-	  row = document.createElement('tr');
-	  row.innerHTML = CreateTableRow(day);
-	  table.appendChild(row);
-	}
+        for (var day = 0; day < tripDuration; day++) {
+          row = document.createElement('tr');
+          row.innerHTML = CreateTableRow(day);
+          table.appendChild(row);
+        }
 
-	UpdateTotals();
-	ShowOrHideDeweyLakeDetails();
+        UpdateTotals();
+        ShowOrHideDeweyLakeDetails();
       }
 
 
       function UpdateTotals() {
-	var distance = 0;
-	var up = 0;
-	var down = 0;
+        var distance = 0;
+        var up = 0;
+        var down = 0;
 
-	for (var i = 0; i < tripDuration; i++) {
-	  if (dayDistances[i]) {
-	    distance += dayDistances[i].Distance;
-	    up += dayDistances[i].Up;
-	    down += dayDistances[i].Down;
-	  }
-	}
+        for (var i = 0; i < tripDuration; i++) {
+          if (dayDistances[i]) {
+            distance += dayDistances[i].Distance;
+            up += dayDistances[i].Up;
+            down += dayDistances[i].Down;
+          }
+        }
 
-	document.getElementById('totals').innerHTML = distance.toFixed(1) + ' miles, &uarr; ' + up + '\' &darr; ' + down + '\'';
+        document.getElementById('totals').innerHTML = distance.toFixed(1) + ' miles, &uarr; ' + up + '\' &darr; ' + down + '\'';
       }
 
 
       function ShowOrHideDeweyLakeDetails() {
-	var visibility = 'collapse';
+        var visibility = 'collapse';
 
-	for (var i = 0; i < tripDuration - 1; i++) {
-	  if (selectedCampsites[i] == 'Dewey Lake') {
-	    visibility = 'visible';
-	    break;
-	  }
-	}
+        for (var i = 0; i < tripDuration - 1; i++) {
+          if (selectedCampsites[i] == 'Dewey Lake') {
+            visibility = 'visible';
+            break;
+          }
+        }
 
-	document.getElementById('deweylake').style.visibility = visibility;
+        document.getElementById('deweylake').style.visibility = visibility;
       }
 
 
       function TripDurationChanged(newDuration) {
-	tripDuration = newDuration;
-	RecreateUIElements();
+        tripDuration = newDuration;
+        RecreateUIElements();
       }
 
 
       function GetTableRow(day) {
-	return document.getElementById('table').children[day + 1];
+        return document.getElementById('table').children[day + 1];
       }
 
 
       function UpdateDistance(day) {
-	GetTableRow(day).children[4].innerHTML = MeasureDistance(day);
+        GetTableRow(day).children[4].innerHTML = MeasureDistance(day);
       }
 
 
       function StartTrailheadChanged(newValue) {
-	startTrailhead = newValue;
+        startTrailhead = newValue;
 
-	UpdateDistance(0);
-	UpdateTotals();
+        UpdateDistance(0);
+        UpdateTotals();
       }
 
 
       function EndTrailheadChanged(newValue) {
-	endTrailhead = newValue;
+        endTrailhead = newValue;
 
-	UpdateDistance(tripDuration - 1);
-	UpdateTotals();
+        UpdateDistance(tripDuration - 1);
+        UpdateTotals();
       }
 
 
       function CampsiteChanged(day, newValue) {
-	selectedCampsites[day] = newValue;
+        selectedCampsites[day] = newValue;
 
-	GetTableRow(day + 1).children[1].innerHTML = newValue;
+        GetTableRow(day + 1).children[1].innerHTML = newValue;
 
-	UpdateDistance(day);
-	UpdateDistance(day + 1);
-	UpdateTotals();
-	ShowOrHideDeweyLakeDetails();
+        UpdateDistance(day);
+        UpdateDistance(day + 1);
+        UpdateTotals();
+        ShowOrHideDeweyLakeDetails();
       }
 
 
       function ViaSprayParkChanged(day, newValue) {
-	viaSprayPark[day] = newValue;
+        viaSprayPark[day] = newValue;
 
-	UpdateDistance(day);
-	UpdateTotals();
+        UpdateDistance(day);
+        UpdateTotals();
       }
 
 
       function ViaSprayParkMasterChanged(newValue) {
-	viaSprayParkMaster = newValue;
+        viaSprayParkMaster = newValue;
 
-	for (var i = 0; i < maxDays; i++) {
-	  viaSprayPark[i] = newValue;
-	}
+        for (var i = 0; i < maxDays; i++) {
+          viaSprayPark[i] = newValue;
+        }
 
-	RecreateUIElements();
+        RecreateUIElements();
       }
 
 
       // Import and export functions.
       function Export() {
-	var data = SerializeState();
+        var data = SerializeState();
 
-	var exporter = document.createElement('a');
-	exporter.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
-	exporter.setAttribute('download', 'itinerary.txt');
-	exporter.style.display = 'none';
+        var exporter = document.createElement('a');
+        exporter.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
+        exporter.setAttribute('download', 'itinerary.txt');
+        exporter.style.display = 'none';
 
-	document.body.appendChild(exporter);
+        document.body.appendChild(exporter);
 
-	exporter.click();
+        exporter.click();
 
-	document.body.removeChild(exporter);
+        document.body.removeChild(exporter);
       }
 
 
       function Import() {
-	document.getElementById("fileselector").click();
+        document.getElementById("fileselector").click();
       }
 
 
       function ImportChanged(file) {
-	if (file) {
-	  var reader = new FileReader();
+        if (file) {
+          var reader = new FileReader();
 
-	  reader.onload = function() {
-	    DeserializeState(reader.result);
-	    InitializeUI();
-	  };
+          reader.onload = function() {
+            DeserializeState(reader.result);
+            InitializeUI();
+          };
 
-	  reader.readAsText(file);
-	}
+          reader.readAsText(file);
+        }
       }
 
 
       function SerializeState() {
-	var text = tripDuration + ' days\n';
+        var text = tripDuration + ' days\n';
 
-	if (viaSprayParkMaster) {
-	  text += 'via Spray Park\n';
-	}
+        if (viaSprayParkMaster) {
+          text += 'via Spray Park\n';
+        }
 
-	for (var i = 0; i < tripDuration; i++) {
-	  var startPlace = (i == 0) ? startTrailhead : selectedCampsites[i - 1];
-	  var endPlace = (i == tripDuration - 1) ? endTrailhead : selectedCampsites[i];
+        for (var i = 0; i < tripDuration; i++) {
+          var startPlace = (i == 0) ? startTrailhead : selectedCampsites[i - 1];
+          var endPlace = (i == tripDuration - 1) ? endTrailhead : selectedCampsites[i];
 
-	  text += '\nDay ' + (i + 1) + ': ' + ExpandPlaceNames(startPlace) + ' to ' + ExpandPlaceNames(endPlace);
+          text += '\nDay ' + (i + 1) + ': ' + ExpandPlaceNames(startPlace) + ' to ' + ExpandPlaceNames(endPlace);
 
-	  if (viaSprayPark[i] && !viaSprayParkMaster) {
-	    text += ' (via Spray Park)';
-	  }
-	  else if (!viaSprayPark[i] && viaSprayParkMaster) {
-	    text += ' (not Spray Park)';
-	  }
+          if (viaSprayPark[i] && !viaSprayParkMaster) {
+            text += ' (via Spray Park)';
+          }
+          else if (!viaSprayPark[i] && viaSprayParkMaster) {
+            text += ' (not Spray Park)';
+          }
 
-	  text += '\n';
+          text += '\n';
 
-	  text += dayDistances[i].Distance.toFixed(1) + ' miles, ' + dayDistances[i].Up + '\' gain, ' + dayDistances[i].Down + '\' descent\n';
+          text += dayDistances[i].Distance.toFixed(1) + ' miles, ' + dayDistances[i].Up + '\' gain, ' + dayDistances[i].Down + '\' descent\n';
 
-	  text += '  (route: ' + ExpandPlaceNames(dayDistances[i].Route).replace(/&rarr;/g, '->') + ')\n';
-	}
+          text += '  (route: ' + ExpandPlaceNames(dayDistances[i].Route).replace(/&rarr;/g, '->') + ')\n';
+        }
 
-	return text;
+        return text;
       }
 
 
       function DeserializeState(text) {
-	InitializeDefaults();
+        InitializeDefaults();
 
-	text.split("\n").forEach(line => {
-	  var match;
+        text.split("\n").forEach(line => {
+          var match;
 
-	  if (match = /^(\d+) days/.exec(line)) {
-	    tripDuration = match[1];
-	  }
-	  else if (/^via Spray Park/.test(line))
-	  {
-	    viaSprayParkMaster = true;
+          if (match = /^(\d+) days/.exec(line)) {
+            tripDuration = match[1];
+          }
+          else if (/^via Spray Park/.test(line))
+          {
+            viaSprayParkMaster = true;
 
-	    for (var i = 0; i < maxDays; i++) {
-	      viaSprayPark[i] = true;
-	    }
-	  }
-	  else if (match = /^Day (\d+): (.+) to (([^ ]| [^\(])+)/.exec(line)) {
-	    var day = match[1] - 1;
+            for (var i = 0; i < maxDays; i++) {
+              viaSprayPark[i] = true;
+            }
+          }
+          else if (match = /^Day (\d+): (.+) to (([^ ]| [^\(])+)/.exec(line)) {
+            var day = match[1] - 1;
 
-	    var startPlace = EncodePlaceNames(match[2]);
-	    var endPlace = EncodePlaceNames(match[3]);
+            var startPlace = EncodePlaceNames(match[2]);
+            var endPlace = EncodePlaceNames(match[3]);
 
-	    if (day == 0) {
-	      startTrailhead = startPlace;
-	    }
+            if (day == 0) {
+              startTrailhead = startPlace;
+            }
 
-	    if (day == tripDuration - 1) {
-	      endTrailhead = endPlace;
-	    }
-	    else {
-	      selectedCampsites[day] = endPlace;
-	    }
+            if (day == tripDuration - 1) {
+              endTrailhead = endPlace;
+            }
+            else {
+              selectedCampsites[day] = endPlace;
+            }
 
-	    if (line.includes('(via Spray Park)'))
-	    {
-	      viaSprayPark[day] = true;
-	    }
-	    else if (line.includes('(not Spray Park)'))
-	    {
-	      viaSprayPark[day] = false;
-	    }
-	  }
-	});
+            if (line.includes('(via Spray Park)'))
+            {
+              viaSprayPark[day] = true;
+            }
+            else if (line.includes('(not Spray Park)'))
+            {
+              viaSprayPark[day] = false;
+            }
+          }
+        });
       }
 
 
       // Set default state when the page first loads.
       function Reset() {
-	InitializeDefaults();
-	InitializeUI();
+        InitializeDefaults();
+        InitializeUI();
       }
 
       Reset();
