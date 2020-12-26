@@ -19,13 +19,14 @@ a:link, a:visited {
   padding-top: 4;
   padding-bottom: 8;
   margin-bottom: 20;
-  min-height: 55;
+  min-height: 72;
   background-color: #95C0E0;
 }
 
 .backlink {
   font-size: 32px;
   font-weight: bold;
+  margin-top: 6;
 }
 
 @media (max-width: 480px) {
@@ -38,7 +39,7 @@ a:link, a:visited {
   font-size: 13px;
   font-style: italic;
   line-height: 1.4;
-  margin-top: 2;
+  margin-top: 1;
   margin-left: 8;
   float: right;
 }
@@ -46,7 +47,7 @@ a:link, a:visited {
 .subtitle {
   font-size: 13px;
   font-style: italic;
-  margin-top: 2;
+  margin-top: 8;
 }
 
 .map {
@@ -212,4 +213,72 @@ a:link, a:visited {
   padding: 23;
   padding-right: 0;
   max-width: 40%;
+}
+
+.plannerday {
+  padding-right: 20;
+}
+
+.plannerdistance {
+  padding-left: 20;
+  position: relative;
+}
+
+.plannerdistance .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: #606060;
+  color: #D0D0D0;
+  text-align: center;
+  font-style: italic;
+  position: absolute;
+  width: 256;
+  padding: 5;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -160;
+}
+
+.plannerdistance .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5;
+  border-width: 5;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.plannerdistance:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.plannersprayparklabel {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .planner {
+    border-collapse: collapse;
+  }
+
+  .planner tr {
+    border-bottom: 1pt solid gray;
+  }
+
+  .planner td {
+    display: block;
+  }
+
+  .plannerspraymaster {
+    visibility: collapse;
+  }
+
+  .plannersprayparklabel {
+    display: inline;
+  }
 }

@@ -62,6 +62,7 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "Planner.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
 
                 // Debug .csv output can be pasted into Excel for length/difficulty analysis.
@@ -179,7 +180,8 @@ namespace builder
             writer.WriteLine("        <div class=\"about\">");
             writer.WriteLine("          <a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
             writer.WriteLine("          <a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
-            writer.WriteLine("          <a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a>");
+            writer.WriteLine("          <a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a><br/>");
+            writer.WriteLine("          <a href=\"" + rootPrefix + "Planner.html\">campsite distances</a>");
             writer.WriteLine("        </div>");
             writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
             writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
