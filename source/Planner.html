@@ -40,10 +40,10 @@
     <table id="table" class="planner"></table>
     <div class="fixedwidth progress">
       <p id="totals"></p>
-      <button onClick="Export()">Export</button>
-      <button onClick="Import()">Import</button>
+      <button onClick="ExportTrip()">Export</button>
+      <button onClick="ImportTrip()">Import</button>
       <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
-      <button onClick="Reset()">Reset</button>
+      <button onClick="ResetTrip()">Reset</button>
       <p>
         If there is more than one route between two locations, this page will measure the 
         shortest one, except for trail segments in the northwest corner of the park 
@@ -61,52 +61,46 @@
       </p>
     </div>
     <script>
-      // Variable state tracking the current user selection.
-      var maxDays = 14;
+      // State tracking the current trip configuration.
+      const maxDays = 14;
 
-      var tripDuration;
-
-      var startTrailhead;
-      var endTrailhead;
-
-      var selectedCampsites;
-
-      var viaSprayPark;
-      var viaSprayParkMaster;
+      var trip;
 
       var dayDistances = [];
 
 
-      function InitializeDefaults() {
-        tripDuration = 11;
+      function CreateDefaultTrip() {
+        return {
+          Duration: 11,
 
-        startTrailhead = 'Longmire';
-        endTrailhead = 'Longmire';
+          StartTrailhead: 'Longmire',
+          EndTrailhead: 'Longmire',
 
-        selectedCampsites = [
-          'Devil\'s Dream',
-          'Klapatche Park',
-          'Golden Lakes',
-          'Mowich Lake',
-          'Carbon River Camp',
-          'Mystic Camp',
-          'Sunrise Camp',
-          'Summerland',
-          'Indian Bar',
-          'Maple Creek',
+          SelectedCampsites: [
+            'Devil\'s Dream',
+            'Klapatche Park',
+            'Golden Lakes',
+            'Mowich Lake',
+            'Carbon River Camp',
+            'Mystic Camp',
+            'Sunrise Camp',
+            'Summerland',
+            'Indian Bar',
+            'Maple Creek',
 
-          'Pyramid Creek',
-          'Pyramid Creek',
-          'Pyramid Creek',
-        ];
+            'Pyramid Creek',
+            'Pyramid Creek',
+            'Pyramid Creek'
+          ],
 
-        viaSprayPark = [];
-        viaSprayParkMaster = false;
+          ViaSprayPark: [],
+          ViaSprayParkMaster: false
+        };
       }
 
 
       // Static data about available options to be displayed in the UI.
-      var placeNames = {
+      const placeNames = {
         'Wonderland Trailheads': [
           'Longmire',
           'Mowich Lake',
@@ -183,14 +177,14 @@
         ]
       };
 
-      var trailheadCategories = [
+      const trailheadCategories = [
         'Wonderland Trailheads',
         'Alternative Accesses',
         'Eastside Trailheads',
         'Sneaking in the Backdoor'
       ];
 
-      var campsiteCategories = [
+      const campsiteCategories = [
         'Wonderland Camps',
         'Northern Loop',
         'Eastside Camps',
@@ -199,7 +193,7 @@
 
 
       // Static map data about trail distances and elevation changes.
-      var trailData = {
+      const trailData = {
         'Longmire': [
           { To: 'Pyramid Creek', Distance: 3.3, Up: 1400, Down: 400 }
         ],
@@ -530,12 +524,12 @@
       function MeasureDistance(day)
       {
         // What two places are we measuring between?
-        var startPlace = (day == 0) ? startTrailhead : selectedCampsites[day - 1];
+        var startPlace = (day == 0) ? trip.StartTrailhead : trip.SelectedCampsites[day - 1];
 
-        var endPlace = (day == tripDuration - 1) ? endTrailhead : selectedCampsites[day];
+        var endPlace = (day == trip.Duration - 1) ? trip.EndTrailhead : trip.SelectedCampsites[day];
 
         // Find the best route.
-        var route = FindRoute(startPlace, endPlace, viaSprayPark[day]);
+        var route = FindRoute(startPlace, endPlace, trip.ViaSprayPark[day]);
 
         // Store and format the results.
         dayDistances[day] = route;
@@ -558,7 +552,7 @@
         }
 
         if (up.length < 12) {
-          up = up + align;
+          up = up + align.repeat(12 - up.length);
         }
 
         return miles + ', ' + up + ' ' + down + tooltip;
@@ -579,7 +573,7 @@
 
       // UI code.
       function InitializeUI() {
-        document.getElementById('tripduration').value = tripDuration;
+        document.getElementById('tripduration').value = trip.Duration;
         RecreateUIElements();
       }
 
@@ -605,25 +599,25 @@
       function CreateTableRow(day) {
         if (day == 0) {
           // Starting the first day at trailhead.
-          var startHtml = CreatePlaceSelector(trailheadCategories, startTrailhead, 'StartTrailheadChanged(this.value)');
+          var startHtml = CreatePlaceSelector(trailheadCategories, trip.StartTrailhead, 'StartTrailheadChanged(this.value)');
         }
         else
         {
           // Starting a subsequent day at previous night's camp.
-          var startHtml = selectedCampsites[day - 1];
+          var startHtml = trip.SelectedCampsites[day - 1];
         }
 
-        if (day == tripDuration - 1) {
+        if (day == trip.Duration - 1) {
           // Ending the trip back at a trailhead.
-          var endHtml = CreatePlaceSelector(trailheadCategories, endTrailhead, 'EndTrailheadChanged(this.value)');
+          var endHtml = CreatePlaceSelector(trailheadCategories, trip.EndTrailhead, 'EndTrailheadChanged(this.value)');
         }
         else
         {
           // Ending the day at a campsite.
-          var endHtml = CreatePlaceSelector(campsiteCategories, selectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
+          var endHtml = CreatePlaceSelector(campsiteCategories, trip.SelectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
         }
 
-        var checkboxAttribute = viaSprayPark[day] ? 'checked ' : '';
+        var checkboxAttribute = trip.ViaSprayPark[day] ? 'checked ' : '';
 
         return '<tr>' +
                '  <td class="plannerday">Day ' + (day + 1) + '</td>' +
@@ -638,7 +632,7 @@
       function RecreateUIElements() {
         var table = document.getElementById('table');
 
-        var checkboxAttribute = viaSprayParkMaster ? 'checked ' : '';
+        var checkboxAttribute = trip.ViaSprayParkMaster ? 'checked ' : '';
 
         table.innerHTML = '<tr class="plannerspraymaster">' +
                           '  <td/>' +
@@ -647,7 +641,7 @@
                           '  <td><input type="checkbox" onChange="ViaSprayParkMasterChanged(this.checked)" ' + checkboxAttribute + '/></td>' +
                           '</tr>';
 
-        for (var day = 0; day < tripDuration; day++) {
+        for (var day = 0; day < trip.Duration; day++) {
           row = document.createElement('tr');
           row.innerHTML = CreateTableRow(day);
           table.appendChild(row);
@@ -663,7 +657,7 @@
         var up = 0;
         var down = 0;
 
-        for (var i = 0; i < tripDuration; i++) {
+        for (var i = 0; i < trip.Duration; i++) {
           if (dayDistances[i]) {
             distance += dayDistances[i].Distance;
             up += dayDistances[i].Up;
@@ -678,8 +672,8 @@
       function ShowOrHideDeweyLakeDetails() {
         var visibility = 'collapse';
 
-        for (var i = 0; i < tripDuration - 1; i++) {
-          if (selectedCampsites[i] == 'Dewey Lake') {
+        for (var i = 0; i < trip.Duration - 1; i++) {
+          if (trip.SelectedCampsites[i] == 'Dewey Lake') {
             visibility = 'visible';
             break;
           }
@@ -690,8 +684,9 @@
 
 
       function TripDurationChanged(newDuration) {
-        tripDuration = newDuration;
+        trip.Duration = newDuration;
         RecreateUIElements();
+        SaveTrip();
       }
 
 
@@ -706,23 +701,25 @@
 
 
       function StartTrailheadChanged(newValue) {
-        startTrailhead = newValue;
+        trip.StartTrailhead = newValue;
 
         UpdateDistance(0);
         UpdateTotals();
+        SaveTrip();
       }
 
 
       function EndTrailheadChanged(newValue) {
-        endTrailhead = newValue;
+        trip.EndTrailhead = newValue;
 
-        UpdateDistance(tripDuration - 1);
+        UpdateDistance(trip.Duration - 1);
         UpdateTotals();
+        SaveTrip();
       }
 
 
       function CampsiteChanged(day, newValue) {
-        selectedCampsites[day] = newValue;
+        trip.SelectedCampsites[day] = newValue;
 
         GetTableRow(day + 1).children[1].innerHTML = newValue;
 
@@ -730,31 +727,34 @@
         UpdateDistance(day + 1);
         UpdateTotals();
         ShowOrHideDeweyLakeDetails();
+        SaveTrip();
       }
 
 
       function ViaSprayParkChanged(day, newValue) {
-        viaSprayPark[day] = newValue;
+        trip.ViaSprayPark[day] = newValue;
 
         UpdateDistance(day);
         UpdateTotals();
+        SaveTrip();
       }
 
 
       function ViaSprayParkMasterChanged(newValue) {
-        viaSprayParkMaster = newValue;
+        trip.ViaSprayParkMaster = newValue;
 
         for (var i = 0; i < maxDays; i++) {
-          viaSprayPark[i] = newValue;
+          trip.ViaSprayPark[i] = newValue;
         }
 
         RecreateUIElements();
+        SaveTrip();
       }
 
 
       // Import and export functions.
-      function Export() {
-        var data = SerializeState();
+      function ExportTrip() {
+        var data = SerializeTrip();
 
         var exporter = document.createElement('a');
         exporter.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
@@ -769,7 +769,7 @@
       }
 
 
-      function Import() {
+      function ImportTrip() {
         document.getElementById("fileselector").click();
       }
 
@@ -779,8 +779,9 @@
           var reader = new FileReader();
 
           reader.onload = function() {
-            DeserializeState(reader.result);
+            DeserializeTrip(reader.result);
             InitializeUI();
+            SaveTrip();
           };
 
           reader.readAsText(file);
@@ -788,23 +789,23 @@
       }
 
 
-      function SerializeState() {
-        var text = tripDuration + ' days\n';
+      function SerializeTrip() {
+        var text = trip.Duration + ' days\n';
 
-        if (viaSprayParkMaster) {
+        if (trip.ViaSprayParkMaster) {
           text += 'via Spray Park\n';
         }
 
-        for (var i = 0; i < tripDuration; i++) {
-          var startPlace = (i == 0) ? startTrailhead : selectedCampsites[i - 1];
-          var endPlace = (i == tripDuration - 1) ? endTrailhead : selectedCampsites[i];
+        for (var i = 0; i < trip.Duration; i++) {
+          var startPlace = (i == 0) ? trip.StartTrailhead : trip.SelectedCampsites[i - 1];
+          var endPlace = (i == trip.Duration - 1) ? trip.EndTrailhead : trip.SelectedCampsites[i];
 
           text += '\nDay ' + (i + 1) + ': ' + ExpandPlaceNames(startPlace) + ' to ' + ExpandPlaceNames(endPlace);
 
-          if (viaSprayPark[i] && !viaSprayParkMaster) {
+          if (trip.ViaSprayPark[i] && !trip.ViaSprayParkMaster) {
             text += ' (via Spray Park)';
           }
-          else if (!viaSprayPark[i] && viaSprayParkMaster) {
+          else if (!trip.ViaSprayPark[i] && trip.ViaSprayParkMaster) {
             text += ' (not Spray Park)';
           }
 
@@ -819,21 +820,21 @@
       }
 
 
-      function DeserializeState(text) {
-        InitializeDefaults();
+      function DeserializeTrip(text) {
+        trip = CreateDefaultTrip();
 
         text.split("\n").forEach(line => {
           var match;
 
           if (match = /^(\d+) days/.exec(line)) {
-            tripDuration = match[1];
+            trip.Duration = match[1];
           }
           else if (/^via Spray Park/.test(line))
           {
-            viaSprayParkMaster = true;
+            trip.ViaSprayParkMaster = true;
 
             for (var i = 0; i < maxDays; i++) {
-              viaSprayPark[i] = true;
+              trip.ViaSprayPark[i] = true;
             }
           }
           else if (match = /^Day (\d+): (.+) to (([^ ]| [^\(])+)/.exec(line)) {
@@ -843,36 +844,45 @@
             var endPlace = EncodePlaceNames(match[3]);
 
             if (day == 0) {
-              startTrailhead = startPlace;
+              trip.StartTrailhead = startPlace;
             }
 
-            if (day == tripDuration - 1) {
-              endTrailhead = endPlace;
+            if (day == trip.Duration - 1) {
+              trip.EndTrailhead = endPlace;
             }
             else {
-              selectedCampsites[day] = endPlace;
+              trip.SelectedCampsites[day] = endPlace;
             }
 
             if (line.includes('(via Spray Park)'))
             {
-              viaSprayPark[day] = true;
+              trip.ViaSprayPark[day] = true;
             }
             else if (line.includes('(not Spray Park)'))
             {
-              viaSprayPark[day] = false;
+              trip.ViaSprayPark[day] = false;
             }
           }
         });
       }
 
 
-      // Set default state when the page first loads.
-      function Reset() {
-        InitializeDefaults();
+      function ResetTrip() {
+        trip = CreateDefaultTrip();
         InitializeUI();
+        SaveTrip();
       }
 
-      Reset();
+
+      function SaveTrip() {
+        localStorage.Trip = JSON.stringify(trip);
+      }
+
+
+      // Initialize or restore state when the page first loads.
+      trip = localStorage.Trip ? JSON.parse(localStorage.Trip) : CreateDefaultTrip();
+
+      InitializeUI();
     </script>
   </body>
 </html>
