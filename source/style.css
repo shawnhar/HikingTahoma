@@ -215,23 +215,17 @@ a:link, a:visited {
   max-width: 40%;
 }
 
-.plannerday {
-  padding-right: 20;
-}
-
-.plannerdistance {
-  padding-left: 20;
+.tooltip {
   position: relative;
 }
 
-.plannerdistance .tooltip {
+.tooltip .tip {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
   background-color: #606060;
   color: #D0D0D0;
   text-align: center;
-  font-style: italic;
   position: absolute;
   width: 256;
   padding: 5;
@@ -241,24 +235,63 @@ a:link, a:visited {
   margin-left: -160;
 }
 
-.plannerdistance .tooltip::after {
+.tooltip .tip::after {
   content: "";
   position: absolute;
   top: 100%;
-  left: 40%;
+  left: 45%;
   margin-left: -5;
   border-width: 5;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
 
-.plannerdistance:hover .tooltip {
+.tooltip:hover .tip {
   visibility: visible;
   opacity: 1;
 }
 
+.planner {
+  margin-bottom: 20;
+}
+
+.plannerday {
+  padding-right: 20;
+}
+
 .plannersprayparklabel {
   display: none;
+}
+
+.plannerdistance {
+  padding-left: 20;
+}
+
+.plannertotal {
+  margin-left: 10;
+}
+
+.plannerbuttons {
+  margin-bottom: 10;
+  float: right;
+}
+
+.plannerhelp {
+  font-size: 13px;
+  clear: right;
+  float: right;
+}
+
+.plannerhelpbreak {
+  display: none;
+}
+
+.plannerhelp .tip {
+  font-size: initial;
+}
+
+.plannerhelp .tooltip .tip::after {
+  left: 57%;
 }
 
 @media (max-width: 680px) {
@@ -282,12 +315,36 @@ a:link, a:visited {
     display: inline;
   }
 
-  .plannerdistance .tooltip {
+  .plannerdistance .tip {
     margin-left: -90;
   }
 
-  .plannerdistance .tooltip::after {
-    left: 14%;
+  .plannerdistance .tip::after {
+    left: 20%;
+  }
+
+  .plannerbuttons {
+    margin-top: 10;
+  }
+
+  .plannerhelp {
+    font-size: initial;
+  }
+
+  .plannerhelpbreak {
+    display: inline;
+  }
+
+  .plannerhelpsplitter {
+    display: none;
+  }
+
+  .plannerhelp .tooltip .tip {
+    margin-left: -220;
+  }
+
+  .plannerhelp .tooltip .tip::after {
+    left: 81%;
   }
 }
 

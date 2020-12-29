@@ -38,27 +38,53 @@
       </select>
     </p>
     <table id="table" class="planner"></table>
-    <div class="fixedwidth progress">
-      <p id="totals"></p>
-      <button onClick="ExportTrip()">Export</button>
-      <button onClick="ImportTrip()">Import</button>
-      <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
-      <button onClick="ResetTrip()">Reset</button>
-      <p>
-        If there is more than one route between two locations, this page will measure the 
-        shortest one, except for trail segments in the northwest corner of the park 
-        (around Mowich Lake / Spray Park / Ipsut Pass / Carbon River) where choice of 
-        route is determined by the 'via Spray Park' option. To check which way was 
-        measured, move your mouse over or tap on the distance for a day, and you'll see a 
-        tooltip listing all the locations along that day's trail.
-      </p>
-      <p id="deweylake">
-        Note: Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use 
-        the Rainier campsite reservation system. It's included as an option here because 
-        camping somewhere along that section of the PCT can be useful for making a loop 
-        by connecting the Laughingwater Creek trail at Three Lakes to the northern end of 
-        the Eastside Trail at Tipsoo Lake.
-      </p>
+    <div class="fixedwidth">
+      <span id="totals" class="plannertotal"></span>
+      <div class="plannerbuttons">
+        <button onClick="ExportTrip()">Export</button>
+        <button onClick="ImportTrip()">Import</button>
+        <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
+<!-- TODO
+        <button onClick="ResetTrip()">Auto (CW)</button>
+        <button onClick="ResetTrip()">Auto (CCW)</button>
+-->
+        <button onClick="ResetTrip()">Reset</button>
+      </div>
+      <div class="plannerhelp">
+        <span id="deweylake" class="tooltip">
+          about Dewey Lake
+          <span class="tip">
+            Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use the 
+            Rainier campsite reservation system. It's included as an option here because 
+            camping somewhere along that section of the PCT can be useful for making a 
+            loop by connecting the Laughingwater Creek trail at Three Lakes to the 
+            northern end of the Eastside Trail at Tipsoo Lake.
+          </span>
+          <span class="plannerhelpsplitter">|</span>
+          <br class="plannerhelpbreak" />
+        </span>
+        <span class="tooltip">
+          about Spray Park
+          <span class="tip">
+            If there is more than one route between two locations, this page will measure 
+            the shortest one, except for trail segments in the northwest corner of the 
+            park (around Mowich Lake / Spray Park / Ipsut Pass / Carbon River) where 
+            choice of route is determined by the 'via Spray Park' option. To check which 
+            way was measured, move your mouse over or tap on the distance for a day, and 
+            you'll see a tooltip listing all the locations along that day's trail.
+          </span>
+<!-- TODO
+          <span class="plannerhelpsplitter">|</span>
+          <br class="plannerhelpbreak" />
+        </span>
+        <span class="tooltip">
+          about Auto Buttons
+          <span class="tip">
+            The Auto (CW) and Auto (CCW) buttons attempt 
+          </span>
+-->
+        </span>
+      </div>
     </div>
     <script>
       // State tracking the current trip configuration.
@@ -545,7 +571,7 @@
 
         var align = '<span style="visibility:hidden">0</span>';
 
-        var tooltip = '<span class="tooltip">' + ExpandPlaceNames(route.Route) + '</span>';
+        var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Route) + '</span>';
 
         if (miles.length < 10) {
           miles = align + miles;
@@ -624,7 +650,7 @@
                '  <td>' + startHtml + '</td>' +
                '  <td>to ' + endHtml + '</td>' +
                '  <td><span class="plannersprayparklabel">via Spray Park:</span><input type="checkbox" onChange="ViaSprayParkChanged(' + day + ', this.checked)" ' + checkboxAttribute + '/></td>' +
-               '  <td class="plannerdistance">' + MeasureDistance(day) + '</td>' +
+               '  <td class="plannerdistance tooltip">' + MeasureDistance(day) + '</td>' +
                '</tr>';
       }
 
@@ -670,16 +696,16 @@
 
 
       function ShowOrHideDeweyLakeDetails() {
-        var visibility = 'collapse';
+        var display = 'none';
 
         for (var i = 0; i < trip.Duration - 1; i++) {
           if (trip.SelectedCampsites[i] == 'Dewey Lake') {
-            visibility = 'visible';
+            display = 'inline';
             break;
           }
         }
 
-        document.getElementById('deweylake').style.visibility = visibility;
+        document.getElementById('deweylake').style.display = display;
       }
 
 
