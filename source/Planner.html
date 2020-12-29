@@ -455,11 +455,7 @@
 
 
       // The core place-to-place distance computation.
-      function MeasureDistance(day) {
-        // What two places are we measuring between?
-        var startPlace = (day == 0) ? startTrailhead : selectedCampsites[day - 1];
-
-        var endPlace = (day == tripDuration - 1) ? endTrailhead : selectedCampsites[day];
+      function FindRoute(startPlace, endPlace, viaSprayPark) {
 
         // Seed the search with our starting point.
         var searchPaths = [ 
@@ -482,7 +478,7 @@
           searchPaths.forEach(searchPath => {
             if (searchPath.Place == endPlace) {
               // If via Spray Park option is enabled, reject routes that were near Spray Park but did not go over it.
-              if (viaSprayPark[day] && searchPath.NearSprayPark && !searchPath.IsSprayPark) {
+              if (viaSprayPark && searchPath.NearSprayPark && !searchPath.IsSprayPark) {
                 return;
               }
 
@@ -506,7 +502,7 @@
                 }
 
                 // Some links are conditionally valid depending on whether the Spray Park option was selected.
-                if (!viaSprayPark[day] && trailLink.IsSprayPark) {
+                if (!viaSprayPark && trailLink.IsSprayPark) {
                   return;
                 }
 
@@ -527,15 +523,45 @@
           searchPaths = newPaths;
         }
 
-        dayDistances[day] = found;
+        return found;
+      }
 
-        if (!found) {
+
+      function MeasureDistance(day)
+      {
+        // What two places are we measuring between?
+        var startPlace = (day == 0) ? startTrailhead : selectedCampsites[day - 1];
+
+        var endPlace = (day == tripDuration - 1) ? endTrailhead : selectedCampsites[day];
+
+        // Find the best route.
+        var route = FindRoute(startPlace, endPlace, viaSprayPark[day]);
+
+        // Store and format the results.
+        dayDistances[day] = route;
+
+        if (!route) {
           return 'error: no route found!';
         }
 
-        var tooltip = '<span class="tooltip">' + ExpandPlaceNames(found.Route) + '</span>';
+        var miles = route.Distance.toFixed(1) + ' miles';
 
-        return found.Distance.toFixed(1) + ' miles, &uarr; ' + found.Up + '\' &darr; ' + found.Down + '\'' + tooltip;
+        var up = '&uarr; ' + route.Up + '\'';
+        var down = '&darr; ' + route.Down + '\'';
+
+        var align = '<span style="visibility:hidden">0</span>';
+
+        var tooltip = '<span class="tooltip">' + ExpandPlaceNames(route.Route) + '</span>';
+
+        if (miles.length < 10) {
+          miles = align + miles;
+        }
+
+        if (up.length < 12) {
+          up = up + align;
+        }
+
+        return miles + ', ' + up + ' ' + down + tooltip;
       }
 
 
