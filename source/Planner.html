@@ -92,7 +92,7 @@
 
       var trip;
 
-      var dayDistances = [];
+      var dayRoutes = [];
 
 
       function CreateDefaultTrip() {
@@ -481,11 +481,10 @@
         var searchPaths = [ 
           {
             Place: startPlace,
-            Route: startPlace,
+            Visited: [],
             Distance: 0,
             Up: 0,
-            Down: 0,
-            Visited: []
+            Down: 0
           }
         ];
 
@@ -504,6 +503,7 @@
 
               // Reached the goal! But is this the shortest path we've found so far?
               if (!found || (searchPath.Distance < found.Distance)) {
+                searchPath.Visited.push(endPlace);
                 found = searchPath;
               }
             }
@@ -528,13 +528,12 @@
 
                 newPaths.push({
                   Place: trailLink.To,
-                  Route: searchPath.Route + ' &rarr; ' + trailLink.To,
+                  Visited: [...searchPath.Visited, searchPath.Place],
                   Distance: newDistance,
                   Up: searchPath.Up + trailLink.Up,
                   Down: searchPath.Down + trailLink.Down,
                   IsSprayPark: searchPath.IsSprayPark || trailLink.IsSprayPark,
-                  NearSprayPark: searchPath.NearSprayPark || trailLink.NearSprayPark,
-                  Visited: [...searchPath.Visited, searchPath.Place]
+                  NearSprayPark: searchPath.NearSprayPark || trailLink.NearSprayPark
                 });
               });
             }
@@ -558,7 +557,7 @@
         var route = FindRoute(startPlace, endPlace, trip.ViaSprayPark[day]);
 
         // Store and format the results.
-        dayDistances[day] = route;
+        dayRoutes[day] = route;
 
         if (!route) {
           return 'error: no route found!';
@@ -571,7 +570,7 @@
 
         var align = '<span style="visibility:hidden">0</span>';
 
-        var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Route) + '</span>';
+        var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Visited.join(' &rarr; ')) + '</span>';
 
         if (miles.length < 10) {
           miles = align + miles;
@@ -684,10 +683,10 @@
         var down = 0;
 
         for (var i = 0; i < trip.Duration; i++) {
-          if (dayDistances[i]) {
-            distance += dayDistances[i].Distance;
-            up += dayDistances[i].Up;
-            down += dayDistances[i].Down;
+          if (dayRoutes[i]) {
+            distance += dayRoutes[i].Distance;
+            up += dayRoutes[i].Up;
+            down += dayRoutes[i].Down;
           }
         }
 
@@ -837,9 +836,9 @@
 
           text += '\n';
 
-          text += dayDistances[i].Distance.toFixed(1) + ' miles, ' + dayDistances[i].Up + '\' gain, ' + dayDistances[i].Down + '\' descent\n';
+          text += dayRoutes[i].Distance.toFixed(1) + ' miles, ' + dayRoutes[i].Up + '\' gain, ' + dayRoutes[i].Down + '\' descent\n';
 
-          text += '  (route: ' + ExpandPlaceNames(dayDistances[i].Route).replace(/&rarr;/g, '->') + ')\n';
+          text += '  (route: ' + ExpandPlaceNames(dayRoutes[i].Visited.join(' -> ')) + ')\n';
         }
 
         return text;
