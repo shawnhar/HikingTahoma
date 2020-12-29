@@ -1,0 +1,535 @@
+Wonderland Trail
+strenuous 7-12 days
+93 27,000 27,000
+Pyramid Creek, Devils Dream, South Puyallup River, Klapatche Park, North Puyallup River, Golden Lakes, South Mowich River, Mowich Lake, Ipsut Creek, Eagles Roost, Cataract Valley, Carbon River Camp, Dick Creek, Mystic Camp, Granite Creek, Sunrise Camp, White River, Summerland, Indian Bar, Nickel Creek, Maple Creek, Paradise River
+not yet!
+
+<i>Note: the Wonderland is unique among the entries on this website because I haven't 
+actually hiked the whole thing yet. As of this writing I've day- and section-hiked 
+approximately 2/3 of the trail, and I'm researching in preparation to apply for a full 
+loop permit next year, so I decided to go ahead and start writing things down as I'm 
+learning them.</i>
+
+
+<p class="heading">What</p>
+
+The Wonderland Trail is a 93 mile loop circumnavigating Mount Rainier. Along the way it 
+takes in many of the best examples of every kind of terrain the mountain has to offer, 
+with plenty of steep ascents and descents as the trail repeatedly climbs out of a river 
+valley, crests a ridge with stunning views in every direction, then plummets back down 
+into the next valley.
+
+Most people take between 7 and 12 days to complete the circuit. The Park Service allows a 
+maximum of 14 days for a reservation, while some exceptional fastpacking athletes do it 
+in as little as 3 days. Or if you really want to have your mind blown, do a web search 
+for 'rainier infinity loop'.
+
+Many sections of the Wonderland also make fantastic day hikes:
+<ul class="tight">
+  <li>[PanhandleGap]</li>
+  <li>[IndianBar]</li>
+  <li>[IndianHenrysFromLongmire]</li>
+  <li>[SprayPark]</li>
+  <li>[LongmireToReflectionLakes]</li>
+  <li>[WhiteRiverToSunrise]</li>
+</ul>
+or shorter backpacking trips:
+<ul class="tight">
+  <li>[SprayParkLoop]</li>
+  <li>[NorthernLoop]</li>
+  <li>[KlapatchePark]</li>
+  <li>[NorthPuyallup]</li>
+  <li>[CarbonGlacier]</li>
+</ul>
+
+
+<p class="heading">How</p>
+
+You can't just camp wherever you like on Mount Rainier. There are designated campsites, 
+with pit toilets and bear poles for hanging your food. Each camp contains a number of 
+individual sites designed for parties of 1 to 5 people, which can comfortably fit a 
+couple of 2-person tents. Most camps also have a larger group site that can accommodate 
+up to 12 people. You need a reservation for every camp you want to stay at, but the 
+allocation of individual sites within a camp is first-come-first-served. The group site, 
+on the other hand, must be specifically reserved in advance.
+
+The permit application process can vary from year to year, so check
+<a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
+for the latest information.
+
+If you don't fancy the idea of carrying all the supplies for your entire trip, you can 
+cache food and fuel at Longmire, Mowich Lake, Sunrise, and White River. Caches must be 
+stored in rodent-proof plastic containers (a 5 gallon plastic bucket is perfect). Food 
+caches can be mailed or delivered by hand, while fuel caches must be hand-delivered. See
+<a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
+for details.
+
+Sunrise and White River are close enough together that it doesn't make sense to cache at 
+both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
+avoid having to lug a freshly refilled pack up or down the steep trail between the two.
+
+There are occasional stories of food being stolen from caches at Mowich Lake. This is 
+very rare, but has happened more than zero times. Cache locations also have a donation 
+bin where people can leave unwanted supplies, so I hope the backpackers who had their 
+food taken were able to find enough replacements to keep going! And to whoever was so low 
+as to steal from others in the wilderness: I pray to Our Lady The Mountain that you may 
+be eaten by a bear forthwith :-)
+
+Speaking of which: bears are common on Rainier, so it's important to properly hang all 
+your food and other scented supplies. Thanks to bear poles at every camp, bear canisters 
+are not needed during the main hiking season, but the poles are taken down during the 
+off-season.
+
+
+<p class="heading">When</p>
+
+The Wonderland Trail is most commonly hiked during the months of July, August, and 
+September:
+
+<ul>
+  <li>
+    July marks the transition from winter conditions to great hiking, but the melt date 
+    varies greatly from year to year. Risks include deep snow at higher elevations, 
+    consequently difficult route finding, and raging rivers where missing bridges may not 
+    yet have been replaced. If you make reservations for early July, be prepared either 
+    with the skills for safe snow travel, or to cancel at the last minute if the mountain 
+    does not melt according to your schedule that year.
+  </li>
+  <li>
+    August is the most popular month, and for good reason. Best weather. Best 
+    wildflowers. Probably still some snow on the high passes, but most of the trail will 
+    have melted. Most people. Most mosquitoes.
+  </li>
+  <li>
+    September offers fall foliage colors, fewer bugs, and highest probability of the 
+    whole trail being in good condition, but also cooler nights and some risk of early 
+    fall snow.
+  </li>
+</ul>
+
+Some people do complete the trail in June or October (or even beyond!) but these months 
+greatly increase the odds of encountering winter conditions or dangerous river crossings.
+
+
+<p class="heading">Where</p>
+
+First question is where to start? There are multiple trailheads around the Wonderland:
+
+<ul>
+  <li>
+    Longmire (southwest side of the mountain) is the most popular. It's easily accessible 
+    year-round, has copious parking, toilets with running water, a restaurant, and a 
+    small shop in case you forgot your toothbrush. There's also a historic lodge here, so 
+    you could stay the night before or after your hike.
+  </li>
+  <li>
+    Sunrise (northeast side) is in many ways similar to Longmire, with plentiful parking, 
+    running water, cafe, and a small shop, but it has no lodge and is at higher elevation 
+    so the access road may close during early or late season snowfalls. Note that the 
+    Sunrise trailhead is 0.5 miles from the Wonderland Trail proper, and 1.3 miles from 
+    Sunrise Camp.
+  </li>
+  <li>
+    White River is near Sunrise but at lower elevation, so it remains accessible when the 
+    road to Sunrise is closed. There is running water here, but no other amenities.
+  </li>
+  <li>
+    Mowich Lake (northwest side) has only pit toilets, and lies at the end of a long, 
+    dusty, potholed road. It may be closed due to snow early or late in the season.
+  </li>
+  <li>
+    Box Canyon (southeast side) has plenty of parking space and toilets.
+  </li>
+  <li>
+    Fryingpan Creek and Reflection Lakes are theoretically valid options, but not 
+    particularly desirable due to limited parking and lack of amenities.
+  </li>
+  <li>
+    The Paul Peak and Carbon River trailheads are not on the Wonderland Trail at all, but 
+    can be useful access points when Mowich Lake is closed due to snow. Or bailout points 
+    if your trip goes poorly :-(
+  </li>
+</ul>
+
+Whichever of Longmire or Sunrise you don't start at, the cafe there may offer a pleasant 
+mid-trip lunch break. Just be aware that stopping for a burger at Sunrise adds an extra 
+mile.
+
+Next up, which direction to hike? Personally I don't think this matters much, as (being a 
+loop) either direction involves the exact same amount of up and down, plus the same views 
+as long as you remember to turn around occasionally. Minor factors to consider are:
+
+<ul>
+  <li>
+    Going clockwise makes it easier to carry water from St. Andrews Lake if you are 
+    staying at Klapatche Park, which often dries up later in the season.
+  </li>
+  <li>
+    The sketchy washed-out section of trail along Stevens Canyon is easier to traverse 
+    going clockwise.
+  </li>
+  <li>
+    Counterclockwise has the advantage that, because clockwise is the more popular 
+    direction, when going the opposite way you're likely to encounter a wider variety of 
+    new temporary friends along the trail, and thus get better what's-coming-up-next 
+    intel.
+  </li>
+</ul>
+
+Yet another choice: at the northwest corner of the mountain, follow the official 
+Wonderland Trail over Ipsut Pass, or take the popular alternative route over Spray Park?
+
+<ul>
+  <li>
+    The Ipsut Pass route is more sheltered in bad weather, and features stunning 
+    old growth temperate rainforest plus the devastation of the glacial Carbon River 
+    valley. It requires crossing that river on a log bridge that has an unfortunate habit 
+    of getting washed away.
+  </li>
+  <li>
+    The Spray Park route is slightly shorter but with more elevation change, and features 
+    some of the best alpine wildflower meadows on the mountain. The highest part remains 
+    snow covered for much of the year, and can be tricky to navigate in bad weather.
+  </li>
+</ul>
+
+Both options are great, so clearly the best solution is to pick one at random for your 
+Wonderland circuit, then come back later and hike the [SprayParkLoop] to also see the 
+other.
+
+
+<p class="heading">Campsites</p>
+
+There are many itinerary choices while planning a Wonderland circuit. This website 
+includes a <a href="../Planner.html">campsite distances</a> tool for planning backpacking 
+itineraries, which shows distance and elevation change between your choice of trailheads 
+and campsites.
+
+Going clockwise from Longmire, campsites along the Wonderland trail are:
+
+<table class="campstable">
+  <tr>
+    <th/>
+    <th>Individual Sites</th>
+    <th>Group Sites</th>
+    <th>Elevation</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Pyramid Creek</td>
+    <td>3</td>
+    <td>n/a</td>
+    <td>3800'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Devil's Dream</td>
+    <td>7</td>
+    <td>1</td>
+    <td>5100'</td>
+    <td>Notoriously buggy during summer</td>
+  </tr>
+  <tr>
+    <td>South Puyallup River</td>
+    <td>4</td>
+    <td>1</td>
+    <td>4000'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Klapatche Park</td>
+    <td>4</td>
+    <td>n/a</td>
+    <td>5500'</td>
+    <td>
+      Water source is Aurora Lake, which tends to dry up later in the season. Carry water 
+      from St. Andrews Lake (if you're heading north) or uphill from North Puyallup River 
+      (if heading south)
+    </td>
+  </tr>
+  <tr>
+    <td>North Puyallup River</td>
+    <td>3</td>
+    <td>1</td>
+    <td>3700'</td>
+    <td>
+      Unique and romantically spooky group site is made from the end of an abandoned road
+    </td>
+  </tr>
+  <tr>
+    <td>Golden Lakes</td>
+    <td>5</td>
+    <td>1</td>
+    <td>5100'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>South Mowich River</td>
+    <td>3</td>
+    <td>1</td>
+    <td>2600'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Mowich Lake</td>
+    <td>10</td>
+    <td>3</td>
+    <td></td>
+    <td>
+      Doubles as a popular frontcountry car camping site, so lacks privacy and is often 
+      noisy
+    </td>
+  </tr>
+  <tr>
+    <td>Ipsut Creek</td>
+    <td>12</td>
+    <td>1</td>
+    <td>2400'</td>
+    <td>
+      <i>(if not going over Spray Park)</i>
+      Former car campsite, now reclaimed as wilderness due to road closure
+    </td>
+  </tr>
+  <tr>
+    <td>Eagle's Roost</td>
+    <td>7</td>
+    <td>n/a</td>
+    <td>4900'</td>
+    <td><i>(if taking Spray Park)</i></td>
+  </tr>
+  <tr>
+    <td>Cataract Valley</td>
+    <td>6</td>
+    <td>1</td>
+    <td>4600'</td>
+    <td><i>(if taking Spray Park)</i></td>
+  </tr>
+  <tr>
+    <td>Carbon River Camp</td>
+    <td>4</td>
+    <td>1</td>
+    <td>3200'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Dick Creek</td>
+    <td>2</td>
+    <td>n/a</td>
+    <td>4200'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Mystic Camp</td>
+    <td>7</td>
+    <td>1</td>
+    <td>5600'</td>
+    <td>
+      Mystic Lake (a short walk from the camp) is where I want my ashes scattered when my 
+      time comes (I suppose I should get to work on becoming close friends with some 
+      strong hikers a few decades younger than me, then? :-)
+    </td>
+  </tr>
+  <tr>
+    <td>Granite Creek</td>
+    <td>3</td>
+    <td>1</td>
+    <td>5800'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sunrise Camp</td>
+    <td>8</td>
+    <td>2</td>
+    <td>6200'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>White River</td>
+    <td>4</td>
+    <td>n/a</td>
+    <td></td>
+    <td>
+      This doubles as a frontcountry car camping site, but is situated in thick forest so 
+      has more quiet & privacy than Mowich Lake
+    </td>
+  </tr>
+  <tr>
+    <td>Summerland</td>
+    <td>5</td>
+    <td>1</td>
+    <td>5900'</td>
+    <td>Stunning alpine meadows, famous for bear encounters</td>
+  </tr>
+  <tr>
+    <td>Indian Bar</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5100'</td>
+    <td>One of the prettiest places on the mountain</td>
+  </tr>
+  <tr>
+    <td>Nickel Creek</td>
+    <td>3</td>
+    <td>1</td>
+    <td>3400'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Maple Creek</td>
+    <td>4</td>
+    <td>1</td>
+    <td>2800'</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Paradise River</td>
+    <td>3</td>
+    <td>1</td>
+    <td>3800'</td>
+    <td></td>
+  </tr>
+</table>
+
+Longmire itself has nowhere to camp, but you could book a room in its lodge, or camp at 
+Cougar Rock (a frontcountry car campground) 1.5 miles up the road.
+
+Oftentimes, the secret of success for getting a Wonderland permit is flexibility. The 
+more you're able to adjust dates, direction, duration, and campsites, the better your 
+odds of something being available. Sometimes this can involve putting together creative 
+routes that stray off the Wonderland in places, making use of whatever campsites are 
+still available. There are many such possibilities, including:
+
+<table class="campstable">
+  <tr>
+    <th/>
+    <th>Individual Sites</th>
+    <th>Group Site</th>
+    <th>Elevation</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Berkeley Park</td>
+    <td>2</td>
+    <td>1</td>
+    <td>5400'</td>
+    <td>1.5 miles off the Wonderland, between Granite Creek and Frozen Lake</td>
+  </tr>
+  <tr>
+    <td>Forest Lake</td>
+    <td>1</td>
+    <td>n/a</td>
+    <td>5700'</td>
+    <td>1.8 miles off the Wonderland, between Frozen Lake and Sunrise</td>
+  </tr>
+  <tr>
+    <td>Glacier Basin</td>
+    <td>5</td>
+    <td>1</td>
+    <td>6000'</td>
+    <td>
+      4.2 miles from Frozen Lake and 3.6 from White River, which may seem a lot but it 
+      only adds 3.3 miles total distance if you substitute this in place of going past 
+      Sunrise (and it's a much nicer place than White River to camp...)
+    </td>
+  </tr>
+  <tr>
+    <td>Olallie Creek</td>
+    <td>2</td>
+    <td>1</td>
+    <td>3900'</td>
+    <td>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek</td>
+  </tr>
+  <tr>
+    <td>Snow Lake</td>
+    <td>2</td>
+    <td>n/a</td>
+    <td>4700'</td>
+    <td>
+      1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and 
+      Reflection Lakes
+    </td>
+  </tr>
+</table>
+
+
+<p class="heading">Hazards</p>
+
+By far the greatest danger along the Wonderland Trail is the many glacial river 
+crossings. Some rivers have sturdy wooden bridges over them while others are spanned by 
+cool suspension bridges, but many have just a log, plus a railing if you are lucky. 
+Falling off these logs into fast moving turbid waters, which are often filled with 
+rolling boulders, is not good for your life expectancy. Also, these rivers have a habit 
+of repeatedly removing their log crossings, so the Park Service is playing a perpetual 
+game of whack-a-mole trying to keep the bridges in place.
+
+River conditions can vary day to day and even hour to hour as melt levels change 
+(mornings are better for crossing). It's a good idea to research bridge status before you 
+set out, but be aware that a log which existed when you started your hike may have washed 
+away by the time you arrive at its river, or a missing bridge may have been replaced. 
+Judge for yourself, and turn back if you don't like what you see.
+
+Potentially problematic river crossings are:
+
+<ul>
+  <li>
+    Kautz Creek (between Longmire and Pyramid Creek Camp) was barely a trickle each time 
+    I've crossed it so far, but I'm told the level can increase significantly during 
+    heavy rain.
+  </li>
+  <li>
+    Pyramid Creek (between Pyramid Creek Camp and Devil's Dream) is a substantial river 
+    crossed by log bridge with railing.
+  </li>
+  <li>
+    South Mowich River (by South Mowich Camp, between Golden Lakes and Mowich Lake) has 
+    multiple forks that frequently change their course. Sometimes there are log bridges 
+    over them, or there may be fallen trees you can cross on. This is probably the most 
+    dangerous and unpredictable of the rivers, combining remote location with lack of 
+    alternatives if you can't find a good way across it.
+  </li>
+  <li>
+    The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) is 
+    another log-with-railing, which happens to be washed out at the time I'm writing 
+    this. This would be a risky river to attempt fording if there is no bridge in place 
+    when you arrive there. An alternative is to take the Spray Park route instead of 
+    going via Ipsut Pass and Ipsut Creek, which avoids this log bridge location and 
+    allows you to cross the Carbon River on a nice suspension bridge instead.
+  </li>
+  <li>
+    Winthrop Creek (between Mystic Lake and Granite Creek) was the site of a fatality in 
+    2018, at which time its log bridge had no railing. A railing had been added by the 
+    time I crossed here in 2020, but water was lapping over the top of the log at peak 
+    melt times.
+  </li>
+  <li>
+    White River (leaving White River campground heading toward Fryingpan Creek) is 
+    another log-with-railing that's washed out at the time of this writing. If you can't 
+    cross safely here, detour down the road and hop back onto the Wonderland shortly 
+    after crossing the road bridge.
+  </li>
+  <li>
+    Nisqually River (between Paradise River camp and Longmire) is, yup, you guessed it, 
+    another log-and-railing crossing.
+  </li>
+</ul>
+
+In addition to the rivers, snow can of course be a hazard especially early in the season. 
+The highest points along the Wonderland are Panhandle Gap (between Summerland and Indian 
+Bar) and Spray Park (if you choose to go that way). These often remain snowy until the 
+end of August, and there's a steep traverse approaching Panhandle Gap from the north that 
+would be un-fun to slide down. Spikes aren't needed once most of the trail has melted, 
+but it'll be easier to cross these high places if you can arrange to do so later in the 
+day, when the snow is soft rather than icy. And make sure your navigation is solid for 
+these sections! Most of the Wonderland Trail is obvious to follow, but Panhandle Gap and 
+the top of Spray Park are just rocks and snow patches with cairns to mark the way, so 
+it'd be easy to lose your way during bad weather.
+
+One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
+where the trail traverses across a washout with loose, unstable footing. I have yet to 
+experience this myself, but am told it is particularly unpleasant in wet conditions.
+
+
+<p class="heading">My Wonderland</p>
+
+Trail notes and photos will be added here once I've completed hiking the Wonderland. Wish 
+me luck for 2021!

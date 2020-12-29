@@ -267,7 +267,7 @@ a:link, a:visited {
   }
 
   .planner tr {
-    border-bottom: 1pt solid gray;
+    border-bottom: 1pt solid darkgray;
   }
 
   .planner td {
@@ -289,4 +289,20 @@ a:link, a:visited {
   .plannerdistance .tooltip::after {
     left: 14%;
   }
+}
+
+.campstable {
+  border-collapse: collapse;
+}
+
+.campstable th {
+  font-weight: normal;
+  font-style: italic;
+  text-align: left;
+  padding: 0 12 2 4;
+}
+
+.campstable td {
+  border: 1px solid darkgray;
+  padding: 2 4 2 4;
 }

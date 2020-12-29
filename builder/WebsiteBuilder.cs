@@ -50,12 +50,14 @@ namespace builder
                     await hike.WriteOutput(hikes, outFolder.Path);
                 }
 
-                var progress = await imageProcessor.MeasureProgressTowardGoal(hikes, sourceFolder.Path, outFolder.Path);
+                var doneHikes = hikes.Where(hike => !hike.IsFuture).ToList();
+
+                var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
 
                 // Generate the index page.
                 WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
 
-                await imageProcessor.WriteMasterMap(outFolder.Path, hikes);
+                await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
 
                 // Copy root files.
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
@@ -92,6 +94,8 @@ namespace builder
                 var sortedHikes = hikes.Where(hike => !hike.IsHidden)
                                        .OrderBy(hike => hike.HikeName);
 
+                var doneHikes = sortedHikes.Where(hike => !hike.IsFuture);
+
                 using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
                 using (var writer = new StreamWriter(file))
                 {
@@ -103,7 +107,7 @@ namespace builder
                     writer.WriteLine("    <div class=\"map\">");
                     writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
 
-                    foreach (var hike in sortedHikes)
+                    foreach (var hike in doneHikes)
                     {
                         writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
                     }
@@ -111,7 +115,7 @@ namespace builder
                     writer.WriteLine("      <img class=\"maplayer\" id=\"hike-todo\" src=\"todo.png\" {0} />", imgSize);
 
                     // Overlay clickable and focusable regions to create an image map.
-                    var imageMap = new ImageMap(sortedHikes);
+                    var imageMap = new ImageMap(doneHikes);
 
                     imageMap.Write(writer);
 
@@ -122,7 +126,9 @@ namespace builder
 
                     foreach (var hike in sortedHikes)
                     {
-                        writer.WriteLine("      <li id=\"link-{0}\" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName);
+                        var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
+
+                        writer.WriteLine("      <li id=\"link-{0}\"{2}><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName, eventHandler);
                     }
 
                     writer.WriteLine("    </ul>");

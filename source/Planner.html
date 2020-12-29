@@ -30,8 +30,8 @@
         <option value="7">7 days</option>
         <option value="8">8 days</option>
         <option value="9">9 days</option>
-        <option value="10" selected>10 days</option>
-        <option value="11">11 days</option>
+        <option value="10">10 days</option>
+        <option value="11" selected>11 days</option>
         <option value="12">12 days</option>
         <option value="13">13 days</option>
         <option value="14">14 days</option>
@@ -45,17 +45,17 @@
       <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
       <button onClick="Reset()">Reset</button>
       <p>
-        If there is more than one route between two locations, the system will measure 
-        the shortest one, except for trail segments between Mowich Lake / Eagle's Roost 
-        and Ipsut Creek / Cataract Valley / Carbon River Camp, where choice of route is 
-        determined by the 'via Spray Park' option. To check which way was measured, move 
-        your mouse over or tap on the distance for a day, and you'll see a tooltip 
-        listing all the locations along that day's trail.
+        If there is more than one route between two locations, this page will measure the 
+        shortest one, except for trail segments in the northwest corner of the park 
+        (around Mowich Lake / Spray Park / Ipsut Pass / Carbon River) where choice of 
+        route is determined by the 'via Spray Park' option. To check which way was 
+        measured, move your mouse over or tap on the distance for a day, and you'll see a 
+        tooltip listing all the locations along that day's trail.
       </p>
       <p id="deweylake">
         Note: Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use 
         the Rainier campsite reservation system. It's included as an option here because 
-        camping somewhere along this section of the PCT can be useful for making a loop 
+        camping somewhere along that section of the PCT can be useful for making a loop 
         by connecting the Laughingwater Creek trail at Three Lakes to the northern end of 
         the Eastside Trail at Tipsoo Lake.
       </p>
@@ -78,7 +78,7 @@
 
 
       function InitializeDefaults() {
-        tripDuration = 10;
+        tripDuration = 11;
 
         startTrailhead = 'Longmire';
         endTrailhead = 'Longmire';
@@ -89,12 +89,12 @@
           'Golden Lakes',
           'Mowich Lake',
           'Carbon River Camp',
-          'Granite Creek',
-          'White River',
+          'Mystic Camp',
+          'Sunrise Camp',
+          'Summerland',
           'Indian Bar',
           'Maple Creek',
 
-          'Pyramid Creek',
           'Pyramid Creek',
           'Pyramid Creek',
           'Pyramid Creek',
@@ -201,216 +201,216 @@
       // Static map data about trail distances and elevation changes.
       var trailData = {
         'Longmire': [
-          { To: 'Pyramid Creek', Distance: 3, Up: 1400, Down: 400 }
+          { To: 'Pyramid Creek', Distance: 3.3, Up: 1400, Down: 400 }
         ],
 
         'Pyramid Creek': [
-          { To: 'Devil\'s Dream', Distance: 2.3, Up: 1400, Down: 100 }
+          { To: 'Devil\'s Dream', Distance: 2.5, Up: 1400, Down: 100 }
         ],
 
         'Devil\'s Dream': [
-          { To: 'South Puyallup River', Distance: 6, Up: 1900, Down: 2700 }
+          { To: 'South Puyallup River', Distance: 6.5, Up: 1900, Down: 2700 }
         ],
 
         'South Puyallup River': [
-          { To: 'Klapatche Park', Distance: 3.8, Up: 2100, Down: 800 }
+          { To: 'Klapatche Park', Distance: 4.1, Up: 2100, Down: 800 }
         ],
 
         'Klapatche Park': [
-          { To: 'North Puyallup River', Distance: 2.4, Up: 100, Down: 1900 }
+          { To: 'North Puyallup River', Distance: 2.6, Up: 100, Down: 1900 }
         ],
 
         'North Puyallup River': [
-          { To: 'Golden Lakes', Distance: 4.7, Up: 1900, Down: 600 }
+          { To: 'Golden Lakes', Distance: 5.1, Up: 1900, Down: 600 }
         ],
 
         'Golden Lakes': [
-          { To: 'South Mowich River', Distance: 5.3, Up: 200, Down: 2400 }
+          { To: 'South Mowich River', Distance: 5.8, Up: 200, Down: 2400 }
         ],
 
         'South Mowich River': [
-          { To: 'Mowich Lake', Distance: 4.1, Up: 2400, Down: 300 }
+          { To: 'Mowich Lake', Distance: 4.4, Up: 2400, Down: 300 }
         ],
 
         'Mowich Lake': [
-          { To: 'Ipsut Pass', Distance: 1.3, Up: 400, Down: 300, NotSprayPark: true },
-          { To: 'Eagle\'s Roost', Distance: 1.8, Up: 500, Down: 600 }
+          { To: 'Ipsut Pass', Distance: 1.4, Up: 400, Down: 300, NearSprayPark: true },
+          { To: 'Eagle\'s Roost', Distance: 2, Up: 500, Down: 600 }
         ],
 
         'Ipsut Pass': [
-          { To: 'Ipsut Creek', Distance: 3.9, Up: 0, Down: 2700, NotSprayPark: true },
-          { To: 'Carbon River Camp', Distance: 6.8, Up: 1000, Down: 2800, NotSprayPark: true },
+          { To: 'Ipsut Creek', Distance: 4.2, Up: 0, Down: 2700, NearSprayPark: true },
+          { To: 'Carbon River Camp', Distance: 7.4, Up: 1000, Down: 2800, NearSprayPark: true },
         ],
 
         'Ipsut Creek': [
-          { To: 'Carbon River Camp', Distance: 3.7, Up: 1300, Down: 400 }
+          { To: 'Carbon River Camp', Distance: 4, Up: 1300, Down: 400, NearSprayPark: true }
         ],
 
         'Eagle\'s Roost': [
-          { To: 'Spray Park', Distance: 3.2, Up: 1600, Down: 600, IsSprayPark: true }
+          { To: 'Spray Park', Distance: 3.5, Up: 1600, Down: 600, IsSprayPark: true }
         ],
 
         'Spray Park': [
-          { To: 'Cataract Valley', Distance: 1.3, Up: 0, Down: 1400, IsSprayPark: true }
+          { To: 'Cataract Valley', Distance: 1.4, Up: 0, Down: 1400, IsSprayPark: true }
         ],
 
         'Cataract Valley': [
-          { To: 'Carbon River Camp', Distance: 1.5, Up: 100, Down: 1300 }
+          { To: 'Carbon River Camp', Distance: 1.6, Up: 100, Down: 1300 }
         ],
 
         'Carbon River Camp': [
-          { To: 'Dick Creek', Distance: 1.2, Up: 1000, Down: 100 }
+          { To: 'Dick Creek', Distance: 1.3, Up: 1000, Down: 100 }
         ],
 
         'Dick Creek': [
-          { To: 'Mystic Camp', Distance: 3.4, Up: 2100, Down: 600 }
+          { To: 'Mystic Camp', Distance: 3.7, Up: 2100, Down: 600 }
         ],
 
         'Mystic Camp': [
-          { To: 'Granite Creek', Distance: 3.8, Up: 1500, Down: 1200 }
+          { To: 'Granite Creek', Distance: 4.1, Up: 1500, Down: 1200 }
         ],
 
         'Granite Creek': [
-          { To: 'Frozen Lake', Distance: 3.3, Up: 1400, Down: 500 }
+          { To: 'Frozen Lake', Distance: 3.6, Up: 1400, Down: 500 }
         ],
 
         'Frozen Lake': [
-          { To: 'Sunrise Camp', Distance: 0.9, Up: 0, Down: 500 }
+          { To: 'Sunrise Camp', Distance: 1, Up: 0, Down: 500 }
         ],
 
         'Sunrise Camp': [
-          { To: 'White River', Distance: 3.2, Up: 100, Down: 2100 }
+          { To: 'White River', Distance: 3.5, Up: 100, Down: 2100 }
         ],
 
         'Sunrise': [
-          { To: 'White River', Distance: 2.9, Up: 0, Down: 2200 },
-          { To: 'Sunrise Camp', Distance: 1.3, Up: 200, Down: 400 },
-          { To: 'Frozen Lake', Distance: 1.5, Up: 400, Down: 100 }
+          { To: 'White River', Distance: 3.1, Up: 0, Down: 2200 },
+          { To: 'Sunrise Camp', Distance: 1.4, Up: 200, Down: 400 },
+          { To: 'Frozen Lake', Distance: 1.6, Up: 400, Down: 100 }
         ],
 
         'White River': [
-          { To: 'Fryingpan Creek', Distance: 2.5, Up: 100, Down: 600 }
+          { To: 'Fryingpan Creek', Distance: 2.7, Up: 100, Down: 600 }
         ],
 
         'Fryingpan Creek': [
-          { To: 'Summerland', Distance: 4, Up: 2200, Down: 100 }
+          { To: 'Summerland', Distance: 4.3, Up: 2200, Down: 100 }
         ],
 
         'Summerland': [
-          { To: 'Indian Bar', Distance: 4.3, Up: 1200, Down: 2100 }
+          { To: 'Indian Bar', Distance: 4.7, Up: 1200, Down: 2100 }
         ],
 
         'Indian Bar': [
-          { To: 'Nickel Creek', Distance: 6.3, Up: 1400, Down: 3200 }
+          { To: 'Nickel Creek', Distance: 6.8, Up: 1400, Down: 3200 }
         ],
 
         'Nickel Creek': [
-          { To: 'Box Canyon', Distance: 0.8, Up: 100, Down: 400 }
+          { To: 'Box Canyon', Distance: 0.9, Up: 100, Down: 400 }
         ],
 
         'Box Canyon': [
-          { To: 'Maple Creek', Distance: 2.5, Up: 500, Down: 700 }
+          { To: 'Maple Creek', Distance: 2.7, Up: 500, Down: 700 }
         ],
 
         'Maple Creek': [
-          { To: 'Reflection Lakes', Distance: 4.3, Up: 2300, Down: 200 }
+          { To: 'Reflection Lakes', Distance: 4.7, Up: 2300, Down: 200 }
         ],
 
         'Reflection Lakes': [
-          { To: 'Paradise River', Distance: 2.4, Up: 200, Down: 1200 }
+          { To: 'Paradise River', Distance: 2.6, Up: 200, Down: 1200 }
         ],
 
         'Paradise River': [
-          { To: 'Longmire', Distance: 3.3, Up: 100, Down: 1200 }
+          { To: 'Longmire', Distance: 3.6, Up: 100, Down: 1200 }
         ],
 
         'Westside Road': [
-          { To: 'Lake George', Distance: 4.4, Up: 1500, Down: 100 },
-          { To: 'South Puyallup River', Distance: 5.6, Up: 1700, Down: 400 }
+          { To: 'Lake George', Distance: 4.8, Up: 1500, Down: 100 },
+          { To: 'South Puyallup River', Distance: 6.1, Up: 1700, Down: 400 }
         ],
 
         'Lake George': [
-          { To: 'South Puyallup River', Distance: 2.9, Up: 800, Down: 900 }
+          { To: 'South Puyallup River', Distance: 3.1, Up: 800, Down: 900 }
         ],
 
         'Paul Peak trhd': [
-          { To: 'Mowich Lake', Distance: 6, Up: 2400, Down: 1200 },
-          { To: 'South Mowich River', Distance: 3.9, Up: 500, Down: 1400 }
+          { To: 'Mowich Lake', Distance: 6.5, Up: 2400, Down: 1200 },
+          { To: 'South Mowich River', Distance: 4.2, Up: 500, Down: 1400 }
         ],
 
         'Carbon River trhd': [
-          { To: 'Ipsut Creek', Distance: 4.9, Up: 700, Down: 100 }
+          { To: 'Ipsut Creek', Distance: 5.3, Up: 700, Down: 100 }
         ],
 
         'Forest Lake': [
-          { To: 'Sunrise', Distance: 2.4, Up: 1300, Down: 500 },
-          { To: 'Frozen Lake', Distance: 2.6, Up: 1400, Down: 300 }
+          { To: 'Sunrise', Distance: 2.6, Up: 1300, Down: 500 },
+          { To: 'Frozen Lake', Distance: 2.8, Up: 1400, Down: 300 }
         ],
 
         'Glacier Basin': [
-          { To: 'White River', Distance: 3.3, Up: 100, Down: 1800 },
-          { To: 'Sunrise Camp', Distance: 4.5, Up: 2000, Down: 1700 },
-          { To: 'Frozen Lake', Distance: 3.9, Up: 2000, Down: 1200 }
+          { To: 'White River', Distance: 3.6, Up: 100, Down: 1800 },
+          { To: 'Sunrise Camp', Distance: 4.9, Up: 2000, Down: 1700 },
+          { To: 'Frozen Lake', Distance: 4.2, Up: 2000, Down: 1200 }
         ],
 
         'Snow Lake': [
-          { To: 'Maple Creek', Distance: 4.6, Up: 500, Down: 2400 },
-          { To: 'Reflection Lakes', Distance: 2.6, Up: 700, Down: 500 }
+          { To: 'Maple Creek', Distance: 5, Up: 500, Down: 2400 },
+          { To: 'Reflection Lakes', Distance: 2.8, Up: 700, Down: 500 }
         ],
 
         'Yellowstone Cliffs': [
-          { To: 'Ipsut Creek', Distance: 4.9, Up: 300, Down: 3100 },
-          { To: 'Carbon River Camp', Distance: 3.7, Up: 600, Down: 2500 },
-          { To: 'Ipsut Pass', Distance: 7.9, Up: 2900, Down: 3000, NotSprayPark: true },
-          { To: 'James Camp', Distance: 3, Up: 900, Down: 1500 }
+          { To: 'Ipsut Creek', Distance: 5.3, Up: 300, Down: 3100, NearSprayPark: true },
+          { To: 'Carbon River Camp', Distance: 4, Up: 600, Down: 2500, NearSprayPark: true },
+          { To: 'Ipsut Pass', Distance: 8.6, Up: 2900, Down: 3000, NearSprayPark: true },
+          { To: 'James Camp', Distance: 3.3, Up: 900, Down: 1500 }
         ],
 
         'James Camp': [
-          { To: 'Fire Creek', Distance: 4.5, Up: 1700, Down: 1600 },
-          { To: 'Berkeley Park', Distance: 7.4, Up: 3000, Down: 1900 }
+          { To: 'Fire Creek', Distance: 4.9, Up: 1700, Down: 1600 },
+          { To: 'Berkeley Park', Distance: 8, Up: 3000, Down: 1900 }
         ],
 
         'Fire Creek': [
-          { To: 'Berkeley Park', Distance: 3.8, Up: 1600, Down: 600 }
+          { To: 'Berkeley Park', Distance: 4.1, Up: 1600, Down: 600 }
         ],
 
         'Berkeley Park': [
-          { To: 'Granite Creek', Distance: 4.1, Up: 1300, Down: 1000 },
-          { To: 'Frozen Lake', Distance: 2.3, Up: 1200, Down: 0 }
+          { To: 'Granite Creek', Distance: 4.4, Up: 1300, Down: 1000 },
+          { To: 'Frozen Lake', Distance: 2.5, Up: 1200, Down: 0 }
         ],
 
         'Lake Eleanor trhd': [
-          { To: 'Lake Eleanor', Distance: 1, Up: 500, Down: 0 }
+          { To: 'Lake Eleanor', Distance: 1.1, Up: 500, Down: 0 }
         ],
 
         'Lake Eleanor': [
-          { To: 'Berkeley Park', Distance: 5.3, Up: 1300, Down: 700 },
-          { To: 'Fire Creek', Distance: 4.8, Up: 1000, Down: 1400 },
-          { To: 'James Camp', Distance: 8.4, Up: 2300, Down: 2800 }
+          { To: 'Berkeley Park', Distance: 5.8, Up: 1300, Down: 700 },
+          { To: 'Fire Creek', Distance: 5.2, Up: 1000, Down: 1400 },
+          { To: 'James Camp', Distance: 9.1, Up: 2300, Down: 2800 }
         ],
 
         'G. of Patriarchs trhd': [
-          { To: 'Olallie Creek', Distance: 3, Up: 1800, Down: 0 },
-          { To: 'Deer Creek', Distance: 6.4, Up: 1300, Down: 600 },
-          { To: 'Three Lakes', Distance: 6, Up: 2800, Down: 400 }
+          { To: 'Olallie Creek', Distance: 3.3, Up: 1800, Down: 0 },
+          { To: 'Deer Creek', Distance: 6.9, Up: 1300, Down: 600 },
+          { To: 'Three Lakes', Distance: 6.5, Up: 2800, Down: 400 }
         ],
 
         'Olallie Creek': [
-          { To: 'Nickel Creek', Distance: 3, Up: 800, Down: 1500 },
-          { To: 'Indian Bar', Distance: 5.6, Up: 2500, Down: 1400 }
+          { To: 'Nickel Creek', Distance: 3.3, Up: 800, Down: 1500 },
+          { To: 'Indian Bar', Distance: 6.1, Up: 2500, Down: 1400 }
         ],
 
         'Upper Owyhigh trhd': [
-          { To: 'Fryingpan Creek', Distance: 0.8, Up: 200, Down: 100 },
-          { To: 'Tamanos Creek', Distance: 2.9, Up: 1600, Down: 100 }
+          { To: 'Fryingpan Creek', Distance: 0.9, Up: 200, Down: 100 },
+          { To: 'Tamanos Creek', Distance: 3.1, Up: 1600, Down: 100 }
         ],
 
         'Tamanos Creek': [
-          { To: 'Deer Creek', Distance: 5.1, Up: 200, Down: 2600 }
+          { To: 'Deer Creek', Distance: 5.5, Up: 200, Down: 2600 }
         ],
 
         'Deer Creek': [
-          { To: 'Tipsoo Lake', Distance: 3.9, Up: 2500, Down: 100 }
+          { To: 'Tipsoo Lake', Distance: 4.2, Up: 2500, Down: 100 }
         ],
 
         'Deer Creek trhd': [
@@ -418,11 +418,11 @@
         ],
 
         'Three Lakes': [
-          { To: 'Dewey Lake', Distance: 8, Up: 2300, Down: 1800 }
+          { To: 'Dewey Lake', Distance: 8.7, Up: 2300, Down: 1800 }
         ],
 
         'Dewey Lake': [
-          { To: 'Tipsoo Lake', Distance: 3.8, Up: 900, Down: 700 }
+          { To: 'Tipsoo Lake', Distance: 4.1, Up: 900, Down: 700 }
         ],
 
         'Tipsoo Lake': []
@@ -445,7 +445,7 @@
               Up: trailLink.Down,
               Down: trailLink.Up,
               IsSprayPark: trailLink.IsSprayPark,
-              NotSprayPark: trailLink.NotSprayPark
+              NearSprayPark: trailLink.NearSprayPark
             });
           });
         }
@@ -481,6 +481,11 @@
 
           searchPaths.forEach(searchPath => {
             if (searchPath.Place == endPlace) {
+              // If via Spray Park option is enabled, reject routes that were near Spray Park but did not go over it.
+              if (viaSprayPark[day] && searchPath.NearSprayPark && !searchPath.IsSprayPark) {
+                return;
+              }
+
               // Reached the goal! But is this the shortest path we've found so far?
               if (!found || (searchPath.Distance < found.Distance)) {
                 found = searchPath;
@@ -501,7 +506,7 @@
                 }
 
                 // Some links are conditionally valid depending on whether the Spray Park option was selected.
-                if ((viaSprayPark[day] && trailLink.NotSprayPark) || (!viaSprayPark[day] && trailLink.IsSprayPark)) {
+                if (!viaSprayPark[day] && trailLink.IsSprayPark) {
                   return;
                 }
 
@@ -511,6 +516,8 @@
                   Distance: newDistance,
                   Up: searchPath.Up + trailLink.Up,
                   Down: searchPath.Down + trailLink.Down,
+                  IsSprayPark: searchPath.IsSprayPark || trailLink.IsSprayPark,
+                  NearSprayPark: searchPath.NearSprayPark || trailLink.NearSprayPark,
                   Visited: [...searchPath.Visited, searchPath.Place]
                 });
               });

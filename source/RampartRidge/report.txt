@@ -7,8 +7,8 @@ none
 [Viewpoint.jpg] View from the open section along Rampart Ridge
 
 Rampart Ridge is a straightforward loop hike starting from Longmire. Its 
-eastern side is also the start of the [IndianHenrysFromLongmire] Wonderland 
-Trail section, and [MildredPoint].
+eastern side is also the start of the [IndianHenrysFromLongmire] [Wonderland] 
+section, and [MildredPoint].
 
 Most of the trail is through forest, which is splendidly lush and 
 rainforesty at the lower elevations. Along the way there's a nice overlook 
