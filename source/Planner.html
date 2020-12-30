@@ -28,10 +28,10 @@
         <option value="5">5 days</option>
         <option value="6">6 days</option>
         <option value="7">7 days</option>
-        <option value="8">8 days</option>
+        <option value="8" selected>8 days</option>
         <option value="9">9 days</option>
         <option value="10">10 days</option>
-        <option value="11" selected>11 days</option>
+        <option value="11">11 days</option>
         <option value="12">12 days</option>
         <option value="13">13 days</option>
         <option value="14">14 days</option>
@@ -44,11 +44,9 @@
         <button onClick="ExportTrip()">Export</button>
         <button onClick="ImportTrip()">Import</button>
         <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
-<!-- TODO
-        <button onClick="ResetTrip()">Auto (CW)</button>
-        <button onClick="ResetTrip()">Auto (CCW)</button>
--->
         <button onClick="ResetTrip()">Reset</button>
+        <button onClick="GenerateItinerary(false)">Auto (CW)</button>
+        <button onClick="GenerateItinerary(true)">Auto (CCW)</button>
       </div>
       <div class="plannerhelp">
         <span id="deweylake" class="tooltip">
@@ -68,21 +66,29 @@
           <span class="tip">
             If there is more than one route between two locations, this page will measure 
             the shortest one, except for trail segments in the northwest corner of the 
-            park (around Mowich Lake / Spray Park / Ipsut Pass / Carbon River) where 
-            choice of route is determined by the 'via Spray Park' option. To check which 
-            way was measured, move your mouse over or tap on the distance for a day, and 
-            you'll see a tooltip listing all the locations along that day's trail.
+            park (around Mowich Lake / Ipsut Pass / Spray Park / Carbon River) where 
+            choice of route is determined by the <i>via Spray Park</i> option.
+            To check which way was measured, move your mouse over or tap on the distance 
+            for a day, and you'll see a tooltip listing all the locations along that 
+            day's trail.
           </span>
-<!-- TODO
           <span class="plannerhelpsplitter">|</span>
           <br class="plannerhelpbreak" />
         </span>
         <span class="tooltip">
-          about Auto Buttons
+          about the Auto buttons
           <span class="tip">
-            The Auto (CW) and Auto (CCW) buttons attempt 
+            Clicking the <b>Auto (CW)</b> or <b>Auto (CCW)</b> button will generate a 
+            suggested clockwise or counter-clockwise Wonderland itinerary using your 
+            current trip duration, start trailhead, finish trailhead, and <i>via Spray 
+            Park</i> settings. Campsites will be spaced as evenly as possible around the 
+            loop in the chosen direction.
+            <br/><br/>
+            This feature only supports full or partial Wonderland circuits, not other 
+            trails such as the Northern Loop or Eastside Loop. If you pick trailheads 
+            that are not on the Wonderland, it will choose a route that connects from 
+            them to the Wonderland.
           </span>
--->
         </span>
       </div>
     </div>
@@ -95,25 +101,26 @@
       var dayRoutes = [];
 
 
-      function CreateDefaultTrip() {
+      function CreateDefaultTrip()
+      {
         return {
-          Duration: 11,
+          Duration: 8,
 
           StartTrailhead: 'Longmire',
           EndTrailhead: 'Longmire',
 
           SelectedCampsites: [
-            'Devil\'s Dream',
-            'Klapatche Park',
+            'South Puyallup River',
             'Golden Lakes',
             'Mowich Lake',
-            'Carbon River Camp',
-            'Mystic Camp',
+            'Dick Creek',
             'Sunrise Camp',
             'Summerland',
-            'Indian Bar',
-            'Maple Creek',
+            'Nickel Creek',
 
+            'Pyramid Creek',
+            'Pyramid Creek',
+            'Pyramid Creek',
             'Pyramid Creek',
             'Pyramid Creek',
             'Pyramid Creek'
@@ -144,7 +151,7 @@
           'G. of Patriarchs trhd',
           'Upper Owyhigh trhd',
           'Deer Creek trhd',
-          'Tipsoo Lake',
+          'Tipsoo Lake'
         ],
 
         'Sneaking in the Backdoor': [
@@ -450,7 +457,8 @@
 
 
       // On load, create reversed copies of all the trail links, to make the graph bidirectional.
-      function CreateInverseTrailLinks() {
+      function CreateInverseTrailLinks()
+      {
         var toReverse = {};
 
         for (var trail in trailData) {
@@ -475,8 +483,8 @@
 
 
       // The core place-to-place distance computation.
-      function FindRoute(startPlace, endPlace, viaSprayPark) {
-
+      function FindRoute(startPlace, endPlace, viaSprayPark)
+      {
         // Seed the search with our starting point.
         var searchPaths = [ 
           {
@@ -584,26 +592,230 @@
       }
 
 
-      function ExpandPlaceNames(name) {
+      function ExpandPlaceNames(name)
+      {
         return name.replace(/trhd/g, 'trailhead')
                    .replace(/G. of/g, 'Grove of the');
       }
 
 
-      function EncodePlaceNames(name) {
+      function EncodePlaceNames(name)
+      {
         return name.replace(/trailhead/g, 'trhd')
                    .replace(/Grove of the/g, 'G. of');
       }
 
 
+      function GenerateItinerary(ccw)
+      {
+        // First, we simplify the problem down to one involving just four major
+        // trailheads, replacing other trailheads with the closest of the chosen four.
+
+        const simplifiedTrailheads = {
+          'Longmire':              'Longmire',
+          'Mowich Lake':           'Mowich Lake',
+          'Sunrise':               'White River',
+          'White River':           'White River',
+          'Box Canyon':            'Box Canyon',
+          'Fryingpan Creek':       'White River',
+          'Reflection Lakes':      'Box Canyon',
+          'G. of Patriarchs trhd': 'Box Canyon',
+          'Upper Owyhigh trhd':    'White River',
+          'Deer Creek trhd':       'White River',
+          'Tipsoo Lake':           'White River',
+          'Westside Road':         'Longmire',
+          'Paul Peak trhd':        'Mowich Lake',
+          'Carbon River trhd':     'Mowich Lake',
+          'Lake Eleanor trhd':     'White River'
+        };
+
+        const otherTrailheads = {
+          'Longmire':    [ 'Mowich Lake', 'White River', 'Box Canyon'  ],
+          'Mowich Lake': [ 'White River', 'Box Canyon',  'Longmire'    ],
+          'White River': [ 'Box Canyon',  'Longmire',    'Mowich Lake' ],
+          'Box Canyon':  [ 'Longmire',    'Mowich Lake', 'White River' ]
+        };
+
+        var simpleStart = simplifiedTrailheads[trip.StartTrailhead];
+        var simpleEnd = simplifiedTrailheads[trip.EndTrailhead];
+
+        var trailheads = otherTrailheads[simpleStart];
+
+        // Figure out which order to visit these trailheads, handling clockwise vs.
+        // counterclockwise preference and the possibility of this being a section hike.
+        if (ccw) {
+          trailheads = trailheads.slice();
+          trailheads.reverse();
+        }
+
+        if (simpleStart == simpleEnd) {
+          // Doing a full circuit of all four sections.
+          trailheads = [ simpleStart, ...trailheads, simpleEnd ];
+        }
+        else if (simpleEnd == trailheads[0]) {
+          // Single section.
+          trailheads = [ simpleStart, simpleEnd ];
+        }
+        else if (simpleEnd == trailheads[1]) {
+          // Two sections.
+          trailheads = [ simpleStart, trailheads[0], simpleEnd ];
+        }
+        else {
+          // Three sections.
+          trailheads = [ simpleStart, trailheads[0], trailheads[1], simpleEnd ];
+        }
+
+        // Hack to make sure Ipsut Creek is considered when not going over Spray Park,
+        // even though it's slightly off the WT so normal route finding ignores it.
+        if (!trip.ViaSprayParkMaster) {
+          for (var i = 0; i < trailheads.length; i++) {
+            if (trailheads[i] == 'Mowich Lake') {
+              if (ccw && i > 0) {
+                trailheads.splice(i, 0, 'Ipsut Creek');
+                i++;
+              }
+              else if (!ccw && i < trailheads.length - 1) {
+                trailheads.splice(i + 1, 0, 'Ipsut Creek');
+                i++;
+              }
+            }
+          }
+        }
+
+        // Restore the original non-simplified start and finish trailheads.
+        trailheads[0] = trip.StartTrailhead;
+        trailheads[trailheads.length - 1] = trip.EndTrailhead;
+
+        // Find routes between the chosen trailheads, and flatten these into a single path.
+        var route = [ trailheads[0] ];
+
+        for (var i = 0; i < trailheads.length - 1; i++) {
+          var section = FindRoute(trailheads[i], trailheads[i + 1], trip.ViaSprayParkMaster);
+
+          route = route.concat(section.Visited.slice(1));
+        }
+
+        // Measure cumulative distance along our chosen route.
+        var distances = [ 0 ];
+        var totalDistance = 0;
+
+        for (var i = 0; i < route.length - 1; i++) {
+          var trailLink = trailData[route[i]].find(link => link.To == route[i + 1]);
+
+          totalDistance += trailLink.Distance;
+          distances.push(totalDistance);
+        }
+
+        // Remove the start and end trailheads.
+        route.shift();
+        distances.shift();
+
+        route.pop();
+        distances.pop();
+
+        // Filter out entries for places that aren't actually campsites.
+        var allCampsites = [].concat(...campsiteCategories.map(category => placeNames[category]));
+
+        var i = 0;
+
+        while (i < route.length) {
+          if (allCampsites.includes(route[i])) {
+            i++;
+          }
+          else {
+            route.splice(i, 1);
+            distances.splice(i, 1);
+          }
+        }
+
+        // Choose camps as close as possible to an even division of the total distance.
+        var camps = [];
+        var currentCamp = 0;
+
+        for (var day = 0; day < trip.Duration - 1; day++) {
+          var wantedDistance = totalDistance * (day + 1) / trip.Duration;
+
+          while (distances[currentCamp] < wantedDistance && currentCamp < route.length - 1) {
+            currentCamp++;
+          }
+
+          if (currentCamp > 0) {
+            var prevDistance = wantedDistance - distances[currentCamp - 1];
+            var nextDistance = distances[currentCamp] - wantedDistance;
+
+            camps.push((nextDistance < prevDistance) ? currentCamp : currentCamp - 1);
+          }
+          else
+          {
+            camps.push(currentCamp);
+          }
+        }
+
+        // Add dummy entries at both ends of the route, so bound checks are not needed later on.
+        camps.push(route.length);
+        distances.push(totalDistance);
+
+        camps[-1] = -1;
+        distances[-1] = 0;
+
+        // Unsophisticated easing function attempts to smooth out the mileage per day.
+        function RateCampChoice(day, proposedCamp)
+        {
+          var prevCamp = camps[day - 1];
+          var nextCamp = camps[day + 1];
+
+          var prevDistance = distances[proposedCamp] - distances[prevCamp];
+          var nextDistance = distances[nextCamp] - distances[proposedCamp];
+
+          return Math.abs(prevDistance - nextDistance);
+        }
+
+        for (var day = 0; day < trip.Duration - 1; day++) {
+          var delta = RateCampChoice(day, camps[day]);
+
+          // Maybe we should slide our camp choice one place earlier?
+          var isAheadOfPrevCamp = camps[day] > Math.max(camps[day - 1], 0);
+
+          var deltaPrev = isAheadOfPrevCamp ? RateCampChoice(day, camps[day] - 1) : Number.MAX_VALUE;
+
+          // Or perhaps we should slide it later?
+          var isBehindNextCamp = camps[day] < Math.min(camps[day + 1], route.length - 1);
+
+          var deltaNext = isBehindNextCamp ? RateCampChoice(day, camps[day] + 1) : Number.MAX_VALUE;
+
+          if (deltaPrev < delta && deltaPrev < deltaNext) {
+            camps[day]--;
+          }
+          else if (deltaNext < delta) {
+            camps[day]++;
+          }
+        }
+
+        // Store our chosen route, and refresh the UI.
+        for (var day = 0; day < trip.Duration - 1; day++) {
+          trip.SelectedCampsites[day] = route[camps[day]];
+        }
+
+        for (var i = 0; i < maxDays; i++) {
+          trip.ViaSprayPark[i] = trip.ViaSprayParkMaster;
+        }
+
+        RecreateUIElements();
+        SaveTrip();
+      }
+
+
       // UI code.
-      function InitializeUI() {
+      function InitializeUI()
+      {
         document.getElementById('tripduration').value = trip.Duration;
+
         RecreateUIElements();
       }
 
 
-      function CreatePlaceSelector(categories, currentSelection, changeHandler) {
+      function CreatePlaceSelector(categories, currentSelection, changeHandler)
+      {
         var result = '<select onChange="' + changeHandler + '">';
 
         categories.forEach(category => {
@@ -621,7 +833,8 @@
       }
 
 
-      function CreateTableRow(day) {
+      function CreateTableRow(day)
+      {
         if (day == 0) {
           // Starting the first day at trailhead.
           var startHtml = CreatePlaceSelector(trailheadCategories, trip.StartTrailhead, 'StartTrailheadChanged(this.value)');
@@ -654,7 +867,8 @@
       }
 
 
-      function RecreateUIElements() {
+      function RecreateUIElements()
+      {
         var table = document.getElementById('table');
 
         var checkboxAttribute = trip.ViaSprayParkMaster ? 'checked ' : '';
@@ -677,7 +891,8 @@
       }
 
 
-      function UpdateTotals() {
+      function UpdateTotals()
+      {
         var distance = 0;
         var up = 0;
         var down = 0;
@@ -694,7 +909,8 @@
       }
 
 
-      function ShowOrHideDeweyLakeDetails() {
+      function ShowOrHideDeweyLakeDetails()
+      {
         var display = 'none';
 
         for (var i = 0; i < trip.Duration - 1; i++) {
@@ -708,24 +924,29 @@
       }
 
 
-      function TripDurationChanged(newDuration) {
+      function TripDurationChanged(newDuration)
+      {
         trip.Duration = newDuration;
+
         RecreateUIElements();
         SaveTrip();
       }
 
 
-      function GetTableRow(day) {
+      function GetTableRow(day)
+      {
         return document.getElementById('table').children[day + 1];
       }
 
 
-      function UpdateDistance(day) {
+      function UpdateDistance(day)
+      {
         GetTableRow(day).children[4].innerHTML = MeasureDistance(day);
       }
 
 
-      function StartTrailheadChanged(newValue) {
+      function StartTrailheadChanged(newValue)
+      {
         trip.StartTrailhead = newValue;
 
         UpdateDistance(0);
@@ -734,7 +955,8 @@
       }
 
 
-      function EndTrailheadChanged(newValue) {
+      function EndTrailheadChanged(newValue)
+      {
         trip.EndTrailhead = newValue;
 
         UpdateDistance(trip.Duration - 1);
@@ -743,7 +965,8 @@
       }
 
 
-      function CampsiteChanged(day, newValue) {
+      function CampsiteChanged(day, newValue)
+      {
         trip.SelectedCampsites[day] = newValue;
 
         GetTableRow(day + 1).children[1].innerHTML = newValue;
@@ -756,7 +979,8 @@
       }
 
 
-      function ViaSprayParkChanged(day, newValue) {
+      function ViaSprayParkChanged(day, newValue)
+      {
         trip.ViaSprayPark[day] = newValue;
 
         UpdateDistance(day);
@@ -765,7 +989,8 @@
       }
 
 
-      function ViaSprayParkMasterChanged(newValue) {
+      function ViaSprayParkMasterChanged(newValue)
+      {
         trip.ViaSprayParkMaster = newValue;
 
         for (var i = 0; i < maxDays; i++) {
@@ -778,7 +1003,8 @@
 
 
       // Import and export functions.
-      function ExportTrip() {
+      function ExportTrip()
+      {
         var data = SerializeTrip();
 
         var exporter = document.createElement('a');
@@ -794,12 +1020,14 @@
       }
 
 
-      function ImportTrip() {
+      function ImportTrip()
+      {
         document.getElementById("fileselector").click();
       }
 
 
-      function ImportChanged(file) {
+      function ImportChanged(file)
+      {
         if (file) {
           var reader = new FileReader();
 
@@ -814,7 +1042,8 @@
       }
 
 
-      function SerializeTrip() {
+      function SerializeTrip()
+      {
         var text = trip.Duration + ' days\n';
 
         if (trip.ViaSprayParkMaster) {
@@ -845,7 +1074,8 @@
       }
 
 
-      function DeserializeTrip(text) {
+      function DeserializeTrip(text)
+      {
         trip = CreateDefaultTrip();
 
         text.split("\n").forEach(line => {
@@ -892,14 +1122,16 @@
       }
 
 
-      function ResetTrip() {
+      function ResetTrip()
+      {
         trip = CreateDefaultTrip();
         InitializeUI();
         SaveTrip();
       }
 
 
-      function SaveTrip() {
+      function SaveTrip()
+      {
         localStorage.Trip = JSON.stringify(trip);
       }
 
