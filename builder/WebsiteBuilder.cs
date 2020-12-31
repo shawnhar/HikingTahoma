@@ -37,6 +37,7 @@ namespace builder
 
                 // Process all the hikes.
                 var hikes = (await sourceFolder.GetFoldersAsync())
+                            .Where(folder => Path.GetFileName(folder.Path) != "Overlays")
                             .Select(folder => new Hike(folder.Path, imageProcessor))
                             .ToList();
 
@@ -59,12 +60,16 @@ namespace builder
 
                 await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
 
+                // Generate map overlay images for the distances planning tool.
+                await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
+
                 // Copy root files.
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
 
                 // Debug .csv output can be pasted into Excel for length/difficulty analysis.
@@ -193,6 +198,27 @@ namespace builder
             writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
             writer.WriteLine("      </div>");
             writer.WriteLine("    </div>");
+        }
+
+
+        async Task ProcessMapOverlays(string sourcePath, string outPath, ImageProcessor imageProcessor)
+        {
+            using (new Profiler("WebsiteBuilder.ProcessMapOverlays"))
+            {
+                sourcePath = Path.Combine(sourcePath, "Overlays");
+                outPath = Path.Combine(outPath, "Overlays");
+
+                Directory.CreateDirectory(outPath);
+
+                foreach (var filename in Directory.GetFiles(sourcePath, "*.png").Select(Path.GetFileName))
+                {
+                    var bitmap = await imageProcessor.LoadImage(sourcePath, filename);
+
+                    bitmap = imageProcessor.ProcessMapOverlay(bitmap);
+
+                    await imageProcessor.SaveImage(bitmap, outPath, filename);
+                }
+            }
         }
 
 

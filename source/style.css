@@ -58,6 +58,7 @@ a:link, a:visited {
   left: -1;
   top: -1;
   border: 1px solid #95C0E0;
+  clear: right;
 }
 
 .map img {
@@ -281,6 +282,7 @@ a:link, a:visited {
   font-size: 13px;
   clear: right;
   float: right;
+  margin-bottom: 20;
 }
 
 .plannerhelpbreak {
@@ -347,6 +349,22 @@ a:link, a:visited {
   .plannerhelp .tooltip .tip::after {
     left: 74%;
   }
+}
+
+.plannermapevenday {
+  visibility: visible;
+  filter: url(#filterPlannerMapEvenDay);
+}
+
+.plannermapoddday {
+  visibility: visible;
+  filter: url(#filterPlannerMapOddDay);
+}
+
+.plannermaphighlighted {
+  visibility: visible;
+  z-index: 1;
+  filter: url(#filterPlannerMapHighlighted);
 }
 
 .campstable {

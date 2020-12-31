@@ -225,5 +225,68 @@ namespace builder
                 }
             }
         }
+
+
+        public CanvasBitmap ProcessMapOverlay(CanvasBitmap bitmap)
+        {
+            const int dilation = 40;
+            const int fringeDilation = 4;
+
+            var scale = new Vector2(MapWidth, MapHeight) / bitmap.Size.ToVector2();
+
+            var transformedMap = new Transform2DEffect
+            {
+                TransformMatrix = Matrix3x2.CreateScale(scale),
+                InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
+
+                Source = new LinearTransferEffect
+                {
+                    RedSlope = 0,
+                    GreenSlope = 0,
+                    BlueSlope = 0,
+
+                    RedOffset = 1,
+                    GreenOffset = 1,
+                    BlueOffset = 1,
+
+                    Source = new MorphologyEffect
+                    {
+                        Mode = MorphologyEffectMode.Dilate,
+                        Width = dilation,
+                        Height = dilation,
+
+                        Source = bitmap
+                    }
+                }
+            };
+
+            var mapWithFringe = new ArithmeticCompositeEffect
+            {
+                Source1 = transformedMap,
+
+                Source2 = new MorphologyEffect
+                {
+                    Mode = MorphologyEffectMode.Dilate,
+                    Width = fringeDilation,
+                    Height = fringeDilation,
+
+                    Source = transformedMap
+                },
+
+                Source1Amount = 127f / 128,
+                Source2Amount = 1f / 128,
+
+                MultiplyAmount = 0
+            };
+
+            var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96);
+
+            using (var drawingSession = result.CreateDrawingSession())
+            {
+                drawingSession.DrawImage(mapWithFringe);
+            }
+
+            return result;
+        }
     }
 }

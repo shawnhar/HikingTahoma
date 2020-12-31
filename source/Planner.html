@@ -92,6 +92,33 @@
         </span>
       </div>
     </div>
+    <div class="map" id="map">
+      <img class="mapbase" src="mapbase.jpg" width="600" height="506" />
+    </div>
+    <svg height="0">
+      <filter id="filterPlannerMapEvenDay">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+          <feFuncG type="linear" slope="0" intercept="0.216"></feFuncG>
+          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+        </feComponentTransfer>
+      </filter>
+      <filter id="filterPlannerMapOddDay">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+          <feFuncG type="linear" slope="0" intercept="0.63"></feFuncG>
+          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+        </feComponentTransfer>
+      </filter>
+      <filter id="filterPlannerMapHighlighted">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+          <feFuncG type="linear" slope="0" intercept="0"></feFuncG>
+          <feFuncB type="linear" slope="0" intercept="1"></feFuncB>
+          <feFuncA type="linear" slope="128" intercept="0"></feFuncA>
+        </feComponentTransfer>
+      </filter>
+    </svg>
     <script>
       // State tracking the current trip configuration.
       const maxDays = 14;
@@ -99,6 +126,8 @@
       var trip;
 
       var dayRoutes = [];
+      var visibleMapSegments = {};
+      var highlightedDays = 0;
 
 
       function CreateDefaultTrip()
@@ -456,9 +485,40 @@
       };
 
 
-      // On load, create reversed copies of all the trail links, to make the graph bidirectional.
-      function CreateInverseTrailLinks()
+      function GetTrailSegmentId(startPlace, endPlace)
       {
+        // Canonicalize into alphabetical order, so we don't need to worry about direction.
+        if (startPlace > endPlace) {
+          [ startPlace, endPlace ] = [ endPlace, startPlace ];
+        }
+
+        return (startPlace + '-' + endPlace).replace(/[ '\.]/g, '');
+      }
+
+
+      // On load, run some preprocessing over our trail route data.
+      function PreprocessTrailData()
+      {
+        // Create maplayer elements for every trail segment.
+        var map = document.getElementById('map');
+
+        for (var trail in trailData) {
+          trailData[trail].forEach(trailLink => {
+            var id = GetTrailSegmentId(trail, trailLink.To);
+
+            var img = document.createElement('img');
+
+            img.setAttribute('class', 'maplayer');
+            img.setAttribute('id', id);
+            img.setAttribute('src', 'Overlays/' + id + '.png');
+            img.setAttribute('width', '600');
+            img.setAttribute('height', '506');
+
+            map.appendChild(img);
+          });
+        }
+
+        // Create reversed copies of all the trail links, to make the graph bidirectional.
         var toReverse = {};
 
         for (var trail in trailData) {
@@ -479,7 +539,7 @@
         }
       }
 
-      CreateInverseTrailLinks();
+      PreprocessTrailData();
 
 
       // The core place-to-place distance computation.
@@ -489,7 +549,7 @@
         var searchPaths = [ 
           {
             Place: startPlace,
-            Visited: [],
+            Route: [],
             Distance: 0,
             Up: 0,
             Down: 0
@@ -511,14 +571,14 @@
 
               // Reached the goal! But is this the shortest path we've found so far?
               if (!found || (searchPath.Distance < found.Distance)) {
-                searchPath.Visited.push(endPlace);
+                searchPath.Route.push(endPlace);
                 found = searchPath;
               }
             }
             else {
               trailData[searchPath.Place].forEach(trailLink => {
                 // Prevent cycles.
-                if (searchPath.Visited.includes(trailLink.To)) {
+                if (searchPath.Route.includes(trailLink.To)) {
                   return;
                 }
 
@@ -536,7 +596,7 @@
 
                 newPaths.push({
                   Place: trailLink.To,
-                  Visited: [...searchPath.Visited, searchPath.Place],
+                  Route: [...searchPath.Route, searchPath.Place],
                   Distance: newDistance,
                   Up: searchPath.Up + trailLink.Up,
                   Down: searchPath.Down + trailLink.Down,
@@ -578,7 +638,7 @@
 
         var align = '<span style="visibility:hidden">0</span>';
 
-        var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Visited.join(' &rarr; ')) + '</span>';
+        var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Route.join(' &rarr; ')) + '</span>';
 
         if (miles.length < 10) {
           miles = align + miles;
@@ -692,7 +752,7 @@
         for (var i = 0; i < trailheads.length - 1; i++) {
           var section = FindRoute(trailheads[i], trailheads[i + 1], trip.ViaSprayParkMaster);
 
-          route = route.concat(section.Visited.slice(1));
+          route = route.concat(section.Route.slice(1));
         }
 
         // Measure cumulative distance along our chosen route.
@@ -862,7 +922,7 @@
                '  <td>' + startHtml + '</td>' +
                '  <td>to ' + endHtml + '</td>' +
                '  <td><span class="plannersprayparklabel">via Spray Park:</span><input type="checkbox" onChange="ViaSprayParkChanged(' + day + ', this.checked)" ' + checkboxAttribute + '/></td>' +
-               '  <td class="plannerdistance tooltip">' + MeasureDistance(day) + '</td>' +
+               '  <td class="plannerdistance tooltip" onMouseEnter="OnEnterDay(' + day + ')" onMouseLeave="OnLeaveDay(' + day + ')">' + MeasureDistance(day) + '</td>' +
                '</tr>';
       }
 
@@ -881,12 +941,13 @@
                           '</tr>';
 
         for (var day = 0; day < trip.Duration; day++) {
-          row = document.createElement('tr');
+          var row = document.createElement('tr');
           row.innerHTML = CreateTableRow(day);
           table.appendChild(row);
         }
 
         UpdateTotals();
+        UpdateMapOverlays();
         ShowOrHideDeweyLakeDetails();
       }
 
@@ -951,6 +1012,7 @@
 
         UpdateDistance(0);
         UpdateTotals();
+        UpdateMapOverlays();
         SaveTrip();
       }
 
@@ -961,6 +1023,7 @@
 
         UpdateDistance(trip.Duration - 1);
         UpdateTotals();
+        UpdateMapOverlays();
         SaveTrip();
       }
 
@@ -974,6 +1037,7 @@
         UpdateDistance(day);
         UpdateDistance(day + 1);
         UpdateTotals();
+        UpdateMapOverlays();
         ShowOrHideDeweyLakeDetails();
         SaveTrip();
       }
@@ -985,6 +1049,7 @@
 
         UpdateDistance(day);
         UpdateTotals();
+        UpdateMapOverlays();
         SaveTrip();
       }
 
@@ -999,6 +1064,60 @@
 
         RecreateUIElements();
         SaveTrip();
+      }
+
+
+      function UpdateMapOverlays()
+      {
+        // Make the desired map segments visible.
+        var visible = {};
+
+        for (var i = 0; i < trip.Duration; i++) {
+          var isHighlighted = highlightedDays & (1 << i);
+
+          var className = isHighlighted ? 'plannermaphighlighted' :
+                          (i & 1)       ? 'plannermapoddday' :
+                                          'plannermapevenday';
+
+          for (var j = 0; j < dayRoutes[i].Route.length - 1; j++) {
+            var id = GetTrailSegmentId(dayRoutes[i].Route[j], dayRoutes[i].Route[j + 1]);
+
+            if (!visible[id] || isHighlighted) {
+              var element = document.getElementById(id);
+
+              if (element) {
+                element.className = 'maplayer ' + className;
+
+                visible[id] = true;
+              }
+            }
+          }
+        }
+
+        // Hide any previously visible map segments that are no longer wanted.
+        for (var id in visibleMapSegments) {
+          if (!visible[id]) {
+            document.getElementById(id).className = 'maplayer';
+          }
+        }
+
+        visibleMapSegments = visible;
+      }
+
+
+      function OnEnterDay(day)
+      {
+        highlightedDays |= 1 << day;
+
+        UpdateMapOverlays();
+      }
+
+
+      function OnLeaveDay(day)
+      {
+        highlightedDays &= ~(1 << day);
+
+        UpdateMapOverlays();
       }
 
 
@@ -1067,7 +1186,7 @@
 
           text += dayRoutes[i].Distance.toFixed(1) + ' miles, ' + dayRoutes[i].Up + '\' gain, ' + dayRoutes[i].Down + '\' descent\n';
 
-          text += '  (route: ' + ExpandPlaceNames(dayRoutes[i].Visited.join(' -> ')) + ')\n';
+          text += '  (route: ' + ExpandPlaceNames(dayRoutes[i].Route.join(' -> ')) + ')\n';
         }
 
         return text;
