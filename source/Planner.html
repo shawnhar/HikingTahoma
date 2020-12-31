@@ -43,7 +43,7 @@
       <div class="plannerbuttons">
         <button onClick="ExportTrip()">Export</button>
         <button onClick="ImportTrip()">Import</button>
-        <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this.files[0])">
+        <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this)">
         <button onClick="ResetTrip()">Reset</button>
         <button onClick="GenerateItinerary(false)">Auto (CW)</button>
         <button onClick="GenerateItinerary(true)">Auto (CCW)</button>
@@ -1145,8 +1145,10 @@
       }
 
 
-      function ImportChanged(file)
+      function ImportChanged(input)
       {
+        var file = input.files[0];
+
         if (file) {
           var reader = new FileReader();
 
@@ -1158,6 +1160,8 @@
 
           reader.readAsText(file);
         }
+
+        input.value = null;
       }
 
 
