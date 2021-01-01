@@ -756,19 +756,22 @@
         }
 
         // Measure cumulative distance along our chosen route.
-        var distances = [ 0 ];
         var totalDistance = 0;
+        var distances = [];
+        var isSprayPark = [];
+        var nearSprayPark = [];
 
         for (var i = 0; i < route.length - 1; i++) {
           var trailLink = trailData[route[i]].find(link => link.To == route[i + 1]);
 
           totalDistance += trailLink.Distance;
           distances.push(totalDistance);
+          isSprayPark.push(trailLink.IsSprayPark);
+          nearSprayPark.push(trailLink.NearSprayPark);
         }
 
         // Remove the start and end trailheads.
         route.shift();
-        distances.shift();
 
         route.pop();
         distances.pop();
@@ -785,6 +788,8 @@
           else {
             route.splice(i, 1);
             distances.splice(i, 1);
+            isSprayPark.splice(i, 1);
+            nearSprayPark.splice(i, 1);
           }
         }
 
@@ -856,8 +861,14 @@
           trip.SelectedCampsites[day] = route[camps[day]];
         }
 
-        for (var i = 0; i < maxDays; i++) {
-          trip.ViaSprayPark[i] = trip.ViaSprayParkMaster;
+        for (var day = 0; day < trip.Duration; day++) {
+          var sliceStart = camps[day - 1] + 1;
+          var sliceEnd = camps[day] + 1;
+
+          var isSpray = isSprayPark.slice(sliceStart, sliceEnd).some(value => value);
+          var nearSpray = nearSprayPark.slice(sliceStart, sliceEnd).some(value => value);
+
+          trip.ViaSprayPark[day] = trip.ViaSprayParkMaster && (isSpray || !nearSpray);
         }
 
         RecreateUIElements();
