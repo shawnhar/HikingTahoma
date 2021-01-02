@@ -50,6 +50,15 @@
         <button onClick="GenerateItinerary(true)">Auto (CCW)</button>
       </div>
       <div class="plannerhelp">
+        <span id="cougarrock" class="tooltip">
+          about Cougar Rock
+          <span class="tip">
+            Cougar Rock is a frontcountry car campground, so it doesn't use the Rainier 
+            backcountry campsite reservation system.
+          </span>
+          <span class="plannerhelpsplitter">|</span>
+          <br class="plannerhelpbreak" />
+        </span>
         <span id="deweylake" class="tooltip">
           about Dewey Lake
           <span class="tip">
@@ -969,7 +978,7 @@
 
         UpdateTotals();
         UpdateMapOverlays();
-        ShowOrHideDeweyLakeDetails();
+        ShowOrHideCougarDeweyDetails();
       }
 
 
@@ -991,18 +1000,22 @@
       }
 
 
-      function ShowOrHideDeweyLakeDetails()
+      function ShowOrHideCougarDeweyDetails()
       {
-        var display = 'none';
+        var cougarDisplay = 'none';
+        var deweyDisplay = 'none';
 
         for (var i = 0; i < trip.Duration - 1; i++) {
-          if (trip.SelectedCampsites[i] == 'Dewey Lake') {
-            display = 'inline';
-            break;
+          if (trip.SelectedCampsites[i] == 'Cougar Rock') {
+            cougarDisplay = 'inline';
+          }
+          else if (trip.SelectedCampsites[i] == 'Dewey Lake') {
+            deweyDisplay = 'inline';
           }
         }
 
-        document.getElementById('deweylake').style.display = display;
+        document.getElementById('cougarrock').style.display = cougarDisplay;
+        document.getElementById('deweylake').style.display = deweyDisplay;
       }
 
 
@@ -1059,7 +1072,7 @@
         UpdateDistance(day + 1);
         UpdateTotals();
         UpdateMapOverlays();
-        ShowOrHideDeweyLakeDetails();
+        ShowOrHideCougarDeweyDetails();
         SaveTrip();
       }
 
