@@ -35,6 +35,7 @@
         <option value="12">12 days</option>
         <option value="13">13 days</option>
         <option value="14">14 days</option>
+        <option value="15">15 days</option>
       </select>
     </p>
     <table id="table" class="planner"></table>
@@ -121,7 +122,7 @@
     </svg>
     <script>
       // State tracking the current trip configuration.
-      const maxDays = 14;
+      const maxDays = 15;
 
       var trip;
 
@@ -132,7 +133,7 @@
 
       function CreateDefaultTrip()
       {
-        return {
+        trip = {
           Duration: 8,
 
           StartTrailhead: 'Longmire',
@@ -145,19 +146,22 @@
             'Dick Creek',
             'Sunrise Camp',
             'Summerland',
-            'Nickel Creek',
-
-            'Pyramid Creek',
-            'Pyramid Creek',
-            'Pyramid Creek',
-            'Pyramid Creek',
-            'Pyramid Creek',
-            'Pyramid Creek'
+            'Nickel Creek'
           ],
 
           ViaSprayPark: [],
           ViaSprayParkMaster: false
         };
+
+        PopulateUnusedCampsites();
+      }
+
+
+      function PopulateUnusedCampsites()
+      {
+        while (trip.SelectedCampsites.length < maxDays - 1) {
+          trip.SelectedCampsites.push('Pyramid Creek');
+        }
       }
 
 
@@ -1210,7 +1214,7 @@
 
       function DeserializeTrip(text)
       {
-        trip = CreateDefaultTrip();
+        CreateDefaultTrip();
 
         text.split("\n").forEach(line => {
           var match;
@@ -1258,7 +1262,7 @@
 
       function ResetTrip()
       {
-        trip = CreateDefaultTrip();
+        CreateDefaultTrip();
         InitializeUI();
         SaveTrip();
       }
@@ -1271,7 +1275,13 @@
 
 
       // Initialize or restore state when the page first loads.
-      trip = localStorage.Trip ? JSON.parse(localStorage.Trip) : CreateDefaultTrip();
+      if (localStorage.Trip) {
+        trip = JSON.parse(localStorage.Trip);
+        PopulateUnusedCampsites();
+      }
+      else {
+        CreateDefaultTrip();
+      }
 
       InitializeUI();
     </script>
