@@ -44,10 +44,11 @@
       <div class="plannerbuttons">
         <button onClick="ExportTrip()">Export</button>
         <button onClick="ImportTrip()">Import</button>
+        <button onClick="ShareTrip()">Share</button>
         <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this)">
         <button onClick="ResetTrip()">Reset</button>
-        <button onClick="GenerateItinerary(false)">Auto (CW)</button>
-        <button onClick="GenerateItinerary(true)">Auto (CCW)</button>
+        <button onClick="GenerateItinerary(false)">Auto CW</button>
+        <button onClick="GenerateItinerary(true)">Auto CCW</button>
       </div>
       <div class="plannerhelp">
         <span id="cougarrock" class="tooltip">
@@ -88,7 +89,7 @@
         <span class="tooltip">
           about the Auto buttons
           <span class="tip">
-            Clicking the <b>Auto (CW)</b> or <b>Auto (CCW)</b> button will generate a 
+            Clicking the <b>Auto CW</b> or <b>Auto CCW</b> button will generate a 
             suggested clockwise or counter-clockwise Wonderland itinerary using your 
             current trip duration, start trailhead, finish trailhead, and <i>via Spray 
             Park</i> settings. Campsites will be spaced as evenly as possible around the 

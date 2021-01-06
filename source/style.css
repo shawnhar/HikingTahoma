@@ -278,6 +278,11 @@ a:link, a:visited {
   float: right;
 }
 
+.plannerbuttons button {
+  padding-left: 4;
+  padding-right: 4;
+}
+
 .plannerhelp {
   font-size: 13px;
   clear: right;

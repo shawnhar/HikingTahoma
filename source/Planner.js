@@ -1152,6 +1152,10 @@ function ResetTrip()
   CreateDefaultTrip();
   InitializeUI();
   SaveTrip();
+
+  if (window.location.href.includes('?')) {
+    window.location = window.location.href.split('?')[0];
+  }
 }
 
 
@@ -1161,12 +1165,81 @@ function SaveTrip()
 }
 
 
-// Initialize or restore state when the page first loads.
-if (localStorage.Trip) {
-  trip = JSON.parse(localStorage.Trip);
-  PopulateUnusedCampsites();
+function ShareTrip()
+{
+  var url = window.location.href.split('?')[0];
+
+  var itinerary = JSON.stringify(trip);
+
+  var toShare = url + '?i=' + encodeURIComponent(itinerary);
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'Hiking Tahoma: Planning Tool Itinerary',
+      url: toShare
+    });
+  }
+  else {
+    const element = document.createElement('textarea');
+
+    element.value = toShare;
+    element.setAttribute('readonly', '');
+    element.style.position = 'absolute';
+    element.style.left = '-9999px';
+
+    document.body.appendChild(element);
+
+    element.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(element);
+
+    alert("Itinerary share link copied to clipboard");
+  }
 }
-else {
+
+
+function RestoreSavedState()
+{
+  var initData;
+
+  // URL parameter takes priority, if any.
+  var search = window.location.search;
+
+  if (search) {
+    var searchParams = new URLSearchParams(search);
+
+    var iParam = searchParams.get('i');
+
+    if (iParam) {
+      initData = decodeURIComponent(iParam);
+    }
+  }
+
+  // Otherwise use local storage data.
+  if (!initData) {
+    initData = localStorage.Trip;
+
+    if (!initData)
+      return false;
+  }
+
+  // Parse the saved state.
+  try {
+    trip = JSON.parse(initData);
+  }
+  catch(e) {
+    return false;
+  }
+
+  PopulateUnusedCampsites();
+
+  return true;
+}
+
+
+// Initialize or restore state when the page first loads.
+if (!RestoreSavedState()) {
   CreateDefaultTrip();
 }
 
