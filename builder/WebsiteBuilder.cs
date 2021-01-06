@@ -69,6 +69,7 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "Planner.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
 
