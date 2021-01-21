@@ -72,6 +72,7 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
+                CopyFile(sourceFolder.Path, outFolder.Path, ".htaccess");
 
                 // Debug .csv output can be pasted into Excel for length/difficulty analysis.
                 PrintHikeLengthsAndDifficulties(hikes);
@@ -134,7 +135,7 @@ namespace builder
                     {
                         var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("      <li id=\"link-{0}\"{2}><a href=\"{0}/{0}.html\">{1}</a></li>", hike.FolderName, hike.HikeName, eventHandler);
+                        writer.WriteLine("      <li id=\"link-{0}\"{2}><a href=\"{0}/\">{1}</a></li>", hike.FolderName, hike.HikeName, eventHandler);
                     }
 
                     writer.WriteLine("    </ul>");
@@ -195,7 +196,7 @@ namespace builder
             writer.WriteLine("          <a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a><br/>");
             writer.WriteLine("          <a href=\"" + rootPrefix + "Planner.html\">campsite distances</a>");
             writer.WriteLine("        </div>");
-            writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "index.html\">Hiking Tahoma</a></div>");
+            writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "\">Hiking Tahoma</a></div>");
             writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
             writer.WriteLine("      </div>");
             writer.WriteLine("    </div>");

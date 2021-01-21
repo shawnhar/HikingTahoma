@@ -181,7 +181,7 @@ namespace builder
         {
             using (new Profiler("Hike.WriteHtml"))
             {
-                using (var file = File.OpenWrite(Path.Combine(outPath, FolderName + ".html")))
+                using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
                 using (var writer = new StreamWriter(file))
                 {
                     WebsiteBuilder.WriteHtmlHeader(writer, HikeName, "../");
@@ -307,7 +307,7 @@ namespace builder
                 throw new Exception("Unknown link target " + name);
             }
 
-            return string.Format("<a href=\"../{0}/{0}.html\">{1}</a>", target.FolderName, target.HikeName);
+            return string.Format("<a href=\"../{0}/\">{1}</a>", target.FolderName, target.HikeName);
         }
 
 
