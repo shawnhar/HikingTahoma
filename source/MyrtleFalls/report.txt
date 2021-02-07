@@ -1,6 +1,7 @@
 Myrtle Falls
 easy
 0.9 200 5600
+Paradise
 none
 older
 

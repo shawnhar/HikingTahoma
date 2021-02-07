@@ -19,14 +19,13 @@ a:link, a:visited {
   padding-top: 4;
   padding-bottom: 8;
   margin-bottom: 20;
-  min-height: 72;
+  min-height: 55;
   background-color: #95C0E0;
 }
 
 .backlink {
   font-size: 32px;
   font-weight: bold;
-  margin-top: 6;
 }
 
 @media (max-width: 480px) {
@@ -38,10 +37,12 @@ a:link, a:visited {
 .about {
   font-size: 13px;
   font-style: italic;
-  line-height: 1.4;
-  margin-top: 1;
-  margin-left: 8;
   float: right;
+  margin-top: 4;
+}
+
+.about td {
+  padding: 0 0 0 12;
 }
 
 .subtitle {
@@ -97,10 +98,26 @@ a:link, a:visited {
   color: #0000FF;
 }
 
+.hikelist .listhead {
+  display: none;
+  font-weight: bold;
+  margin-bottom: 8;
+}
+
+.hikelist li + .listhead {
+  margin-top: 24;
+}
+
+#sortselector {
+  margin-top: 10;
+  margin-left: 10;
+}
+
 .progress {
-  padding-left: 10;
-  padding-top: 10;
   font-style: italic;
+  float: right;
+  margin-top: 10;
+  margin-right: 10;
 }
 
 @media (max-width: 480px) {

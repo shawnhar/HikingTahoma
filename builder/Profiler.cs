@@ -30,6 +30,8 @@ namespace builder
             }
 
             results[name] = previous + timer.ElapsedTicks;
+
+            Debug.WriteLine("Finished " + name);
         }
 
 

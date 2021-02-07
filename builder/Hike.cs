@@ -14,6 +14,7 @@ namespace builder
         public string Distance      { get; private set; }
         public string ElevationGain { get; private set; }
         public string MaxElevation  { get; private set; }
+        public string Region        { get; private set; }
         public string CampSites     { get; private set; }
         public string FirstHiked    { get; private set; }
 
@@ -31,6 +32,34 @@ namespace builder
         string sourcePath;
 
         ImageProcessor imageProcessor;
+
+
+        public Tuple<string, string> DifficultyCategory
+        {
+            get
+            {
+                if (Difficulty.Contains("overnighter") || Difficulty.Contains("days"))
+                {
+                    return Tuple.Create("x", "Backpacking");
+                }
+                else if (Difficulty.Contains("easy"))
+                {
+                    return Tuple.Create("easy", "Easy");
+                }
+                else if (Difficulty.Contains("moderate"))
+                {
+                    return Tuple.Create("moderate", "Moderate");
+                }
+                else if (Difficulty.Contains("strenuous") || Difficulty.Contains("wtf"))
+                {
+                    return Tuple.Create("strenuous", "Strenuous");
+                }
+                else
+                {
+                    throw new Exception("Unknown difficulty category: " + Difficulty);
+                }
+            }
+        }
 
 
         public Hike(string sourcePath, ImageProcessor imageProcessor)
@@ -68,13 +97,16 @@ namespace builder
                 ElevationGain = split[1];
                 MaxElevation = split[2];
 
-                // Fourth line is campsites along this trail.
-                CampSites = lines[3];
+                // Fourth line is the region.
+                Region = lines[3];
 
-                // Fifth line is when I first hiked it.
-                FirstHiked = lines[4];
+                // Fifth line is campsites along this trail.
+                CampSites = lines[4];
 
-                var remainder = lines.Skip(5)
+                // Sixth line is when I first hiked it.
+                FirstHiked = lines[5];
+
+                var remainder = lines.Skip(6)
                                      .SkipWhile(string.IsNullOrEmpty);
 
                 while (remainder.Any())

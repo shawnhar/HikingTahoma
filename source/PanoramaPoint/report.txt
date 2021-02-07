@@ -1,6 +1,7 @@
 Panorama Point and Skyline Trail
 moderate
 5.5 1850 7000
+Paradise
 none
 older
 

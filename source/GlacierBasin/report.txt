@@ -1,6 +1,7 @@
 Glacier Basin
 moderate
 9.8 2880 6650
+White River
 White River, Glacier Basin
 older
 

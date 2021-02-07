@@ -1,6 +1,7 @@
 Paradise Glacier
 easy
 4.8 1300 6280
+Paradise
 none
 older
 

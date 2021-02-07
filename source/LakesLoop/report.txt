@@ -1,6 +1,7 @@
 Lakes Loop
 easy
 5.4 1450 5800
+Paradise
 none
 older
 

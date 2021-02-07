@@ -1,6 +1,7 @@
 Fremont Lookout
 moderate
 6.5 1540 7190
+Sunrise
 none
 2020
 

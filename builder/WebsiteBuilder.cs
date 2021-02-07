@@ -67,9 +67,11 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
+                CopyFile(sourceFolder.Path, outFolder.Path, "WhereToStart.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.js");
+                CopyFile(sourceFolder.Path, outFolder.Path, "index.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, ".htaccess");
@@ -131,43 +133,44 @@ namespace builder
                     // Trail names.
                     writer.WriteLine("    <ul class=\"hikelist\">");
 
+                    var difficulties = new Dictionary<string, string>();
+                    var regions = new Dictionary<string, string>();
+
                     foreach (var hike in sortedHikes)
                     {
+                        var difficulty = hike.DifficultyCategory;
+                        var region = hike.Region;
+
+                        difficulties[difficulty.Item1] = difficulty.Item2;
+                        regions[region] = region;
+
                         var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("      <li id=\"link-{0}\"{2}><a href=\"{0}/\">{1}</a></li>", hike.FolderName, hike.HikeName, eventHandler);
+                        writer.WriteLine("      <li id=\"link-{0}\" data-difficulty=\"{2}\" data-region=\"{3}\"{4}><a href=\"{0}/\">{1}</a></li>", hike.FolderName, hike.HikeName, difficulty.Item1, region, eventHandler);
+                    }
+
+                    // Category headings.
+                    foreach (var difficulty in difficulties)
+                    {
+                        writer.WriteLine("      <li class=\"listhead\" data-difficulty=\"{0}\">{1}</li>", difficulty.Key, difficulty.Value);
+                    }
+
+                    foreach (var region in regions)
+                    {
+                        writer.WriteLine("      <li class=\"listhead\" data-region=\"{0}\">{1}</li>", region.Key, region.Value);
                     }
 
                     writer.WriteLine("    </ul>");
 
-                    writer.WriteLine("    <p class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</p>", completionRatio * 100, distanceHiked);
+                    writer.WriteLine("    <select id=\"sortselector\" onChange=\"SortSelectorChanged(this.value)\">");
+                    writer.WriteLine("      <option value=\"alphabetical\">Alphabetical</option>");
+                    writer.WriteLine("      <option value=\"difficulty\">By Difficulty</option>");
+                    writer.WriteLine("      <option value=\"region\">By Region</option>");
+                    writer.WriteLine("    </select>");
 
-                    // Helper functions.
-                    writer.WriteLine(@"
-                    <script>
-                      function OnEnterImage(document, hikename) {
-                        document.getElementById('hike-' + hikename).style.visibility = 'visible';
-                        document.getElementById('link-' + hikename).style.textDecoration = 'underline';
-                        document.getElementById('link-' + hikename).firstElementChild.style.color = '#0000FF';
-                      }
+                    writer.WriteLine("    <span class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</span>", completionRatio * 100, distanceHiked);
 
-                      function OnLeaveImage(document, hikename) {
-                        document.getElementById('hike-' + hikename).style.visibility = 'hidden';
-                        document.getElementById('link-' + hikename).style.textDecoration = '';
-                        document.getElementById('link-' + hikename).firstElementChild.style.color = null;
-                      }
-
-                      function OnEnterLink(document, hikename) {
-                        document.getElementById('hike-' + hikename).style.visibility = 'visible';
-                      }
-
-                      function OnLeaveLink(document, hikename) {
-                        document.getElementById('hike-' + hikename).style.visibility = 'hidden';
-                      }
-                    </script>"
-                        .TrimStart('\r', '\n')
-                        .Replace("                ", "")
-                    );
+                    writer.WriteLine("    <script src=\"index.js\"></script>");
 
                     writer.WriteLine("  </body>");
                     writer.WriteLine("</html>");
@@ -190,14 +193,24 @@ namespace builder
 
             writer.WriteLine("    <div class=\"fixedwidth\">");
             writer.WriteLine("      <div class=\"title\">");
-            writer.WriteLine("        <div class=\"about\">");
-            writer.WriteLine("          <a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a><br/>");
-            writer.WriteLine("          <a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a><br/>");
-            writer.WriteLine("          <a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a><br/>");
-            writer.WriteLine("          <a href=\"" + rootPrefix + "Planner.html\">campsite distances</a>");
-            writer.WriteLine("        </div>");
+
+            writer.WriteLine("        <table class=\"about\">");
+            writer.WriteLine("          <tr>");
+            writer.WriteLine("            <td><a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a></td>");
+            writer.WriteLine("            <td><a href=\"" + rootPrefix + "WhereToStart.html\">where to start</a></td>");
+            writer.WriteLine("          </tr>");
+            writer.WriteLine("          <tr>");
+            writer.WriteLine("            <td><a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a></td>");
+            writer.WriteLine("            <td><a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a></td>");
+            writer.WriteLine("          </tr>");
+            writer.WriteLine("          <tr>");
+            writer.WriteLine("            <td><a href=\"" + rootPrefix + "Planner.html\">campsite distances</a></td>");
+            writer.WriteLine("          </tr>");
+            writer.WriteLine("        </table>");
+
             writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "\">Hiking Tahoma</a></div>");
             writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
+
             writer.WriteLine("      </div>");
             writer.WriteLine("    </div>");
         }

@@ -1,6 +1,7 @@
 Dege Peak from Sunrise
 easy
 4 1000 6950
+Sunrise
 none
 older
 
