@@ -45,6 +45,20 @@ a:link, a:visited {
   padding: 0 0 0 12;
 }
 
+@media (max-width: 380px) {
+  .title {
+    min-height: 85;
+  }
+
+  .about {
+    margin-top: 0;
+  }
+
+  .about td {
+    display: block;
+  }
+}
+
 .subtitle {
   font-size: 13px;
   font-style: italic;
