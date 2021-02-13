@@ -14,12 +14,9 @@ a:link, a:visited {
 }
 
 .title {
-  padding-left: 20;
-  padding-right: 20;
-  padding-top: 4;
-  padding-bottom: 8;
+  width: 100%;
+  padding: 3 16 3 16;
   margin-bottom: 20;
-  min-height: 55;
   background-color: #95C0E0;
 }
 
@@ -28,34 +25,9 @@ a:link, a:visited {
   font-weight: bold;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .backlink {
     font-size: 18px;
-  }
-}
-
-.about {
-  font-size: 13px;
-  font-style: italic;
-  float: right;
-  margin-top: 4;
-}
-
-.about td {
-  padding: 0 0 0 12;
-}
-
-@media (max-width: 380px) {
-  .title {
-    min-height: 85;
-  }
-
-  .about {
-    margin-top: 0;
-  }
-
-  .about td {
-    display: block;
   }
 }
 
@@ -63,6 +35,23 @@ a:link, a:visited {
   font-size: 13px;
   font-style: italic;
   margin-top: 8;
+}
+
+.about {
+  float: right;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.about td {
+  padding: 0 0 0 12;
+  white-space: nowrap;
+}
+
+@media (max-width: 440px) {
+  .about td {
+    display: block;
+  }
 }
 
 .map {

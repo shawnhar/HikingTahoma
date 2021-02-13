@@ -192,26 +192,29 @@ namespace builder
             writer.WriteLine("  <body>");
 
             writer.WriteLine("    <div class=\"fixedwidth\">");
-            writer.WriteLine("      <div class=\"title\">");
-
-            writer.WriteLine("        <table class=\"about\">");
-            writer.WriteLine("          <tr>");
-            writer.WriteLine("            <td><a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a></td>");
-            writer.WriteLine("            <td><a href=\"" + rootPrefix + "WhereToStart.html\">where to start</a></td>");
-            writer.WriteLine("          </tr>");
-            writer.WriteLine("          <tr>");
-            writer.WriteLine("            <td><a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a></td>");
-            writer.WriteLine("            <td><a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a></td>");
-            writer.WriteLine("          </tr>");
-            writer.WriteLine("          <tr>");
-            writer.WriteLine("            <td><a href=\"" + rootPrefix + "Planner.html\">campsite distances</a></td>");
-            writer.WriteLine("          </tr>");
-            writer.WriteLine("        </table>");
-
-            writer.WriteLine("        <div class=\"backlink\"><a href=\"" + rootPrefix + "\">Hiking Tahoma</a></div>");
-            writer.WriteLine("        <div class=\"subtitle\">Documenting my Rainier obsession</div>");
-
-            writer.WriteLine("      </div>");
+            writer.WriteLine("      <table class=\"title\">");
+            writer.WriteLine("        <tr>");
+            writer.WriteLine("          <td>");
+            writer.WriteLine("            <div class=\"backlink\"><a href=\"" + rootPrefix + "\">Hiking Tahoma</a></div>");
+            writer.WriteLine("            <div class=\"subtitle\">Documenting my Rainier obsession</div>");
+            writer.WriteLine("          </td>");
+            writer.WriteLine("          <td>");
+            writer.WriteLine("            <table class=\"about\">");
+            writer.WriteLine("              <tr>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "AboutRainier.html\">about Mount Rainier</a></td>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "WhereToStart.html\">where to start</a></td>");
+            writer.WriteLine("              </tr>");
+            writer.WriteLine("              <tr>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "AboutThisSite.html\">about this site</a></td>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a></td>");
+            writer.WriteLine("              </tr>");
+            writer.WriteLine("              <tr>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "Planner.html\">campsite distances</a></td>");
+            writer.WriteLine("              </tr>");
+            writer.WriteLine("            </table>");
+            writer.WriteLine("          </td>");
+            writer.WriteLine("        </tr>");
+            writer.WriteLine("      </table>");
             writer.WriteLine("    </div>");
         }
 
