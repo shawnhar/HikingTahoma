@@ -68,7 +68,8 @@ const placeNames = {
     'Westside Road',
     'Paul Peak trhd',
     'Carbon River trhd',
-    'Lake Eleanor trhd'
+    'Lake Eleanor trhd',
+    'Huckleberry Creek'
   ],
 
   'Wonderland Camps': [
@@ -283,6 +284,10 @@ const trailData = {
   'Forest Lake': [
     { To: 'Sunrise', Distance: 2.6, Up: 1300, Down: 500 },
     { To: 'Frozen Lake', Distance: 2.8, Up: 1400, Down: 300 }
+  ],
+
+  'Huckleberry Creek': [
+    { To: 'Forest Lake', Distance: 6.9, Up: 2900, Down: 200 }
   ],
 
   'Glacier Basin': [
@@ -573,7 +578,8 @@ function GenerateItinerary(ccw)
     'Westside Road':         'Longmire',
     'Paul Peak trhd':        'Mowich Lake',
     'Carbon River trhd':     'Mowich Lake',
-    'Lake Eleanor trhd':     'White River'
+    'Lake Eleanor trhd':     'White River',
+    'Huckleberry Creek':     'White River'
   };
 
   const otherTrailheads = {
