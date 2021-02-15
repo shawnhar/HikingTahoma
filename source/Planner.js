@@ -1173,9 +1173,26 @@ function SaveTrip()
 
 function ShareTrip()
 {
+  // Simplify our trip data, stripping out any unnecessary elements.
+  var data = {...trip};
+
+  data.SelectedCampsites = data.SelectedCampsites.slice(0, data.Duration - 1);
+
+  if (data.ViaSprayPark.slice(0, data.Duration).every(value => value == data.ViaSprayParkMaster)) {
+    delete data.ViaSprayPark;
+  }
+  else {
+    data.ViaSprayPark = data.ViaSprayPark.slice(0, data.Duration);
+  }
+
+  if (!data.ViaSprayParkMaster) {
+    delete data.ViaSprayParkMaster;
+  }
+
+  // Encode as a URL.
   var url = window.location.href.split('?')[0];
 
-  var itinerary = JSON.stringify(trip);
+  var itinerary = JSON.stringify(data);
 
   var toShare = url + '?i=' + encodeURIComponent(itinerary);
 
@@ -1236,6 +1253,15 @@ function RestoreSavedState()
   }
   catch(e) {
     return false;
+  }
+
+  // Restore any potentially missing data.
+  if (!trip.hasOwnProperty('ViaSprayParkMaster')) {
+    trip.ViaSprayParkMaster = false;
+  }
+
+  if (!trip.hasOwnProperty('ViaSprayPark')) {
+    trip.ViaSprayPark = Array(Number(trip.Duration)).fill(trip.ViaSprayParkMaster);
   }
 
   PopulateUnusedCampsites();
