@@ -149,8 +149,8 @@ const viaOptions = [
   'Panhandle',
   'Eastside tr',
   'PCT',
-  // 'St. Andrews tr',
-  // 'N. Puyallup tr'
+  'St. Andrews tr',
+  'N. Puyallup tr'
 ];
 
 
@@ -159,13 +159,14 @@ const viaOptions = [
 // 1. For most 'via' options, relevant trail segments are marked with a Via
 //    property. Routes that don't pass through one of these segments are rejected.
 //
-// 2. For the more complex area around Spray Park, nearby trail segments are marked
-//    using both Via and IsNearTo properties. Pathfinding rejects any segments that
-//    are marked Via:'Spray Park' when the via Spray Park option is not set. When
-//    via Spray Park is selected, pathfinding rejects routes that pass through
+// 2. For the more complex areas around Spray Park and the Westside Road, nearby
+//    trail segments are marked using both Via and IsNearTo properties. Pathfinding
+//    rejects any segments that are marked Via:<x> when the via <x> option is not
+//    set. When via <x> is selected, pathfinding rejects routes that pass through
 //    segments marked IsNearTo without also going Via.
 const viaModeNearTo = {
-  'Spray Park': true
+  'Spray Park': true,
+  'N. Puyallup tr': true
 };
 
 
@@ -184,11 +185,11 @@ const trailData = {
   ],
 
   'South Puyallup River': [
-    { To: 'Klapatche Park', Distance: 4.1, Up: 2100, Down: 800 }
+    { To: 'Klapatche Park', Distance: 4.1, Up: 2100, Down: 800, IsNearTo: 'N. Puyallup tr' }
   ],
 
   'Klapatche Park': [
-    { To: 'North Puyallup River', Distance: 2.6, Up: 100, Down: 1900 }
+    { To: 'North Puyallup River', Distance: 2.6, Up: 100, Down: 1900, IsNearTo: 'N. Puyallup tr' }
   ],
 
   'North Puyallup River': [
@@ -297,11 +298,23 @@ const trailData = {
 
   'Westside Road': [
     { To: 'Lake George', Distance: 4.8, Up: 1500, Down: 100 },
-    { To: 'South Puyallup River', Distance: 6.1, Up: 1700, Down: 400 }
+    { To: 'South Puyallup River', Distance: 6.1, Up: 1700, Down: 400, IsNearTo: 'N. Puyallup tr' }
   ],
 
   'Lake George': [
-    { To: 'South Puyallup River', Distance: 3.1, Up: 800, Down: 900 }
+    { To: 'South Puyallup River', Distance: 3.1, Up: 800, Down: 900, IsNearTo: 'N. Puyallup tr' }
+  ],
+
+  'St. Andrews Creek Trail': [
+    { To: 'Westside Road', Distance: 7.7, Up: 700, Down: 1600 },
+    { To: 'Lake George', Distance: 4.8, Up: 1100, Down: 600 },
+    { To: 'Klapatche Park', Distance: 2.6, Up: 1800, Down: 100, Via: 'St. Andrews tr', IsNearTo: 'N. Puyallup tr' },
+  ],
+
+  'North Puyallup Trail': [
+    { To: 'Westside Road', Distance: 9, Up: 700, Down: 1900 },
+    { To: 'Lake George', Distance: 6, Up: 1100, Down: 900 },
+    { To: 'North Puyallup River', Distance: 3, Up: 400, Down: 800, Via: 'N. Puyallup tr' },
   ],
 
   'Paul Peak trhd': [
