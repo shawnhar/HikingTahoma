@@ -281,8 +281,8 @@ a:link, a:visited {
   padding-right: 20;
 }
 
-.plannersprayparklabel {
-  display: none;
+.plannerinactiveselector {
+  background-color: #D0D0D0;
 }
 
 .plannerdistance {
@@ -322,7 +322,7 @@ a:link, a:visited {
   left: 58%;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 820px) {
   .planner {
     border-collapse: collapse;
   }
@@ -337,10 +337,6 @@ a:link, a:visited {
 
   .plannerspraymaster {
     visibility: collapse;
-  }
-
-  .plannersprayparklabel {
-    display: inline;
   }
 
   .plannerdistance .tip {

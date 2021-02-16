@@ -26,8 +26,8 @@ function CreateDefaultTrip()
       'Nickel Creek'
     ],
 
-    ViaSprayPark: [],
-    ViaSprayParkMaster: false
+    Via: [],
+    ViaSprayPark: false
   };
 
   PopulateUnusedCampsites();
@@ -122,6 +122,7 @@ const placeNames = {
   ]
 };
 
+
 const trailheadCategories = [
   'Wonderland Trailheads',
   'Alternative Accesses',
@@ -129,12 +130,42 @@ const trailheadCategories = [
   'Sneaking in the Backdoor'
 ];
 
+
 const campsiteCategories = [
   'Wonderland Camps',
   'Northern Loop',
   'Eastside Camps',
   'Other Camps'
 ];
+
+
+const viaOptions = [
+  '',
+  'Spray Park',
+  'Sunrise',
+  'Windy Gap',
+  'Mystic Lake',
+  'Panhandle',
+  'Eastside tr',
+  'PCT',
+  // 'St. Andrews tr',
+  // 'N. Puyallup tr'
+];
+
+
+// There are two algorithms for handling alternate route 'via' selections:
+//
+// 1. For most 'via' options, relevant trail segments are marked with a Via
+//    property. Routes that don't pass through one of these segments are rejected.
+//
+// 2. For the more complex area around Spray Park, nearby trail segments are marked
+//    using both Via and IsNearTo properties. Pathfinding rejects any segments that
+//    are marked Via:'Spray Park' when the via Spray Park option is not set. When
+//    via Spray Park is selected, pathfinding rejects routes that pass through
+//    segments marked IsNearTo without also going Via.
+const viaModeNearTo = {
+  'Spray Park': true
+};
 
 
 // Static map data about trail distances and elevation changes.
@@ -172,25 +203,25 @@ const trailData = {
   ],
 
   'Mowich Lake': [
-    { To: 'Ipsut Pass', Distance: 1.4, Up: 400, Down: 300, NearSprayPark: true },
+    { To: 'Ipsut Pass', Distance: 1.4, Up: 400, Down: 300, IsNearTo: 'Spray Park' },
     { To: 'Eagle\'s Roost', Distance: 2, Up: 500, Down: 600 }
   ],
 
   'Ipsut Pass': [
-    { To: 'Ipsut Creek', Distance: 4.2, Up: 0, Down: 2700, NearSprayPark: true },
-    { To: 'Carbon River Camp', Distance: 7.4, Up: 1000, Down: 2800, NearSprayPark: true },
+    { To: 'Ipsut Creek', Distance: 4.2, Up: 0, Down: 2700, IsNearTo: 'Spray Park' },
+    { To: 'Carbon River Camp', Distance: 7.4, Up: 1000, Down: 2800, IsNearTo: 'Spray Park' },
   ],
 
   'Ipsut Creek': [
-    { To: 'Carbon River Camp', Distance: 4, Up: 1300, Down: 400, NearSprayPark: true }
+    { To: 'Carbon River Camp', Distance: 4, Up: 1300, Down: 400, IsNearTo: 'Spray Park' }
   ],
 
   'Eagle\'s Roost': [
-    { To: 'Spray Park', Distance: 3.5, Up: 1600, Down: 600, IsSprayPark: true }
+    { To: 'Spray Park', Distance: 3.5, Up: 1600, Down: 600, Via: 'Spray Park' }
   ],
 
   'Spray Park': [
-    { To: 'Cataract Valley', Distance: 1.4, Up: 0, Down: 1400, IsSprayPark: true }
+    { To: 'Cataract Valley', Distance: 1.4, Up: 0, Down: 1400, Via: 'Spray Park' }
   ],
 
   'Cataract Valley': [
@@ -202,11 +233,11 @@ const trailData = {
   ],
 
   'Dick Creek': [
-    { To: 'Mystic Camp', Distance: 3.7, Up: 2100, Down: 600 }
+    { To: 'Mystic Camp', Distance: 3.7, Up: 2100, Down: 600, Via: 'Mystic Lake' }
   ],
 
   'Mystic Camp': [
-    { To: 'Granite Creek', Distance: 4.1, Up: 1500, Down: 1200 }
+    { To: 'Granite Creek', Distance: 4.1, Up: 1500, Down: 1200, Via: 'Mystic Lake' }
   ],
 
   'Granite Creek': [
@@ -222,9 +253,9 @@ const trailData = {
   ],
 
   'Sunrise': [
-    { To: 'White River', Distance: 3.1, Up: 0, Down: 2200 },
-    { To: 'Sunrise Camp', Distance: 1.4, Up: 200, Down: 400 },
-    { To: 'Frozen Lake', Distance: 1.6, Up: 400, Down: 100 }
+    { To: 'White River', Distance: 3.1, Up: 0, Down: 2200, Via: 'Sunrise' },
+    { To: 'Sunrise Camp', Distance: 1.4, Up: 200, Down: 400, Via: 'Sunrise' },
+    { To: 'Frozen Lake', Distance: 1.6, Up: 400, Down: 100, Via: 'Sunrise' }
   ],
 
   'White River': [
@@ -236,7 +267,7 @@ const trailData = {
   ],
 
   'Summerland': [
-    { To: 'Indian Bar', Distance: 4.7, Up: 1200, Down: 2100 }
+    { To: 'Indian Bar', Distance: 4.7, Up: 1200, Down: 2100, Via: 'Panhandle' }
   ],
 
   'Indian Bar': [
@@ -282,7 +313,7 @@ const trailData = {
   ],
 
   'Forest Lake': [
-    { To: 'Sunrise', Distance: 2.6, Up: 1300, Down: 500 },
+    { To: 'Sunrise', Distance: 2.6, Up: 1300, Down: 500, Via: 'Sunrise' },
     { To: 'Frozen Lake', Distance: 2.8, Up: 1400, Down: 300 }
   ],
 
@@ -307,10 +338,10 @@ const trailData = {
   ],
 
   'Yellowstone Cliffs': [
-    { To: 'Ipsut Creek', Distance: 5.3, Up: 300, Down: 3100, NearSprayPark: true },
-    { To: 'Carbon River Camp', Distance: 4, Up: 600, Down: 2500, NearSprayPark: true },
-    { To: 'Ipsut Pass', Distance: 8.6, Up: 2900, Down: 3000, NearSprayPark: true },
-    { To: 'James Camp', Distance: 3.3, Up: 900, Down: 1500 }
+    { To: 'Ipsut Creek', Distance: 5.3, Up: 300, Down: 3100, IsNearTo: 'Spray Park' },
+    { To: 'Carbon River Camp', Distance: 4, Up: 600, Down: 2500, IsNearTo: 'Spray Park' },
+    { To: 'Ipsut Pass', Distance: 8.6, Up: 2900, Down: 3000, IsNearTo: 'Spray Park' },
+    { To: 'James Camp', Distance: 3.3, Up: 900, Down: 1500, Via: 'Windy Gap' }
   ],
 
   'James Camp': [
@@ -339,7 +370,7 @@ const trailData = {
 
   'G. of Patriarchs trhd': [
     { To: 'Olallie Creek', Distance: 3.3, Up: 1800, Down: 0 },
-    { To: 'Deer Creek', Distance: 6.9, Up: 1300, Down: 600 },
+    { To: 'Deer Creek', Distance: 6.9, Up: 1300, Down: 600, Via: 'Eastside tr' },
     { To: 'Three Lakes', Distance: 6.5, Up: 2800, Down: 400 }
   ],
 
@@ -366,7 +397,7 @@ const trailData = {
   ],
 
   'Three Lakes': [
-    { To: 'Dewey Lake', Distance: 9.5, Up: 2300, Down: 1800 }
+    { To: 'Dewey Lake', Distance: 9.5, Up: 2300, Down: 1800, Via: 'PCT' }
   ],
 
   'Dewey Lake': [
@@ -424,8 +455,8 @@ function PreprocessTrailData()
         Distance: trailLink.Distance,
         Up: trailLink.Down,
         Down: trailLink.Up,
-        IsSprayPark: trailLink.IsSprayPark,
-        NearSprayPark: trailLink.NearSprayPark
+        Via: trailLink.Via,
+        IsNearTo: trailLink.IsNearTo
       });
     });
   }
@@ -435,7 +466,7 @@ PreprocessTrailData();
 
 
 // The core place-to-place distance computation.
-function FindRoute(startPlace, endPlace, viaSprayPark)
+function FindRoute(startPlace, endPlace, goVia)
 {
   // Seed the search with our starting point.
   var searchPaths = [ 
@@ -456,8 +487,10 @@ function FindRoute(startPlace, endPlace, viaSprayPark)
 
     searchPaths.forEach(searchPath => {
       if (searchPath.Place == endPlace) {
-        // If via Spray Park option is enabled, reject routes that were near Spray Park but did not go over it.
-        if (viaSprayPark && searchPath.NearSprayPark && !searchPath.IsSprayPark) {
+        // If a specific 'via' option is enabled, reject routes that do not satisfy that constraint.
+        if (goVia &&
+            !searchPath.WentVia &&
+            (searchPath.WentNearTo || !viaModeNearTo[goVia])) {
           return;
         }
 
@@ -481,8 +514,8 @@ function FindRoute(startPlace, endPlace, viaSprayPark)
             return;
           }
 
-          // Some links are conditionally valid depending on whether the Spray Park option was selected.
-          if (!viaSprayPark && trailLink.IsSprayPark) {
+          // Some links are conditionally valid depending on which 'via' option was selected.
+          if (viaModeNearTo[trailLink.Via] && (trailLink.Via != goVia)) {
             return;
           }
 
@@ -492,8 +525,8 @@ function FindRoute(startPlace, endPlace, viaSprayPark)
             Distance: newDistance,
             Up: searchPath.Up + trailLink.Up,
             Down: searchPath.Down + trailLink.Down,
-            IsSprayPark: searchPath.IsSprayPark || trailLink.IsSprayPark,
-            NearSprayPark: searchPath.NearSprayPark || trailLink.NearSprayPark
+            WentVia: searchPath.WentVia || (trailLink.Via == goVia),
+            WentNearTo: searchPath.WentNearTo || (trailLink.IsNearTo == goVia)
           });
         });
       }
@@ -514,7 +547,7 @@ function MeasureDistance(day)
   var endPlace = (day == trip.Duration - 1) ? trip.EndTrailhead : trip.SelectedCampsites[day];
 
   // Find the best route.
-  var route = FindRoute(startPlace, endPlace, trip.ViaSprayPark[day]);
+  var route = FindRoute(startPlace, endPlace, trip.Via[day]);
 
   // Store and format the results.
   dayRoutes[day] = route;
@@ -555,6 +588,12 @@ function EncodePlaceNames(name)
 {
   return name.replace(/trailhead/g, 'trhd')
              .replace(/Grove of the/g, 'G. of');
+}
+
+
+function SprayParkToString(viaSprayPark)
+{
+  return viaSprayPark ? 'Spray Park' : '';
 }
 
 
@@ -620,7 +659,7 @@ function GenerateItinerary(ccw)
 
   // Hack to make sure Ipsut Creek is considered when not going over Spray Park,
   // even though it's slightly off the WT so normal route finding ignores it.
-  if (!trip.ViaSprayParkMaster) {
+  if (!trip.ViaSprayPark) {
     for (var i = 0; i < trailheads.length; i++) {
       if (trailheads[i] == 'Mowich Lake') {
         if (ccw && i > 0) {
@@ -643,7 +682,9 @@ function GenerateItinerary(ccw)
   var route = [ trailheads[0] ];
 
   for (var i = 0; i < trailheads.length - 1; i++) {
-    var section = FindRoute(trailheads[i], trailheads[i + 1], trip.ViaSprayParkMaster);
+    var via = SprayParkToString(trip.ViaSprayPark);
+
+    var section = FindRoute(trailheads[i], trailheads[i + 1], via);
 
     route = route.concat(section.Route.slice(1));
   }
@@ -659,8 +700,8 @@ function GenerateItinerary(ccw)
 
     totalDistance += trailLink.Distance;
     distances.push(totalDistance);
-    isSprayPark.push(trailLink.IsSprayPark);
-    nearSprayPark.push(trailLink.NearSprayPark);
+    isSprayPark.push(trailLink.Via == 'Spray Park');
+    nearSprayPark.push(trailLink.IsNearTo == 'Spray Park');
   }
 
   // Remove the start and end trailheads.
@@ -703,8 +744,7 @@ function GenerateItinerary(ccw)
 
       camps.push((nextDistance < prevDistance) ? currentCamp : currentCamp - 1);
     }
-    else
-    {
+    else {
       camps.push(currentCamp);
     }
   }
@@ -761,7 +801,7 @@ function GenerateItinerary(ccw)
     var isSpray = isSprayPark.slice(sliceStart, sliceEnd).some(value => value);
     var nearSpray = nearSprayPark.slice(sliceStart, sliceEnd).some(value => value);
 
-    trip.ViaSprayPark[day] = trip.ViaSprayParkMaster && (isSpray || !nearSpray);
+    trip.Via[day] = SprayParkToString(trip.ViaSprayPark && (isSpray || !nearSpray));
   }
 
   RecreateUIElements();
@@ -797,14 +837,43 @@ function CreatePlaceSelector(categories, currentSelection, changeHandler)
 }
 
 
+function GetViaSelectorClass(value)
+{
+  var valueIsMeaningful;
+
+  if (trip.ViaSprayPark) {
+    valueIsMeaningful = value != 'Spray Park';
+  }
+  else {
+    valueIsMeaningful = Boolean(value);
+  }
+
+  return valueIsMeaningful ? '' : 'plannerinactiveselector';
+}
+
+
+function CreateViaSelector(currentSelection, day)
+{
+  var selectorClass = GetViaSelectorClass(currentSelection);
+
+  var result = '<select class="' + selectorClass + '" onChange="ViaChanged(' + day + ', this.value)">';
+
+  viaOptions.forEach(via => {
+    var selectedAttribute = (via == currentSelection) ? ' selected' : '';
+    result += '<option' + selectedAttribute + '>' + via + '</option>';
+  });
+
+  return result + '</select>';
+}
+
+
 function CreateTableRow(day)
 {
   if (day == 0) {
     // Starting the first day at trailhead.
     var startHtml = CreatePlaceSelector(trailheadCategories, trip.StartTrailhead, 'StartTrailheadChanged(this.value)');
   }
-  else
-  {
+  else {
     // Starting a subsequent day at previous night's camp.
     var startHtml = trip.SelectedCampsites[day - 1];
   }
@@ -813,19 +882,18 @@ function CreateTableRow(day)
     // Ending the trip back at a trailhead.
     var endHtml = CreatePlaceSelector(trailheadCategories, trip.EndTrailhead, 'EndTrailheadChanged(this.value)');
   }
-  else
-  {
+  else {
     // Ending the day at a campsite.
     var endHtml = CreatePlaceSelector(campsiteCategories, trip.SelectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
   }
 
-  var checkboxAttribute = trip.ViaSprayPark[day] ? 'checked ' : '';
+  var viaHtml = CreateViaSelector(trip.Via[day], day);
 
   return '<tr>' +
          '  <td class="plannerday">Day ' + (day + 1) + '</td>' +
          '  <td>' + startHtml + '</td>' +
          '  <td>to ' + endHtml + '</td>' +
-         '  <td><span class="plannersprayparklabel">via Spray Park:</span><input type="checkbox" onChange="ViaSprayParkChanged(' + day + ', this.checked)" ' + checkboxAttribute + '/></td>' +
+         '  <td>via ' + viaHtml + '</td>' +
          '  <td class="plannerdistance tooltip" onMouseEnter="OnEnterDay(' + day + ')" onMouseLeave="OnLeaveDay(' + day + ')">' + MeasureDistance(day) + '</td>' +
          '</tr>';
 }
@@ -835,13 +903,13 @@ function RecreateUIElements()
 {
   var table = document.getElementById('table');
 
-  var checkboxAttribute = trip.ViaSprayParkMaster ? 'checked ' : '';
+  var checkboxAttribute = trip.ViaSprayPark ? 'checked ' : '';
 
   table.innerHTML = '<tr class="plannerspraymaster">' +
                     '  <td/>' +
                     '  <td/>' +
-                    '  <td style="text-align:right">via Spray Park:</td>' +
-                    '  <td><input type="checkbox" onChange="ViaSprayParkMasterChanged(this.checked)" ' + checkboxAttribute + '/></td>' +
+                    '  <td/>' +
+                    '  <td>via Spray Park: <input type="checkbox" onChange="ViaSprayParkChanged(this.checked)" ' + checkboxAttribute + '/></td>' +
                     '</tr>';
 
   for (var day = 0; day < trip.Duration; day++) {
@@ -951,23 +1019,25 @@ function CampsiteChanged(day, newValue)
 }
 
 
-function ViaSprayParkChanged(day, newValue)
+function ViaChanged(day, newValue)
 {
-  trip.ViaSprayPark[day] = newValue;
+  trip.Via[day] = newValue;
 
   UpdateDistance(day);
   UpdateTotals();
   UpdateMapOverlays();
   SaveTrip();
+
+  GetTableRow(day).children[3].children[0].className = GetViaSelectorClass(newValue);
 }
 
 
-function ViaSprayParkMasterChanged(newValue)
+function ViaSprayParkChanged(newValue)
 {
-  trip.ViaSprayParkMaster = newValue;
+  trip.ViaSprayPark = newValue;
 
   for (var i = 0; i < maxDays; i++) {
-    trip.ViaSprayPark[i] = newValue;
+    trip.Via[i] = SprayParkToString(newValue);
   }
 
   RecreateUIElements();
@@ -1077,7 +1147,7 @@ function SerializeTrip()
 {
   var text = trip.Duration + ' days\n';
 
-  if (trip.ViaSprayParkMaster) {
+  if (trip.ViaSprayPark) {
     text += 'via Spray Park\n';
   }
 
@@ -1087,10 +1157,10 @@ function SerializeTrip()
 
     text += '\nDay ' + (i + 1) + ': ' + ExpandPlaceNames(startPlace) + ' to ' + ExpandPlaceNames(endPlace);
 
-    if (trip.ViaSprayPark[i] && !trip.ViaSprayParkMaster) {
-      text += ' (via Spray Park)';
+    if (trip.Via[i] && (!trip.ViaSprayPark || trip.Via[i] != 'Spray Park')) {
+      text += ' (via ' + trip.Via[i] + ')';
     }
-    else if (!trip.ViaSprayPark[i] && trip.ViaSprayParkMaster) {
+    else if (!trip.Via[i] && trip.ViaSprayPark) {
       text += ' (not Spray Park)';
     }
 
@@ -1115,12 +1185,11 @@ function DeserializeTrip(text)
     if (match = /^(\d+) days/.exec(line)) {
       trip.Duration = match[1];
     }
-    else if (/^via Spray Park/.test(line))
-    {
-      trip.ViaSprayParkMaster = true;
+    else if (/^via Spray Park/.test(line)) {
+      trip.ViaSprayPark = true;
 
       for (var i = 0; i < maxDays; i++) {
-        trip.ViaSprayPark[i] = true;
+        trip.Via[i] = 'Spray Park';
       }
     }
     else if (match = /^Day (\d+): (.+) to (([^ ]| [^\(])+)/.exec(line)) {
@@ -1140,13 +1209,11 @@ function DeserializeTrip(text)
         trip.SelectedCampsites[day] = endPlace;
       }
 
-      if (line.includes('(via Spray Park)'))
-      {
-        trip.ViaSprayPark[day] = true;
+      if (match = /\(via (.+)\)/.exec(line)) {
+        trip.Via[day] = match[1];
       }
-      else if (line.includes('(not Spray Park)'))
-      {
-        trip.ViaSprayPark[day] = false;
+      else if (line.includes('(not Spray Park)')) {
+        trip.Via[day] = '';
       }
     }
   });
@@ -1178,15 +1245,15 @@ function ShareTrip()
 
   data.SelectedCampsites = data.SelectedCampsites.slice(0, data.Duration - 1);
 
-  if (data.ViaSprayPark.slice(0, data.Duration).every(value => value == data.ViaSprayParkMaster)) {
-    delete data.ViaSprayPark;
+  if (data.Via.slice(0, data.Duration).every(value => data.ViaSprayPark ? value == 'Spray Park' : !value)) {
+    delete data.Via;
   }
   else {
-    data.ViaSprayPark = data.ViaSprayPark.slice(0, data.Duration);
+    data.Via = data.Via.slice(0, data.Duration);
   }
 
-  if (!data.ViaSprayParkMaster) {
-    delete data.ViaSprayParkMaster;
+  if (!data.ViaSprayPark) {
+    delete data.ViaSprayPark;
   }
 
   // Encode as a URL.
@@ -1255,13 +1322,26 @@ function RestoreSavedState()
     return false;
   }
 
-  // Restore any potentially missing data.
-  if (!trip.hasOwnProperty('ViaSprayParkMaster')) {
-    trip.ViaSprayParkMaster = false;
+  // Fix up older save formats.
+  var isOldFormat = trip.hasOwnProperty('ViaSprayParkMaster') || Array.isArray(trip.ViaSprayPark);
+
+  if (isOldFormat) {
+    if (trip.ViaSprayPark) {
+      trip.Via = trip.ViaSprayPark.map(SprayParkToString);
+    }
+
+    trip.ViaSprayPark = trip.ViaSprayParkMaster;
+
+    delete trip.ViaSprayParkMaster;
   }
 
+  // Restore any potentially missing data.
   if (!trip.hasOwnProperty('ViaSprayPark')) {
-    trip.ViaSprayPark = Array(Number(trip.Duration)).fill(trip.ViaSprayParkMaster);
+    trip.ViaSprayPark = false;
+  }
+
+  if (!trip.hasOwnProperty('Via')) {
+    trip.Via = Array(Number(trip.Duration)).fill(SprayParkToString(trip.ViaSprayPark));
   }
 
   PopulateUnusedCampsites();
