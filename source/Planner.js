@@ -118,7 +118,8 @@ const placeNames = {
     'Forest Lake',
     'Glacier Basin',
     'Snow Lake',
-    'Cougar Rock'
+    'Cougar Rock',
+    'Longmire'
   ]
 };
 
@@ -716,7 +717,7 @@ function GenerateItinerary(ccw)
   var i = 0;
 
   while (i < route.length) {
-    if (allCampsites.includes(route[i])) {
+    if (allCampsites.includes(route[i]) && route[i] != 'Longmire') {
       i++;
     }
     else {
@@ -920,7 +921,7 @@ function RecreateUIElements()
 
   UpdateTotals();
   UpdateMapOverlays();
-  ShowOrHideCougarDeweyDetails();
+  ShowOrHideSelectedCampDetails();
 }
 
 
@@ -942,10 +943,11 @@ function UpdateTotals()
 }
 
 
-function ShowOrHideCougarDeweyDetails()
+function ShowOrHideSelectedCampDetails()
 {
   var cougarDisplay = 'none';
   var deweyDisplay = 'none';
+  var longmireDisplay = 'none';
 
   for (var i = 0; i < trip.Duration - 1; i++) {
     if (trip.SelectedCampsites[i] == 'Cougar Rock') {
@@ -954,10 +956,14 @@ function ShowOrHideCougarDeweyDetails()
     else if (trip.SelectedCampsites[i] == 'Dewey Lake') {
       deweyDisplay = 'inline';
     }
+    else if (trip.SelectedCampsites[i] == 'Longmire') {
+      longmireDisplay = 'inline';
+    }
   }
 
   document.getElementById('cougarrock').style.display = cougarDisplay;
   document.getElementById('deweylake').style.display = deweyDisplay;
+  document.getElementById('longmire').style.display = longmireDisplay;
 }
 
 
@@ -1014,7 +1020,7 @@ function CampsiteChanged(day, newValue)
   UpdateDistance(day + 1);
   UpdateTotals();
   UpdateMapOverlays();
-  ShowOrHideCougarDeweyDetails();
+  ShowOrHideSelectedCampDetails();
   SaveTrip();
 }
 
