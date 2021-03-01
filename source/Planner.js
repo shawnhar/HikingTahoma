@@ -170,6 +170,14 @@ const viaModeNearTo = {
 };
 
 
+const isResupply = {
+  'Longmire': true,
+  'Mowich Lake': true,
+  'Sunrise': true,
+  'White River': true
+};
+
+
 // Static map data about trail distances and elevation changes.
 const trailData = {
   'Longmire': [
@@ -553,6 +561,17 @@ function FindRoute(startPlace, endPlace, goVia)
 }
 
 
+function MarkResupplyLocations(camp, index)
+{
+  if (isResupply[camp] && index > 0 && camp != trip.EndTrailhead) {
+    return camp + ' [resupply]';
+  }
+  else {
+    return camp;
+  }
+}
+
+
 function MeasureDistance(day)
 {
   // What two places are we measuring between?
@@ -577,7 +596,7 @@ function MeasureDistance(day)
 
   var align = '<span style="visibility:hidden">0</span>';
 
-  var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Route.join(' &rarr; ')) + '</span>';
+  var tooltip = '<span class="tip">' + ExpandPlaceNames(route.Route.map(MarkResupplyLocations).join(' &rarr; ')) + '</span>';
 
   if (miles.length < 10) {
     miles = align + miles;
@@ -881,6 +900,19 @@ function CreateViaSelector(currentSelection, day)
 }
 
 
+function CreateResupplyIcon(day)
+{
+  var resupplies = dayRoutes[day].Route.slice(1).filter(camp => isResupply[camp]);
+
+  if (!resupplies.length || day == trip.Duration - 1) {
+    return '';
+  }
+  else {
+    return '<img src="bucket.png"><span class="tip">Resupply at ' + resupplies.join(', ') + '</span></img>';
+  }
+}
+
+
 function CreateTableRow(day)
 {
   if (day == 0) {
@@ -909,6 +941,7 @@ function CreateTableRow(day)
          '  <td>to ' + endHtml + '</td>' +
          '  <td>via ' + viaHtml + '</td>' +
          '  <td class="plannerdistance tooltip" onMouseEnter="OnEnterDay(' + day + ')" onMouseLeave="OnLeaveDay(' + day + ')">' + MeasureDistance(day) + '</td>' +
+         '  <td class="plannerresupply tooltip">' + CreateResupplyIcon(day) + '</td>' +
          '</tr>';
 }
 
@@ -997,7 +1030,10 @@ function GetTableRow(day)
 
 function UpdateDistance(day)
 {
-  GetTableRow(day).children[4].innerHTML = MeasureDistance(day);
+  var row = GetTableRow(day);
+
+  row.children[4].innerHTML = MeasureDistance(day);
+  row.children[5].innerHTML = CreateResupplyIcon(day)
 }
 
 
@@ -1187,7 +1223,7 @@ function SerializeTrip()
 
     text += dayRoutes[i].Distance.toFixed(1) + ' miles, ' + dayRoutes[i].Up + '\' gain, ' + dayRoutes[i].Down + '\' descent\n';
 
-    text += '  (route: ' + ExpandPlaceNames(dayRoutes[i].Route.join(' -> ')) + ')\n';
+    text += '  (route: ' + ExpandPlaceNames(dayRoutes[i].Route.map(MarkResupplyLocations).join(' -> ')) + ')\n';
   }
 
   return text;

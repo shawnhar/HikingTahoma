@@ -278,7 +278,7 @@ a:link, a:visited {
 }
 
 .plannerday {
-  padding-right: 20;
+  padding-right: 16;
 }
 
 .plannerinactiveselector {
@@ -286,7 +286,19 @@ a:link, a:visited {
 }
 
 .plannerdistance {
-  padding-left: 20;
+  padding-left: 16;
+}
+
+.plannerresupply {
+  padding-left: 8;
+}
+
+.plannerresupply .tip {
+  width: 192;
+}
+
+.plannerresupply .tip::after {
+  left: 72%;
 }
 
 .plannertotal {
@@ -322,9 +334,16 @@ a:link, a:visited {
   left: 58%;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 850px) {
+  .planner {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 770px) {
   .planner {
     border-collapse: collapse;
+    font-size: initial;
   }
 
   .planner tr {
@@ -369,6 +388,14 @@ a:link, a:visited {
 
   .plannerhelp .tooltip .tip::after {
     left: 74%;
+  }
+
+  .plannerresupply .tip {
+    margin-left: -100;
+  }
+
+  .plannerresupply .tip::after {
+    left: 8%;
   }
 }
 

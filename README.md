@@ -14,4 +14,7 @@ workflow is:
 - Run the builder UWP
 - Run get.bat
 
-Published website files will now be in the 'out' folder.
+Published website files will now be in the .\HikingTahoma folder.
+
+Bucket emoji designed by [OpenMoji](https://openmoji.org/) - the open-source emoji and 
+icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
