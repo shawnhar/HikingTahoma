@@ -146,6 +146,7 @@ const viaOptions = [
   'Sunrise',
   'Windy Gap',
   'Mystic Lake',
+  'Glacier Basin',
   'Panhandle',
   'Eastside tr',
   'PCT',
@@ -344,9 +345,9 @@ const trailData = {
   ],
 
   'Glacier Basin': [
-    { To: 'White River', Distance: 3.6, Up: 100, Down: 1800 },
-    { To: 'Sunrise Camp', Distance: 4.9, Up: 2000, Down: 1700 },
-    { To: 'Frozen Lake', Distance: 4.2, Up: 2000, Down: 1200 }
+    { To: 'White River', Distance: 3.6, Up: 100, Down: 1800, Via: 'Glacier Basin' },
+    { To: 'Sunrise Camp', Distance: 4.9, Up: 2000, Down: 1700, Via: 'Glacier Basin' },
+    { To: 'Frozen Lake', Distance: 4.2, Up: 2000, Down: 1200, Via: 'Glacier Basin' }
   ],
 
   'Snow Lake': [
