@@ -27,17 +27,19 @@ function CreateDefaultTrip()
     ],
 
     Via: [],
-    ViaSprayPark: false
-  };
+    ViaSprayPark: false,
 
-  PopulateUnusedCampsites();
+    UseGroupSites: false
+  };
 }
 
 
 function PopulateUnusedCampsites()
 {
+  var defaultCampsite = trip.UseGroupSites ? 'Devil\'s Dream' : 'Pyramid Creek';
+
   while (trip.SelectedCampsites.length < maxDays - 1) {
-    trip.SelectedCampsites.push('Pyramid Creek');
+    trip.SelectedCampsites.push(defaultCampsite);
   }
 }
 
@@ -166,16 +168,28 @@ const viaOptions = [
 //    set. When via <x> is selected, pathfinding rejects routes that pass through
 //    segments marked IsNearTo without also going Via.
 const viaModeNearTo = {
-  'Spray Park': true,
+  'Spray Park':     true,
   'N. Puyallup tr': true
 };
 
 
 const isResupply = {
-  'Longmire': true,
+  'Longmire':    true,
   'Mowich Lake': true,
-  'Sunrise': true,
+  'Sunrise':     true,
   'White River': true
+};
+
+
+const hasNoGroupSite = {
+  'Pyramid Creek':      'Devil\'s Dream',
+  'Klapatche Park':     'North Puyallup River',
+  'Eagle\'s Roost':     'Mowich Lake',
+  'Dick Creek':         'Carbon River Camp',
+  'Yellowstone Cliffs': 'James Camp',
+  'Deer Creek':         'Tamanos Creek',
+  'Forest Lake':        'Sunrise Camp',
+  'Snow Lake':          'Maple Creek'
 };
 
 
@@ -745,7 +759,8 @@ function GenerateItinerary(ccw)
   distances.pop();
 
   // Filter out entries for places that aren't actually campsites.
-  var allCampsites = [].concat(...campsiteCategories.map(category => placeNames[category]));
+  var allCampsites = [].concat(...campsiteCategories.map(category => placeNames[category]))
+                       .filter(camp => !(trip.UseGroupSites && hasNoGroupSite[camp]));
 
   var i = 0;
 
@@ -848,11 +863,13 @@ function InitializeUI()
 {
   document.getElementById('tripduration').value = trip.Duration;
 
+  document.getElementById('usegroupsites').checked = trip.UseGroupSites;
+
   RecreateUIElements();
 }
 
 
-function CreatePlaceSelector(categories, currentSelection, changeHandler)
+function CreatePlaceSelector(categories, currentSelection, changeHandler, useGroupSites)
 {
   var result = '<select onChange="' + changeHandler + '">';
 
@@ -860,8 +877,10 @@ function CreatePlaceSelector(categories, currentSelection, changeHandler)
     result += '<optgroup label="' + category + '">';
 
     placeNames[category].forEach(placeName => {
-      var selectedAttribute = (placeName == currentSelection) ? ' selected' : '';
-      result += '<option' + selectedAttribute + '>' + placeName + '</option>';
+      if (!(useGroupSites && hasNoGroupSite[placeName])) {
+        var selectedAttribute = (placeName == currentSelection) ? ' selected' : '';
+        result += '<option' + selectedAttribute + '>' + placeName + '</option>';
+      }
     });
 
     result += '</optgroup>';
@@ -918,7 +937,7 @@ function CreateTableRow(day)
 {
   if (day == 0) {
     // Starting the first day at trailhead.
-    var startHtml = CreatePlaceSelector(trailheadCategories, trip.StartTrailhead, 'StartTrailheadChanged(this.value)');
+    var startHtml = CreatePlaceSelector(trailheadCategories, trip.StartTrailhead, 'StartTrailheadChanged(this.value)', false);
   }
   else {
     // Starting a subsequent day at previous night's camp.
@@ -927,11 +946,11 @@ function CreateTableRow(day)
 
   if (day == trip.Duration - 1) {
     // Ending the trip back at a trailhead.
-    var endHtml = CreatePlaceSelector(trailheadCategories, trip.EndTrailhead, 'EndTrailheadChanged(this.value)');
+    var endHtml = CreatePlaceSelector(trailheadCategories, trip.EndTrailhead, 'EndTrailheadChanged(this.value)', false);
   }
   else {
     // Ending the day at a campsite.
-    var endHtml = CreatePlaceSelector(campsiteCategories, trip.SelectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)');
+    var endHtml = CreatePlaceSelector(campsiteCategories, trip.SelectedCampsites[day], 'CampsiteChanged(' + day + ', this.value)', trip.UseGroupSites);
   }
 
   var viaHtml = CreateViaSelector(trip.Via[day], day);
@@ -1017,6 +1036,26 @@ function ShowOrHideSelectedCampDetails()
 function TripDurationChanged(newDuration)
 {
   trip.Duration = newDuration;
+
+  RecreateUIElements();
+  SaveTrip();
+}
+
+
+function UseGroupSitesChanged(newValue)
+{
+  trip.UseGroupSites = newValue;
+
+  if (trip.UseGroupSites) {
+    // Fix up any selected camps that are no longer valid.
+    for (var i = 0; i < trip.SelectedCampsites.length; i++) {
+      var replacement = hasNoGroupSite[trip.SelectedCampsites[i]];
+
+      if (replacement) {
+        trip.SelectedCampsites[i] = replacement;
+      }
+    }
+  }
 
   RecreateUIElements();
   SaveTrip();
@@ -1203,6 +1242,10 @@ function SerializeTrip()
 {
   var text = trip.Duration + ' days\n';
 
+  if (trip.UseGroupSites) {
+    text += 'using group campsites\n';
+  }
+
   if (trip.ViaSprayPark) {
     text += 'via Spray Park\n';
   }
@@ -1241,6 +1284,9 @@ function DeserializeTrip(text)
     if (match = /^(\d+) days/.exec(line)) {
       trip.Duration = match[1];
     }
+    else if (/^using group campsites/.test(line)) {
+      trip.UseGroupSites = true;
+    }
     else if (/^via Spray Park/.test(line)) {
       trip.ViaSprayPark = true;
 
@@ -1273,12 +1319,15 @@ function DeserializeTrip(text)
       }
     }
   });
+
+  PopulateUnusedCampsites();
 }
 
 
 function ResetTrip()
 {
   CreateDefaultTrip();
+  PopulateUnusedCampsites();
   InitializeUI();
   SaveTrip();
 
@@ -1310,6 +1359,10 @@ function ShareTrip()
 
   if (!data.ViaSprayPark) {
     delete data.ViaSprayPark;
+  }
+
+  if (!data.UseGroupSites) {
+    delete data.UseGroupSites;
   }
 
   // Encode as a URL.
@@ -1409,6 +1462,7 @@ function RestoreSavedState()
 // Initialize or restore state when the page first loads.
 if (!RestoreSavedState()) {
   CreateDefaultTrip();
+  PopulateUnusedCampsites();
 }
 
 InitializeUI();

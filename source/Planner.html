@@ -32,25 +32,33 @@
       <p class="heading">Campsite Distances Planning Tool</p>
     </div>
     <br/>
-    <p>
-      Trip duration: 
-      <select id="tripduration" onChange="TripDurationChanged(this.value)">
-        <option value="2">2 days</option>
-        <option value="3">3 days</option>
-        <option value="4">4 days</option>
-        <option value="5">5 days</option>
-        <option value="6">6 days</option>
-        <option value="7">7 days</option>
-        <option value="8" selected>8 days</option>
-        <option value="9">9 days</option>
-        <option value="10">10 days</option>
-        <option value="11">11 days</option>
-        <option value="12">12 days</option>
-        <option value="13">13 days</option>
-        <option value="14">14 days</option>
-        <option value="15">15 days</option>
-      </select>
-    </p>
+    <table class="planneroptions">
+      <tr>
+        <td>
+          Trip duration: 
+          <select id="tripduration" onChange="TripDurationChanged(this.value)">
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+            <option value="5">5 days</option>
+            <option value="6">6 days</option>
+            <option value="7">7 days</option>
+            <option value="8" selected>8 days</option>
+            <option value="9">9 days</option>
+            <option value="10">10 days</option>
+            <option value="11">11 days</option>
+            <option value="12">12 days</option>
+            <option value="13">13 days</option>
+            <option value="14">14 days</option>
+            <option value="15">15 days</option>
+          </select>
+        </td>
+        <td>
+          Use group campsites:
+          <input id="usegroupsites" type="checkbox" onChange="UseGroupSitesChanged(this.checked)"
+        </td>
+      </tr>
+    </table>
     <table id="table" class="planner"></table>
     <div class="fixedwidth">
       <span id="totals" class="plannertotal"></span>

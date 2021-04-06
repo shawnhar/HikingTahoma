@@ -273,6 +273,15 @@ a:link, a:visited {
   opacity: 1;
 }
 
+.planneroptions {
+  margin-top: 8;
+  margin-bottom: 8;
+}
+
+.planneroptions td {
+  padding-right: 20;
+}
+
 .planner {
   margin-bottom: 20;
 }
@@ -341,6 +350,11 @@ a:link, a:visited {
 }
 
 @media (max-width: 770px) {
+  .planneroptions td {
+    display: block;
+    margin-bottom: 6;
+  }
+
   .planner {
     border-collapse: collapse;
     font-size: initial;
