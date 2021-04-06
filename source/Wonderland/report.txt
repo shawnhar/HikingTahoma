@@ -212,35 +212,35 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <th/>
     <th>Individual Sites</th>
-    <th>Group Sites</th>
+    <th>Group Site</th>
     <th>Elevation</th>
     <th>Notes</th>
   </tr>
   <tr>
     <td>Pyramid Creek</td>
     <td>3</td>
-    <td>n/a</td>
+    <td>no</td>
     <td>3800'</td>
     <td></td>
   </tr>
   <tr>
     <td>Devil's Dream</td>
     <td>7</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5100'</td>
     <td>Notoriously buggy during summer</td>
   </tr>
   <tr>
     <td>South Puyallup River</td>
     <td>4</td>
-    <td>1</td>
+    <td>yes</td>
     <td>4000'</td>
     <td></td>
   </tr>
   <tr>
     <td>Klapatche Park</td>
     <td>4</td>
-    <td>n/a</td>
+    <td>no</td>
     <td>5500'</td>
     <td>
       Water source is Aurora Lake, which tends to dry up later in the season. Carry water 
@@ -251,7 +251,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>North Puyallup River</td>
     <td>3</td>
-    <td>1</td>
+    <td>yes</td>
     <td>3700'</td>
     <td>
       Unique and romantically spooky group site is made from the end of an abandoned road
@@ -260,22 +260,22 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Golden Lakes</td>
     <td>5</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5100'</td>
     <td></td>
   </tr>
   <tr>
     <td>South Mowich River</td>
     <td>3</td>
-    <td>1</td>
+    <td>yes</td>
     <td>2600'</td>
     <td></td>
   </tr>
   <tr>
     <td>Mowich Lake</td>
     <td>10</td>
-    <td>3</td>
-    <td></td>
+    <td>yes</td>
+    <td>4900'</td>
     <td>
       Doubles as a popular frontcountry car camping site, so lacks privacy and is often 
       noisy
@@ -284,7 +284,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Ipsut Creek</td>
     <td>12</td>
-    <td>1</td>
+    <td>yes</td>
     <td>2400'</td>
     <td>
       <i>(if not going over Spray Park)</i>
@@ -294,35 +294,35 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Eagle's Roost</td>
     <td>7</td>
-    <td>n/a</td>
+    <td>no</td>
     <td>4900'</td>
     <td><i>(if taking Spray Park)</i></td>
   </tr>
   <tr>
     <td>Cataract Valley</td>
     <td>6</td>
-    <td>1</td>
+    <td>yes</td>
     <td>4600'</td>
     <td><i>(if taking Spray Park)</i></td>
   </tr>
   <tr>
     <td>Carbon River Camp</td>
     <td>4</td>
-    <td>1</td>
+    <td>yes</td>
     <td>3200'</td>
     <td></td>
   </tr>
   <tr>
     <td>Dick Creek</td>
     <td>2</td>
-    <td>n/a</td>
+    <td>no</td>
     <td>4200'</td>
     <td></td>
   </tr>
   <tr>
     <td>Mystic Camp</td>
     <td>7</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5600'</td>
     <td>
       Mystic Lake (a short walk from the camp) is where I want my ashes scattered when my 
@@ -333,22 +333,22 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Granite Creek</td>
     <td>3</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5800'</td>
     <td></td>
   </tr>
   <tr>
     <td>Sunrise Camp</td>
     <td>8</td>
-    <td>2</td>
+    <td>yes</td>
     <td>6200'</td>
     <td></td>
   </tr>
   <tr>
     <td>White River</td>
     <td>4</td>
-    <td>n/a</td>
-    <td></td>
+    <td>yes</td>
+    <td>4200'</td>
     <td>
       This doubles as a frontcountry car camping site, but is situated in thick forest so 
       has more quiet & privacy than Mowich Lake
@@ -357,35 +357,35 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Summerland</td>
     <td>5</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5900'</td>
     <td>Stunning alpine meadows, famous for bear encounters</td>
   </tr>
   <tr>
     <td>Indian Bar</td>
     <td>4</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5100'</td>
     <td>One of the prettiest places on the mountain</td>
   </tr>
   <tr>
     <td>Nickel Creek</td>
     <td>3</td>
-    <td>1</td>
+    <td>yes</td>
     <td>3400'</td>
     <td></td>
   </tr>
   <tr>
     <td>Maple Creek</td>
     <td>4</td>
-    <td>1</td>
+    <td>yes</td>
     <td>2800'</td>
     <td></td>
   </tr>
   <tr>
     <td>Paradise River</td>
     <td>3</td>
-    <td>1</td>
+    <td>yes</td>
     <td>3800'</td>
     <td></td>
   </tr>
@@ -411,21 +411,21 @@ still available. There are many such possibilities, including:
   <tr>
     <td>Berkeley Park</td>
     <td>2</td>
-    <td>1</td>
+    <td>yes</td>
     <td>5400'</td>
     <td>1.5 miles off the Wonderland, between Granite Creek and Frozen Lake</td>
   </tr>
   <tr>
     <td>Forest Lake</td>
-    <td>1</td>
-    <td>n/a</td>
+    <td>yes</td>
+    <td>no</td>
     <td>5700'</td>
     <td>1.8 miles off the Wonderland, between Frozen Lake and Sunrise</td>
   </tr>
   <tr>
     <td>Glacier Basin</td>
     <td>5</td>
-    <td>1</td>
+    <td>yes</td>
     <td>6000'</td>
     <td>
       4.2 miles from Frozen Lake and 3.6 from White River, which may seem a lot but it 
@@ -436,14 +436,14 @@ still available. There are many such possibilities, including:
   <tr>
     <td>Olallie Creek</td>
     <td>2</td>
-    <td>1</td>
+    <td>yes</td>
     <td>3900'</td>
     <td>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek</td>
   </tr>
   <tr>
     <td>Snow Lake</td>
     <td>2</td>
-    <td>n/a</td>
+    <td>no</td>
     <td>4700'</td>
     <td>
       1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and 
