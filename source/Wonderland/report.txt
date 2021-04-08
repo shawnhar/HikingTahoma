@@ -508,10 +508,6 @@ Potentially problematic river crossings are:
     cross safely here, detour down the road and hop back onto the Wonderland shortly 
     after crossing the road bridge.
   </li>
-  <li>
-    Nisqually River (between Paradise River camp and Longmire) is, yup, you guessed it, 
-    another log-and-railing crossing.
-  </li>
 </ul>
 
 In addition to the rivers, snow can of course be a hazard especially early in the season. 
