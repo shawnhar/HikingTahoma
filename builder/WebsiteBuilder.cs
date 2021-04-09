@@ -109,7 +109,10 @@ namespace builder
                 using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
                 using (var writer = new StreamWriter(file))
                 {
-                    WebsiteBuilder.WriteHtmlHeader(writer, "Documenting my Rainier obsession", "./");
+                    const string title = "Documenting my Rainier obsession";
+                    const string description = "Mount Rainier trail descriptions, photos, and Wonderland itinerary planner.";
+
+                    WebsiteBuilder.WriteHtmlHeader(writer, title, "./", description);
 
                     // Trails map.
                     var imgSize = string.Format("width=\"{0}\" height=\"{1}\"", imageProcessor.MapWidth / 2, imageProcessor.MapHeight / 2);
@@ -180,7 +183,7 @@ namespace builder
         }
 
 
-        public static void WriteHtmlHeader(StreamWriter writer, string title, string rootPrefix)
+        public static void WriteHtmlHeader(StreamWriter writer, string title, string rootPrefix, string description = null)
         {
             writer.WriteLine("<html>");
 
@@ -188,6 +191,12 @@ namespace builder
             writer.WriteLine("    <title>Hiking Tahoma: {0}</title>", title);
             writer.WriteLine("    <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
             writer.WriteLine("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+
+            if (!string.IsNullOrEmpty(description))
+            {
+                writer.WriteLine("    <meta name=\"description\" content=\"{0}\">", description);
+            }
+
             writer.WriteLine("  </head>");
 
             writer.WriteLine("  <body>");
@@ -210,7 +219,7 @@ namespace builder
             writer.WriteLine("                <td><a href=\"" + rootPrefix + "FuturePlans.html\">future plans</a></td>");
             writer.WriteLine("              </tr>");
             writer.WriteLine("              <tr>");
-            writer.WriteLine("                <td><a href=\"" + rootPrefix + "Planner.html\">campsite distances</a></td>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "Planner.html\">itinerary planner</a></td>");
             writer.WriteLine("              </tr>");
             writer.WriteLine("            </table>");
             writer.WriteLine("          </td>");

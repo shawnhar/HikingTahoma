@@ -201,10 +201,9 @@ other.
 
 <p class="heading">Campsites</p>
 
-There are many itinerary choices while planning a Wonderland circuit. This website 
-includes a <a href="../Planner.html">campsite distances</a> tool for planning backpacking 
-itineraries, which shows distance and elevation change between your choice of trailheads 
-and campsites.
+There are many choices while planning a Wonderland circuit. This website includes a 
+<a href="../Planner.html">Wonderland Itinerary Planner</a>, which shows distance and 
+elevation change between your choice of trailheads and campsites.
 
 Going clockwise from Longmire, campsites along the Wonderland trail are:
 
