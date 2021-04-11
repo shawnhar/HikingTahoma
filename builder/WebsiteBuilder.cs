@@ -77,11 +77,13 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "bucket.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, ".htaccess");
 
+#if false
                 // Debug .csv output can be pasted into Excel for length/difficulty analysis.
                 PrintHikeLengthsAndDifficulties(hikes);
 
                 // Combine all the text for all the hikes, so a spell check can easily be run over the whole thing.
                 LogHikeTextForSpellCheck(outFolder.Path, hikes);
+#endif
             }
 
             Profiler.OutputResults();
@@ -252,22 +254,18 @@ namespace builder
 
         void PrintHikeLengthsAndDifficulties(IEnumerable<Hike> hikes)
         {
-#if false
             foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
             {
                 Debug.WriteLine("{0},{1},{2},{3}", hike.HikeName, hike.Distance, hike.ElevationGain, hike.Difficulty);
             }
-#endif
         }
 
 
         void LogHikeTextForSpellCheck(string outPath, IEnumerable<Hike> hikes)
         {
-#if false
-            var allText = hikes.SelectMany(hike => hike.Descriptions.Concat(hike.Photos.Select(photo => photo.Description)));
+            var allText = hikes.SelectMany(hike => hike.Sections.SelectMany(section => section.Descriptions.Concat(section.Photos.Select(photo => photo.Description))));
 
             File.WriteAllLines(Path.Combine(outPath, "spell.txt"), allText);
-#endif
         }
     }
 }

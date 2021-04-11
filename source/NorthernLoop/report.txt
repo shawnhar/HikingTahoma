@@ -31,7 +31,7 @@ I hiked the Northern Loop in early September, over four days going
 counterclockwise from Sunrise.
 
 
-# Day 1: Sunrise to Fire Creek
+## Day 1: Sunrise to Fire Creek
 
 [1-Company.jpg] Tracy and Jenn joined me for the first part of this trip, day hiking from Sunrise to Berkely Park
 [1-Pasqueflower.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick" 
@@ -69,7 +69,7 @@ the base of a tree. Time spent reading while leaning against the tree made my
 back twinge. This is NOT the time or place for me to develop a back issue...
 
 
-# Day 2: Fire Creek to Carbon River Camp
+## Day 2: Fire Creek to Carbon River Camp
 
 [2-WestForkWhiteRiver.jpg] The West Fork White River: white indeed, and turbid
 [2-LakeJames.jpg] Lake James
@@ -119,7 +119,7 @@ quick hop and a skip over the Carbon River on a suspension bridge, and I'm
 at camp for the night.
 
 
-# Day 3: Carbon River Camp to Mystic Camp
+## Day 3: Carbon River Camp to Mystic Camp
 
 [3-CarbonGlacierSnout.jpg] Snout of the Carbon Glacier
 [3-CarbonGlacier.jpg] Carbon Glacier (covered in rockfall)
@@ -165,7 +165,7 @@ super fine dust into my tent, covering all my gear and getting in my eyes.
 Where is this coming from? I would find out tomorrow...
 
 
-# Day 4: Mystic Camp to Sunrise
+## Day 4: Mystic Camp to Sunrise
 
 [4-Eeek.jpg] Sketchy descent over loose dust and rocks
 [4-Mountain.jpg] Rainier view

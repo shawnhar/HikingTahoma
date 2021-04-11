@@ -2,7 +2,7 @@
 
 Simple static website about hiking on Mount Rainier. Contains authored source 
 data (in the source folder) plus code (in the builder folder) for generating 
-the actual site.
+the actual site (which is published at www.hikingtahoma.com).
 
 The workflow is annoying because I wanted to use Win2D in the builder app, but 
 was too lazy to figure out how to make that work with a regular console app. 

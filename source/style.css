@@ -180,11 +180,20 @@ a:link, a:visited {
   font-weight: bold;
   margin-top: 40;
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .subheading {
   text-align: center;
   font-style: italic;
+  margin-top: -16;
+  margin-bottom: 32;
+}
+
+.pagefooter {
+  text-align: center;
+  font-style: italic;
+  margin: 32;
 }
 
 .photos td {

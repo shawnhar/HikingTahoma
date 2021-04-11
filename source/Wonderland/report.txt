@@ -1,6 +1,6 @@
 Wonderland Trail
 strenuous 7-12 days
-93 27,000 27,000
+93 27,000 6785
 Longmire
 Pyramid Creek, Devils Dream, South Puyallup River, Klapatche Park, North Puyallup River, Golden Lakes, South Mowich River, Mowich Lake, Ipsut Creek, Eagles Roost, Cataract Valley, Carbon River Camp, Dick Creek, Mystic Camp, Granite Creek, Sunrise Camp, White River, Summerland, Indian Bar, Nickel Creek, Maple Creek, Paradise River
 not yet!
@@ -11,40 +11,23 @@ approximately 2/3 of the trail, and I'm researching in preparation to apply for 
 loop permit next year, so I decided to go ahead and start writing things down as I'm 
 learning them.</i>
 
-
-<p class="heading">What</p>
-
 The Wonderland Trail is a 93 mile loop circumnavigating Mount Rainier. Along the way it 
 takes in many of the best examples of every kind of terrain the mountain has to offer, 
-with plenty of steep ascents and descents as the trail repeatedly climbs out of a river 
-valley, crests a ridge with stunning views in every direction, then plummets back down 
-into the next valley.
+with plenty of steep ascents and descents as it repeatedly climbs out of a river valley, 
+crests a ridge with stunning views in every direction, then plummets back down into the 
+next valley.
+
+The trail was first established in 1915, for use by rangers on patrol for poachers and 
+wildfires. It wasn't until the 1920's that the Park Service realized they had created one 
+of the most magnificent recreational backcountry adventures in the world.
 
 Most people take between 7 and 12 days to complete the circuit. The Park Service allows a 
 maximum of 14 days for a reservation, while some exceptional fastpacking athletes do it 
 in as little as 3 days. Or if you really want to have your mind blown, do a web search 
 for 'rainier infinity loop'.
 
-Many sections of the Wonderland also make fantastic day hikes:
-<ul class="tight">
-  <li>[PanhandleGap]</li>
-  <li>[IndianBar]</li>
-  <li>[IndianHenrysFromLongmire]</li>
-  <li>[SprayPark]</li>
-  <li>[LongmireToReflectionLakes]</li>
-  <li>[WhiteRiverToSunrise]</li>
-</ul>
-or shorter backpacking trips:
-<ul class="tight">
-  <li>[SprayParkLoop]</li>
-  <li>[NorthernLoop]</li>
-  <li>[KlapatchePark]</li>
-  <li>[NorthPuyallup]</li>
-  <li>[CarbonGlacier]</li>
-</ul>
 
-
-<p class="heading">How</p>
+## How?|How To Get A Wonderland Permit
 
 You can't just camp wherever you like on Mount Rainier. There are designated campsites, 
 with pit toilets and bear poles for hanging your food. Each camp contains a number of 
@@ -56,33 +39,22 @@ on the other hand, must be specifically reserved in advance.
 
 The permit application process can vary from year to year, so check
 <a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
-for the latest information.
+for the latest information. Two thirds of available capacity is typically allocated 
+through a lottery during March, while a third is held in reserve for walkup permits. 
+Walkups are issued on a first-come-first-served basis to anyone who arrives in person at 
+a ranger station for a trip starting that day or the day after.
 
-If you don't fancy the idea of carrying all the supplies for your entire trip, you can 
-cache food and fuel at Longmire, Mowich Lake, Sunrise, and White River. Caches must be 
-stored in rodent-proof plastic containers (a 5 gallon plastic bucket is perfect). Food 
-caches can be mailed or delivered by hand, while fuel caches must be hand-delivered. See
-<a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
-for details.
-
-Sunrise and White River are close enough together that it doesn't make sense to cache at 
-both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
-avoid having to lug a freshly refilled pack up or down the steep trail between the two.
-
-There are occasional stories of food being stolen from caches at Mowich Lake. This is 
-very rare, but has happened more than zero times. Cache locations also have a donation 
-bin where people can leave unwanted supplies, so I hope the backpackers who had their 
-food taken were able to find enough replacements to keep going! And to whoever was so low 
-as to steal from others in the wilderness: I pray to Our Lady The Mountain that you may 
-be eaten by a bear forthwith :-)
-
-Speaking of which: bears are common on Rainier, so it's important to properly hang all 
-your food and other scented supplies. Thanks to bear poles at every camp, bear canisters 
-are not needed during the main hiking season, but the poles are taken down during the 
-off-season.
+The permit lottery is extremely competitive. Around 600 Wonderland circuits can be 
+reserved in advance each season, while another ~300 are issued as walkup permits, but in 
+recent years the Park has received over 10,000 lottery entries! Many report better luck 
+getting out on the trail via walkup permits, but of course that requires a high level of 
+dedication and leap of faith to book time off work, pack supplies, then drive to the park 
+without knowing for sure if a trip will be possible. You can improve walkup chances by 
+being extremely flexible about route, and arriving at the ranger station super early so 
+you're first in line when they open.
 
 
-<p class="heading">When</p>
+## When?|When To Hike The Wonderland Trail
 
 The Wonderland Trail is most commonly hiked during the months of July, August, and 
 September:
@@ -104,7 +76,8 @@ September:
   <li>
     September offers fall foliage colors, fewer bugs, and highest probability of the 
     whole trail being in good condition, but also cooler nights and some risk of early 
-    fall snow.
+    fall snow. There may be (slightly) less competition for permits, as many cannot 
+    backpack during the school term.
   </li>
 </ul>
 
@@ -112,7 +85,7 @@ Some people do complete the trail in June or October (or even beyond!) but these
 greatly increase the odds of encountering winter conditions or dangerous river crossings.
 
 
-<p class="heading">Where</p>
+## Where?|Where To Go On A Wonderland Circuit
 
 First question is where to start? There are multiple trailheads around the Wonderland:
 
@@ -199,11 +172,12 @@ Wonderland circuit, then come back later and hike the [SprayParkLoop] to also se
 other.
 
 
-<p class="heading">Campsites</p>
+## Campsites
 
 There are many choices while planning a Wonderland circuit. This website includes a 
-<a href="../Planner.html">Wonderland Itinerary Planner</a>, which shows distance and 
-elevation change between your choice of trailheads and campsites.
+<a href="../Planner.html">Wonderland Itinerary Planner</a>, which shows 
+distance and elevation change between your choice of trailheads and 
+campsites.
 
 Going clockwise from Longmire, campsites along the Wonderland trail are:
 
@@ -451,8 +425,42 @@ still available. There are many such possibilities, including:
   </tr>
 </table>
 
+Another source of flexibility can be found in substituting other trails for unavailable 
+sections of the Wonderland. If none of Dick Creek, Mystic Camp, or Granite Creek are 
+available, you could detour via the [NorthernLoop] and stay at James Camp or Fire Creek 
+instead. If Summerland and Indian Bar are fully booked, hop over to the Eastside Trail 
+and go via Tamanos Creek, Deer Creek, and Olallie Creek. The latter can be particularly 
+useful because Summerland and Indian Bar tend to fill up early, so they often end up 
+being the limiting factor in putting together a full circuit.
 
-<p class="heading">Hazards</p>
+
+## Caching Supplies|Caching Supplies Around The Wonderland
+
+If you don't fancy the idea of carrying all the supplies for your entire trip, you can 
+cache food and fuel at Longmire, Mowich Lake, Sunrise, and White River. Caches must be 
+stored in rodent-proof containers: typically a 5 gallon plastic bucket. Food 
+caches can be mailed or delivered by hand, while fuel caches must be hand-delivered. See
+<a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
+for details.
+
+Sunrise and White River are close enough together that it doesn't make sense to cache at 
+both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
+avoid having to lug a freshly refilled pack up or down the steep trail between the two.
+
+There are occasional stories of food being stolen from caches at Mowich Lake. This is 
+very rare, but has happened more than zero times. Cache locations also have a donation 
+bin where people can leave unwanted supplies, so I hope the backpackers who had their 
+food taken were able to find enough replacements to keep going! And to whoever was so low 
+as to steal from others in the wilderness: I pray to Our Lady The Mountain that you may 
+be eaten by a bear forthwith :-)
+
+Speaking of which: bears are common on Rainier, so it's important to properly hang all 
+your food and other scented supplies. Thanks to bear poles at every camp, bear canisters 
+are not needed during the main hiking season, but the poles are taken down during the 
+off-season.
+
+
+## Hazards
 
 By far the greatest danger along the Wonderland Trail is the many glacial river 
 crossings. Some rivers have sturdy wooden bridges over them while others are spanned by 
@@ -525,7 +533,28 @@ where the trail traverses across a washout with loose, unstable footing. I have 
 experience this myself, but am told it is particularly unpleasant in wet conditions.
 
 
-<p class="heading">My Wonderland</p>
+## Section Hiking|Section Hiking The Wonderland Trail
+
+Many sections of the Wonderland also make fantastic day hikes:
+<ul class="tight">
+  <li>[PanhandleGap]</li>
+  <li>[IndianBar]</li>
+  <li>[IndianHenrysFromLongmire]</li>
+  <li>[SprayPark]</li>
+  <li>[LongmireToReflectionLakes]</li>
+  <li>[WhiteRiverToSunrise]</li>
+</ul>
+or shorter backpacking trips:
+<ul class="tight">
+  <li>[SprayParkLoop]</li>
+  <li>[NorthernLoop]</li>
+  <li>[KlapatchePark]</li>
+  <li>[NorthPuyallup]</li>
+  <li>[CarbonGlacier]</li>
+</ul>
+
+
+# My Wonderland
 
 Trail notes and photos will be added here once I've completed hiking the Wonderland. Wish 
 me luck for 2021!

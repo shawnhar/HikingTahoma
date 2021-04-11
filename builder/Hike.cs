@@ -18,7 +18,7 @@ namespace builder
         public string CampSites     { get; private set; }
         public string FirstHiked    { get; private set; }
 
-        readonly List<HikeSection> Sections = new List<HikeSection>();
+        public readonly List<HikeSection> Sections = new List<HikeSection>();
 
         public string FolderName => Path.GetFileName(sourcePath);
         public string MapName => FolderName + "-map.jpg";
@@ -109,16 +109,23 @@ namespace builder
                 var remainder = lines.Skip(6)
                                      .SkipWhile(string.IsNullOrEmpty);
 
+                var titleRegex = new Regex("^#+ ");
+
                 while (remainder.Any())
                 {
                     var currentSection = new HikeSection();
 
                     Sections.Add(currentSection);
 
-                    // Optional section title.
-                    if (remainder.First().StartsWith("# "))
+                    // Optional section title:
+                    // "# Title" embeds the section within the current page.
+                    // "## Title" outputs the section as a separate page.
+                    var match = titleRegex.Match(remainder.First());
+
+                    if (match.Success)
                     {
-                        currentSection.Title = remainder.First().Substring(2).Trim();
+                        currentSection.SetTitle(remainder.First().Substring(match.Length).Trim(), HikeName);
+                        currentSection.IsSeparatePage = match.Length > 2;
 
                         remainder = remainder.Skip(1)
                                              .SkipWhile(string.IsNullOrEmpty);
@@ -131,8 +138,8 @@ namespace builder
                     remainder = remainder.Skip(currentSection.Photos.Count)
                                          .SkipWhile(string.IsNullOrEmpty);
 
-                    // Rest of the file is a text description;
-                    while (remainder.Any() && !remainder.First().StartsWith("# "))
+                    // Rest of the section is a text description;
+                    while (remainder.Any() && !titleRegex.IsMatch(remainder.First()))
                     {
                         var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
 
@@ -239,77 +246,151 @@ namespace builder
                     writer.WriteLine("        </tr>");
                     writer.WriteLine("      </table>");
 
-                    foreach (var section in Sections)
+                    IEnumerable<HikeSection> todo = Sections;
+
+                    HikeSection prevSeparatePage = null;
+
+                    while (todo.Any())
                     {
-                        writer.WriteLine("      <div class=\"description\">");
+                        var currentSection = todo.First();
+                        var separatePages = todo.Skip(1).TakeWhile(page => page.IsSeparatePage);
 
-                        // Section title?
-                        if (!string.IsNullOrEmpty(section.Title))
+                        WriteSection(hikes, writer, currentSection, separatePages);
+
+                        foreach (var separatePage in separatePages)
                         {
-                            writer.WriteLine("        <p class=\"heading\">{0}</p>", section.Title);
+                            var nextSeparatePage = todo.SkipWhile(page => page != separatePage)
+                                                       .Skip(1)
+                                                       .FirstOrDefault(page => page.IsSeparatePage);
+
+                            WriteSeparatePage(hikes, outPath, separatePage, prevSeparatePage, nextSeparatePage);
+
+                            prevSeparatePage = separatePage;
                         }
 
-                        // Section text.
-                        foreach (var line in section.Descriptions)
-                        {
-                            var expandedLinks = ExpandLinks(line, hikes);
-
-                            writer.WriteLine("        <p>{0}</p>", expandedLinks);
-                        }
-
-                        writer.WriteLine("      </div>");
-
-                        // Photos.
-                        if (section.Photos.Any())
-                        {
-                            writer.WriteLine("      <table class=\"photos\">");
-
-                            int photoCount = 0;
-
-                            foreach (var photo in section.Photos)
-                            {
-                                if ((photoCount & 1) == 0)
-                                {
-                                    if (photoCount > 0)
-                                    {
-                                        writer.WriteLine("        </tr>");
-                                    }
-
-                                    writer.WriteLine("        <tr>");
-                                }
-
-                                if (photo.IsPanorama)
-                                {
-                                    writer.WriteLine("          <td class=\"panorama\" colspan=\"2\">");
-                                    photoCount++;
-                                }
-                                else
-                                {
-                                    writer.WriteLine("          <td>");
-                                }
-
-                                writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
-                                writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
-                                writer.WriteLine("              <p>{0}</p>", photo.Description);
-                                writer.WriteLine("            </a>");
-                                writer.WriteLine("          </td>");
-
-                                photoCount++;
-                            }
-
-                            if (photoCount > 0)
-                            {
-                                writer.WriteLine("        </tr>");
-                            }
-
-                            writer.WriteLine("      </table>");
-                        }
+                        todo = todo.Skip(1 + separatePages.Count());
                     }
 
                     writer.WriteLine("    </div>");
                     writer.WriteLine("  </body>");
                     writer.WriteLine("</html>");
                 }
+            }
+        }
+
+
+        static void WriteSeparatePage(IEnumerable<Hike> hikes, string outPath, HikeSection page, HikeSection prev, HikeSection next)
+        {
+            using (var file = File.OpenWrite(Path.Combine(outPath, page.Url)))
+            using (var writer = new StreamWriter(file))
+            {
+                WebsiteBuilder.WriteHtmlHeader(writer, page.LongTitle, "../");
+
+                writer.WriteLine("    <div class=\"fixedwidth\">");
+
+                writer.WriteLine("      <p class=\"heading\">{0}</p>", page.LongTitle.Replace(": ", ":<br/>"));
+
+                WriteSection(hikes, writer, page);
+
+                writer.WriteLine("      <div class=\"pagefooter\">");
+
+                if (prev != null)
+                {
+                    writer.WriteLine("        <a href=\"{0}\">prev</a> -", prev.Url);
+                }
+
+                writer.WriteLine("        <a href=\"./\">up</a>");
+
+                if (next != null)
+                {
+                    writer.WriteLine("        - <a href=\"{0}\">next</a>", next.Url);
+                }
+
+                writer.WriteLine("      </div>");
+                writer.WriteLine("    </div>");
+                writer.WriteLine("  </body>");
+                writer.WriteLine("</html>");
+            }
+        }
+
+
+        static void WriteSection(IEnumerable<Hike> hikes, StreamWriter writer, HikeSection section, IEnumerable<HikeSection> separatePages = null)
+        {
+            writer.WriteLine("      <div class=\"description\">");
+
+            // Section title?
+            if (!string.IsNullOrEmpty(section.Title) && !section.IsSeparatePage)
+            {
+                writer.WriteLine("        <p class=\"heading\">{0}</p>", section.Title);
+            }
+
+            // Section text.
+            foreach (var line in section.Descriptions)
+            {
+                var expandedLinks = ExpandLinks(line, hikes);
+
+                writer.WriteLine("        <p>{0}</p>", expandedLinks);
+            }
+
+            // Links to separate pages?
+            if (separatePages != null && separatePages.Any())
+            {
+                writer.WriteLine("        <ul>");
+
+                foreach (var page in separatePages)
+                {
+                    writer.WriteLine("          <li><a href=\"{0}\">{1}</a></li>", page.Url, page.Title);
+                }
+
+                writer.WriteLine("        </ul>");
+            }
+
+            writer.WriteLine("      </div>");
+
+            // Photos.
+            if (section.Photos.Any())
+            {
+                writer.WriteLine("      <table class=\"photos\">");
+
+                int photoCount = 0;
+
+                foreach (var photo in section.Photos)
+                {
+                    if ((photoCount & 1) == 0)
+                    {
+                        if (photoCount > 0)
+                        {
+                            writer.WriteLine("        </tr>");
+                        }
+
+                        writer.WriteLine("        <tr>");
+                    }
+
+                    if (photo.IsPanorama)
+                    {
+                        writer.WriteLine("          <td class=\"panorama\" colspan=\"2\">");
+                        photoCount++;
+                    }
+                    else
+                    {
+                        writer.WriteLine("          <td>");
+                    }
+
+                    writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
+                    writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
+                    writer.WriteLine("              <p>{0}</p>", photo.Description);
+                    writer.WriteLine("            </a>");
+                    writer.WriteLine("          </td>");
+
+                    photoCount++;
+                }
+
+                if (photoCount > 0)
+                {
+                    writer.WriteLine("        </tr>");
+                }
+
+                writer.WriteLine("      </table>");
             }
         }
 

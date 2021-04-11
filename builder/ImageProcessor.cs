@@ -13,6 +13,9 @@ namespace builder
 {
     class ImageProcessor
     {
+        // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
+        const float totalLengthOfAllTrails = 286;
+
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
 
@@ -71,9 +74,6 @@ namespace builder
 
         public async Task<(float DistanceHiked, float CompletionRatio)> MeasureProgressTowardGoal(List<Hike> hikes, string sourceFolder, string outPath)
         {
-            // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-            const float totalLengthOfAllTrails = 286;
-
             using (new Profiler("ImageProcessor.MeasureProgressTowardGoal"))
             {
                 const int todoDilation = 24;
