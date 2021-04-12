@@ -159,6 +159,7 @@ namespace builder
                     { "older", Color.FromArgb(0xFF, 0x00, 0x80, 0x00) },
                     { "2019",  Color.FromArgb(0xFF, 0x00, 0xD0, 0x00) },
                     { "2020",  Color.FromArgb(0xFF, 0xFF, 0xFF, 0x00) },
+                    { "2021",  Color.FromArgb(0xFF, 0xFF, 0xA0, 0x00) },
                 };
 
                 using (var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
