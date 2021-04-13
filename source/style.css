@@ -422,14 +422,19 @@ a:link, a:visited {
   }
 }
 
-.plannermapevenday {
+.plannermapday1 {
   visibility: visible;
-  filter: url(#filterPlannerMapEvenDay);
+  filter: url(#filterPlannerMapDay1);
 }
 
-.plannermapoddday {
+.plannermapday2 {
   visibility: visible;
-  filter: url(#filterPlannerMapOddDay);
+  filter: url(#filterPlannerMapDay2);
+}
+
+.plannermapday3 {
+  visibility: visible;
+  filter: url(#filterPlannerMapDay3);
 }
 
 .plannermaphighlighted {

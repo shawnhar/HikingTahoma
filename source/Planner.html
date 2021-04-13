@@ -143,17 +143,24 @@
       <img class="mapbase" src="mapbase.jpg" width="600" height="506" />
     </div>
     <svg height="0">
-      <filter id="filterPlannerMapEvenDay">
+      <filter id="filterPlannerMapDay1">
         <feComponentTransfer>
           <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
           <feFuncG type="linear" slope="0" intercept="0.216"></feFuncG>
           <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
         </feComponentTransfer>
       </filter>
-      <filter id="filterPlannerMapOddDay">
+      <filter id="filterPlannerMapDay2">
         <feComponentTransfer>
           <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
           <feFuncG type="linear" slope="0" intercept="0.63"></feFuncG>
+          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+        </feComponentTransfer>
+      </filter>
+      <filter id="filterPlannerMapDay3">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="1"></feFuncR>
+          <feFuncG type="linear" slope="0" intercept="1"></feFuncG>
           <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
         </feComponentTransfer>
       </filter>
