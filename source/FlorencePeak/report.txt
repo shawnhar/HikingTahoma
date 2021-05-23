@@ -8,7 +8,7 @@ none
 [Sign.jpg] No Park Service letterhead here! An unofficial sign for an unofficial trail
 [BoundaryTrail.jpg] Switchbacking up the Boundary Trail
 [Falls.jpg] Unnamed waterfall: the trail goes right across the middle of this photo
-[TrueSummit.jpg] From the false summit of Florence Peak, looking down at the Carbon River (left) and across at the true summit (right)
+[TrueSummit.jpg] From the false summit of Florence Peak, looking down at the Carbon River (left) and across at the true summit
 [StHelens.jpg] Mount St. Helens, from the false summit
 [Rainier.jpg] Rainier, from the false summit, with Mowich Lake Road cutting across the foreground
 
