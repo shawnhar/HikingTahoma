@@ -46,11 +46,6 @@ namespace builder
                     await hike.Load();
                 }
 
-                foreach (var hike in hikes.Where(hike => !hike.IsHidden))
-                {
-                    await hike.WriteOutput(hikes, outFolder.Path);
-                }
-
                 var doneHikes = hikes.Where(hike => !hike.IsFuture).ToList();
 
                 var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
@@ -59,6 +54,12 @@ namespace builder
                 WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
 
                 await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
+
+                // Process the individual hikes and photos.
+                foreach (var hike in hikes.Where(hike => !hike.IsHidden))
+                {
+                    await hike.WriteOutput(hikes, outFolder.Path);
+                }
 
                 // Generate map overlay images for the distances planning tool.
                 await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);

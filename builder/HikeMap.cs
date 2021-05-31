@@ -16,10 +16,12 @@ namespace builder
         readonly ImageProcessor imageProcessor;
         readonly Dictionary<string, CanvasBitmap> myMaps = new Dictionary<string, CanvasBitmap>();
         CanvasBitmap combinedMap;
+        CanvasBitmap overlayMap;
         Rect usedBounds;
+        Rect overlayBounds;
 
         public IEnumerable<string> YearsHiked => myMaps.Keys;
-        public CanvasBitmap RawOverlay => combinedMap;
+        public CanvasBitmap CombinedOverlay => combinedMap;
 
 
         public HikeMap(ImageProcessor imageProcessor)
@@ -69,6 +71,13 @@ namespace builder
                 }
 
                 usedBounds = GetUsedBounds(combinedMap);
+
+                // Does this hike have a custom overlay image, due to being outside the normal map bounds?
+                if (File.Exists(Path.Combine(sourceFolder, "overlay.png")))
+                {
+                    overlayMap = await imageProcessor.LoadImage(sourceFolder, "overlay.png");
+                    overlayBounds = GetUsedBounds(overlayMap);
+                }
             }
         }
 
@@ -167,7 +176,7 @@ namespace builder
                 Source = new CropEffect
                 {
                     SourceRectangle = bounds,
-                    Source = imageProcessor.MasterMap,
+                    Source = (overlayMap != null) ? imageProcessor.UncroppedMap : imageProcessor.MasterMap,
                 },
             };
 
@@ -234,7 +243,7 @@ namespace builder
             {
                 const int overlayDilation = 40;
 
-                var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation);
+                var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation, null, true);
 
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
                 {
@@ -249,12 +258,20 @@ namespace builder
         }
 
 
-        public ICanvasImage GetTrailOverlay(Color color, int dilation, string year = null)
+        public ICanvasImage GetTrailOverlay(Color color, int dilation, string year = null, bool isOverlay = false)
         {
             var source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year];
+            var bounds = usedBounds;
+
+            if (isOverlay && overlayMap != null)
+            {
+                source = overlayMap;
+                bounds = overlayBounds;
+            }
+
             var scale = (float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width;
 
-            return GetTrailOverlay(source, usedBounds, scale, color, dilation);        
+            return GetTrailOverlay(source, bounds, scale, color, dilation);        
         }
 
 
@@ -331,6 +348,11 @@ namespace builder
         {
             using (new Profiler("HikeMap.GetImageMap"))
             {
+                if (overlayMap != null)
+                {
+                    return new byte[subdiv * subdiv];
+                }
+
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
                 {
                     var effect = new Transform2DEffect

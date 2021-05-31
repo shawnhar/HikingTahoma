@@ -14,9 +14,10 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 313;
+        const float totalLengthOfAllTrails = 318;
 
         public CanvasDevice Device { get; private set; }
+        public CanvasBitmap UncroppedMap { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
 
         public int MapWidth => 1200;
@@ -27,7 +28,9 @@ namespace builder
         {
             Device = new CanvasDevice();
 
-            MasterMap = await LoadImage(sourceFolder, "map.png");
+            UncroppedMap = await LoadImage(sourceFolder, "map.png");
+
+            MasterMap = CropMap(UncroppedMap);
         }
 
 
@@ -72,6 +75,25 @@ namespace builder
         }
 
 
+        public CanvasBitmap CropMap(CanvasBitmap bitmap)
+        {
+            const int mapW = 7011;
+            const int mapH = 5916;
+
+            using (new Profiler("ImageProcessor.CropMap"))
+            {
+                var result = new CanvasRenderTarget(Device, mapW, mapH, 96);
+
+                using (var drawingSession = result.CreateDrawingSession())
+                {
+                    drawingSession.DrawImage(bitmap);
+                }
+
+                return result;
+            }
+        }
+
+
         public async Task<(float DistanceHiked, float CompletionRatio)> MeasureProgressTowardGoal(List<Hike> hikes, string sourceFolder, string outPath)
         {
             using (new Profiler("ImageProcessor.MeasureProgressTowardGoal"))
@@ -87,7 +109,7 @@ namespace builder
                     {
                         foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
                         {
-                            drawingSession.DrawImage(hike.Map.RawOverlay);
+                            drawingSession.DrawImage(hike.Map.CombinedOverlay);
                         }
                     }
 
@@ -109,10 +131,10 @@ namespace builder
                     }
 
                     // Write out an overlay showing trails that are still to be hiked.
-                    var scale = (float)MapWidth / (float)trailsTodo.SizeInPixels.Width;
-
-                    using (var todo = new CanvasRenderTarget(Device, (float)trailsTodo.Size.Width * scale, (float)trailsTodo.Size.Height * scale, 96))
+                    using (var todo = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
                     {
+                        var scale = (float)MapWidth / (float)trailsTodo.SizeInPixels.Width;
+
                         var todoOverlay = HikeMap.GetTrailOverlay(trailsTodo, trailsTodo.Bounds, scale, Colors.Red, todoDilation);
 
                         using (var drawingSession = todo.CreateDrawingSession())

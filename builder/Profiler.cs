@@ -17,6 +17,8 @@ namespace builder
         {
             this.name = name;
             this.timer = Stopwatch.StartNew();
+
+            Debug.WriteLine("Starting " + name);
         }
 
 
