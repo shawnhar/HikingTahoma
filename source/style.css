@@ -52,6 +52,10 @@ a:link, a:visited {
   .about td {
     display: block;
   }
+
+  .about tr {
+    display: block;
+  }
 }
 
 .map {
