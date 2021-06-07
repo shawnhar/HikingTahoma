@@ -26,6 +26,8 @@ namespace builder
         public string OverlayName => FolderName + "-overlay.png";
         public bool IsHidden => HikeName == "misc";
         public bool IsFuture => FirstHiked == "not yet!";
+        public bool IsNever => FirstHiked == "never";
+        public bool IsNotHiked => IsFuture || IsNever;
 
         public readonly HikeMap Map;
 
@@ -206,11 +208,11 @@ namespace builder
 
                 WriteHtml(hikes, outPath);
 
-                await Map.WriteTrailMaps(outPath, MapName, MapThumbnail);
+                await Map.WriteTrailMaps(outPath, MapName, MapThumbnail, IsNever);
 
                 if (!IsFuture)
                 {
-                    await Map.WriteTrailOverlay(outPath, OverlayName);
+                    await Map.WriteTrailOverlay(outPath, OverlayName, IsNever);
                 }
             }
         }

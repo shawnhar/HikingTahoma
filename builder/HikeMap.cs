@@ -82,7 +82,7 @@ namespace builder
         }
 
 
-        public async Task WriteTrailMaps(string folder, string mapName, string mapThumbnail)
+        public async Task WriteTrailMaps(string folder, string mapName, string mapThumbnail, bool isNever)
         {
             using (new Profiler("HikeMap.WriteTrailMaps"))
             {
@@ -149,13 +149,13 @@ namespace builder
                     bounds.Y = combinedMap.Size.Height - bounds.Height;
 
                 // Write two sizes of map.
-                await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName);
-                await WriteTrailMap(bounds, thumbnailSize, thumbnailDilation, true, folder, mapThumbnail);
+                await WriteTrailMap(bounds, mapSize, mapDilation, false, folder, mapName, isNever);
+                await WriteTrailMap(bounds, thumbnailSize, thumbnailDilation, true, folder, mapThumbnail, isNever);
             }
         }
 
 
-        async Task WriteTrailMap(Rect bounds, int outputSize, int dilation, bool vignette, string folder, string filename)
+        async Task WriteTrailMap(Rect bounds, int outputSize, int dilation, bool vignette, string folder, string filename, bool isNever)
         {
             const float vignetteAmount = 0.333f;
             const float vignetteCurve = 1f;
@@ -204,9 +204,9 @@ namespace builder
                     GreenSlope = 0,
                     BlueSlope = 0,
 
-                    RedOffset = 0,
+                    RedOffset = isNever ? 1 : 0,
                     GreenOffset = 0,
-                    BlueOffset = 1,
+                    BlueOffset = isNever ? 0 : 1,
 
                     Source = new MorphologyEffect
                     {
@@ -237,13 +237,15 @@ namespace builder
         }
 
 
-        public async Task WriteTrailOverlay(string folder, string filename)
+        public async Task WriteTrailOverlay(string folder, string filename, bool isNever)
         {
             using (new Profiler("HikeMap.WriteTrailOverlay"))
             {
                 const int overlayDilation = 40;
 
-                var trailOverlay = GetTrailOverlay(Colors.Blue, overlayDilation, null, true);
+                var color = isNever ? Colors.Red : Colors.Blue;
+
+                var trailOverlay = GetTrailOverlay(color, overlayDilation, null, true);
 
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
                 {

@@ -46,7 +46,7 @@ namespace builder
                     await hike.Load();
                 }
 
-                var doneHikes = hikes.Where(hike => !hike.IsFuture).ToList();
+                var doneHikes = hikes.Where(hike => !hike.IsNotHiked).ToList();
 
                 var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
 
@@ -107,7 +107,8 @@ namespace builder
                 var sortedHikes = hikes.Where(hike => !hike.IsHidden)
                                        .OrderBy(hike => hike.HikeName);
 
-                var doneHikes = sortedHikes.Where(hike => !hike.IsFuture);
+                var doneHikes = sortedHikes.Where(hike => !hike.IsNotHiked);
+                var notFutureHikes = sortedHikes.Where(hike => !hike.IsFuture);
 
                 using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
                 using (var writer = new StreamWriter(file))
@@ -123,7 +124,7 @@ namespace builder
                     writer.WriteLine("    <div class=\"map\">");
                     writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
 
-                    foreach (var hike in doneHikes)
+                    foreach (var hike in notFutureHikes)
                     {
                         writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
                     }
