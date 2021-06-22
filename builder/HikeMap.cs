@@ -245,7 +245,7 @@ namespace builder
 
                 var color = isNever ? Colors.Red : Colors.Blue;
 
-                var trailOverlay = GetTrailOverlay(color, overlayDilation, null, true);
+                var trailOverlay = GetTrailOverlay(color, overlayDilation);
 
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, imageProcessor.MapWidth, imageProcessor.MapHeight, 96))
                 {
@@ -260,12 +260,12 @@ namespace builder
         }
 
 
-        public ICanvasImage GetTrailOverlay(Color color, int dilation, string year = null, bool isOverlay = false)
+        public ICanvasImage GetTrailOverlay(Color color, int dilation, string year = null)
         {
             var source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year];
             var bounds = usedBounds;
 
-            if (isOverlay && overlayMap != null)
+            if (overlayMap != null)
             {
                 source = overlayMap;
                 bounds = overlayBounds;
@@ -350,16 +350,13 @@ namespace builder
         {
             using (new Profiler("HikeMap.GetImageMap"))
             {
-                if (overlayMap != null)
-                {
-                    return new byte[subdiv * subdiv];
-                }
+                var map = overlayMap ?? combinedMap;
 
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
                 {
                     var effect = new Transform2DEffect
                     {
-                        TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)combinedMap.Bounds.Width, subdiv / (float)combinedMap.Bounds.Height),
+                        TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)map.Bounds.Width, subdiv / (float)map.Bounds.Height),
                         InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                         Source = new MorphologyEffect
@@ -368,7 +365,7 @@ namespace builder
                             Width = 100,
                             Height = 100,
 
-                            Source = combinedMap,
+                            Source = map,
                         },
                     };
 
