@@ -10,7 +10,7 @@ namespace builder
 
         public readonly bool IsPanorama;
 
-        public string Thumbnail => Path.GetFileName(Filename) + "-small.jpg";
+        public string Thumbnail => Path.GetFileNameWithoutExtension(Filename) + "-small.jpg";
 
         public BitmapSize ThumbnailSize;
 
