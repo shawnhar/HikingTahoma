@@ -430,6 +430,7 @@ namespace builder
         {
             using (new Profiler("Hike.WritePhoto"))
             {
+                const int thumbnailWidth = 1200;
                 const int thumbnailHeight = 380;
 
                 int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
@@ -451,7 +452,7 @@ namespace builder
                     }
 
                     // Also create thumbnail versions.
-                    using (var thumbnail = imageProcessor.ResizeImage(bitmap, int.MaxValue, thumbnailHeight))
+                    using (var thumbnail = imageProcessor.ResizeImage(bitmap, thumbnailWidth, thumbnailHeight))
                     {
                         await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
 
