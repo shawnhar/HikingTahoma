@@ -92,8 +92,12 @@ a:link, a:visited {
 .hikelist {
   padding-top: 12;
   padding-left: 10;
-  column-width: 250px;
+  column-width: 200px;
   list-style-type: none;
+}
+
+.hikelist li {
+  font-size: 13.5px;
 }
 
 .hikelist a:link, a:visited {
