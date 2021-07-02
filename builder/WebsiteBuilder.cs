@@ -139,7 +139,7 @@ namespace builder
                     writer.WriteLine("    </div>");
 
                     // Trail names.
-                    writer.WriteLine("    <ul class=\"hikelist\">");
+                    writer.WriteLine("    <div class=\"hikelist\">");
 
                     var difficulties = new Dictionary<string, string>();
                     var regions = new Dictionary<string, string>();
@@ -154,21 +154,21 @@ namespace builder
 
                         var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("      <li id=\"link-{0}\" data-difficulty=\"{2}\" data-region=\"{3}\"{4}><a href=\"{0}/\">{1}</a></li>", hike.FolderName, hike.HikeName, difficulty.Item1, region, eventHandler);
+                        writer.WriteLine("      <div id=\"link-{0}\" data-difficulty=\"{2}\" data-region=\"{3}\"{4}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, difficulty.Item1, region, eventHandler);
                     }
 
                     // Category headings.
                     foreach (var difficulty in difficulties)
                     {
-                        writer.WriteLine("      <li class=\"listhead\" data-difficulty=\"{0}\">{1}</li>", difficulty.Key, difficulty.Value);
+                        writer.WriteLine("      <div class=\"listhead\" data-difficulty=\"{0}\">{1}</div>", difficulty.Key, difficulty.Value);
                     }
 
                     foreach (var region in regions)
                     {
-                        writer.WriteLine("      <li class=\"listhead\" data-region=\"{0}\">{1}</li>", region.Key, region.Value);
+                        writer.WriteLine("      <div class=\"listhead\" data-region=\"{0}\">{1}</div>", region.Key, region.Value);
                     }
 
-                    writer.WriteLine("    </ul>");
+                    writer.WriteLine("    </div>");
 
                     writer.WriteLine("    <select id=\"sortselector\" onChange=\"SortSelectorChanged(this.value)\">");
                     writer.WriteLine("      <option value=\"alphabetical\">Alphabetical</option>");

@@ -29,7 +29,7 @@ function OnLeaveImage(document, hikename)
 function SortHikes(order)
 {
   var parent = document.getElementsByClassName('hikelist')[0];
-  var items = [...parent.getElementsByTagName('li')];
+  var items = [...parent.getElementsByTagName('div')];
 
   var getItemCategory;
 
@@ -60,7 +60,15 @@ function SortHikes(order)
     var item = items[i];
 
     if (item.className == 'listhead') {
-      item.style.display = getItemCategory(item) ? 'block' : '';
+      if (getItemCategory(item)) {
+        item.style.display = 'block';
+
+        // Move the first child inside the heading, so they'll column wrap together.
+        item.appendChild(parent.firstChild);
+      }
+      else {
+        item.style.display = '';
+      }
     }
 
     parent.insertBefore(item, parent.firstChild);
