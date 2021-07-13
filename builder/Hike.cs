@@ -28,6 +28,8 @@ namespace builder
         public bool IsFuture => FirstHiked == "not yet!";
         public bool IsNever => FirstHiked == "never";
         public bool IsNotHiked => IsFuture || IsNever;
+        public bool IsOffTop => FolderName == "WestForkWhiteRiver";
+        public bool IsOffBottom => FolderName == "BackboneRidge";
 
         public readonly HikeMap Map;
 
@@ -69,7 +71,7 @@ namespace builder
             this.sourcePath = sourcePath;
             this.imageProcessor = imageProcessor;
 
-            Map = new HikeMap(imageProcessor);
+            Map = new HikeMap(imageProcessor, IsOffTop, IsOffBottom);
         }
 
 

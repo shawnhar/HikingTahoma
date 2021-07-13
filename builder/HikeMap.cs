@@ -19,14 +19,18 @@ namespace builder
         CanvasBitmap overlayMap;
         Rect usedBounds;
         Rect overlayBounds;
+        bool isOffTop;
+        bool isOffBottom;
 
         public IEnumerable<string> YearsHiked => myMaps.Keys;
         public CanvasBitmap CombinedOverlay => combinedMap;
 
 
-        public HikeMap(ImageProcessor imageProcessor)
+        public HikeMap(ImageProcessor imageProcessor, bool isOffTop, bool isOffBottom)
         {
             this.imageProcessor = imageProcessor;
+            this.isOffTop = isOffTop;
+            this.isOffBottom = isOffBottom;
         }
 
 
@@ -168,15 +172,31 @@ namespace builder
                                                outputSize / (float)bounds.Height);
 
             // Crop, scale, and optionally vignette the background image.
+            var backgroundSource = imageProcessor.MasterMap;
+            var backgroundTransform = transform;
+            var backgroundBounds = bounds;
+
+            if (isOffTop)
+            {
+                backgroundSource = imageProcessor.CombineMaps(imageProcessor.MapTop, imageProcessor.MasterMap);
+            }
+            else if (isOffBottom)
+            {
+                backgroundSource = imageProcessor.CombineMaps(imageProcessor.MasterMap, imageProcessor.MapBottom);
+                var offset = (float)(combinedMap.Size.Height - backgroundSource.Size.Height);
+                backgroundTransform = Matrix3x2.CreateTranslation(0, offset) * backgroundTransform;
+                backgroundBounds.Y -= offset;
+            }
+
             ICanvasEffect background = new Transform2DEffect
             {
-                TransformMatrix = transform,
+                TransformMatrix = backgroundTransform,
                 InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                 Source = new CropEffect
                 {
-                    SourceRectangle = bounds,
-                    Source = (overlayMap != null) ? imageProcessor.UncroppedMap : imageProcessor.MasterMap,
+                    SourceRectangle = backgroundBounds,
+                    Source = backgroundSource,
                 },
             };
 
@@ -264,26 +284,31 @@ namespace builder
         {
             var source = string.IsNullOrEmpty(year) ? combinedMap : myMaps[year];
             var bounds = usedBounds;
+            var offset = GetOverlayOffset();
 
             if (overlayMap != null)
             {
                 source = overlayMap;
                 bounds = overlayBounds;
+                offset = Vector2.Zero;
             }
 
             var scale = (float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width;
 
-            return GetTrailOverlay(source, bounds, scale, color, dilation);        
+            var transform = Matrix3x2.CreateTranslation(offset) *
+                            Matrix3x2.CreateScale(scale);
+
+            return GetTrailOverlay(source, bounds, transform, color, dilation);        
         }
 
 
-        public static ICanvasImage GetTrailOverlay(ICanvasImage source, Rect bounds, float scale, Color color, int dilation)
+        public static ICanvasImage GetTrailOverlay(ICanvasImage source, Rect bounds, Matrix3x2 transform, Color color, int dilation)
         {
             using (new Profiler("HikeMap.GetTrailOverlay"))
             {
                 return new Transform2DEffect
                 {
-                    TransformMatrix = Matrix3x2.CreateScale(scale),
+                    TransformMatrix = transform,
                     InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                     Source = new LinearTransferEffect
@@ -310,6 +335,23 @@ namespace builder
                         },
                     },
                 };
+            }
+        }
+
+
+        public Vector2 GetOverlayOffset()
+        {
+            if (isOffTop)
+            {
+                return new Vector2(0, (float)(-imageProcessor.MapTop.Size.Height));
+            }
+            else if (isOffBottom)
+            {
+                return new Vector2(0, (float)(imageProcessor.MasterMap.Size.Height + imageProcessor.MapBottom.Size.Height - combinedMap.Size.Height));
+            }
+            else
+            {
+                return Vector2.Zero;
             }
         }
 
@@ -351,12 +393,14 @@ namespace builder
             using (new Profiler("HikeMap.GetImageMap"))
             {
                 var map = overlayMap ?? combinedMap;
+                var offset = overlayMap != null ? Vector2.Zero : GetOverlayOffset();
+                var scale = new Vector2(subdiv) / imageProcessor.MasterMap.Size.ToVector2();
 
                 using (var result = new CanvasRenderTarget(imageProcessor.Device, subdiv, subdiv, 96))
                 {
                     var effect = new Transform2DEffect
                     {
-                        TransformMatrix = Matrix3x2.CreateScale(subdiv / (float)map.Bounds.Width, subdiv / (float)map.Bounds.Height),
+                        TransformMatrix = Matrix3x2.CreateTranslation(offset) * Matrix3x2.CreateScale(scale),
                         InterpolationMode = CanvasImageInterpolation.HighQualityCubic,
 
                         Source = new MorphologyEffect
@@ -371,6 +415,7 @@ namespace builder
 
                     using (var drawingSession = result.CreateDrawingSession())
                     {
+                        drawingSession.Clear(Colors.Transparent);
                         drawingSession.DrawImage(effect);
                     }
 

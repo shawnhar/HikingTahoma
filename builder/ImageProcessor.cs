@@ -14,11 +14,12 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 318;
+        const float totalLengthOfAllTrails = 323;
 
         public CanvasDevice Device { get; private set; }
-        public CanvasBitmap UncroppedMap { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
+        public CanvasBitmap MapTop { get; private set; }
+        public CanvasBitmap MapBottom { get; private set; }
 
         public int MapWidth => 1200;
         public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
@@ -28,9 +29,9 @@ namespace builder
         {
             Device = new CanvasDevice();
 
-            UncroppedMap = await LoadImage(sourceFolder, "map.png");
-
-            MasterMap = CropMap(UncroppedMap);
+            MasterMap = await LoadImage(sourceFolder, "map.png");
+            MapTop = await LoadImage(sourceFolder, "maptop.png");
+            MapBottom = await LoadImage(sourceFolder, "mapbottom.png");
         }
 
 
@@ -75,18 +76,16 @@ namespace builder
         }
 
 
-        public CanvasBitmap CropMap(CanvasBitmap bitmap)
+        public CanvasBitmap CombineMaps(CanvasBitmap top, CanvasBitmap bottom)
         {
-            const int mapW = 7011;
-            const int mapH = 5916;
-
-            using (new Profiler("ImageProcessor.CropMap"))
+            using (new Profiler("ImageProcessor.CombineMaps"))
             {
-                var result = new CanvasRenderTarget(Device, mapW, mapH, 96);
+                var result = new CanvasRenderTarget(Device, top.SizeInPixels.Width, top.SizeInPixels.Height + bottom.SizeInPixels.Height, 96);
 
                 using (var drawingSession = result.CreateDrawingSession())
                 {
-                    drawingSession.DrawImage(bitmap);
+                    drawingSession.DrawImage(top);
+                    drawingSession.DrawImage(bottom, 0, top.SizeInPixels.Height);
                 }
 
                 return result;
@@ -101,59 +100,75 @@ namespace builder
                 const int todoDilation = 24;
 
                 using (var allTrails = await LoadImage(sourceFolder, "alltrails.png"))
-                using (var trailsHiked = new CanvasRenderTarget(allTrails, allTrails.Size))
-                using (var trailsTodo = new CanvasRenderTarget(allTrails, allTrails.Size))
                 {
-                    // Combine the individual maps of all hikes done so far.
-                    using (var drawingSession = trailsHiked.CreateDrawingSession())
+                    var expandedSize = allTrails.Size;
+
+                    expandedSize.Height += MapTop.Size.Height;
+                    expandedSize.Height += MapBottom.Size.Height;
+
+                    var expandedOffset = new Vector2(0, (float)MapTop.Size.Height);                    
+
+                    using (var trailsHiked = new CanvasRenderTarget(allTrails, expandedSize))
+                    using (var trailsTodo = new CanvasRenderTarget(allTrails, allTrails.Size))
                     {
-                        foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
+                        // Combine the individual maps of all hikes done so far.
+                        using (var drawingSession = trailsHiked.CreateDrawingSession())
                         {
-                            drawingSession.DrawImage(hike.Map.CombinedOverlay);
-                        }
-                    }
-
-                    // Subtract out trails already hiked from the allTrails map, leaving only the sections that are still to be hiked.
-                    using (var drawingSession = trailsTodo.CreateDrawingSession())
-                    {
-                        drawingSession.DrawImage(allTrails);
-
-                        // Expand slightly to avoid partial alpha artifacts along edges.
-                        var dilate = new MorphologyEffect
-                        {
-                            Source = trailsHiked,
-                            Mode = MorphologyEffectMode.Dilate,
-                            Width = 6,
-                            Height = 6,
-                        };
-
-                        drawingSession.DrawImage(dilate, trailsTodo.Bounds, trailsTodo.Bounds, 1, CanvasImageInterpolation.Linear, CanvasComposite.DestinationOut);
-                    }
-
-                    // Write out an overlay showing trails that are still to be hiked.
-                    using (var todo = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
-                    {
-                        var scale = (float)MapWidth / (float)trailsTodo.SizeInPixels.Width;
-
-                        var todoOverlay = HikeMap.GetTrailOverlay(trailsTodo, trailsTodo.Bounds, scale, Colors.Red, todoDilation);
-
-                        using (var drawingSession = todo.CreateDrawingSession())
-                        {
-                            drawingSession.DrawImage(todoOverlay);
+                            foreach (var hike in hikes.OrderBy(hike => hike.HikeName))
+                            {
+                                drawingSession.DrawImage(hike.Map.CombinedOverlay, expandedOffset + hike.Map.GetOverlayOffset());
+                            }
                         }
 
-                        await SaveImage(todo, outPath, "todo.png");
+                        await SaveImage(trailsHiked, outPath, "hiked.png");
+
+                        // Subtract out trails already hiked from the allTrails map, leaving only the sections that are still to be hiked.
+                        using (var drawingSession = trailsTodo.CreateDrawingSession())
+                        {
+                            drawingSession.DrawImage(allTrails);
+
+                            // Expand slightly to avoid partial alpha artifacts along edges.
+                            var dilate = new MorphologyEffect
+                            {
+                                Mode = MorphologyEffectMode.Dilate,
+                                Width = 6,
+                                Height = 6,
+
+                                Source = new Transform2DEffect
+                                {
+                                    Source = trailsHiked,
+                                    TransformMatrix = Matrix3x2.CreateTranslation(-expandedOffset),
+                                },
+                            };
+
+                            drawingSession.DrawImage(dilate, trailsTodo.Bounds, trailsTodo.Bounds, 1, CanvasImageInterpolation.Linear, CanvasComposite.DestinationOut);
+                        }
+
+                        // Write out an overlay showing trails that are still to be hiked.
+                        using (var todo = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
+                        {
+                            var transform = Matrix3x2.CreateScale((float)MapWidth / (float)trailsTodo.SizeInPixels.Width);
+
+                            var todoOverlay = HikeMap.GetTrailOverlay(trailsTodo, trailsTodo.Bounds, transform, Colors.Red, todoDilation);
+
+                            using (var drawingSession = todo.CreateDrawingSession())
+                            {
+                                drawingSession.DrawImage(todoOverlay);
+                            }
+
+                            await SaveImage(todo, outPath, "todo.png");
+                        }
+
+                        // What portion of the total set of trails has been hiked so far?
+                        var pixelsHiked = CountPixels(trailsHiked);
+                        var todoPixels = CountPixels(trailsTodo);
+
+                        var completionRatio = pixelsHiked / (pixelsHiked + todoPixels);
+
+                        var distanceHiked = totalLengthOfAllTrails * completionRatio;
+
+                        return (distanceHiked, completionRatio);
                     }
-
-                    // What portion of the total set of trails has been hiked so far?
-                    var pixelsHiked = CountPixels(trailsHiked);
-                    var todoPixels = CountPixels(trailsTodo);
-
-                    var completionRatio = pixelsHiked / (pixelsHiked + todoPixels);
-
-                    var distanceHiked = totalLengthOfAllTrails * completionRatio;
-
-                    return (distanceHiked, completionRatio);
                 }
             }
         }
@@ -165,7 +180,7 @@ namespace builder
             {
                 var bins = CanvasImage.ComputeHistogram(bitmap, bitmap.Bounds, bitmap.Device, EffectChannelSelect.Alpha, 2);
 
-                return bins[1];
+                return bins[1] * (float)(bitmap.Size.Width * bitmap.Size.Height);
             }
         }
 
