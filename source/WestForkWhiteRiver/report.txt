@@ -1,6 +1,6 @@
 West Fork White River
 strenuous
-10.8 2240 3200
+10.8 1800 3200
 Sunrise
 none
 2021
