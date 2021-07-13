@@ -120,8 +120,6 @@ namespace builder
                             }
                         }
 
-                        await SaveImage(trailsHiked, outPath, "hiked.png");
-
                         // Subtract out trails already hiked from the allTrails map, leaving only the sections that are still to be hiked.
                         using (var drawingSession = trailsTodo.CreateDrawingSession())
                         {
