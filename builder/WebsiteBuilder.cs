@@ -61,6 +61,8 @@ namespace builder
                     await hike.WriteOutput(hikes, outFolder.Path);
                 }
 
+                await ProcessAnimalPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
+
                 // Generate map overlay images for the distances planning tool.
                 await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
 
@@ -230,6 +232,25 @@ namespace builder
             writer.WriteLine("        </tr>");
             writer.WriteLine("      </table>");
             writer.WriteLine("    </div>");
+        }
+
+
+        async Task ProcessAnimalPhotos(string sourcePath, string outPath, ImageProcessor imageProcessor)
+        {
+            using (new Profiler("WebsiteBuilder.ProcessAnimalPhotos"))
+            {
+                sourcePath = Path.Combine(sourcePath, "Animals");
+                outPath = Path.Combine(outPath, "Animals");
+
+                Directory.CreateDirectory(outPath);
+
+                foreach (var filename in Directory.GetFiles(sourcePath, "*.jpg").Select(Path.GetFileName))
+                {
+                    var photo = new Photo(filename, string.Empty);
+
+                    await imageProcessor.WritePhoto(photo, sourcePath, outPath);
+                }
+            }
         }
 
 

@@ -324,5 +324,42 @@ namespace builder
 
             return result;
         }
+
+
+        public async Task WritePhoto(Photo photo, string sourcePath, string outPath)
+        {
+            using (new Profiler("ImageProcessor.WritePhoto"))
+            {
+                const int thumbnailWidth = 1200;
+                const int thumbnailHeight = 380;
+
+                int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
+
+                using (var bitmap = await LoadImage(sourcePath, photo.Filename))
+                {
+                    if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
+                    {
+                        // Resize if the source is excessively large.
+                        using (var sensibleSize = ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                        {
+                            await SaveImage(sensibleSize, outPath, photo.Filename);
+                        }
+                    }
+                    else
+                    {
+                        // If the size is ok, just copy it directly over.
+                        File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
+                    }
+
+                    // Also create thumbnail versions.
+                    using (var thumbnail = ResizeImage(bitmap, thumbnailWidth, thumbnailHeight))
+                    {
+                        await SaveImage(thumbnail, outPath, photo.Thumbnail);
+
+                        photo.ThumbnailSize = thumbnail.SizeInPixels;
+                    }
+                }
+            }
+        }
     }
 }

@@ -205,7 +205,7 @@ namespace builder
 
                 foreach (var photo in Sections.SelectMany(section => section.Photos))
                 {
-                    await WritePhoto(photo, outPath);
+                    await imageProcessor.WritePhoto(photo, sourcePath, outPath);
                 }
 
                 WriteHtml(hikes, outPath);
@@ -425,43 +425,6 @@ namespace builder
             }
 
             return string.Format("<a href=\"../{0}/\">{1}</a>", target.FolderName, target.HikeName);
-        }
-
-
-        async Task WritePhoto(Photo photo, string outPath)
-        {
-            using (new Profiler("Hike.WritePhoto"))
-            {
-                const int thumbnailWidth = 1200;
-                const int thumbnailHeight = 380;
-
-                int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;
-
-                using (var bitmap = await imageProcessor.LoadImage(sourcePath, photo.Filename))
-                {
-                    if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
-                    {
-                        // Resize if the source is excessively large.
-                        using (var sensibleSize = imageProcessor.ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
-                        {
-                            await imageProcessor.SaveImage(sensibleSize, outPath, photo.Filename);
-                        }
-                    }
-                    else
-                    {
-                        // If the size is ok, just copy it directly over.
-                        File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
-                    }
-
-                    // Also create thumbnail versions.
-                    using (var thumbnail = imageProcessor.ResizeImage(bitmap, thumbnailWidth, thumbnailHeight))
-                    {
-                        await imageProcessor.SaveImage(thumbnail, outPath, photo.Thumbnail);
-
-                        photo.ThumbnailSize = thumbnail.SizeInPixels;
-                    }
-                }
-            }
         }
     }
 }
