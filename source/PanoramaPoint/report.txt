@@ -6,11 +6,11 @@ none
 older
 
 [Tatoosh.jpg] Mount Adams peeking over the Tatoosh Range, right by the parking lot at Paradise
-[NisquallyValley.jpg] Looking down the Nisqually river valley
-[Summit.jpg] Summit view and Nisqually Glacier
-[PhotoFrame.jpg] The gap between these trees makes a perfect frame for a selfie!
+[Flowers.jpg] Spring flowers along the Golden Gate trail
+[AltaVista.jpg] Fall colors at Alta Vista
+[Summit.jpg] Summit view and Nisqually Glacier, from the eastern part of the loop near Sluiskin Falls
+[PhotoFrame.jpg] The gap between these trees (approaching Panorama Point from the west) makes a perfect frame for a selfie!
 [Trail.jpg] Along the Skyline Trail
-[AltaVista.jpg] Fall colors near Alta Vista
 
 Only one of the network of paths above Paradise is officially named the Skyline 
 Trail, but I view them all as combining to form one big multiple-choice hike. 
@@ -54,9 +54,20 @@ don't keep walking north forever, or you'll end up at [CampMuir]!
 After the High and Low Skyline trails rejoin, head downhill to the south before 
 arriving at one last decision point: turn southwest along the Golden Gate trail 
 for the shortest route home, or southeast, remaining on the official Skyline 
-trail, for a longer hike that passes Sluiskin Falls? Shortly before these 
-falls comes the option of further extending your hike by adding in the 
+trail, for a longer hike passing near the inaccessible Sluiskin Falls? (which 
+can be viewed from the road but not reached by trail). Shortly before the falls 
+comes the option of further extending your hike by adding in the 
 [ParadiseGlacier] trail.
+
+Near Sluiskin Falls, a bench marks the spot where Sluiskin, a Native American 
+(probably Taidnapam) guide, waited while Hazard Stevens and Philemon van Trump 
+made the first documented summit of Mount Rainier. I find many accounts of this 
+tale uncomfortably racist, as they infantilize the 'superstitious' fear with 
+which Sluiskin warned of the powerful guardian who dwelt on the summit in a 
+lake of fire, and the astonishment with which he greeted the climbers' 
+successful return. It sounds to me like Sluiskin was sensibly worried that 
+these explorers were taking a risk of which he understood more than they did, 
+and about the likelihood that he'd be blamed should he return without them!
 
 The Golden Gate and Skyline options rejoin shortly before [MyrtleFalls], after 
 which the paving resumes, crowd density increases, and it's a gentle stroll 
