@@ -37,7 +37,8 @@ namespace builder
 
                 // Process all the hikes.
                 var hikes = (await sourceFolder.GetFoldersAsync())
-                            .Where(folder => Path.GetFileName(folder.Path) != "Overlays")
+                            .Where(folder => Path.GetFileName(folder.Path) != "Animals" && 
+                                             Path.GetFileName(folder.Path) != "Overlays")
                             .Select(folder => new Hike(folder.Path, imageProcessor))
                             .ToList();
 
