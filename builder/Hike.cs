@@ -12,6 +12,7 @@ namespace builder
         public string HikeName      { get; private set; }
         public string Difficulty    { get; private set; }
         public string Distance      { get; private set; }
+        public bool   IsOneWay      { get; private set; }
         public string ElevationGain { get; private set; }
         public string MaxElevation  { get; private set; }
         public string Region        { get; private set; }
@@ -48,7 +49,14 @@ namespace builder
                 }
                 else if (Difficulty.Contains("easy"))
                 {
-                    return Tuple.Create("easy", "Easy");
+                    if (Difficulty.Contains("strenuous"))
+                    {
+                        return Tuple.Create("moderate", "Moderate");
+                    }
+                    else
+                    {
+                        return Tuple.Create("easy", "Easy");
+                    }
                 }
                 else if (Difficulty.Contains("moderate"))
                 {
@@ -100,6 +108,12 @@ namespace builder
                 Distance = split[0];
                 ElevationGain = split[1];
                 MaxElevation = split[2];
+
+                if (Distance.EndsWith(".oneway"))
+                {
+                    Distance = Distance.Substring(0, Distance.Length - ".oneway".Length);
+                    IsOneWay = true;
+                }
 
                 // Fourth line is the region.
                 Region = lines[3];
@@ -241,7 +255,7 @@ namespace builder
                     writer.WriteLine("          <td class=\"stats\">");
                     writer.WriteLine("            <p class=\"hikename\">{0}</p>", HikeName);
                     writer.WriteLine("            <p class=\"detail\">Difficulty: {0}</p>", Difficulty);
-                    writer.WriteLine("            <p class=\"detail\">{0} miles</p>", Distance);
+                    writer.WriteLine("            <p class=\"detail\">{0} miles{1}</p>", Distance, IsOneWay ? " one way" : string.Empty);
                     writer.WriteLine("            <p class=\"detail\">Elevation gain: {0}'</p>", ElevationGain);
                     writer.WriteLine("            <p class=\"detail\">Max elevation: {0}'</p>", MaxElevation);
                     writer.WriteLine("            <p class=\"detail\">Camps: {0}</p>", CampSites);
