@@ -47,22 +47,20 @@ namespace builder
                 {
                     return Tuple.Create("x", "Backpacking");
                 }
-                else if (Difficulty.Contains("easy"))
+
+                var epos = (uint)Difficulty.IndexOf("easy");
+                var mpos = (uint)Difficulty.IndexOf("moderate");
+                var spos = (uint)Difficulty.IndexOf("strenuous");
+
+                if (epos < mpos && epos < spos)
                 {
-                    if (Difficulty.Contains("strenuous"))
-                    {
-                        return Tuple.Create("moderate", "Moderate");
-                    }
-                    else
-                    {
-                        return Tuple.Create("easy", "Easy");
-                    }
+                    return Tuple.Create("easy", "Easy");
                 }
-                else if (Difficulty.Contains("moderate"))
+                else if (mpos < spos)
                 {
                     return Tuple.Create("moderate", "Moderate");
                 }
-                else if (Difficulty.Contains("strenuous") || Difficulty.Contains("wtf"))
+                else if (spos < uint.MaxValue || Difficulty.Contains("wtf"))
                 {
                     return Tuple.Create("strenuous", "Strenuous");
                 }
