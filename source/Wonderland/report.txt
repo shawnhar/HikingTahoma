@@ -3,13 +3,7 @@ strenuous 7-12 days
 93 27,000 6785
 Longmire
 Pyramid Creek, Devils Dream, South Puyallup River, Klapatche Park, North Puyallup River, Golden Lakes, South Mowich River, Mowich Lake, Ipsut Creek, Eagles Roost, Cataract Valley, Carbon River Camp, Dick Creek, Mystic Camp, Granite Creek, Sunrise Camp, White River, Summerland, Indian Bar, Nickel Creek, Maple Creek, Paradise River
-not yet!
-
-<i>Note: the Wonderland is unique among the entries on this website because I haven't 
-actually hiked the whole thing yet. As of this writing I've day- and section-hiked 
-approximately 2/3 of the trail, and I'm researching in preparation for a trip this 
-September, so I decided to go ahead and start writing things down as I'm learning 
-them.</i>
+2021
 
 The Wonderland Trail is a 93 mile loop circumnavigating Mount Rainier. Along the way it 
 takes in many of the best examples of every kind of terrain the mountain has to offer, 
@@ -42,10 +36,10 @@ on the other hand, must be specifically reserved in advance.
 
 The permit application process can vary from year to year, so check
 <a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
-for the latest information. Two thirds of available capacity is typically allocated 
-through a lottery during March, while a third is held in reserve for walkup permits. 
+for the latest information. Two thirds of capacity is typically allocated 
+through a lottery in March, while a third is held in reserve for walkup permits. 
 Walkups are issued on a first-come-first-served basis to anyone who arrives in person at 
-a ranger station for a trip starting that day or the day after.
+a ranger station for a trip starting that day or the next.
 
 The permit lottery is extremely competitive. Around 600 Wonderland circuits can be 
 reserved in advance each season, while another ~300 are issued as walkup permits, but in 
@@ -96,7 +90,7 @@ First question is where to start? There are multiple trailheads around the Wonde
   <li>
     Longmire (southwest side of the mountain) is the most popular. It's easily accessible 
     year-round, has copious parking, toilets with running water, a restaurant, and a 
-    small shop in case you forgot your toothbrush. There's also a historic lodge here, so 
+    small shop in case you forgot your toothbrush. There's also a historic lodge where 
     you could stay the night before or after your hike.
   </li>
   <li>
@@ -115,7 +109,7 @@ First question is where to start? There are multiple trailheads around the Wonde
     dusty, potholed road. It may be closed due to snow early or late in the season.
   </li>
   <li>
-    Box Canyon (southeast side) has plenty of parking space and toilets.
+    Box Canyon (southeast side) has plenty of parking space and toilets with running water.
   </li>
   <li>
     Fryingpan Creek and Reflection Lakes are theoretically valid options, but not 
@@ -132,8 +126,8 @@ Whichever of Longmire or Sunrise you don't start at, the cafe there may offer a 
 mid-trip lunch break. Just be aware that stopping for a burger at Sunrise adds an extra 
 mile.
 
-Next up, which direction to hike? Personally I don't think this matters much, as (being a 
-loop) either direction involves the exact same amount of up and down, plus the same views 
+Next up, which direction to hike? Personally I don't think this matters much, as 
+either direction involves the exact same amount of up and down, plus the same views 
 as long as you remember to turn around occasionally. Minor factors to consider are:
 
 <ul>
@@ -142,14 +136,13 @@ as long as you remember to turn around occasionally. Minor factors to consider a
     staying at Klapatche Park, which often dries up later in the season.
   </li>
   <li>
-    The sketchy washed-out section of trail along Stevens Canyon is easier to traverse 
+    The washed out section of trail along Stevens Canyon is easier to traverse 
     going clockwise.
   </li>
   <li>
-    Counterclockwise has the advantage that, because clockwise is the more popular 
-    direction, when going the opposite way you're likely to encounter a wider variety of 
-    new temporary friends along the trail, and thus get better what's-coming-up-next 
-    intel.
+    Some claim that going counterclockwise has steeper uphills vs. clockwise where the 
+    descents are steeper, but I'm not convinced. Seems to me there is plenty of both in 
+    either direction!
   </li>
 </ul>
 
@@ -204,14 +197,14 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>7</td>
     <td>yes</td>
     <td>5100'</td>
-    <td>Notoriously buggy during summer</td>
+    <td>Notoriously buggy in summer</td>
   </tr>
   <tr>
     <td>South Puyallup River</td>
     <td>4</td>
     <td>yes</td>
     <td>4000'</td>
-    <td></td>
+    <td>Don't miss the columnar andesite rock formation opposite the toilet</td>
   </tr>
   <tr>
     <td>Klapatche Park</td>
@@ -238,7 +231,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>5</td>
     <td>yes</td>
     <td>5100'</td>
-    <td></td>
+    <td>Great place to watch the sunset</td>
   </tr>
   <tr>
     <td>South Mowich River</td>
@@ -250,11 +243,11 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
   <tr>
     <td>Mowich Lake</td>
     <td>10</td>
-    <td>yes</td>
+    <td>yes according to the booking system, but not really in practice: you'll just have to squish tents in wherever they can fit</td>
     <td>4900'</td>
     <td>
       Doubles as a popular frontcountry car camping site, so lacks privacy and is often 
-      noisy
+      noisy, but having resupply cache and picnic tables right by camp is a huge plus
     </td>
   </tr>
   <tr>
@@ -279,7 +272,10 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>6</td>
     <td>yes</td>
     <td>4600'</td>
-    <td><i>(if taking Spray Park)</i></td>
+    <td>
+      <i>(if taking Spray Park)</i>
+      Situated below a talus field, so pika will likely join in your campsite conversations
+    </td>
   </tr>
   <tr>
     <td>Carbon River Camp</td>
@@ -293,7 +289,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>2</td>
     <td>no</td>
     <td>4200'</td>
-    <td></td>
+    <td>Cool site overlooking the Carbon Glacier</td>
   </tr>
   <tr>
     <td>Mystic Camp</td>
@@ -326,8 +322,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>yes</td>
     <td>4200'</td>
     <td>
-      This doubles as a frontcountry car camping site, but is situated in thick forest so 
-      has more quiet & privacy than Mowich Lake
+      This doubles as a frontcountry car camping site, but has more quiet &amp; privacy than Mowich Lake
     </td>
   </tr>
   <tr>
@@ -356,7 +351,7 @@ Going clockwise from Longmire, campsites along the Wonderland trail are:
     <td>4</td>
     <td>yes</td>
     <td>2800'</td>
-    <td></td>
+    <td>Pretty forest camp, but suffers occasional road noise</td>
   </tr>
   <tr>
     <td>Paradise River</td>
@@ -444,7 +439,8 @@ cache food and fuel at Longmire, Mowich Lake, Sunrise, and White River. Caches m
 stored in rodent-proof containers: typically a 5 gallon plastic bucket. Food 
 caches can be mailed or delivered by hand, while fuel caches must be hand-delivered. See
 <a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
-for details.
+for details, and note that caches for pickup at Mowich Lake should be delivered to the 
+Carbon River Ranger Station instead.
 
 Sunrise and White River are close enough together that it doesn't make sense to cache at 
 both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
@@ -458,9 +454,9 @@ as to steal from others in the wilderness: I pray to Our Lady The Mountain that 
 be eaten by a bear forthwith :-)
 
 Speaking of which: bears are common on Rainier, so it's important to properly hang all 
-your food and other scented supplies. Thanks to bear poles at every camp, bear canisters 
-are not needed during the main hiking season, but the poles are taken down during the 
-off-season.
+your food and other scented supplies such as toiletries. Thanks to bear poles at every 
+camp, bear canisters are not needed during the main hiking season, but the poles are 
+taken down during the off-season.
 
 
 ## Hazards
@@ -479,14 +475,10 @@ set out, but be aware that a log which existed when you started your hike may ha
 away by the time you arrive at its river, or a missing bridge may have been replaced. 
 Judge for yourself, and turn back if you don't like what you see.
 
-Potentially problematic river crossings are:
+With the caveat that even minor streams may be problematic at times of high flow, notable 
+crossings to be aware of include:
 
 <ul>
-  <li>
-    Kautz Creek (between Longmire and Pyramid Creek Camp) was barely a trickle each time 
-    I've crossed it so far, but I'm told the level can increase significantly during 
-    heavy rain.
-  </li>
   <li>
     Pyramid Creek (between Pyramid Creek Camp and Devil's Dream) is a substantial river 
     crossed by log bridge with railing.
@@ -499,12 +491,12 @@ Potentially problematic river crossings are:
     alternatives if you can't find a good way across it.
   </li>
   <li>
-    The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) is 
-    another log-with-railing, which happens to be washed out at the time I'm writing 
-    this. This would be a risky river to attempt fording if there is no bridge in place 
-    when you arrive there. An alternative is to take the Spray Park route instead of 
-    going via Ipsut Pass and Ipsut Creek, which avoids this log bridge location and 
-    allows you to cross the Carbon River on a nice suspension bridge instead.
+    The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) happens 
+    to be washed out at the time I'm writing this. This would be a risky river to attempt 
+    fording if there is no bridge in place when you arrive there. An alternative is to 
+    take the Spray Park route instead of going via Ipsut Pass and Ipsut Creek, which 
+    avoids this log bridge location and allows you to cross the Carbon River on a nice 
+    suspension bridge instead.
   </li>
   <li>
     Winthrop Creek (between Mystic Lake and Granite Creek) was the site of a fatality in 
@@ -513,10 +505,9 @@ Potentially problematic river crossings are:
     melt times.
   </li>
   <li>
-    White River (leaving White River campground heading toward Fryingpan Creek) is 
-    another log-with-railing that's washed out at the time of this writing. If you can't 
-    cross safely here, detour down the road and hop back onto the Wonderland shortly 
-    after crossing the road bridge.
+    White River (leaving White River campground heading toward Fryingpan Creek) is also 
+    washed out at the time of this writing. If you can't cross safely here, detour down 
+    the road and hop back onto the Wonderland shortly after crossing the road bridge.
   </li>
 </ul>
 
@@ -526,14 +517,14 @@ Bar) and Spray Park (if you choose to go that way). These often remain snowy unt
 end of August, and there's a steep traverse approaching Panhandle Gap from the north that 
 would be un-fun to slide down. Spikes aren't needed once most of the trail has melted, 
 but it'll be easier to cross these high places if you can arrange to do so later in the 
-day, when the snow is soft rather than icy. And make sure your navigation is solid for 
+day when the snow is soft rather than icy. And make sure your navigation is solid for 
 these sections! Most of the Wonderland Trail is obvious to follow, but Panhandle Gap and 
 the top of Spray Park are just rocks and snow patches with cairns to mark the way, so 
 it'd be easy to lose your way during bad weather.
 
 One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
-where the trail traverses across a washout with loose, unstable footing. I have yet to 
-experience this myself, but am told it is particularly unpleasant in wet conditions.
+where the trail crosses a washout with loose, unstable footing. I am told this is 
+particularly unpleasant in wet conditions.
 
 
 ## Section Hiking|Section Hiking The Wonderland Trail
@@ -559,5 +550,603 @@ or shorter backpacking trips:
 
 # My Wonderland
 
-Trail notes and photos will be added here once I've completed hiking the Wonderland. I 
-have a permit for September 2021, so wish me luck!
+<i>pilgrimage (noun)</i>
+
+<i>1. a journey, especially a long one, made to some sacred place as an act of religious devotion</i>
+
+<i>2. any long journey, especially one undertaken as a quest or for a votive purpose, as to pay homage</i>
+
+The Wonderland Trail means a lot to me. It is the reason I learned to backpack, and the 
+reason this website exists. I got lucky in the 2021 permit lottery, and completed a 
+leisurely 11 day circuit in early September, going clockwise from Longmire via Spray Park.
+
+
+## Day 1: Longmire to Devil's Dream
+
+[1-HelloGorgeous.jpg] Our first proper view of Tahoma comes while crossing Kautz Creek
+[1-PyramidCreek.jpg] Bridge over Pyramid Creek
+[1-SquawLake.jpg] Squaw Lake is shrunken and muddy, not a great water source at this time of year
+[1-IndianHenrys.jpg] Ranger patrol cabin at Indian Henry's Hunting Grounds
+[1-Evening.jpg] Evening light from Indian Henry's Hunting Grounds
+[1-Camp.jpg] Camped at Devil's Dream
+
+<p class="subheading">8.4 miles, 3200' gain, 1200' descent</p>
+
+Five of us set out from Longmire: me (Shawn), Meg, Sasha, Tanner, and Tanner. I had 
+planned the trip for a group of seven, but one dropped out in advance and Mike ended up 
+only able to join for a section due to work commitments.
+
+I arrived at the ranger station around 9 AM to activate my permit, and met up with the 
+others before 10. We were in no great hurry to get going as this was a short first day, 
+so we stopped for a pricy but delicious latte at the National Park Inn. The Longmire gift 
+shop offers a final opportunity to pick up any last minute supplies. Meg bought a map of 
+the trail, which was arguably unnecessary given how easy the Wonderland is to follow and 
+that she was hiking in a large group, but would later prove to be a wise decision.
+
+Onto the trail, and straight into one of so many Big Ups to come. We climbed through lush 
+green forest, descended slightly to cross the flood-damaged valleys of Kautz Creek and 
+Pyramid Creek, then climbed more through varying forest to Devil's Dream camp, which is 
+tucked unobtrusively into the woods by the side of the trail. Pyramid Creek really 
+brought home how dynamic this landscape is, because several of us had visited here last 
+year, and remember the river channel being in a different place with a memorable double 
+bridge across it. That bridge is now partially buried in a foot or more of rocks, while a 
+new bridge crosses the river in its revised location.
+
+Aside: along this trip I heard many hikers disparaging forested trail sections such as 
+this, viewing them merely as a tax that must be paid in order to reach the dramatic 
+alpine regions. I feel so sorry for these people! Learn to focus your gaze on the small 
+and nearby as well as the grand and distant, open your ears to the trees which all have 
+stories to tell, and you will find so much more delight just waiting to be had.
+
+The Devil's Dream water source had dried up due to the late season, but we were 
+forewarned of that so continued past camp up to the meadows and patrol cabin at Indian 
+Henry's Hunting Grounds. Here we found water, enjoyed dinner, and watched the mountain 
+change color as evening arrived. Without this extension, the day would have been just 5.8 
+miles with 2800' elevation gain.
+
+Today's section of the Wonderland can also be day hiked as [IndianHenrysFromLongmire].
+
+
+## Day 2: Devil's Dream to South Puyallup River
+
+[2-EarlyLight.jpg] Indian Henry's patrol cabin in the early morning light
+[2-MirrorLake.jpg] Mirror Lake is a highly worthwhile detour
+[2-SuspensionBridge.jpg] Tahoma Creek suspension bridge
+[2-CrossingTheBridge.jpg] Crossing the suspension bridge
+[2-Tahoma.jpg] Tahoma, looking slumped and dissolute from this western vantage
+[2-NeedAGeologist.jpg] I need a geologist to tell me what these bands of differently colored rock are!
+[2-TahomaGlacier.jpg] Tahoma Glacier, viewed from the top of Emerald Ridge
+[2-SouthPuyallup.jpg] Looking down the South Puyallup river valley from the top of Emerald Ridge
+[2-EmeraldRidge.jpg] Emerald Ridge
+[2-ColumnarAndesite.jpg] Columnar andesite near the toilet at South Puyallup River camp, aka the Devil's Pipe Organ
+[2-ColumnarDebris.jpg] Debris from the columnar andesite looks strangely artificial with straight edges and perfect angles
+[2-Camp.jpg] Camped at South Puyallup River
+
+<p class="subheading">8 miles, 2300' gain, 3000' descent</p>
+
+On our second day, the "Wonder" part of the Wonderland really kicked in. We retraced our 
+steps up to Indian Henry's Hunting Grounds and explored the side spur to the attractive 
+Mirror Lakes. Then comes a Big Down, switchbacking through forest into the valley of 
+Tahoma Creek, which is crossed on a dramatic and wobbly suspension bridge.
+
+Upward again, through a fascinatingly bizarre and desolate landscape of volcanic rock 
+forms modified by glacial erosion. We ascended a lateral moraine, and although I was 
+delighted with the composition of our hiking group, it was unfortunate that none of us 
+were geologists. Note to self: find and befriend more geologists, so they can explain 
+exactly what I'm looking at on future trips.
+
+The climb tops out at Emerald Ridge, which is a high and almost shockingly green meadow 
+with amazing views over the Tahoma Glacier and down the valley of the South Puyallup 
+River. An incredible spot for lunch, and also the start of our second Big Down of the 
+day. The trail consists of loose rock as it descends a sometimes narrow and 
+precarious/exposed ridge toward the South Puyallup River: careful footing is essential 
+here.
+
+What a day. What a trail. What a mountain.
+
+
+## Day 3: South Puyallup River to Golden Lakes
+
+[3-ApproachingStAndrewsPark.jpg] Approaching St. Andrews Park
+[3-StAndrewsLake.jpg] St. Andrews Lake is a perfect spot for first lunch
+[3-TokalooSpire.jpg] Looking upward past Tokaloo Spire
+[3-TokalooSpireAndTahomaGlacier.jpg] Tokaloo Spire and the upper reaches of the Tahoma Glacier
+[3-Trail.jpg] Along the trail
+[3-AuroraLake.jpg] Aurora Lake (by Klapatche Park) is dried up at this time of year
+[3-Descending.jpg] Descending from Klapatche Park to North Puyallup
+[3-LunchAtNorthPuyallup.jpg] View from our second lunch spot near North Puyallup River
+[3-Climbing.jpg] Climbing upward through lush forest 
+[3-Huckleberry.jpg] Delicious antioxidants are provided free of charge along this trail
+[3-ApproachingSunsetPark.jpg] Approaching Sunset Park
+[3-SunsetPark.jpg] Sunset Park
+[3-PatrolCabin.jpg] Golden Lakes patrol cabin
+[3-GoldenLake.jpg] One of the Golden Lakes: pretty enough, but also stagnant and muddy so my filter needed a lot of backwashing
+[3-Camp.jpg] Camped at Golden Lakes
+[3-Sunset.jpg] Sunset at Golden Lakes
+
+<p class="subheading">11.8 miles, 4100' gain, 3300' descent</p>
+
+This was our hardest day, both in total mileage and elevation gain. It consists of a Big 
+Up, Big Down, then another Big Up.
+
+The trail switchbacks up through forest, then straightens out as it ascends a ridgeline 
+and views open up, including behind us to the Gobbler's Knob fire lookout. Into the 
+subalpine of St. Andrews Park, a lunch stop at the stupendously beautiful St. Andrews 
+Lake, then a relatively level traverse across to Klapatche Park and its predictably 
+dried-up-by-September water source, Aurora Lake.
+
+Now down, down, down a series of steep switchbacks to the North Puyallup River, with 
+periodic views of dramatic rock spires above us. But what is this: stonework so deep in 
+the wilderness? North Puyallup Camp is where construction ended when the attempt to 
+connect the Westside Road through to Mowich Lake was abandoned, so these stone bulwarks 
+have been growing moss for nearly a century now.
+
+The second climb of the day is a sneaky one. It starts gently through rich forest, so I 
+was moving fast and feeling good. But it gets steeper. And steeper. I was no longer 
+feeling so strong... Fortunately there were many delicious huckleberries (technically 
+blueberries, but huckleberry is the local name for mountain blueberries) along this 
+section of trail, so I stopped to snack often.
+
+Eventually the forest opens into the unusual landscape of Sunset Park. Fall foliage 
+colors make a stark contrast with the bright white skeletons of dead trees, bleached by 
+the weather after an old fire, and Her Highness Tahoma The Great overlooks it all.
+
+Near bear encounter #1: shortly after Meg and I passed through this area, Sasha and 
+Tanner met a bear along the trail, and Mike saw one in the same place later that evening. 
+We must have walked right by it.
+
+Golden Lakes is a beautiful campsite. The lake is pretty, although muddy and far from my 
+favorite water source, but the sunset viewpoint above camp more than makes up for that. 
+Mike joined us here, having hiked in from Mowich Lake.
+
+For dinner I tried my first ramen bomb, a recipe that Sasha and Tanner told me about. 
+Take spicy instant ramen, cook them with more water than usual, then stir in a packet of 
+instant mashed potatoes. And lo, it was good. It is essential that this meal ONLY EVER be 
+eaten after a long day on the trail, however :-)
+
+This got me thinking. A problem with freeze dried dinners is that if you include enough 
+water to avoid crunchy non-rehydrated bits, everything inevitably ends up too soupy. 
+Could that be fixed by turning all meals into mini-bombs? Wait until they are fully 
+rehydrated and then add just enough instant potato powder to soak up excess moisture. 
+This warrants further investigation.
+
+
+## Day 4: Golden Lakes to Mowich Lake
+
+[4-Stumps.jpg] Descending into the river valley
+[4-Fungi.jpg] Fascinating fungi - is anyone in the mood for pizza? :-)
+[4-Lush.jpg] Lush temperate rainforest feels primeval and oxygenated
+[4-SouthMowichRiver.jpg] Crossing the South Mowich River
+[4-BridgeGraveyard.jpg] A graveyard of dead bridges, left behind each time the river flooded or changed course
+[4-Resupply.jpg] Cached resupply treats were waiting for us at Mowich Lake
+[4-MowichLake.jpg] Mowich Lake is a great spot for a swim
+[4-Camp.jpg] Camped at Mowich Lake
+
+<p class="subheading">10.2 miles, 2600' gain, 2700' descent</p>
+
+This was a straightforward day consisting of a Big Down to cross both the South and North 
+Mowich Rivers, followed by a Big Up to Mowich Lake, all through forest without views. But 
+what a forest: this valley is wild and remote temperate rainforest where it would feel 
+unsurprising to run across a dinosaur, or at very least a sasquatch.
+
+Speaking of which: South Mowich River is a notoriously difficult crossing with a bad 
+habit of shedding any bridges that are put across it. The bridge was in when we crossed, 
+but a ranger later told us it washed out again the very next day. It was fascinating to 
+see the wide river plain littered with remnants of bridges prior.
+
+Near the river is an old wooden shelter with amusing graffiti carved into its beams: 
+"Will it ever stop raining?" and "Drip, Drip".
+
+Mowich Lake is a most unusual campsite, because it's not wilderness at all: tents are 
+pitched tightly together in an old gravel parking lot. There is no privacy here, but 
+there are picnic benches, and, glory of glory, it's our first cache resupply location! We 
+can throw away trash, refill our food bags, and enjoy some heavier treats. I reverted to 
+my college days by eating Heinz baked beans, cold, straight from the tin. So delicious. 
+At the ranger cabin is a hiker box where unwanted supplies can be donated for anyone else 
+to pick up, and Sasha was delighted to find couscous there. We went for a swim. Life is 
+good.
+
+
+## Day 5: Mowich Lake to Cataract Valley
+
+[5-Silhouette.jpg] Trees silhouetted against the cloud
+[5-MistyTrees.jpg] A damp, misty morning
+[5-MistyTrail.jpg] Along the short detour to Spray Falls - but it was too foggy to even see the falls today!
+[5-EnteringSprayPark.jpg] Entering Spray Park
+[5-Snowfields.jpg] There are still a couple of small snowfields at the top of Spray Park
+[5-CairnsInTheMist.jpg] Cairns mark our way through the mist
+[5-Camp.jpg] Camped at Cataract Valley
+[5-Toilet.jpg] Nice location for a toilet: pikas can watch me poop
+
+<p class="subheading">6.9 miles, 2100' gain, 2600' descent</p>
+
+Meg and Tanner got up early for a dawn hike to [TolmiePeak] while the rest of us enjoyed 
+a relaxed start to the day. Turns out the early risers were the only ones to enjoy views 
+today, because the clouds rolled in and made our trip over Spray Park an experience of 
+moody misty dampness. This is one of the higher parts of the trail where plants give way 
+to barren rocks, cairns mark the way, and even this late in the season there were a 
+couple of small snowfields to cross.
+
+Near bear encounter #2: berry pickers coming the other way told us there was a bear in 
+the meadow a few hundred yards ahead, but we saw it not.
+
+Unfortunately, Tanner developed a knee injury which slowed him down and made continuing 
+on this strenuous trail inadvisable. After sleeping on it, he and Meg made the wise 
+decision to bail, so they headed out the next day down the gentle gradient to the Carbon 
+River entrance, where they got a ride from a nice lady in a sporty red convertible.
+
+Congrats Meg and Tanner on completing the western section of the Wonderland, from 
+Longmire to Carbon River via Spray Park!
+
+Today's section of the Wonderland can also be day hiked as [SprayPark].
+
+
+## Day 6: Cataract Valley to Mystic Camp
+
+[6-SuspensionBridge.jpg] Suspension bridge over the Carbon River
+[6-Uphill.jpg] Trail heads steeply uphill
+[6-CarbonGlacier.jpg] The Carbon Glacier
+[6-CarbonGlacier2.jpg] Clouds over the mountain and Carbon Glacier
+[6-MorainePark.jpg] Tahoma from Moraine Park
+[6-MorainePark2.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick"
+[6-MorainePark3.jpg] Fall colors at Moraine Park
+[6-MysticLake.jpg] Mystic Lake is an AMAZING place to go for a swim
+[6-MysticLake2.jpg] Mystic Lake
+[6-ViewFromPatrolCabin.jpg] View from the patrol cabin above Mystic Lake
+[6-MysticLake3.jpg] Evening comes to Mystic Lake
+[6-Camp.jpg] At Mystic Camp
+
+<p class="subheading">6.6 miles, 3200' gain, 2000' descent</p>
+
+We awoke to blue skies and glorious sunshine, perfect for this incredible section of 
+trail. Downhill at first, over the Carbon River on our second suspension bridge, and then 
+a Big Up climbing steeply alongside and with glorious views over the Carbon Glacier. 
+Views continued as we entered Moraine Park, where Mike peeled off to climb up Curtis 
+Ridge, and then we arrived at Mystic Lake which is one of my most favoritest specialest places ever.
+
+The campsite is a short distance past the lake, so we set up our tents, hung damp 
+clothing (from yesterday) to dry, then headed back up to the lake for a swim, dinner, and 
+to watch the sunset. Don't miss the side trail to the patrol cabin, which is situated up a 
+hillside behind the lake.
+
+We found another group of hikers squatting without permit in our group campsite, after 
+finding themselves unable to keep up with their scheduled itinerary. This felt 
+uncomfortable at first (hey, we have a permit for this site!) but they were unobtrusive 
+and everyone fit ok. It's a tough trail, this one. The next day we encountered multiple 
+other people in the same situation.
+
+Near bear encounter #3: just a few minutes after our visit to the patrol cabin, down came 
+a park employee who'd met a bear that immediately climbed a tree upon seeing him. Mike 
+was delayed in getting back to camp after his scramble because a bear was blocking the 
+trail just before the lake, so he waited a half hour for it to move. I'm pretty sure I 
+heard a bear snuffling through our camp and around the pole during the night, and 
+the other group who were sharing our site thought the same thing.
+
+
+## Day 7: Mystic Camp to Sunrise Camp
+
+[7-DescendingMoraines.jpg] Descending along a series of lateral moraines
+[7-WinthropGlacier.jpg] Winthrop Glacier
+[7-WinthropCreek.jpg] Crossing Winthrop Creek
+[7-GraniteCreek.jpg] Granite Creek
+[7-Cloudy.jpg] A cloudy view
+[7-SkyscraperMountain.jpg] Skyscraper Mountain is hiding in the clouds today
+[7-MistyDry.jpg] A misty day on this normally dry eastern side of the mountain
+[7-MarmotLookout.jpg] Lookout marmot is hard at work on sentry duty
+[7-Camp.jpg] At Sunrise Camp
+
+<p class="subheading">10.7 miles, 3200' gain, 2500' descent</p>
+
+Mike left us this morning, hiking back to Mowich Lake as his time off work had come to an 
+end. At so we were three.
+
+After Mystic Lake comes a really ingenious bit of trail design, as the path descends a 
+series of lateral moraines while approaching the Winthrop Glacier. Very fun and cleverly 
+put together. The glacier was impressive and Winthrop Creek crossing straightforward. 
+Next comes a Big Up, at first steeply with views of the glacier, then more gently through 
+gorgeous forest past Granite Creek, where we met some other hikers who have the same last 
+few days itinerary as us. Continuing upward out of the trees to Skyscraper Pass, it was 
+too cloudy for any views today, and I decided to pass on my idea for a side trip up 
+Skyscraper Mountain (I'll be back for that some other day).
+
+Into Berkely Park, and all of a sudden the trail got busy. So many marmots! And 
+golden-mantled ground squirrels. Also, day hikers. Clean smelling people with tiny packs.
+
+Problem: Tanner was not feeling well. We continued the extra mile past Sunrise Camp to 
+the main Sunrise complex, where the Park Service did some kind of magic (have I mentioned 
+yet how great the Park Service is?) and summoned an EMT seemingly out of thin air to 
+check him over. Sasha and Tanner made the difficult but wise decision not to continue 
+further into the wilderness while feeling short of 100%, so they dropped off the trail 
+here, and I found myself unexpectedly on my own.
+
+I hike solo all the time and am comfortable alone in the mountains, but it took me a good 
+half day to shift gears to this new situation. I was greatly enjoying the company of our 
+most excellent hiking group, and I missed them.
+
+Congrats Sasha and Tanner on completing the western and northern sections of the 
+Wonderland, from Longmire to Sunrise!
+
+Near bear encounter #4: on my way from Sunrise back to camp, other hikers told me a mama 
+bear and cub had been seen inside the camp area. When I arrived there, a cluster of 
+backpackers were looking up at a hillside where the bear, far enough away to appear just 
+a black speck, was blocking the trail up to 1st Burroughs. Eventually the bear moved and 
+normal trail traffic resumed.
+
+It got cold here at night, so I wore hiking pants, down jacket, hat and gloves inside my 
+sleeping bag.
+
+
+## Day 8: Sunrise Camp to Summerland
+
+[8-LittleTahoma.jpg] Little Tahoma in the morning light
+[8-Resupply.jpg] Picking up my resupply cache at White River
+[8-WhiteRiverValley.jpg] View up the White River valley
+[8-WhiteRiverBridge.jpg] Crossing the White River
+[8-FlatTrail.jpg] A couple miles of relatively flat trail, unheard of along the Wonderland
+[8-Summerland.jpg] Approaching Summerland
+[8-SummerlandMeadows.jpg] Alpine meadows at Summerland
+[8-Tahomas.jpg] Little Tahoma (left) and big Tahoma (right)
+[8-GroupShelter.jpg] The group campsite at Summerland is an old stone shelter
+[8-CanISleepHere.jpg] I wonder if it'd be a good idea to sleep in here?
+[8-Dusk.jpg] Dusk
+[8-Twilight.jpg] Twilight
+
+<p class="subheading">10.5 miles, 2400' gain, 2800' descent</p>
+
+Today started with a Big Down, switchbacking through forest with intermittent views of 
+the summit, Little Tahoma, and over clouds that were flowing up the White River valley.
+
+At White River, our second resupply cache broke my heart. There were three buckets 
+waiting for me, but only one hiker left to claim them! I threw out my trash, refilled my 
+food bag, and enjoyed a ginger ale treat, but absent Sasha's delight at finding goodies 
+in the hiker box there was no joy for me here. It did make me feel better when I later 
+learned that the park will donate unclaimed supplies to a local food bank.
+
+Back on the trail, here's an oddity: a couple of miles of almost level forested trail. A 
+flat path, along the Wonderland? Truly, wonders will never cease.
+
+Hah, I knew this trail could not keep that up for long :-) Gradually the flat turns into 
+a Big Up, following alongside Fryingpan Creek through forest, then crossing the creek on 
+a log bridge and switchbacking up to the stupendously stunning meadows of Summerland. I 
+lack words to properly describe this amazing place, so just look at the photos. It's 
+ridiculous how pretty everything is.
+
+Near bear encounter #5: the trail telegram told me there was a bear in the bushes just 
+before the start of the switchbacks, and indeed there was. I saw branches moving a few 
+dozen feet from the trail, but not the bear itself.
+
+The Summerland group shelter is an old three sided stone building. I wanted to try 
+sleeping in it but had heard it is home to many rodents, so I set up my tent as a 
+fallback, then got in my sleeping bag inside the stone shelter. The sun went down, I 
+finished reading, clicked my headlamp off, and immediately: &lt;scurry&gt; &lt;scurry&gt; 
+&lt;squeak&gt; &lt;pitter pitter&gt;. "Hey, this is my bedroom!" "Well, we live here 
+24/7". "Ok then, I guess it cannot be my bedroom". I decamped ignominiously to my tent, 
+where I enjoyed good sleep.
+
+Today's section of the Wonderland can also be day hiked as [PanhandleGap].
+
+
+## Day 9: Summerland to Indian Bar
+
+[9-Dawn1.jpg] Waiting for the dawn
+[9-Dawn2.jpg] Dawn is here!
+[9-Dawn3.jpg] Little Tahoma is on fire
+[9-Dawn4.jpg] Everything is on fire
+[9-Fox.jpg] Hey, whassup? Look who wandered through camp while I was filtering water...
+[9-Ascending.jpg] Ascending into the alpine
+[9-Cliffs.jpg] Cliffs and permeant snowfields
+[9-Tahomas.jpg] A meltwater lake in front of the Tahomas, little + big
+[9-SummitHalo.jpg] Cloud halo over the summit
+[9-ApproachingPanhandle.jpg] Approaching Panhandle Gap
+[9-SouthFromPanhandle.jpg] View to the south from Panhandle Gap, including Mount Adams and Mount Hood
+[9-BacksideOfCowlitzChimneys.jpg] Unusual view of the backside of the Cowlitz Chimneys
+[9-OhanapecoshPark.jpg] Ohanapecosh Park is a trove of otherworldly sights
+[9-SourceOfOhanapecoshRiver.jpg] These snowfields and waterfalls are the source of the magical Ohanapecosh River
+[9-Closeup.jpg] Closeup of the cliffs and snowfield
+[9-Descending.jpg] Descending toward Indian Bar
+[9-FallColors.jpg] Fall colors along the descent to Indian Bar
+[9-WauhaukaupaukenFalls.jpg] The bridge over Wauhaukaupauken Falls is alarmingly lacking in railings
+[9-IndianBar.jpg] Indian Bar
+[9-GroupShelter.jpg] The group campsite at Indian Bar is an old stone shelter
+[9-LooWithAView.jpg] It's a loo with a view!
+[9-Camp.jpg] Never say I don't learn from my mistakes: no mice gonna mess with me tonight
+
+<p class="subheading">4.7 miles, 1200' gain, 2100' descent</p>
+
+What a day this was. Up there with the very best days of my life.
+
+I got up early and spent an hour watching dawn color the face of the mountain while three 
+deer grazed in the meadow below me. Back to camp for breakfast, only for a fox to wander 
+through while I was filtering water. Could it get any more magical?
+
+Turns out yes, it could. This section of trail, up to Panhandle Gap, traversing across 
+the high alpine, then a Big Down to Indian Bar, is the ultimate expression of the rock, 
+ice, and strangeness of my favorite mountain. Cliffs and waterfalls abound, with big and 
+constantly changing views in every direction, all overseen by a massive cloud halo that 
+sat over the summit of Tahoma. I was moving slowly with not that much distance to cover, 
+taking it all in, taking SO many photos, literally laughing out loud on multiple 
+occasions, overcome by the sheer incredibleness of it all.
+
+The final descent to Indian Bar is a knee-busting feat of trail engineering, with 
+countless wooden steps to control erosion along this steep path. Eternal gratitude to the 
+trail crews who make such things possible.
+
+The group shelter at Indian Bar, like that at Summerland, is an old stone building. Fool 
+me once... This time I set up my tent <i>inside</i> the shelter, and enjoyed a restful 
+mouse-free sleep. I invited another group of hikers to share the site with me, as it was 
+too special and had too much room to keep for myself. Grateful for their company.
+
+
+## Day 10: Indian Bar to Maple Creek
+
+[10-CowlitzDivide.jpg] Descending the Cowlitz Divide
+[10-BigTree.jpg] Beautiful big trees
+[10-Tantalize.jpg] Tantalizing hint of a summit view
+[10-BoxCanyon.jpg] At Box Canyon, the Muddy Fork of the Cowlitz River has carved deep
+[10-HappyForest.jpg] Such a delightful, happy forest
+[10-StevensCreek.jpg] Crossing Stevens Creek
+[10-Camp.jpg] Camped at Maple Creek
+
+<p class="subheading">10.4 miles, 2000' gain, 4300' descent</p>
+
+According to the stats this should be one of the toughest days of my trip, with by far 
+the most descent, but my legs must be getting stronger because I just started walking, 
+trudged along for a bit, then arrived at camp, without any particular soreness or getting 
+tired. I'm in the groove and feel like I could keep doing this indefinitely.
+
+Descending the Cowlitz Divide was a moody experience, socked into a cloud and lacking its 
+usual views.  The Box Canyon trailhead offers running water and toilets that flush (such 
+luxury) followed by a few miles of the most delightfully green forest on the way to Maple 
+Creek camp. The only downside to this camp is occasional traffic noise from the road that 
+runs up the other side of Stevens Canyon.
+
+Today's section of the Wonderland can also be day hiked as [IndianBar].
+
+
+## Day 11: Maple Creek to Longmire
+
+[11-MapleCreek.jpg] Maple Creek is obviously much bigger and more destructive at other times of year
+[11-SylviaFalls.jpg] Sylivia Falls
+[11-Washout.jpg] The dreaded Stevens Canyon washout turned out to be no big deal, today at least
+[11-StevensCanyon.jpg] Fall colors along Stevens Canyon
+[11-MarthaFalls.jpg] Martha Falls
+[11-ReflectionLakes.jpg] Over the last 11 days I have gotten to know Tahoma from all angles. I have seen her disheveled in the evenings with wisps of cloud across her glaciers, slumped with tiredness in her western aspect, and early in the mornings with a rosy glow to her slopes. But here she is distancing herself, preparing to say goodbye, and retreating to the formality of this picture postcard view from Reflection Lakes
+[11-Forest.jpg] One final stretch of forest
+[11-NisquallyRiver.jpg] One final bridge across the glacial Nisqually River
+[11-Looped.jpg] This is it! This sign marks the point where, 11 days ago, we went right. I have looped. I did it!
+
+<p class="subheading">10.9 miles, 2600' gain, 2600' descent</p>
+
+During this last day my head is filled with reminiscence and reflections. I am ready to 
+go home, yet not ready for this experience to be over. Today's trail is a mostly 
+uneventful Big Up followed by Big Down, but at this point I am literally taking such 
+things in my stride. Its only notable feature is a washed out section along the side of 
+Stevens Canyon, where the trail crosses an old landslide with loose, unstable footing. I 
+had read and worried much about this, but in the end it was no problem at all (luckily it 
+was dry that day).
+
+At Reflection Lakes I experienced for the first time a phenomenon I had read about. I 
+could no longer smell myself or other backpackers, but when I encountered day hikers I 
+found the cloud of chemically fake flower scent that surrounded them nearly overwhelming. 
+Yikes! If they smell like that to me, I can only imagine what I must smell like to them 
+:-)
+
+And that's it. Back to my car, a few hours on the road, then to hug Tracy and pet the 
+dogs and take a bath and eat pizza.
+
+
+## Reflections
+
+[Group.jpg] Tanner, me, Meg, Tanner, Mike, and Sasha
+[Feet.jpg] Lookin' good!
+
+I set out with perhaps unrealistically high expectations for this hike, yet was not 
+disappointed. My preparation proved up to the task: mentally and physically, my 
+knowledge, fitness, gear and food choices were dialed in. Assorted chafes, hot spots and 
+ankle aches threatened at various points, but responded well to a strict talking-to. I 
+encountered no bugs and got no blisters.
+
+As the days passed, my focus narrowed. No thoughts of work or the news, just one foot 
+after another, one camp to the next, view to view, living fully in the present and paying 
+complete attention to my immediate surroundings. Forward planning was limited to 
+wondering what the weather would do next (speculation without influence) and deciding 
+what to have for dinner (from a very limited set of options). The trip almost became an 
+extended period of meditation.
+
+I developed a surprising affection for the equipment I was carrying. Each item was 
+carefully chosen to fulfill a necessary purpose, and nothing was redundant. Oh red 
+fleece, how I love the way you keep me warm on windy parts of the trail, and also wrap my 
+other clothes to create a pillow at night. Beloved camp shoes, you're so great at 
+protecting my feet while letting them air out after a long day on the trail. There was 
+magic in the routine of establishing a comfortable home each evening, then folding it all 
+back up to continue on my way the next day.
+
+My only regret is that the rest of my group was unable to complete the whole circuit with 
+me. They were great company, my kind of hikers, and I have so much respect for the wisdom 
+they showed in dropping off the trail before small problems had a chance to grow into 
+major ones. We found our satellite communicator devices invaluable for keeping folk back 
+home informed while this was going on, and for letting those still on the trail know when 
+others had made it safely home. We carried 3 Garmin inReaches between our group of 6, and 
+learned some things about how best to use them:
+<ul>
+    <li>
+        When splitting into 2 groups over Spray Park, we really should have made sure 
+        each party had an inReach on them, rather than all 3 being with the same people!
+    </li>
+    <li>
+        We should have pre-tested sending messages directly from one inReach to another. 
+        Come to find out this didn't work the way we thought, so we were only able to 
+        communicate indirectly via at-home contacts.
+    </li>
+</ul>
+
+Sasha made a video covering the first 2/3 of the circuit:
+<a href="https://www.youtube.com/watch?v=qVEvBnmfKl8">https://www.youtube.com/watch?v=qVEvBnmfKl8</a>.
+
+Thank you Tahoma for blessing my pilgrimage with great weather and excellent trail 
+conditions. All praise the trail crews for bridges in and blowdowns cleared. These sights 
+and memories will stay with me forever. Truly, the Wonderland Trail is well named.
+
+
+## Gear List
+
+[Food.jpg] Preparing my food. Still to add: tortilla wraps, cheese sticks, and hunk of parmesan. The tinned goods are Mowich resupply treats, to be eaten directly at the cache location rather than carried in my pack
+[BearPole.jpg] Food on the bear pole
+[Pack.jpg] Ready to hit the trail
+[Shoes.jpg] Faithful friends
+
+Here's what I carried on this trip:
+
+<ul class="tight">
+  <li>Backpack (Gossamer Gear Mariposa)</li>
+  <li>Tent (Big Agnes Copper Spur HV UL2)</li>
+  <li>Ground sheet (homemade from garden tarp)</li>
+  <li>Sleeping bag</li>
+  <li>Sleeping pad</li>
+  <li>Trail running shoes (Brooks)</li>
+  <li>Hiking poles (Leki)</li>
+  <li>Hiking pants</li>
+  <li>Long sleeved hiking shirt</li>
+  <li>2x underwear</li>
+  <li>2x socks</li>
+  <li>Fleece
+  <li>Rain shell</li>
+  <li>Waterproof pant shell</li>
+  <li>Cotton t-shirt (for camp and sleeping)</li>
+  <li>Down jacket (for camp and sleeping during colder nights)</li>
+  <li>Wool hat</li>
+  <li>Gloves</li>
+  <li>Camp shoes (Vivobarefoot Ultra III Bloom)</li>
+  <li>Water filter (Sawyer Micro Squeeze)</li>
+  <li>Water bottles (2.5 liter capacity)</li>
+  <li>Stove &amp; fuel (Jetboil)</li>
+  <li>Food sack (Ursack, which was overkill given bear poles at every camp)</li>
+  <li>Long handled bamboo spoon</li>
+  <li>Pocketknife</li>
+  <li>Sun lotion</li>
+  <li>Bug spray</li>
+  <li>Chapstick</li>
+  <li>Sunglasses &amp; case</li>
+  <li>Toothbrush &amp; toothpaste</li>
+  <li>Mini towel</li>
+  <li>Toilet paper</li>
+  <li>Ultralight trowel plus doggy poop bags and a spare ziplock</li>
+  <li>Hand sanitizer</li>
+  <li>Stuff sacks and trash liner bag to keep everything organized and dry</li>
+  <li>Pack rain cover</li>
+  <li>Map</li>
+  <li>Compass</li>
+  <li>Whistle</li>
+  <li>Matches</li>
+  <li>1st aid kit</li>
+  <li>Repair kit (sleeping pad patches, spare shoelace, duct tape)</li>
+  <li>Chemical handwarmers</li>
+  <li>Watch</li>
+  <li>Headlamp, with spare battery</li>
+  <li>Camera, with 3 spare batteries, in doubled ziplock to keep it dry</li>
+  <li>Satellite communicator (Garmin inReach Mini)</li>
+  <li>Paperback novel</li>
+  <li>Credit card, driver's license, cash &amp; car keys</li>
+</ul>
+
+Excluding food, fuel, and water, this gave a base pack weight of 20lb.
