@@ -1,5 +1,5 @@
 Backbone Ridge
-strenuous
+strenuous and unmaintained
 10.8 2990 3200
 Ohanapecosh
 Backbone Lake (unofficial, outside MRNP)

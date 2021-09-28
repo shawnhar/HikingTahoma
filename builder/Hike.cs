@@ -48,6 +48,11 @@ namespace builder
                     return Tuple.Create("x", "Backpacking");
                 }
 
+                if (Difficulty.Contains("unofficial") || Difficulty.Contains("unmaintained"))
+                {
+                    return Tuple.Create("unmaintained", "Unofficial, Unmaintained");
+                }
+
                 var epos = (uint)Difficulty.IndexOf("easy");
                 var mpos = (uint)Difficulty.IndexOf("moderate");
                 var spos = (uint)Difficulty.IndexOf("strenuous");
