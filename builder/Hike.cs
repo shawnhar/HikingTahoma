@@ -50,7 +50,7 @@ namespace builder
 
                 if (Difficulty.Contains("unofficial") || Difficulty.Contains("unmaintained"))
                 {
-                    return Tuple.Create("unmaintained", "Unofficial, Unmaintained");
+                    return Tuple.Create("unmaintained", "Unmaintained, off-trail");
                 }
 
                 var epos = (uint)Difficulty.IndexOf("easy");
