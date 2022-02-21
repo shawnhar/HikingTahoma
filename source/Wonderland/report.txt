@@ -71,16 +71,17 @@ dates you want to go etc.
 <p class="heading">Early Access Reservations</p>
 
 Congrats, so you won the lottery! You will be issued a date and time, which in 2022 
-ranges from March 21 to April 19, when you along with 14 others will gain access to the 
-self-serve <a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> 
-booking system. On this website you can see what campsites are available on which dates, 
-enter whatever itinerary you like using these camps, and book your trip.
+ranges from March 21 to April 19, when a batch of you along with a few others will gain 
+access to the self-serve
+<a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> booking system. 
+On this website you can see what campsites are available on which dates, enter whatever 
+itinerary you like using these camps, and book your trip.
 
 Of course the more trips that have already been booked, the fewer campsites will still be 
 available. This means not all lottery wins are created equal. If you luck out and get one 
 of the first access slots, the mountain is your oyster and you'll be able to book any 
 itinerary you want. If you landed in the middle of the early access period, you'll most 
-likely still be able to book a full Wonderland circuit, but the most popular camps at the 
+likely still be able to book a full Wonderland circuit but the most popular camps at the 
 most popular dates will already be full. If your date falls toward the later end, be 
 prepared for disappointment as only scraps will be left. With creativity you may still be 
 able to figure out a fun trip, but it's unlikely you'll find enough open camps to make it 
@@ -88,7 +89,7 @@ all the way around the Wonderland.
 
 Unless you're extremely experienced with snow travel, beware the temptation to book June 
 trips if you see that July through September is full up. There's a reason those dates are 
-still available :-)
+still available...
 
 Early access winners don't have to log on and book their trip immediately when their time 
 slot comes up, but the longer you wait, the more risk someone else will have taken the 
@@ -107,7 +108,7 @@ backup leader is important because if you find yourself unable to go for whateve
 this other person will still be able to activate and use the permit. Permits cannot be 
 transferred to other people who are not listed on them.
 
-One lottery win allows you to book one trip. Whether you use this for a full Wonderland 
+A lottery win allows you to book one trip. Whether you use this for a full Wonderland 
 circuit or a single night in the wilderness is entirely up to you.
 
 
@@ -135,7 +136,7 @@ ranger station to cancel it!
 
 <p class="heading">Permit Activation</p>
 
-A reservation made online is not yet sufficient to hit the trail!
+A reservation made online is not yet sufficient to hit the trail.
 The person named on the reservation must show up at a
 <a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm#CP_JUMP_664995">ranger 
 station</a> to activate it, either the morning the trip begins or one day before.
@@ -164,9 +165,9 @@ Another is to arrive at noon in hope that permit no-shows will have released a f
 batch of campsites. Starting midweek avoids competition with weekend warriors who are 
 trying for shorter trips.
 
-Either way, walkup success is usually followed by a flurry of driving around the mountain 
-to drop off supply caches in locations that couldn't be known until after your itinerary 
-is settled.
+Walkup success is usually followed by a flurry of driving around the mountain to drop off 
+supply caches in locations that couldn't be known until after your itinerary is settled. 
+This can take all day, so plan your first trail day accordingly.
 
 If you live locally, walkups can be a great option for shorter late season trips, when 
 there's plenty of campsite availability and the main challenge is jumping on a suitable 
@@ -177,13 +178,13 @@ weather window. I enjoyed a fantastic [NorthPuyallup] overnight in October this 
 
 Each backcountry camp contains a number of individual campsites, and most also have a 
 larger group site. Your reservation will be for either an individual or group site, and 
-you must camp in a corresponding location. Which of the individual sites you use within a 
+you must camp in a matching location. Which of the individual sites you use within a 
 camp is first-come-first-served, not specified on your permit.
 
 The Park Service describes the individual sites as being for parties of 1 to 5 people, 
 but in practice the limiting factor will be space for tents. You must fit all tents and 
 hammocks within the established bounds of the site. A couple of 2-person tents will 
-comfortably fit in every site, but 5 individual tents would be a mess of overlapping 
+fit comfortably in every site, but 5 individual tents would be a mess of overlapping 
 stays in most and impossible to fit in some.
 
 The group sites are for use by groups of 6 to 12 people. Some of these are truly huge, 
