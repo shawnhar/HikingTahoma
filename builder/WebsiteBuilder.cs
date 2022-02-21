@@ -227,6 +227,7 @@ namespace builder
             writer.WriteLine("              </tr>");
             writer.WriteLine("              <tr>");
             writer.WriteLine("                <td><a href=\"" + rootPrefix + "Planner.html\">itinerary planner</a></td>");
+            writer.WriteLine("                <td><a href=\"" + rootPrefix + "Wonderland/How.html\">permits</a></td>");
             writer.WriteLine("              </tr>");
             writer.WriteLine("            </table>");
             writer.WriteLine("          </td>");

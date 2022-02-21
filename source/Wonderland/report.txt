@@ -26,29 +26,168 @@ for 'rainier infinity loop'.
 
 ## How?|How To Get A Wonderland Permit
 
-You can't just camp wherever you like on Mount Rainier. There are designated campsites, 
-with pit toilets and bear poles for hanging your food. Each camp contains a number of 
-individual sites designed for parties of 1 to 5 people, which can comfortably fit a 
-couple of 2-person tents. Most camps also have a larger group site that can accommodate 
-up to 12 people. You need a reservation for every camp you want to stay at, but the 
-allocation of individual sites within a camp is first-come-first-served. The group site, 
-on the other hand, must be specifically reserved in advance.
-
-The permit application process can vary from year to year, so check
-<a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
-for the latest information. Two thirds of capacity is typically allocated 
-through a lottery in March, while a third is held in reserve for walkup permits. 
-Walkups are issued on a first-come-first-served basis to anyone who arrives in person at 
-a ranger station for a trip starting that day or the next.
+You can't just camp wherever you like on Mount Rainier. There are designated backcountry 
+campsites, with pit toilets and bear poles for hanging your food, and you need a permit 
+that lists exactly what dates and camps you will stay at.
 
 The permit lottery is extremely competitive. Around 600 Wonderland circuits can be 
 reserved in advance each season, while another ~300 are issued as walkup permits, but in 
-recent years the Park has received over 10,000 lottery entries! Many report better luck 
-getting out on the trail via walkup permits, but of course that requires a high level of 
-dedication and leap of faith to book time off work, pack supplies, then drive to the park 
-without knowing for sure if a trip will be possible. You can improve walkup chances by 
-being extremely flexible about route, and arriving at the ranger station super early so 
-you're first in line when they open.
+recent years the Park has received over 10,000 lottery entries! Demand is increasing each 
+year while trail capacity remains the same, so this is only likely to get worse in the 
+future. Be prepared to keep trying over several years before your number comes up.
+
+The Mount Rainier wilderness permit system is not specific to just the Wonderland Trail. 
+Whether you want to hike a full Wonderland circuit, a section of the trail, something 
+shorter like the Northern Loop, or an overnight out-and-back, you need the same kind of 
+permit and have the same options and odds for getting one.
+
+Permits are only required for overnight camping. You can day hike any trails you like on 
+Rainier, or even run the whole Wonderland in sections from trailhead to trailhead, 
+without any kind of permit as long as you get off the trail before sleeping.
+
+The permit system is quite complicated, but in summary: 2/3 of capacity is available to 
+be reserved in advance, with an annual lottery for early access to the booking system, 
+while 1/3 is reserved for last minute walkups. Details can vary from year to year, so check 
+<a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
+for the latest information. What follows is accurate as of 2022.
+
+
+<p class="heading">Early Access Lottery</p>
+
+The early access lottery is run via
+<a href="https://www.recreation.gov/permits/4675317">recreation.gov</a>. For a small fee, 
+your name will be entered into a random drawing that gives you early access to the online 
+booking system. It's important to understand that winning the lottery does NOT 
+automatically give you a Wonderland permit! You are competing for the chance to attempt 
+booking your trip before everyone else gets access, not directly for the trip itself.
+
+2022 lottery applications can be entered from February 21 to March 7, with results 
+available on March 14 (note dates may vary in future years). Exactly when within this 
+period you enter makes no difference to your chances. The lottery allows one entry per 
+person, and at this point there's no need to specify what route you are hoping to hike or 
+dates you want to go etc.
+
+
+<p class="heading">Early Access Reservations</p>
+
+Congrats, so you won the lottery! You will be issued a date and time, which in 2022 
+ranges from March 21 to April 19, when you along with 14 others will gain access to the 
+self-serve <a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> 
+booking system. On this website you can see what campsites are available on which dates, 
+enter whatever itinerary you like using these camps, and book your trip.
+
+Of course the more trips that have already been booked, the fewer campsites will still be 
+available. This means not all lottery wins are created equal. If you luck out and get one 
+of the first access slots, the mountain is your oyster and you'll be able to book any 
+itinerary you want. If you landed in the middle of the early access period, you'll most 
+likely still be able to book a full Wonderland circuit, but the most popular camps at the 
+most popular dates will already be full. If your date falls toward the later end, be 
+prepared for disappointment as only scraps will be left. With creativity you may still be 
+able to figure out a fun trip, but it's unlikely you'll find enough open camps to make it 
+all the way around the Wonderland.
+
+Unless you're extremely experienced with snow travel, beware the temptation to book June 
+trips if you see that July through September is full up. There's a reason those dates are 
+still available :-)
+
+Early access winners don't have to log on and book their trip immediately when their time 
+slot comes up, but the longer you wait, the more risk someone else will have taken the 
+campsites you were hoping for. When I won early access in 2021 I was on the site hitting 
+refresh the very second my access came due :-)
+
+Early access winners are able to view campsite availability in advance of their own 
+booking slot. This is a mixed bag. Being able to see this info is important for making a 
+good plan, but it's also quite stressful watching the availability decrease each time you 
+check back on it!
+
+To complete your booking you'll need the name of your backup trip leader (if any) and 
+license plate of any vehicles you plan to leave in the park, so have that ready. It's ok 
+to leave details blank if you'll be renting a car and don't yet know the license. The 
+backup leader is important because if you find yourself unable to go for whatever reason, 
+this other person will still be able to activate and use the permit. Permits cannot be 
+transferred to other people who are not listed on them.
+
+One lottery win allows you to book one trip. Whether you use this for a full Wonderland 
+circuit or a single night in the wilderness is entirely up to you.
+
+
+<p class="heading">General Access</p>
+
+After all the early access winners have had their chance to book trips, the same 
+self-serve <a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> site 
+opens to everyone. In 2022 this occurs on April 25. After this date there is no limit on 
+how many trips a person can book, and those who won early access can come back and try to 
+book more trips if they want.
+
+Let's be realistic: there will not be enough campsite availability left to put together a 
+full Wonderland circuit at this time. We're talking scraps of the scraps. But sometimes 
+scraps can be enough to make for great trips! In 2021 I was able to nab a night at Three 
+Lakes camp in August this way, which formed the basis of a 3 day [EastsidePCTLoop].
+
+If you're really dedicated it can be worth checking back as the season progresses, 
+because people sometimes find themselves unable to go on a trip they had booked. If they 
+call the park to cancel their reservation, those camps will become available for others 
+to book.
+
+Speaking of which: if you have a reservation that you're unable to use, please call a 
+ranger station to cancel it!
+
+
+<p class="heading">Permit Activation</p>
+
+A reservation made online is not yet sufficient to hit the trail!
+The person named on the reservation must show up at a
+<a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm#CP_JUMP_664995">ranger 
+station</a> to activate it, either the morning the trip begins or one day before.
+
+
+<p class="heading">Walkups</p>
+
+Only two thirds of campsite capacity is allocated through advance reservations, while one 
+third is held in reserve for walkup permits. This pool may be further increased by 
+advance reservation no-shows, as any reservations that are not activated by noon on the 
+day the trip begins will be returned to the walkup pool.
+
+Walkups are issued on an as-available basis to anyone who arrives in person at a
+<a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm#CP_JUMP_664995">ranger 
+station</a> for a trip starting that day or the next.
+
+Historically, many have reported better success getting out on the trail via walkup 
+permits compared to the advance lottery, but this requires a high level of dedication and 
+a leap of faith to book time off work, pack supplies, then drive to the mountain without 
+knowing for sure if a trip will be possible. As demand for the trail increases, walkups 
+are starting to look more like a gamble than a sure thing.
+
+You can improve walkup chances by being extremely flexible about route. One strategy is 
+to arrive at the ranger station super early so you're first in line when they open. 
+Another is to arrive at noon in hope that permit no-shows will have released a fresh 
+batch of campsites. Starting midweek avoids competition with weekend warriors who are 
+trying for shorter trips.
+
+Either way, walkup success is usually followed by a flurry of driving around the mountain 
+to drop off supply caches in locations that couldn't be known until after your itinerary 
+is settled.
+
+If you live locally, walkups can be a great option for shorter late season trips, when 
+there's plenty of campsite availability and the main challenge is jumping on a suitable 
+weather window. I enjoyed a fantastic [NorthPuyallup] overnight in October this way.
+
+
+<p class="heading">Group Size</p>
+
+Each backcountry camp contains a number of individual campsites, and most also have a 
+larger group site. Your reservation will be for either an individual or group site, and 
+you must camp in a corresponding location. Which of the individual sites you use within a 
+camp is first-come-first-served, not specified on your permit.
+
+The Park Service describes the individual sites as being for parties of 1 to 5 people, 
+but in practice the limiting factor will be space for tents. You must fit all tents and 
+hammocks within the established bounds of the site. A couple of 2-person tents will 
+comfortably fit in every site, but 5 individual tents would be a mess of overlapping 
+stays in most and impossible to fit in some.
+
+The group sites are for use by groups of 6 to 12 people. Some of these are truly huge, 
+but others would struggle to fit more than 5 2-person tents.
 
 
 ## When?|When To Hike The Wonderland Trail
@@ -67,7 +206,7 @@ September:
   </li>
   <li>
     August is the most popular month, and for good reason. Best weather. Best 
-    wildflowers. Probably still some snow on the high passes, but most of the trail will 
+    wildflowers. Perhaps still some snow on the high passes, but most of the trail will 
     have melted. Most people. Most mosquitoes.
   </li>
   <li>
@@ -167,13 +306,16 @@ Both options are great, so clearly the best solution is to pick one at random fo
 Wonderland circuit, then come back later and hike the [SprayParkLoop] to also see the 
 other.
 
+If you are visiting from out of state, you'll need to rent a car. There is no public 
+transport to the National Park, private shuttle options are limited and expensive, and 
+taxis or Uber not a good fit for an area that mostly lacks cell service.
+
 
 ## Campsites
 
 There are many choices while planning a Wonderland circuit. This website includes a 
-<a href="../Planner.html">Wonderland Itinerary Planner</a>, which shows 
-distance and elevation change between your choice of trailheads and 
-campsites.
+<a href="../Planner.html">Wonderland Itinerary Planner</a> which shows distance and 
+elevation change between your choice of trailheads and campsites.
 
 Going clockwise from Longmire, campsites along the Wonderland trail are:
 
@@ -446,6 +588,12 @@ Sunrise and White River are close enough together that it doesn't make sense to 
 both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
 avoid having to lug a freshly refilled pack up or down the steep trail between the two.
 
+Each cache location also has bearproof trashcans for disposing of your rubbish.
+
+If you are camping at a cache location (Mowich, White River) or near one (Sunrise), 
+consider including heavy treats that can be eaten on the spot. Tinned food, soda and beer 
+ftw!
+
 There are occasional stories of food being stolen from caches at Mowich Lake. This is 
 very rare, but has happened more than zero times. Cache locations also have a donation 
 bin where people can leave unwanted supplies, so I hope the backpackers who had their 
@@ -463,7 +611,7 @@ taken down during the off-season.
 
 By far the greatest danger along the Wonderland Trail is the many glacial river 
 crossings. Some rivers have sturdy wooden bridges over them while others are spanned by 
-cool suspension bridges, but many have just a log, plus a railing if you are lucky. 
+cool suspension bridges, but many have just a log plus a railing if you are lucky. 
 Falling off these logs into fast moving turbid waters, which are often filled with 
 rolling boulders, is not good for your life expectancy. Also, these rivers have a habit 
 of repeatedly removing their log crossings, so the Park Service is playing a perpetual 
@@ -516,7 +664,7 @@ The highest points along the Wonderland are Panhandle Gap (between Summerland an
 Bar) and Spray Park (if you choose to go that way). These often remain snowy until the 
 end of August, and there's a steep traverse approaching Panhandle Gap from the north that 
 would be un-fun to slide down. Spikes aren't needed once most of the trail has melted, 
-but it'll be easier to cross these high places if you can arrange to do so later in the 
+but it may be easier to cross these high places if you can arrange to do so later in the 
 day when the snow is soft rather than icy. And make sure your navigation is solid for 
 these sections! Most of the Wonderland Trail is obvious to follow, but Panhandle Gap and 
 the top of Spray Park are just rocks and snow patches with cairns to mark the way, so 
