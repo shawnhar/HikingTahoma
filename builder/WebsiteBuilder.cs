@@ -10,6 +10,10 @@ namespace builder
 {
     class WebsiteBuilder
     {
+        const bool processMap = true;
+        const string processSingleHike = null;
+
+
         public async Task<string> Build()
         {
             // Get paths.
@@ -47,25 +51,34 @@ namespace builder
                     await hike.Load();
                 }
 
-                var doneHikes = hikes.Where(hike => !hike.IsNotHiked).ToList();
+                if (processMap)
+                {
+                    var doneHikes = hikes.Where(hike => !hike.IsNotHiked).ToList();
 
-                var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
+                    var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
 
-                // Generate the index page.
-                WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
+                    // Generate the index page.
+                    WriteIndex(outFolder.Path, hikes, progress.DistanceHiked, progress.CompletionRatio, imageProcessor);
 
-                await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
+                    await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
+                }
 
                 // Process the individual hikes and photos.
                 foreach (var hike in hikes.Where(hike => !hike.IsHidden))
                 {
-                    await hike.WriteOutput(hikes, outFolder.Path);
+                    if (string.IsNullOrEmpty(processSingleHike) || processSingleHike == hike.FolderName)
+                    {
+                        await hike.WriteOutput(hikes, outFolder.Path);
+                    }
                 }
 
-                await ProcessAnimalPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
+                if (string.IsNullOrEmpty(processSingleHike))
+                {
+                    await ProcessAnimalPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
 
-                // Generate map overlay images for the distances planning tool.
-                await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
+                    // Generate map overlay images for the distances planning tool.
+                    await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
+                }
 
                 // Copy root files.
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
