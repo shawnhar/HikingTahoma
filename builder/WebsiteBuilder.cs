@@ -11,7 +11,7 @@ namespace builder
     class WebsiteBuilder
     {
         const bool processMap = true;
-        const string processSingleHike = null;
+        readonly string[] processHikes = { };
 
 
         public async Task<string> Build()
@@ -66,13 +66,13 @@ namespace builder
                 // Process the individual hikes and photos.
                 foreach (var hike in hikes.Where(hike => !hike.IsHidden))
                 {
-                    if (string.IsNullOrEmpty(processSingleHike) || processSingleHike == hike.FolderName)
+                    if (processHikes.Length == 0 || processHikes.Contains(hike.FolderName))
                     {
                         await hike.WriteOutput(hikes, outFolder.Path);
                     }
                 }
 
-                if (string.IsNullOrEmpty(processSingleHike))
+                if (processHikes.Length == 0)
                 {
                     await ProcessAnimalPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
 

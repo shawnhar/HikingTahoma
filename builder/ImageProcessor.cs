@@ -14,7 +14,7 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 326;
+        const float totalLengthOfAllTrails = 327;
 
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
@@ -195,6 +195,7 @@ namespace builder
                     { "2019",  Color.FromArgb(0xFF, 0x00, 0xD0, 0x00) },
                     { "2020",  Color.FromArgb(0xFF, 0xFF, 0xFF, 0x00) },
                     { "2021",  Color.FromArgb(0xFF, 0xFF, 0xA0, 0x00) },
+                    { "2022",  Color.FromArgb(0xFF, 0xFF, 0x00, 0xFF) },
                 };
 
                 using (var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
