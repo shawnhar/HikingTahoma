@@ -82,6 +82,7 @@ namespace builder
 
                 // Copy root files.
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
+                CopyFile(sourceFolder.Path, outFolder.Path, "siteicon.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "WhereToStart.html");
@@ -210,6 +211,7 @@ namespace builder
             writer.WriteLine("  <head>");
             writer.WriteLine("    <title>Hiking Tahoma: {0}</title>", title);
             writer.WriteLine("    <link rel=\"stylesheet\" href=\"" + rootPrefix + "style.css\">");
+            writer.WriteLine("    <link rel=\"icon\" type=\"image/x-icon\" href=\"" + rootPrefix + "siteicon.png\">");
             writer.WriteLine("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
 
             if (!string.IsNullOrEmpty(description))
