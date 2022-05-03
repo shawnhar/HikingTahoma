@@ -6,6 +6,7 @@ none
 2019
 
 [CometFalls.jpg] Comet Falls
+[ForestClimb.jpg] Climbing through the forest
 [FromMildredPoint.jpg] The view from Mildred Point
 [MistyMountains.jpg] Misty Mountains (from Mildred Point)
 [VanTrumpPark.jpg] Entering Van Trump Park

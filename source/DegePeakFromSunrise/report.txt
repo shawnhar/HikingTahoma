@@ -6,6 +6,7 @@ none
 older
 
 [Sunrise.jpg] "Here comes the sun..."
+[North.jpg] Looking north from Sourdough Ridge
 [SunOnSummit.jpg] Sunrise hitting the summit of Rainier
 [FromDegePeak.jpg] View from Dege Peak
 
