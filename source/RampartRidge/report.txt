@@ -8,12 +8,10 @@ none
 [Viewpoint.jpg] View from the open section along Rampart Ridge
 [Beware.jpg] Pay attention to avalanche danger before crossing this short section!
 [Ent.jpg] Lower parts of the trail are lush and rainforesty
-[Cabin.jpg] Historic cabin along the Trail of the Shadows, built by the Longmire family in 1888. Note the iron deposits and melted snow due to a mineral spring behind the cabin
-[HotSprings.jpg] Back in the day the Longmire family built stonework around several mineral springs along the Trail of the Shadows, hoping to establish a spa. Their venture failed, but their construction remains. The springs aren't exactly hot, but warm enough to clear a gap in the snow
 
-Rampart Ridge is a straightforward loop hike starting from Longmire. Its 
-eastern side is also the start of the [IndianHenrysFromLongmire] [Wonderland] 
-section, and [MildredPoint].
+Rampart Ridge is a straightforward loop hike beginning at Longmire. Its eastern 
+side is also the start of the [IndianHenrysFromLongmire] [Wonderland] section, 
+and of [MildredPoint]. It overlaps with part of [TrailOfTheShadows].
 
 Most of the trail is through forest, which is splendidly lush and 
 rainforesty at the lower elevations. Along the way there's a nice overlook 
@@ -24,14 +22,3 @@ loop clockwise so you'll be facing toward the best view at this spot.
 Due to its lower altitude, this hike is sometimes accessible during the 
 off-season when higher trails are snowed in. It also makes a good snowshoe 
 route: just beware avalanche risk across the short open section.
-
-The start of the Rampart Ridge trail doubles as the beginning of the 0.7 
-mile Trail of the Shadows, which circles around a marsh past several mineral 
-springs and remnants of the historical Longmire Springs Hotel. This was 
-constructed by the Longmire family in 1890, before the creation of the 
-National Park, and largely dismantled in 1920. Leftovers include an old log 
-cabin, and rock walls built around several of the hot springs. Their plan to 
-create a spa here didn't really make sense (the spring water isn't 
-particularly hot, its minerals are just smelly rather than therapeutic, and 
-their execution of the idea was, shall we say, not particularly polished) 
-but nevertheless this is an important piece of Rainier history.
