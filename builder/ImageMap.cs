@@ -59,10 +59,10 @@ namespace builder
             if (previousHike == null)
                 return true;
 
-            if (coverage > previousHike.Coverage * 3 / 2)
+            if (coverage > previousHike.Coverage * 7 / 4)
                 return true;
 
-            if (previousHike.Coverage > coverage * 3 / 2)
+            if (previousHike.Coverage > coverage * 7 / 4)
                 return false;
 
             return CombineDistanceAndElevation(hike) < CombineDistanceAndElevation(previousHike.Hike);
