@@ -173,7 +173,7 @@ namespace builder
 
                         var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("      <div id=\"link-{0}\" data-difficulty=\"{2}\" data-region=\"{3}\"{4}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, difficulty.Item1, region, eventHandler);
+                        writer.WriteLine("      <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\"{7}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, eventHandler);
                     }
 
                     // Category headings.
@@ -191,8 +191,12 @@ namespace builder
 
                     writer.WriteLine("    <select id=\"sortselector\" onChange=\"SortSelectorChanged(this.value)\">");
                     writer.WriteLine("      <option value=\"alphabetical\">Alphabetical</option>");
-                    writer.WriteLine("      <option value=\"difficulty\">By Difficulty</option>");
                     writer.WriteLine("      <option value=\"region\">By Region</option>");
+                    writer.WriteLine("      <option value=\"difficulty\">By Difficulty</option>");
+                    writer.WriteLine("      <option value=\"length\">By Length</option>");
+                    writer.WriteLine("      <option value=\"elevation-gain\">By Elevation Gain</option>");
+                    writer.WriteLine("      <option value=\"max-elevation\">By Max Elevation</option>");
+                    writer.WriteLine("      <option value=\"steepness\">By Steepness</option>");
                     writer.WriteLine("    </select>");
 
                     writer.WriteLine("    <span class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</span>", completionRatio * 100, distanceHiked);

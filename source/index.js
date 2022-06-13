@@ -33,14 +33,14 @@ function SortHikes(order)
 
   var getItemCategory;
 
-  if (order == 'alphabetical') {
-    getItemCategory = function(item) { return ''; };
+  if (order == 'region') {
+    getItemCategory = function(item) { return item.getAttribute('data-region') };
   }
   else if (order == 'difficulty') {
     getItemCategory = function(item) { return item.getAttribute('data-difficulty') };
   }
-  else if (order == 'region') {
-    getItemCategory = function(item) { return item.getAttribute('data-region') };
+  else {
+    getItemCategory = function(item) { return ''; };
   }
 
   var getItemText = function(item) {
@@ -49,9 +49,36 @@ function SortHikes(order)
     return links.length > 0 ? links[0].innerHTML : '';
   }
 
+  var toNumber = function(value) {
+    return value ? +value : 1;
+  }
+
+  var getKey;
+
+  if (order == 'length') {
+    getKey = function(item) { return toNumber(item.getAttribute('data-length')) };
+  }
+  else if (order == 'elevation-gain') {
+    getKey = function(item) { return toNumber(item.getAttribute('data-elevation-gain')) };
+  }
+  else if (order == 'max-elevation') {
+    getKey = function(item) { return toNumber(item.getAttribute('data-max-elevation')) };
+  }
+  else if (order == 'steepness') {
+    getKey = function(item) { return toNumber(item.getAttribute('data-elevation-gain')) / toNumber(item.getAttribute('data-length')) };
+  }
+  else {
+    getKey = function(item) { return getItemCategory(item) + '.' + getItemText(item) };
+  }
+
   items.sort(function(a, b) {
-    var aKey = getItemCategory(a) + '.' + getItemText(a);
-    var bKey = getItemCategory(b) + '.' + getItemText(b);
+    var aKey = getKey(a);
+    var bKey = getKey(b);
+
+    if (aKey == bKey) {
+      aKey = getItemText(a);
+      bKey = getItemText(b);
+    }
 
     return aKey < bKey ? -1 : (aKey > bKey ? 1 : 0);
   });

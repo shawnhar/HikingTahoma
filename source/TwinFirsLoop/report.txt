@@ -1,6 +1,6 @@
 Twin Firs Loop
 easy
-0.4 180 2590
+0.4 100 2590
 Longmire
 none
 2020
