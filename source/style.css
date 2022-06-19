@@ -251,6 +251,19 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.wheretostart td {
+  vertical-align: middle;
+}
+
+.wheretostart hr {
+  margin-top: 32;
+  margin-bottom: 32;
+  height: 2px;
+  border: 0;
+  background: #606060;
+  background-image: linear-gradient(to right, #D0D0D0, #606060, #D0D0D0);
+}
+
 .mugshot {
   float: right;
   padding: 23;
