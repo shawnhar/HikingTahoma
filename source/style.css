@@ -251,7 +251,7 @@ a:link, a:visited {
   text-decoration: none;
 }
 
-.wheretostart td {
+.wheretostart .heading {
   vertical-align: middle;
 }
 
