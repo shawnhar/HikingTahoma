@@ -93,6 +93,9 @@ a:link, a:visited {
   padding-top: 12;
   padding-left: 10;
   padding-bottom: 16;
+}
+
+.hikelist .multicolumn {
   column-width: 200px;
 }
 
@@ -124,9 +127,55 @@ a:link, a:visited {
   font-weight: normal;
 }
 
+.hikelist table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hikelist td {
+  padding: 0;
+  padding-right: 10;
+}
+
+.hikelist table div {
+  white-space: nowrap;
+}
+
+.hikelist .graphheading {
+  width: 0;
+}
+
+@media (max-width: 480px) {
+  .hikelist .graphheading div {
+    font-size: 67%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hikelist .graphheading div {
+    font-size: 50%;
+  }
+}
+
+.hikelist div.graphbar {
+  background-color: #95C0E0;
+  font-size: 67%;
+  text-align: right;
+  padding-right: 4;
+  margin: 2;
+}
+
 #sortselector {
   margin-top: 10;
   margin-left: 10;
+}
+
+@media (min-width: 780px) {
+  #sortselector {
+    position: absolute;
+    top: -40;
+    left: 615;
+  }
 }
 
 .progress {
