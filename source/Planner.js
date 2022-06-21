@@ -153,7 +153,8 @@ const viaOptions = [
   'Eastside tr',
   'PCT',
   'St. Andrews tr',
-  'N. Puyallup tr'
+  'N. Puyallup tr',
+  'Sunset Park'
 ];
 
 
@@ -216,7 +217,7 @@ const trailData = {
   ],
 
   'North Puyallup River': [
-    { To: 'Golden Lakes', Distance: 5.1, Up: 1900, Down: 600 }
+    { To: 'Golden Lakes', Distance: 5.1, Up: 1900, Down: 600, Via: 'Sunset Park' }
   ],
 
   'Golden Lakes': [
