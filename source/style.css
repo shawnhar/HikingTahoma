@@ -232,6 +232,11 @@ a:link, a:visited {
   margin-top: 12;
 }
 
+.description .trailinfo {
+  color: #FF0000;
+  font-style: italic;
+}
+
 .tight li {
   margin-top: 0;
 }
