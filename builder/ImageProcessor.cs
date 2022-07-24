@@ -331,7 +331,7 @@ namespace builder
         {
             using (new Profiler("ImageProcessor.WritePhoto"))
             {
-                const int thumbnailWidth = 1200;
+                const int thumbnailWidth = 1100;
                 const int thumbnailHeight = 380;
 
                 int maxPhotoSize = photo.IsPanorama ? 4096 : 2048;

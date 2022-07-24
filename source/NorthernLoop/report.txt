@@ -34,7 +34,7 @@ counterclockwise from Sunrise.
 ## Day 1: Sunrise to Fire Creek
 
 [1-Company.jpg] Tracy and Jenn joined me for the first part of this trip, day hiking from Sunrise to Berkely Park
-[1-Pasqueflower.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick" 
+[!1-Pasqueflower.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick" 
 [1-BerkelyPark.jpg] Lodi Creek, toward the bottom of Berkely Park
 [1-GrandPark1.jpg] Little Tahoma (right) and Mount Fremont (left), from Grand Park
 [1-GrandPark2.jpg] Her Royal Highness, from Grand Park
@@ -74,7 +74,7 @@ back twinge. This is NOT the time or place for me to develop a back issue...
 [2-WestForkWhiteRiver.jpg] The West Fork White River: white indeed, and turbid
 [2-LakeJames.jpg] Lake James
 [2-ApproachingWindyGap.jpg] Approaching Windy Gap from the east
-[2-NaturalBridge.jpg] The Natural Bridge
+[!2-NaturalBridge.jpg] The Natural Bridge
 [2-PastWindyGap.jpg] Descending to the west of Windy Gap
 [2-YellowstoneCliffs.jpg] Pedant says: Yellowstone Cliffs are cliffs, yes indeed, but they're not really yellow...
 [2-Descent.jpg] Descending from Windy Gap to the Carbon River, the foliage became ever more rainforesty as altitude decreased
@@ -122,7 +122,7 @@ at camp for the night.
 ## Day 3: Carbon River Camp to Mystic Camp
 
 [3-CarbonGlacierSnout.jpg] Snout of the Carbon Glacier
-[3-CarbonGlacier.jpg] Carbon Glacier (covered in rockfall)
+[!3-CarbonGlacier.jpg] Carbon Glacier (covered in rockfall)
 [3-ArrivingAtMysticLake.jpg] Arriving at Mystic Lake
 [3-ViewFromRangerCabin.jpg] View from the ranger cabin
 [3-Mystic.jpg] Yep, I am bewitched: this place is mystic indeed
@@ -173,7 +173,7 @@ Where is this coming from? I would find out tomorrow...
 [4-Bridge.jpg] Thank you Park Service for this most excellent bridge over Winthrop Creek!
 [4-Glacier.jpg] Bottom of the Winthrop Glacier
 [4-Mouth.jpg] One of many rivers issuing forth from the Winthrop Glacier
-[4-Rainier.jpg] View from Skyscraper Pass
+[!4-Rainier.jpg] View from Skyscraper Pass
 [4-LittleTahoma.jpg] Little Tahoma, with Burroughs Mountain to the left
 
 <p class="subheading">8.7 miles, 2900' gain, 2130' descent</p>

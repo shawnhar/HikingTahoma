@@ -9,6 +9,7 @@ namespace builder
         public readonly string Description;
 
         public readonly bool IsPanorama;
+        public readonly bool IsFeatured;
 
         public string Thumbnail => Path.GetFileNameWithoutExtension(Filename) + "-small.jpg";
 
@@ -20,6 +21,11 @@ namespace builder
             if (filename.StartsWith('-'))
             {
                 IsPanorama = true;
+                filename = filename.Substring(1);
+            }
+            else if (filename.StartsWith('!'))
+            {
+                IsFeatured = true;
                 filename = filename.Substring(1);
             }
 

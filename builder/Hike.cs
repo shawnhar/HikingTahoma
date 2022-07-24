@@ -356,14 +356,62 @@ namespace builder
             // Links to separate pages?
             if (separatePages != null && separatePages.Any())
             {
-                writer.WriteLine("        <ul>");
+                bool inList = false;
+                bool inTable = false;
+                int rowCount = 0;
 
                 foreach (var page in separatePages)
                 {
-                    writer.WriteLine("          <li><a href=\"{0}\">{1}</a></li>", page.Url, page.Title);
+                    var featuredPhoto = page.Photos.FirstOrDefault(photo => photo.IsFeatured);
+
+                    if (featuredPhoto != null)
+                    {
+                        if (!inTable)
+                        {
+                            Close();
+                            writer.WriteLine("        <table class=\"photos showlinks\">");
+                            writer.WriteLine("          <tr>");
+                            inTable = true;
+                            rowCount = 0;
+                        }
+                        else if (++rowCount >= 2)
+                        {
+                            writer.WriteLine("          </tr>");
+                            writer.WriteLine("          <tr>");
+                            rowCount = 0;
+                        }
+
+                        writer.WriteLine("            <td><a href=\"{0}\"><img src=\"{1}\" width=\"253\" height=\"190\" /><p>{2}</p></a></td>", page.Url, featuredPhoto.Thumbnail, page.Title);
+                    }
+                    else
+                    {
+                        if (!inList)
+                        {
+                            Close();
+                            writer.WriteLine("        <ul>");
+                            inList = true;
+                        }
+
+                        writer.WriteLine("          <li><a href=\"{0}\">{1}</a></li>", page.Url, page.Title);
+                    }
                 }
 
-                writer.WriteLine("        </ul>");
+                Close();
+
+                void Close()
+                {
+                    if (inList)
+                    {
+                        writer.WriteLine("        </ul>");
+                        inList = false;
+                    }
+                    else if (inTable)
+                    {
+                        writer.WriteLine("          </tr>");
+                        writer.WriteLine("        </table>");
+                        inTable = false;
+                    }
+                }
             }
 
             writer.WriteLine("      </div>");

@@ -666,16 +666,16 @@ crossings to be aware of include:
   </li>
 </ul>
 
-In addition to the rivers, snow can of course be a hazard especially early in the season. 
-The highest points along the Wonderland are Panhandle Gap (between Summerland and Indian 
-Bar), Skyscraper Pass, and Spray Park (if you choose to go that way). These often remain 
-snowy until the end of August, and there's a steep traverse approaching Panhandle Gap 
-from the north that would be un-fun to slide down. Spikes aren't needed once most of the 
-trail has melted, but it may be easier to cross these high places if you can arrange to 
-do so later in the day when the snow is soft rather than icy. And make sure your 
-navigation is solid for these sections! Most of the Wonderland Trail is obvious to 
-follow, but Panhandle Gap and the top of Spray Park are just rocks and snow patches with 
-cairns to mark the way, so it'd be easy to lose your way during bad weather.
+In addition to the rivers, snow can be a hazard especially early in the season. The 
+highest points along the Wonderland are Panhandle Gap, Skyscraper Pass, and Spray Park if 
+you choose to go that way. These often remain snowy until the end of August, and there 
+are steep slopes approaching Panhandle Gap and Skyscraper Pass that would be un-fun to 
+slide down. Spikes aren't needed once most of the trail has melted, but it may be easier 
+to cross these high places if you can arrange to do so later in the day when the snow is 
+soft rather than icy. And make sure your navigation is solid for these sections! Most of 
+the Wonderland Trail is obvious to follow, but Panhandle Gap and the top of Spray Park 
+are just rocks and snow patches with cairns to mark the way, so it'd be easy to lose your 
+way during bad weather.
 
 One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
 where the trail crosses a washout with loose, unstable footing. I am told this is 
@@ -684,23 +684,43 @@ particularly unpleasant in wet conditions.
 
 ## Section Hiking|Section Hiking The Wonderland Trail
 
-Many sections of the Wonderland also make fantastic day hikes:
-<ul class="tight">
-  <li>[PanhandleGap]</li>
-  <li>[IndianBar]</li>
-  <li>[IndianHenrysFromLongmire]</li>
-  <li>[SprayPark]</li>
-  <li>[LongmireToReflectionLakes]</li>
-  <li>[WhiteRiverToSunrise]</li>
-</ul>
-or shorter backpacking trips:
-<ul class="tight">
-  <li>[SprayParkLoop]</li>
-  <li>[NorthernLoop]</li>
-  <li>[KlapatchePark]</li>
-  <li>[NorthPuyallup]</li>
-  <li>[CarbonGlacier]</li>
-</ul>
+For those wanting to experience the Wonderland Trail without the hassle of getting a 
+backpacking permit, many sections also make fantastic day hikes:
+
+<table class="photos showlinks">
+  <tr>
+    <td><a href="../PanhandleGap/"><img src="../PanhandleGap/PanhandleGap-small.jpg" width="253" height="190" /><p>Summerland and Panhandle Gap</p></a></td>
+    <td><a href="../IndianBar/"><img src="../IndianBar/IndianBar-small.jpg" width="253" height="190" /><p>Indian Bar</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../IndianHenrysFromLongmire/"><img src="../IndianHenrysFromLongmire/PatrolCabin-small.jpg" width="253" height="190" /><p>Indian Henry's from Longmire</p></a></td>
+    <td><a href="../SkyscraperMountain/"><img src="../SkyscraperMountain/Burroughs-small.jpg" width="253" height="190" /><p>Skyscraper Mountain</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../SprayPark/"><img src="../SprayPark/EnteringSprayPark-small.jpg" width="253" height="190" /><p>Spray Park</p></a></td>
+    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/ForestTrail-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../WhiteRiverToSunrise/"><img src="../WhiteRiverToSunrise/WhiteRiver-small.jpg" width="253" height="190" /><p>White River to Sunrise</p></a></td>
+  </tr>
+</table>
+
+These shorter backpacking routes overlap with parts of the Wonderland. They do require 
+permits, but less time and commitment than hiking the full trail:
+
+<table class="photos showlinks">
+  <tr>
+    <td><a href="../SprayParkLoop/"><img src="../SprayParkLoop/SprayPark-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
+    <td><a href="../NorthernLoop/"><img src="../NorthernLoop/2-NaturalBridge-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../KlapatchePark/"><img src="../KlapatchePark/AuroraLake2-small.jpg" width="253" height="190" /><p>Klapatche Park</p></a></td>
+    <td><a href="../NorthPuyallup/"><img src="../NorthPuyallup/Descent-small.jpg" width="253" height="190" /><p>Westside Road to North Puyallup River</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../CarbonGlacier/"><img src="../CarbonGlacier/SuspensionBridge-small.jpg" width="253" height="190" /><p>Carbon Glacier</p></a></td>
+  </tr>
+</table>
 
 
 # My Wonderland
@@ -719,7 +739,7 @@ leisurely 11 day circuit in early September, going clockwise from Longmire via S
 ## Day 1: Longmire to Devil's Dream
 
 [1-HelloGorgeous.jpg] Our first proper view of Tahoma comes while crossing Kautz Creek
-[1-PyramidCreek.jpg] Bridge over Pyramid Creek
+[!1-PyramidCreek.jpg] Bridge over Pyramid Creek
 [1-SquawLake.jpg] Squaw Lake is shrunken and muddy, not a great water source at this time of year
 [1-IndianHenrys.jpg] Ranger patrol cabin at Indian Henry's Hunting Grounds
 [1-Evening.jpg] Evening light from Indian Henry's Hunting Grounds
@@ -772,7 +792,7 @@ This section of the Wonderland can also be day hiked as [IndianHenrysFromLongmir
 [2-NeedAGeologist.jpg] I need a geologist to tell me what these bands of differently colored rock are!
 [2-TahomaGlacier.jpg] Tahoma Glacier, viewed from the top of Emerald Ridge
 [2-SouthPuyallup.jpg] Looking down the South Puyallup river valley from the top of Emerald Ridge
-[2-EmeraldRidge.jpg] Emerald Ridge
+[!2-EmeraldRidge.jpg] Emerald Ridge
 [2-ColumnarAndesite.jpg] Columnar andesite near the toilet at South Puyallup River camp, aka the Devil's Pipe Organ
 [2-ColumnarDebris.jpg] Debris from the columnar andesite looks strangely artificial with straight edges and perfect angles
 [2-Camp.jpg] Camped at South Puyallup River
@@ -802,7 +822,7 @@ What a day. What a trail. What a mountain.
 
 ## Day 3: South Puyallup River to Golden Lakes
 
-[3-ApproachingStAndrewsPark.jpg] Approaching St. Andrews Park
+[!3-ApproachingStAndrewsPark.jpg] Approaching St. Andrews Park
 [3-StAndrewsLake.jpg] St. Andrews Lake is a perfect spot for first lunch
 [3-TokalooSpire.jpg] Looking upward past Tokaloo Spire
 [3-TokalooSpireAndTahomaGlacier.jpg] Tokaloo Spire and the upper reaches of the Tahoma Glacier
@@ -870,7 +890,7 @@ This warrants further investigation.
 
 [4-Stumps.jpg] Descending into the river valley
 [4-Fungi.jpg] Fascinating fungi - is anyone in the mood for pizza? :-)
-[4-Lush.jpg] Lush temperate rainforest feels primeval and oxygenated
+[!4-Lush.jpg] Lush temperate rainforest feels primeval and oxygenated
 [4-SouthMowichRiver.jpg] Crossing the South Mowich River
 [4-BridgeGraveyard.jpg] A graveyard of dead bridges, left behind each time the river flooded or changed course
 [4-Resupply.jpg] Cached resupply treats were waiting for us at Mowich Lake
@@ -909,7 +929,7 @@ good.
 [5-MistyTrail.jpg] Along the short detour to Spray Falls - but it was too foggy to even see the falls today!
 [5-EnteringSprayPark.jpg] Entering Spray Park
 [5-Snowfields.jpg] There are still a couple of small snowfields at the top of Spray Park
-[5-CairnsInTheMist.jpg] Cairns mark our way through the mist
+[!5-CairnsInTheMist.jpg] Cairns mark our way through the mist
 [5-Camp.jpg] Camped at Cataract Valley
 [5-Toilet.jpg] Nice location for a toilet: pikas can watch me poop
 
@@ -946,7 +966,7 @@ This section of the Wonderland can also be day hiked as [SprayPark].
 [6-MorainePark2.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick"
 [6-MorainePark3.jpg] Fall colors at Moraine Park
 [6-MysticLake.jpg] Mystic Lake is an AMAZING place to go for a swim
-[6-MysticLake2.jpg] Mystic Lake
+[!6-MysticLake2.jpg] Mystic Lake
 [6-ViewFromPatrolCabin.jpg] View from the patrol cabin above Mystic Lake
 [6-MysticLake3.jpg] Evening comes to Mystic Lake
 [6-Camp.jpg] At Mystic Camp
@@ -981,7 +1001,7 @@ and the other group who were sharing our site thought the same thing.
 ## Day 7: Mystic Camp to Sunrise Camp
 
 [7-DescendingMoraines.jpg] Descending along a series of lateral moraines
-[7-WinthropGlacier.jpg] Winthrop Glacier
+[!7-WinthropGlacier.jpg] Winthrop Glacier
 [7-WinthropCreek.jpg] Crossing Winthrop Creek
 [7-GraniteCreek.jpg] Granite Creek
 [7-Cloudy.jpg] A cloudy view
@@ -1040,7 +1060,7 @@ sleeping bag.
 [8-WhiteRiverBridge.jpg] Crossing the White River
 [8-FlatTrail.jpg] A couple miles of relatively flat trail, unheard of along the Wonderland
 [8-Summerland.jpg] Approaching Summerland
-[8-SummerlandMeadows.jpg] Alpine meadows at Summerland
+[!8-SummerlandMeadows.jpg] Alpine meadows at Summerland
 [8-Tahomas.jpg] Little Tahoma (left) and big Tahoma (right)
 [8-GroupShelter.jpg] The group campsite at Summerland is an old stone shelter
 [8-CanISleepHere.jpg] I wonder if it'd be a good idea to sleep in here?
@@ -1101,7 +1121,7 @@ This section of the Wonderland can also be day hiked as [PanhandleGap].
 [9-ApproachingPanhandle.jpg] Approaching Panhandle Gap
 [9-SouthFromPanhandle.jpg] View to the south from Panhandle Gap, including Mount Adams and Mount Hood
 [9-BacksideOfCowlitzChimneys.jpg] Unusual view of the backside of the Cowlitz Chimneys
-[9-OhanapecoshPark.jpg] Ohanapecosh Park is a trove of otherworldly sights
+[!9-OhanapecoshPark.jpg] Ohanapecosh Park is a trove of otherworldly sights
 [9-SourceOfOhanapecoshRiver.jpg] These snowfields and waterfalls are the source of the magical Ohanapecosh River
 [9-Closeup.jpg] Closeup of the cliffs and snowfield
 [9-Descending.jpg] Descending toward Indian Bar
@@ -1148,7 +1168,7 @@ later helicopter pickup, then hike back out. Respect!
 
 ## Day 10: Indian Bar to Maple Creek
 
-[10-CowlitzDivide.jpg] Descending the Cowlitz Divide
+[!10-CowlitzDivide.jpg] Descending the Cowlitz Divide
 [10-BigTree.jpg] Beautiful big trees
 [10-Tantalize.jpg] Tantalizing hint of a summit view
 [10-BoxCanyon.jpg] At Box Canyon, the Muddy Fork of the Cowlitz River has carved deep
@@ -1181,7 +1201,7 @@ This section of the Wonderland can also be day hiked as [IndianBar].
 [11-MarthaFalls.jpg] Martha Falls
 [11-ReflectionLakes.jpg] Over the last 11 days I have gotten to know Tahoma from all angles. I have seen her disheveled in the evenings with wisps of cloud across her glaciers, slumped with tiredness in her western aspect, and early in the mornings with a rosy glow to her slopes. But here she is distancing herself, preparing to say goodbye, retreating to the formality of this picture postcard view from Reflection Lakes
 [11-Forest.jpg] One final stretch of forest
-[11-NisquallyRiver.jpg] One final bridge across the glacial Nisqually River
+[!11-NisquallyRiver.jpg] One final bridge across the glacial Nisqually River
 [11-Looped.jpg] This is it! This sign marks the point where, 11 days ago, we turned left. I have looped. I did it!
 
 <p class="subheading">10.9 miles, 2600' gain, 2600' descent</p>
@@ -1207,7 +1227,7 @@ dogs and take a bath and eat pizza.
 ## Reflections
 
 [Group.jpg] Tanner, me, Meg, Tanner, Mike, and Sasha
-[Feet.jpg] Lookin' good!
+[!Feet.jpg] Lookin' good!
 
 I set out with perhaps unrealistically high expectations for this hike, yet was not 
 disappointed. My preparation proved up to the task: mentally and physically, my 
@@ -1262,7 +1282,7 @@ and memories will stay with me forever. Truly, the Wonderland Trail is well name
 
 ## Gear List
 
-[Food.jpg] Preparing my food. Still to add: tortilla wraps, cheese sticks, and hunk of parmesan. The tinned goods are Mowich resupply treats, to be eaten directly at the cache location rather than carried in my pack
+[!Food.jpg] Preparing my food. Still to add: tortilla wraps, cheese sticks, and hunk of parmesan. The tinned goods are Mowich resupply treats, to be eaten directly at the cache location rather than carried in my pack
 [BearPole.jpg] Food on the bear pole
 [Pack.jpg] Ready to hit the trail
 [Shoes.jpg] Faithful friends

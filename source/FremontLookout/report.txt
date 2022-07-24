@@ -2,7 +2,7 @@ Fremont Lookout
 moderate
 6.5 1540 7190
 Sunrise
-none
+Sunrise
 2020
 
 [Dawn.jpg] Dawn light hits the mountain (from Sourdough Ridge)

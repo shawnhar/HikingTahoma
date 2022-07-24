@@ -43,7 +43,7 @@ distant views, haze can add a unique beauty of its own.
 [1-Rainier.jpg] My only Rainier view of this trip, before smoke haze intensified
 [1-LookingDown.jpg] Looking down on Dewey Lake from Naches Peak
 [1-SmokePlume.jpg] Eeek! Smoke plume from the Schneider Springs wildfire, 15 miles to my east
-[1-DeweyLake.jpg] Dewey Lake
+[!1-DeweyLake.jpg] Dewey Lake
 [1-Camp.jpg] Campsites are set slightly back from the lakeshore
 
 <p class="subheading">7.9 miles, 3200' gain, 1300' descent</p>
@@ -68,7 +68,7 @@ that doesn't involve covering some miles tomorrow.
 [2-Huckleberries.jpg] Huckleberries offer the perfect boost to fatigued hikers: intense sweetness balanced with underlying acidity and such a rich burst of flavor for something so tiny
 [2-Flowers.jpg] A few lupin left on the approach to one of many saddles along the PCT (flowers were mostly done for the year in this area)
 [2-Trail.jpg] This section of the PCT is just a delight to hike along
-[2-Trail2.jpg] Smoke haze messed with my sense of scale, with peaks that I would soon pass by appearing distantly blue
+[!2-Trail2.jpg] Smoke haze messed with my sense of scale, with peaks that I would soon pass by appearing distantly blue
 [2-ThreeLakes.jpg] The Three Lakes are more beautiful than they look: green, tranquil, and a great place to watch dragonflies (that's my afternoon reading log with the water bottle on it), but hard to capture in a photograph
 [2-Tent.jpg] Afternoon siesta inside my tent
 
@@ -106,7 +106,7 @@ one of my shoes (which I left outside the tent) during the night.
 [3-SilverFalls.jpg] Obligatory photo of the famous Silver Falls
 [3-Ohanapecosh.jpg] Looking over the Ohanapecosh River along the Eastside Trail
 [3-Forest.jpg] Old growth solitude on the Eastside Trail
-[3-Bridge.jpg] Bridge over Chinook Creek
+[!3-Bridge.jpg] Bridge over Chinook Creek
 [3-Forest2.jpg] It's like a Jeunet movie: everything tinted green
 
 <p class="subheading">13.8 miles, 2000' gain, 3400' descent</p>

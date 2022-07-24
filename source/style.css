@@ -270,7 +270,7 @@ a:link, a:visited {
 }
 
 .photos img {
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 @media (max-width: 580px) {
@@ -301,7 +301,7 @@ a:link, a:visited {
   font-style: italic;
 }
 
-.photos a:link, a:visited {
+.photos:not(.showlinks) a:link, a:visited {
   text-decoration: none;
 }
 
