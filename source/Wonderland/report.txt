@@ -616,19 +616,43 @@ taken down during the off-season.
 
 ## Hazards
 
-By far the greatest danger along the Wonderland Trail is the many glacial river 
-crossings. Some rivers have sturdy wooden bridges over them while others are spanned by 
-cool suspension bridges, but many have just a log plus a railing if you are lucky. 
-Falling off these logs into fast moving turbid waters, which are often filled with 
-rolling boulders, is not good for your life expectancy. Also, these rivers have a habit 
-of repeatedly removing their log crossings, so the Park Service is playing a perpetual 
-game of whack-a-mole trying to keep the bridges in place.
+By far the greatest danger of the Wonderland Trail is the many glacial river crossings. 
+Some rivers have sturdy wooden bridges over them while others are spanned by cool 
+suspension bridges, but many have just a log plus a railing if you are lucky. Falling off 
+these logs into fast moving turbid waters, which are often filled with rolling boulders, 
+is not good for your life expectancy. Also, these rivers have a habit of repeatedly 
+removing their log crossings, so the Park Service is playing a perpetual game of 
+whack-a-mole trying to keep the bridges in place.
 
-River conditions can vary day to day and even hour to hour as melt levels change 
-(mornings are better for crossing). It's a good idea to research bridge status before you 
-set out, but be aware that a log which existed when you started your hike may have washed 
-away by the time you arrive at its river, or a missing bridge may have been replaced. 
-Judge for yourself, and turn back if you don't like what you see.
+River conditions can vary day to day and even hour to hour as melt levels change. Early 
+mornings are better due to lower flow. It's a good idea to research bridge status before 
+you set out, but be aware that a bridge which existed when you started your hike may have 
+washed away by the time you arrive at its river, or a missing bridge may have been 
+replaced. Judge for yourself, and turn back if you don't like what you see.
+
+If you come to a river with no bridge, your options are to ford it, look for a 
+conveniently placed fallen tree, wait for conditions to change (a river that is raging 
+at 4 PM may be mellow at 6 AM tomorrow), or turn back. Beware if logs are slippery: 
+there's no shame in scootching across on your butt rather than walking upright :-)
+
+There will sometimes be flagging (ribbons tied to trees) showing the way to a suggested 
+crossing location, but take this with a pinch of salt because rivers are constantly 
+changing. Pick a spot that works for you, which might differ from what the rangers 
+thought best at some earlier time.
+
+Scout upstream (because rivers get bigger as more tributaries join) to find a good place 
+to cross. Don't be hesitant about going a long way if needed: it's better to add some 
+sideways distance than to cross in an unsuitable location and have your trip end poorly! 
+Remember that bridges (and hence trail routes) choose spots where the river is narrow and 
+deep, but for fording you want a spot where it's wide and shallow, or even better split 
+into multiple wide and shallow forks that can be tackled independently. Avoid locations 
+with hazards such as log tangles or rapids immediately downstream.
+
+To ford a river: unclip pack straps so you can ditch the pack quickly if needed. Wear 
+shoes: water/camp ones if you carry them, or your main hiking footwear if not. Use two 
+poles, and move just one pole or foot at a time so you'll always have three solid points 
+of contact. Use a pole to check depth, flow rate, and footing before each place you're 
+considering putting a foot. If you hear rocks rolling with the current, DO NOT ATTEMPT.
 
 With the caveat that even minor streams may be problematic at times of high flow, notable 
 crossings to be aware of include:
@@ -644,6 +668,9 @@ crossings to be aware of include:
     over them, or there may be fallen trees you can cross on. This is probably the most 
     dangerous and unpredictable of the rivers, combining remote location with lack of 
     alternatives if you can't find a good way across it.
+  </li>
+  <li>
+    The North Mowich River may also be tricky if its bridge is missing.
   </li>
   <li>
     The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) happens 
@@ -669,13 +696,13 @@ crossings to be aware of include:
 In addition to the rivers, snow can be a hazard especially early in the season. The 
 highest points along the Wonderland are Panhandle Gap, Skyscraper Pass, and Spray Park if 
 you choose to go that way. These often remain snowy until the end of August, and there 
-are steep slopes approaching Panhandle Gap and Skyscraper Pass that would be un-fun to 
-slide down. Spikes aren't needed once most of the trail has melted, but it may be easier 
-to cross these high places if you can arrange to do so later in the day when the snow is 
-soft rather than icy. And make sure your navigation is solid for these sections! Most of 
-the Wonderland Trail is obvious to follow, but Panhandle Gap and the top of Spray Park 
-are just rocks and snow patches with cairns to mark the way, so it'd be easy to lose your 
-way during bad weather.
+are steep slopes approaching Panhandle and Skyscraper that would be un-fun to slide down. 
+Spikes aren't needed once most of the trail has melted, but it may be easier to cross 
+these high places if you can arrange to do so later in the day when the snow is soft 
+rather than icy. And make sure your navigation is solid for these sections! Most of the 
+Wonderland Trail is obvious to follow, but Panhandle Gap and the top of Spray Park are 
+just rocks and snow patches with cairns to mark the way, so it'd be easy to lose your way 
+during bad weather.
 
 One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
 where the trail crosses a washout with loose, unstable footing. I am told this is 
