@@ -698,7 +698,7 @@ backpacking permit, many sections also make fantastic day hikes:
   </tr>
   <tr>
     <td><a href="../SprayPark/"><img src="../SprayPark/EnteringSprayPark-small.jpg" width="253" height="190" /><p>Spray Park</p></a></td>
-    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/ForestTrail-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
+    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/NaradaFalls-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
   </tr>
   <tr>
     <td><a href="../WhiteRiverToSunrise/"><img src="../WhiteRiverToSunrise/WhiteRiver-small.jpg" width="253" height="190" /><p>White River to Sunrise</p></a></td>
@@ -710,8 +710,8 @@ permits, but less time and commitment than hiking the full trail:
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="../SprayParkLoop/"><img src="../SprayParkLoop/SprayPark-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
-    <td><a href="../NorthernLoop/"><img src="../NorthernLoop/2-NaturalBridge-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
+    <td><a href="../SprayParkLoop/"><img src="../SprayParkLoop/Summit-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
+    <td><a href="../NorthernLoop/"><img src="../NorthernLoop/3-CarbonGlacier-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
   </tr>
   <tr>
     <td><a href="../KlapatchePark/"><img src="../KlapatchePark/AuroraLake2-small.jpg" width="253" height="190" /><p>Klapatche Park</p></a></td>
@@ -1168,12 +1168,12 @@ later helicopter pickup, then hike back out. Respect!
 
 ## Day 10: Indian Bar to Maple Creek
 
-[!10-CowlitzDivide.jpg] Descending the Cowlitz Divide
+[10-CowlitzDivide.jpg] Descending the Cowlitz Divide
 [10-BigTree.jpg] Beautiful big trees
 [10-Tantalize.jpg] Tantalizing hint of a summit view
 [10-BoxCanyon.jpg] At Box Canyon, the Muddy Fork of the Cowlitz River has carved deep
 [10-HappyForest.jpg] Such a delightful, happy forest
-[10-StevensCreek.jpg] Crossing Stevens Creek
+[!10-StevensCreek.jpg] Crossing Stevens Creek
 [10-Camp.jpg] Camped at Maple Creek
 
 <p class="subheading">10.4 miles, 2000' gain, 4300' descent</p>
