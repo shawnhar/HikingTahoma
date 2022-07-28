@@ -28,8 +28,6 @@ namespace builder
         public bool IsHidden => HikeName == "misc";
         public bool IsFuture => FirstHiked == "not yet";
         public bool IsNever => FirstHiked == "never";
-        public bool IsOffTop => FolderName == "WestForkWhiteRiver" || FolderName == "HuckleberryCreek" || FolderName == "HuckleberryGrandParkLoop";
-        public bool IsOffBottom => FolderName == "BackboneRidge";
 
         public readonly HikeMap Map;
 
@@ -76,12 +74,33 @@ namespace builder
         }
 
 
+        MapEdge IsOffEdge()
+        {
+            switch (FolderName)
+            {
+                case "WestForkWhiteRiver":
+                case "HuckleberryCreek":
+                case "HuckleberryGrandParkLoop":
+                    return MapEdge.Top;
+
+                case "BackboneRidge":
+                    return MapEdge.Bottom;
+
+                case "GlacierViewWilderness":
+                    return MapEdge.Left;
+
+                default:
+                    return MapEdge.None;
+            }
+        }
+
+
         public Hike(string sourcePath, ImageProcessor imageProcessor)
         {
             this.sourcePath = sourcePath;
             this.imageProcessor = imageProcessor;
 
-            Map = new HikeMap(imageProcessor, IsOffTop, IsOffBottom);
+            Map = new HikeMap(imageProcessor, IsOffEdge());
         }
 
 

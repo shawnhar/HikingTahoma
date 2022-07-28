@@ -14,12 +14,13 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 335;
+        const float totalLengthOfAllTrails = 341;
 
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
         public CanvasBitmap MapTop { get; private set; }
         public CanvasBitmap MapBottom { get; private set; }
+        public CanvasBitmap MapLeft { get; private set; }
 
         public int MapWidth => 1200;
         public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
@@ -32,6 +33,7 @@ namespace builder
             MasterMap = await LoadImage(sourceFolder, "map.png");
             MapTop = await LoadImage(sourceFolder, "maptop.png");
             MapBottom = await LoadImage(sourceFolder, "mapbottom.png");
+            MapLeft = await LoadImage(sourceFolder, "mapleft.png");
         }
 
 
@@ -76,16 +78,20 @@ namespace builder
         }
 
 
-        public CanvasBitmap CombineMaps(CanvasBitmap top, CanvasBitmap bottom)
+        public CanvasBitmap CombineMaps(CanvasBitmap a, CanvasBitmap b, bool horizontal)
         {
             using (new Profiler("ImageProcessor.CombineMaps"))
             {
-                var result = new CanvasRenderTarget(Device, top.SizeInPixels.Width, top.SizeInPixels.Height + bottom.SizeInPixels.Height, 96);
+                var result = new CanvasRenderTarget(Device, 
+                                                    horizontal ? (a.SizeInPixels.Width + b.SizeInPixels.Width) : a.SizeInPixels.Width,
+                                                    horizontal ? a.SizeInPixels.Height : (a.SizeInPixels.Height + b.SizeInPixels.Height), 
+                                                    96);
 
                 using (var drawingSession = result.CreateDrawingSession())
                 {
-                    drawingSession.DrawImage(top);
-                    drawingSession.DrawImage(bottom, 0, top.SizeInPixels.Height);
+                    drawingSession.DrawImage(a);
+                    drawingSession.DrawImage(b, horizontal ? a.SizeInPixels.Width : 0,
+                                                horizontal ? 0 : a.SizeInPixels.Height);
                 }
 
                 return result;

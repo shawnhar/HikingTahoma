@@ -11,6 +11,15 @@ using Windows.UI;
 
 namespace builder
 {
+    enum MapEdge
+    {
+        None,
+        Top,
+        Bottom,
+        Left,
+    }
+
+
     class HikeMap
     {
         readonly ImageProcessor imageProcessor;
@@ -19,18 +28,16 @@ namespace builder
         CanvasBitmap overlayMap;
         Rect usedBounds;
         Rect overlayBounds;
-        bool isOffTop;
-        bool isOffBottom;
+        MapEdge isOffEdge;
 
         public IEnumerable<string> YearsHiked => myMaps.Keys;
         public CanvasBitmap CombinedOverlay => combinedMap;
 
 
-        public HikeMap(ImageProcessor imageProcessor, bool isOffTop, bool isOffBottom)
+        public HikeMap(ImageProcessor imageProcessor, MapEdge isOffEdge)
         {
             this.imageProcessor = imageProcessor;
-            this.isOffTop = isOffTop;
-            this.isOffBottom = isOffBottom;
+            this.isOffEdge = isOffEdge;
         }
 
 
@@ -176,16 +183,22 @@ namespace builder
             var backgroundTransform = transform;
             var backgroundBounds = bounds;
 
-            if (isOffTop)
+            switch (isOffEdge)
             {
-                backgroundSource = imageProcessor.CombineMaps(imageProcessor.MapTop, imageProcessor.MasterMap);
-            }
-            else if (isOffBottom)
-            {
-                backgroundSource = imageProcessor.CombineMaps(imageProcessor.MasterMap, imageProcessor.MapBottom);
-                var offset = (float)(combinedMap.Size.Height - backgroundSource.Size.Height);
-                backgroundTransform = Matrix3x2.CreateTranslation(0, offset) * backgroundTransform;
-                backgroundBounds.Y -= offset;
+                case MapEdge.Top:
+                    backgroundSource = imageProcessor.CombineMaps(imageProcessor.MapTop, imageProcessor.MasterMap, false);
+                    break;
+
+                case MapEdge.Bottom:
+                    backgroundSource = imageProcessor.CombineMaps(imageProcessor.MasterMap, imageProcessor.MapBottom, false);
+                    var offset = (float)(combinedMap.Size.Height - backgroundSource.Size.Height);
+                    backgroundTransform = Matrix3x2.CreateTranslation(0, offset) * backgroundTransform;
+                    backgroundBounds.Y -= offset;
+                    break;
+
+                case MapEdge.Left:
+                    backgroundSource = imageProcessor.CombineMaps(imageProcessor.MapLeft, imageProcessor.MasterMap, true);
+                    break;
             }
 
             ICanvasEffect background = new Transform2DEffect
@@ -293,7 +306,8 @@ namespace builder
                 offset = Vector2.Zero;
             }
 
-            var scale = (float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width;
+            var scale = (isOffEdge == MapEdge.Left) ? (float)imageProcessor.MapHeight / (float)combinedMap.SizeInPixels.Height :
+                                                      (float)imageProcessor.MapWidth / (float)combinedMap.SizeInPixels.Width;
 
             var transform = Matrix3x2.CreateTranslation(offset) *
                             Matrix3x2.CreateScale(scale);
@@ -341,17 +355,19 @@ namespace builder
 
         public Vector2 GetOverlayOffset()
         {
-            if (isOffTop)
+            switch (isOffEdge)
             {
-                return new Vector2(0, (float)(-imageProcessor.MapTop.Size.Height));
-            }
-            else if (isOffBottom)
-            {
-                return new Vector2(0, (float)(imageProcessor.MasterMap.Size.Height + imageProcessor.MapBottom.Size.Height - combinedMap.Size.Height));
-            }
-            else
-            {
-                return Vector2.Zero;
+                case MapEdge.Top:
+                    return new Vector2(0, (float)(-imageProcessor.MapTop.Size.Height));
+                
+                case MapEdge.Bottom:
+                    return new Vector2(0, (float)(imageProcessor.MasterMap.Size.Height + imageProcessor.MapBottom.Size.Height - combinedMap.Size.Height));
+                
+                case MapEdge.Left:
+                    return new Vector2((float)(-imageProcessor.MapLeft.Size.Width), 0);
+                
+                default:
+                    return Vector2.Zero;
             }
         }
 
