@@ -74,7 +74,14 @@ namespace builder
             var distance = float.Parse(hike.Distance);
             var elevation = float.Parse(hike.ElevationGain);
 
-            return distance * (elevation + 3000);
+            var score = distance * (elevation + 3000);
+
+            if (hike.DifficultyCategory.Item1 == "unmaintained")
+            {
+                score *= 2;
+            }
+
+            return score;
         }
 
 
