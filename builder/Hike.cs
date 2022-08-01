@@ -26,10 +26,9 @@ namespace builder
         public string MapThumbnail => FolderName + "-map-small.jpg";
         public string OverlayName => FolderName + "-overlay.png";
         public bool IsHidden => HikeName == "misc";
-        public bool IsFuture => FirstHiked == "not yet!";
+        public bool IsFuture => FirstHiked == "not yet";
         public bool IsNever => FirstHiked == "never";
-        public bool IsNotHiked => IsFuture || IsNever;
-        public bool IsOffTop => FolderName == "WestForkWhiteRiver";
+        public bool IsOffTop => FolderName == "WestForkWhiteRiver" || FolderName == "HuckleberryCreek" || FolderName == "HuckleberryGrandParkLoop";
         public bool IsOffBottom => FolderName == "BackboneRidge";
 
         public readonly HikeMap Map;
@@ -228,11 +227,7 @@ namespace builder
                 WriteHtml(hikes, outPath);
 
                 await Map.WriteTrailMaps(outPath, MapName, MapThumbnail, IsNever);
-
-                if (!IsFuture)
-                {
-                    await Map.WriteTrailOverlay(outPath, OverlayName, IsNever);
-                }
+                await Map.WriteTrailOverlay(outPath, OverlayName, IsNever);
             }
         }
 

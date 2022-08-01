@@ -1,0 +1,25 @@
+Huckleberry / Grand Park Loop
+moderate overnighter
+19.1 4850 6890
+Sunrise
+Forest Lake, Berkeley Park, Lake Eleanor
+not yet
+
+I have not yet hiked this as a single combined loop, which I'd like to do someday, but I 
+have separately visited all the pieces of it at different times:
+
+<table class="photos showlinks">
+  <tr>
+    <td><a href="../HuckleberryCreek/"><img src="../HuckleberryCreek/Meadows-small.jpg" width="253" height="190" /><p>Huckleberry Creek</p></a></td>
+    <td><a href="../GrandPark/"><img src="../GrandPark/RainierFromGrandPark-small.jpg" width="253" height="190" /><p>Grand Park from Sunrise</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../GrandParkViaLakeEleanor/"><img src="../GrandParkViaLakeEleanor/LowerPark-small.jpg" width="253" height="190" /><p>Grand Park via Lake Eleanor</p></a></td>
+  </tr>
+</table>
+
+Closing the loop involves an additional 4.3 miles along Forest Road 73, which is not 
+included in the distance shown above. This could be handled by dropping a bike at the 
+Lake Eleanor trailhead, driving back to the Huckleberry Creek trailhead, and hiking up to 
+Forest Lake for the night. Then on day 2, hike out via Berkeley Park, Grand Park, and 
+Lake Eleanor, pick up the bike, and freewheel down the road back to your car.

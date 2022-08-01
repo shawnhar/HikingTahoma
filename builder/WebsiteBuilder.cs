@@ -54,7 +54,7 @@ namespace builder
 
                 if (processMap)
                 {
-                    var doneHikes = hikes.Where(hike => !hike.IsNotHiked).ToList();
+                    var doneHikes = hikes.Where(hike => !hike.IsFuture && !hike.IsNever).ToList();
 
                     var progress = await imageProcessor.MeasureProgressTowardGoal(doneHikes, sourceFolder.Path, outFolder.Path);
 
@@ -127,8 +127,7 @@ namespace builder
                 var sortedHikes = hikes.Where(hike => !hike.IsHidden)
                                        .OrderBy(hike => hike.HikeName);
 
-                var doneHikes = sortedHikes.Where(hike => !hike.IsNotHiked);
-                var notFutureHikes = sortedHikes.Where(hike => !hike.IsFuture);
+                var doneHikes = sortedHikes.Where(hike => !hike.IsNever);
 
                 using (var file = File.OpenWrite(Path.Combine(outPath, "index.html")))
                 using (var writer = new StreamWriter(file))
@@ -144,7 +143,7 @@ namespace builder
                     writer.WriteLine("    <div class=\"map\">");
                     writer.WriteLine("      <img class=\"mapbase\" src=\"map.jpg\" {0} />", imgSize);
 
-                    foreach (var hike in notFutureHikes)
+                    foreach (var hike in sortedHikes)
                     {
                         writer.WriteLine("      <img class=\"maplayer\" id=\"hike-{0}\" src=\"{0}/{1}\" {2} />", hike.FolderName, hike.OverlayName, imgSize);
                     }
@@ -185,7 +184,7 @@ namespace builder
                         difficulties[difficulty.Item1] = difficulty.Item2;
                         regions[region] = region;
 
-                        var eventHandler = hike.IsFuture ? "" : string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
+                        var eventHandler = string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
                         writer.WriteLine("        <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\"{7}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, eventHandler);
                     }
