@@ -324,7 +324,7 @@ There are many choices while planning a Wonderland circuit. This website include
 <a href="../Planner.html">Wonderland Itinerary Planner</a> which shows distance and 
 elevation change between your choice of trailheads and campsites.
 
-Going clockwise from Longmire, campsites along the Wonderland trail are:
+Going clockwise from Longmire, campsites along the Wonderland Trail are:
 
 <table class="campstable">
   <tr>
@@ -741,10 +741,11 @@ permits, but less time and commitment than hiking the full trail:
     <td><a href="../NorthernLoop/"><img src="../NorthernLoop/3-CarbonGlacier-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
   </tr>
   <tr>
+    <td><a href="../EastsideLoop/"><img src="../OwyhighLakesFromDeerCreek/CowlitzChimneys-small.jpg" width="253" height="190" /><p>Eastside Loop</p></a></td>
     <td><a href="../KlapatchePark/"><img src="../KlapatchePark/AuroraLake2-small.jpg" width="253" height="190" /><p>Klapatche Park</p></a></td>
-    <td><a href="../NorthPuyallup/"><img src="../NorthPuyallup/Descent-small.jpg" width="253" height="190" /><p>Westside Road to North Puyallup River</p></a></td>
   </tr>
   <tr>
+    <td><a href="../NorthPuyallup/"><img src="../NorthPuyallup/Descent-small.jpg" width="253" height="190" /><p>Westside Road to North Puyallup River</p></a></td>
     <td><a href="../CarbonGlacier/"><img src="../CarbonGlacier/SuspensionBridge-small.jpg" width="253" height="190" /><p>Carbon Glacier</p></a></td>
   </tr>
 </table>

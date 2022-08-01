@@ -1,0 +1,33 @@
+Eastside Loop
+moderate 4 days
+35 9000 6785
+Ohanapecosh
+Tamanos Creek, Deer Creek, Olallie Creek, Indian Bar, Summerland
+not yet
+
+I have not yet hiked this as a single combined loop, which I'd like to do someday, but I 
+have separately visited all the pieces of it at different times:
+
+<table class="photos showlinks">
+  <tr>
+    <td><a href="../OwyhighLakesFromWhiteRiverRoad/"><img src="../OwyhighLakesFromWhiteRiverRoad/Flowers-small.jpg" width="253" height="190" /><p>Owyhigh Lakes from White River Road</p></a></td>
+    <td><a href="../OwyhighLakesFromDeerCreek/"><img src="../OwyhighLakesFromDeerCreek/CowlitzChimneys-small.jpg" width="253" height="190" /><p>Owyhigh Lakes from Deer Creek</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../EastsideTrail/"><img src="../EastsideTrail/ForestOfGreenAndRed-small.jpg" width="253" height="190" /><p>Eastside Trail</p></a></td>
+    <td><a href="../CowlitzDivideTrail/"><img src="../CowlitzDivideTrail/GlowingMoss-small.jpg" width="253" height="190" /><p>Cowlitz Divide Trail</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../IndianBar/"><img src="../IndianBar/IndianBar-small.jpg" width="253" height="190" /><p>Indian Bar</p></a></td>
+    <td><a href="../Wonderland/Day9.html"><img src="../Wonderland/9-OhanapecoshPark-small.jpg" width="253" height="190" /><p>Ohanapecosh Park</p></a></td>
+  </tr>
+  <tr>
+    <td><a href="../PanhandleGap/"><img src="../PanhandleGap/PanhandleGap-small.jpg" width="253" height="190" /><p>Summerland and Panhandle Gap</p></a></td>
+  </tr>
+</table>
+
+The lower, eastern half of this loop consists of quiet trails-less-travelled through 
+primordial old growth forest. Its western half doubles as one of the most spectacular 
+high alpine portions of the Wonderland, taking in the Cowlitz Divide, Ohanapecosh Park, 
+and Summerland. Closing the loop involves walking 3/4 mile along the road, which is 
+included in the distance shown above.
