@@ -9,7 +9,8 @@ Berkeley Park
 [PastFrozenLake.jpg] Descending past Frozen Lake toward Berkeley Park
 [BerkeleyPark.jpg] Descending through Berkeley Park
 [BearGrass.jpg] Bear grass along the climb toward Grand Park
-[GrandPark.jpg] Rainier view from Grand Park
+[GrandPark.jpg] Grand Park
+[RainierFromGrandPark.jpg] Rainier view from Grand Park
 [Elk.jpg] A family of elk runs across Grand Park
 
 Grand Park is a unique geological formation created by [something mumble 
