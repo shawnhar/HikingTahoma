@@ -102,7 +102,15 @@ function UpdateHikeList(order)
     getKey = function(item) { return toNumber(item.getAttribute('data-max-elevation')) };
   }
   else if (order == 'steepness') {
-    getKey = function(item) { return Math.round(toNumber(item.getAttribute('data-elevation-gain')) / toNumber(item.getAttribute('data-length'))) };
+    getKey = function(item) {
+      var result = toNumber(item.getAttribute('data-elevation-gain')) / toNumber(item.getAttribute('data-length'));
+
+      if (item.getAttribute('data-one-way')) {
+        result /= 2;
+      }
+
+      return Math.round(result);
+    };
   }
   else {
     getKey = function(item) { return getItemCategory(item) + '.' + getItemText(item) };

@@ -184,9 +184,11 @@ namespace builder
                         difficulties[difficulty.Item1] = difficulty.Item2;
                         regions[region] = region;
 
+                        var oneWay = hike.IsOneWay ? " data-one-way=\"true\"" : "";
+
                         var eventHandler = string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("        <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\"{7}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, eventHandler);
+                        writer.WriteLine("        <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\"{7}{8}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, oneWay, eventHandler);
                     }
 
                     // Category headings.
