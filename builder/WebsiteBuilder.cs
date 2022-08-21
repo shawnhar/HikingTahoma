@@ -207,7 +207,9 @@ namespace builder
                     writer.WriteLine("      </table>");
                     writer.WriteLine("    </div>");
 
-                    writer.WriteLine("    <span class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">Trails hiked so far: {0:0.0}% ({1:0.0} miles)</span>", completionRatio * 100, distanceHiked);
+                    var label = (completionRatio < 0.999) ? "Trails hiked so far" : "Trails hiked";
+
+                    writer.WriteLine("    <span class=\"progress\" onMouseEnter=\"OnEnterLink(document, 'todo')\" onMouseLeave=\"OnLeaveLink(document, 'todo')\">{0}: {1:0.#}% ({2:0.#} miles)</span>", label, completionRatio * 100, distanceHiked);
 
                     writer.WriteLine("    <script src=\"index.js\"></script>");
 
