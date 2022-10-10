@@ -45,7 +45,7 @@ namespace builder
                     return Tuple.Create("x", "Backpacking");
                 }
 
-                if (Difficulty.Contains("unofficial") || Difficulty.Contains("unmaintained"))
+                if (Difficulty.Contains("unofficial") || Difficulty.Contains("unmaintained") || Difficulty.Contains("off-trail"))
                 {
                     return Tuple.Create("unmaintained", "Unmaintained, off-trail");
                 }
