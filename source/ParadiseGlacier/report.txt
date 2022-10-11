@@ -7,7 +7,7 @@ older
 
 [Pool.jpg] Reflections in a pool of meltwater
 [Reflection.jpg] Her Majesty, reflected
-[TheEnd.jpg] This is the end, my only friend... but the actual trail continues past here
+[TheEnd.jpg] This is the end, my only friend... but an unofficial path continues past this point
 [Stream.jpg] Otherworldly barren landscape where a glacier recently retreated
 [Trail.jpg] Evening light on a well-made trail
 [Sunset.jpg] Sunset above Paradise
@@ -20,9 +20,8 @@ above), or you can cut some distance by starting on the 4th Crossing trail.
 Apparently not many people come this way, as it's the only place I've 
 managed to find solitude above Paradise. This is probably because the trail 
 name is misleading. At one time there used to be a glacier here, but the 
-glacier has retreated and its once famous ice caves are no more :-(
-
-In their place is a barren landscape consisting of rock, water, and not much 
+glacier has retreated and its once famous ice caves are no more :-( In 
+their place is a barren landscape consisting of rock, water, and not much 
 else. I find it beautiful in a strange, unsettling way.
 
 In his book <i>"A Year in Paradise"</i>, then-guide Floyd Schmoe describes 
@@ -37,12 +36,12 @@ colors, and it is not dangerous so long as one is careful not to pass under
 the flakes of ice that sometimes split away from the sides and top of the 
 cavern."</i>
 
-As the glacier has retreated, Schmoe's confidence about safety has become 
-increasingly untrue, but every few years someone will climb far higher than 
-was necessary back in 1921 to where a remnant of the glacier still has 
-caves, and take a photo of the strangely beautiful filtered sunlight which 
-then goes viral on social media. Do not emulate these people! In the 21st 
-century, any remaining ice caves are extremely dangerous.
+Schmoe's confidence about safety has become increasingly inaccurate as the 
+glacier has retreated, but every few years someone will continue far 
+higher than was necessary in 1921 to where a remnant still has caves, and 
+take a photo of strangely beautiful filtered sunlight which then goes 
+viral on social media. Do not emulate these people! In the 21st century, 
+any remaining ice caves are extremely dangerous.
 
 The trail peters out rather than having a clear end. If you want to go 
 further, check out [CowlitzGap].
