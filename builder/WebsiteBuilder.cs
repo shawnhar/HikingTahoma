@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -166,6 +167,7 @@ namespace builder
                     writer.WriteLine("        <option value=\"elevation-gain\">By Elevation Gain</option>");
                     writer.WriteLine("        <option value=\"max-elevation\">By Max Elevation</option>");
                     writer.WriteLine("        <option value=\"steepness\">By Steepness</option>");
+                    writer.WriteLine("        <option value=\"first-hiked\">By Year Hiked</option>");
                     writer.WriteLine("      </select>");
                     writer.WriteLine("    </div>");
 
@@ -175,31 +177,42 @@ namespace builder
 
                     var difficulties = new Dictionary<string, string>();
                     var regions = new Dictionary<string, string>();
+                    var years = new Dictionary<string, string>();
 
                     foreach (var hike in sortedHikes)
                     {
                         var difficulty = hike.DifficultyCategory;
                         var region = hike.Region;
+                        var firstHiked = hike.FirstHiked;
+
+                        var firstHikedKey = firstHiked.Replace("older", "0lder")
+                                                      .Replace("never", "znever");
 
                         difficulties[difficulty.Item1] = difficulty.Item2;
                         regions[region] = region;
+                        years[firstHikedKey] = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(firstHiked);
 
                         var oneWay = hike.IsOneWay ? " data-one-way=\"true\"" : "";
 
                         var eventHandler = string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 
-                        writer.WriteLine("        <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\"{7}{8}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, oneWay, eventHandler);
+                        writer.WriteLine("        <div id=\"link-{0}\" data-region=\"{2}\" data-difficulty=\"{3}\" data-length=\"{4}\" data-elevation-gain=\"{5}\" data-max-elevation=\"{6}\" data-first-hiked=\"{7}\"{8}{9}><a href=\"{0}/\">{1}</a></div>", hike.FolderName, hike.HikeName, region, difficulty.Item1, hike.Distance, float.Parse(hike.ElevationGain), hike.MaxElevation, firstHikedKey, oneWay, eventHandler);
                     }
 
                     // Category headings.
-                    foreach (var difficulty in difficulties)
+                    foreach (var difficulty in difficulties.OrderBy(pair => pair.Key))
                     {
                         writer.WriteLine("        <div class=\"listhead\" data-difficulty=\"{0}\">{1}</div>", difficulty.Key, difficulty.Value);
                     }
 
-                    foreach (var region in regions)
+                    foreach (var region in regions.OrderBy(pair => pair.Key))
                     {
                         writer.WriteLine("        <div class=\"listhead\" data-region=\"{0}\">{1}</div>", region.Key, region.Value);
+                    }
+
+                    foreach (var year in years.OrderBy(pair => pair.Key))
+                    {
+                        writer.WriteLine("        <div class=\"listhead\" data-first-hiked=\"{0}\">{1}</div>", year.Key, year.Value);
                     }
 
                     writer.WriteLine("      </div>");

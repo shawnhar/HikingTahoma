@@ -17,6 +17,7 @@ function OnEnterLink(document, hikename)
   HighlightGraph(hikename, true);
 }
 
+
 function OnLeaveLink(document, hikename)
 {
   document.getElementById('hike-' + hikename).style.visibility = 'hidden';
@@ -34,6 +35,7 @@ function OnEnterImage(document, hikename)
 
   HighlightGraph(hikename, true);
 }
+
 
 function OnLeaveImage(document, hikename)
 {
@@ -74,6 +76,9 @@ function UpdateHikeList(order)
   }
   else if (order == 'difficulty') {
     getItemCategory = function(item) { return item.getAttribute('data-difficulty') };
+  }
+  else if (order == 'first-hiked') {
+    getItemCategory = function(item) { return item.getAttribute('data-first-hiked') };
   }
   else {
     getItemCategory = function(item) { return ''; };
