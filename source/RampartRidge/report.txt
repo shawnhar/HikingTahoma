@@ -7,7 +7,9 @@ none
 
 [Viewpoint.jpg] View from the open section along Rampart Ridge
 [Beware.jpg] Pay attention to avalanche danger before crossing this short section!
-[Ent.jpg] Lower parts of the trail are lush and rainforesty
+[Rainforest.jpg] Lower parts of the trail are lush and rainforesty
+[Ent.jpg] Ent in the snow
+[Ramparts.jpg] Distinctive cliffs formed where lava flowed past a glacier-filled valley
 
 Rampart Ridge is a straightforward loop hike beginning at Longmire. Its eastern 
 side is also the start of the [IndianHenrysFromLongmire] [Wonderland] section, 
@@ -18,6 +20,11 @@ rainforesty at the lower elevations. Along the way there's a nice overlook
 of the buildings at Longmire, and a short open section with a great view up 
 the valley of Kautz Creek toward Rainier's summit. I recommend hiking the 
 loop clockwise so you'll be facing toward the best view at this spot.
+
+Rampart Ridge is the remnant of a lava flow that ran down the top of existing 
+ridges at a time when the valleys were full of glaciers. Along its sides are 
+cliffs with distinctive rock patterns, formed when lava cooled rapidly after 
+coming in contact with ice.
 
 Due to its lower altitude, this hike is sometimes accessible during the 
 off-season when higher trails are snowed in. It also makes a good snowshoe 
