@@ -333,7 +333,7 @@ namespace builder
         }
 
 
-        public async Task WritePhoto(Photo photo, string sourcePath, string outPath)
+        public async Task WritePhoto(Photo photo, string sourcePath, string outPath, bool generateThumbnail = true)
         {
             using (new Profiler("ImageProcessor.WritePhoto"))
             {
@@ -359,11 +359,14 @@ namespace builder
                     }
 
                     // Also create thumbnail versions.
-                    using (var thumbnail = ResizeImage(bitmap, thumbnailWidth, thumbnailHeight))
+                    if (generateThumbnail)
                     {
-                        await SaveImage(thumbnail, outPath, photo.Thumbnail);
+                        using (var thumbnail = ResizeImage(bitmap, thumbnailWidth, thumbnailHeight))
+                        {
+                            await SaveImage(thumbnail, outPath, photo.Thumbnail);
 
-                        photo.ThumbnailSize = thumbnail.SizeInPixels;
+                            photo.ThumbnailSize = thumbnail.SizeInPixels;
+                        }
                     }
                 }
             }

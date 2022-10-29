@@ -42,8 +42,8 @@ namespace builder
 
                 // Process all the hikes.
                 var hikes = (await sourceFolder.GetFoldersAsync())
-                            .Where(folder => Path.GetFileName(folder.Path) != "Animals" && 
-                                             Path.GetFileName(folder.Path) != "Tracy" && 
+                            .Where(folder => Path.GetFileName(folder.Path) != "Animals" &&
+                                             Path.GetFileName(folder.Path) != "Tracy" &&
                                              Path.GetFileName(folder.Path) != "Overlays")
                             .Select(folder => new Hike(folder.Path, imageProcessor))
                             .ToList();
@@ -76,7 +76,7 @@ namespace builder
 
                 if (processHikes.Length == 0)
                 {
-                    await ProcessExtraPhotos("Animals", sourceFolder.Path, outFolder.Path, imageProcessor);
+                    await ProcessAnimals(sourceFolder.Path, outFolder.Path, imageProcessor);
                     await ProcessExtraPhotos("Tracy", sourceFolder.Path, outFolder.Path, imageProcessor);
 
                     // Generate map overlay images for the distances planning tool.
@@ -279,6 +279,90 @@ namespace builder
             writer.WriteLine("        </tr>");
             writer.WriteLine("      </table>");
             writer.WriteLine("    </div>");
+        }
+
+
+        async Task ProcessAnimals(string sourcePath, string outPath, ImageProcessor imageProcessor)
+        {
+            using (new Profiler("WebsiteBuilder.ProcessAnimals"))
+            {
+                sourcePath = Path.Combine(sourcePath, "Animals");
+                outPath = Path.Combine(outPath, "Animals");
+
+                Directory.CreateDirectory(outPath);
+
+                foreach (var animalInfo in Directory.GetFiles(sourcePath, "*.txt").Select(Path.GetFileName))
+                {
+                    // Parse the animal description.
+                    var lines = File.ReadAllLines(Path.Combine(sourcePath, animalInfo));
+
+                    var animalName = lines[0];
+
+                    var photos = lines.Where(line => line.StartsWith("["))
+                                      .Select(line => line.TrimStart('[').TrimEnd(']'))
+                                      .ToList();
+
+                    var remainder = lines.Skip(1)
+                                         .SkipWhile(string.IsNullOrEmpty)
+                                         .Where(line => !line.StartsWith("["));
+
+                    var animalDescription = new List<string>();
+
+                    while (remainder.Any())
+                    {
+                        var descs = remainder.TakeWhile(line => !string.IsNullOrEmpty(line));
+
+                        animalDescription.Add(string.Join(' ', descs.Select(s => s.Trim())));
+
+                        remainder = remainder.Skip(descs.Count())
+                                             .SkipWhile(string.IsNullOrEmpty);
+                    }
+
+                    // Convert the animal photo(s).
+                    photos.Insert(0, Path.GetFileNameWithoutExtension(animalInfo) + ".jpg");
+
+                    for (int i = 0; i < photos.Count; i++)
+                    {
+                        if (!photos[i].StartsWith(".."))
+                        {
+                            var photo = new Photo(photos[i], string.Empty);
+
+                            await imageProcessor.WritePhoto(photo, sourcePath, outPath, generateThumbnail: i == 0);
+                        }
+                    }
+
+                    // Write the HTML info page.
+                    using (var file = File.OpenWrite(Path.Combine(outPath, Path.GetFileNameWithoutExtension(animalInfo) + ".html")))
+                    using (var writer = new StreamWriter(file))
+                    {
+                        WebsiteBuilder.WriteHtmlHeader(writer, animalName, "../");
+
+                        writer.WriteLine("    <div class=\"fixedwidth\">");
+                        writer.WriteLine("      <p class=\"heading\">{0}</p>", animalName);
+
+                        writer.WriteLine("      <div class=\"description\">");
+
+                        foreach (var line in animalDescription)
+                        {
+                            writer.WriteLine("        <p>{0}</p>", line);
+                        }
+
+                        writer.WriteLine("        <div class=\"animalphotos\">");
+
+                        foreach (var photoFilename in photos)
+                        {
+                            writer.WriteLine("          <img src=\"{0}\" />", photoFilename);
+                        }
+
+                        writer.WriteLine("        </div>");
+
+                        writer.WriteLine("      </div>");
+                        writer.WriteLine("    </div>");
+                        writer.WriteLine("  </body>");
+                        writer.WriteLine("</html>");
+                    }
+                }
+            }
         }
 
 

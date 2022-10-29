@@ -305,6 +305,13 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.animalphotos img {
+  max-width: 100%;
+  border: 0.5px solid black;
+  margin-top: 16;
+  margin-bottom: 16;
+}
+
 .wheretostart .heading {
   vertical-align: middle;
 }
