@@ -1,10 +1,10 @@
 Golden-mantled Ground Squirrel
 
-[Squirrel2.jpg]
+[GroundSquirrel2.jpg]
 
-These charming little rascals are often mistaken for chipmunks, but this is actually a 
-golden-mantled ground squirrel. An easy way to tell the difference is that chipmunks have 
-stripes on their faces as well as sides.
+These charming little rascals are often mistaken for <a href="Chipmunk.html">chipmunks</a>, 
+but this is actually a golden-mantled ground squirrel. An easy way to tell the difference 
+is that chipmunks have stripes on their faces as well as sides.
 
 They are omnivorous consumers of plants, insects, eggs, carrion, and hiker food. 
 Especially if previous hikers have fed one (please don't do that!) they can become so 
