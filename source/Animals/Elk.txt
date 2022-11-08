@@ -11,9 +11,10 @@ During the fall rut, bull elk make loud bugling calls to attract cows and scare 
 males. They sound a bit like a child in the early stages of learning to play the French 
 horn.
 
-Beginner hikers may wonder how to distinguish elk vs. deer. Key differences: elk are 
-bigger, likely be seen in larger groups, have darker colored legs and necks where deer 
-are a single color all over, and have white rump patches with short stubby tails.
+Beginner hikers may wonder how to distinguish elk vs. <a href="Deer.html">deer</a>. Key 
+differences: elk are bigger, likely be seen in larger groups, have darker colored legs 
+and necks where deer are a single color all over, and have white rump patches with short 
+stubby tails.
 
 Roosevelt (aka Olympic) elk were once native to Rainier, but their population declined 
 throughout the Cascades as settlement and hunting increased. Even after the creation of 
