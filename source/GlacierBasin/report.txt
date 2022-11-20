@@ -1,59 +1,49 @@
 Glacier Basin
 moderate
-9.8 2880 6650
+8.5 2380 6650
 White River
 White River, Glacier Basin
 older
 
-[EmmonsMoraine.jpg] Along the Emmons Moraine side spur (moraine on the right, glacier to the left)
-[EmmonsGlacier.jpg] Snout of the Emmons Glacier
-[EmmonsMeltwater.jpg] Unnamed lake filled and colored by glacial meltwater
-[LittleTahoma.jpg] Little Tahoma viewed from the Emmons Moraine side spur, with the Emmons Glacier to its right
+[Trail.jpg] Along the trail
 [GlacierBasin.jpg] The official trail ends at the entrance to Glacier Basin, but don't stop here!
 [GlacierBasinLookingBack.jpg] Looking back downhill from the middle of Glacier Basin
 [GlacierBasinFurtherUp.jpg] Following the climber's trail up a moraine toward the Inter Glacier
 [Glorious.jpg] What a glorious place this is!
+[Moraine.jpg] A textbook glacial moraine
 [VolcanicSpires.jpg] Looking up at volcanic rock spires near St. Elmo Pass
 [InterGlacier.jpg] Up close and personal with the Inter Glacier
 
 This hike is reported elsewhere as being significantly shorter than the 
 numbers I'm giving above. Usually more like 6 miles with 1600' elevation 
-gain.
-
-That's what happens if you start at the White River campsite, hike up 
+gain. That's what happens if you start at the White River campsite, hike up 
 alongside the Inter Fork of the White River, and turn around at the 'End of 
 Maintained Trail' sign by the Glacier Basin backcountry camp. It's a 
 pleasant enough hike, through varied forest with occasional more open views, 
 and the high basin at the end of the trail is quite beautiful.
 
 You're really missing the point if this is all you do here, though. Far 
-greater rewards are to be had by going further.
+greater rewards are to be had by going further. After you reach the end of 
+the official trail at the entrance to Glacier Basin, an unofficial but easy 
+to follow climber's path continues upward through the basin. It passes a 
+small moraine on its way to the foot of the Inter Glacier, at which point it 
+becomes a summit climbing route requiring special equipment and skills. 
+Don't venture onto the glacier if you lack these, but do continue up the 
+basin as far as you want. It's super cool.
 
-A mile from the trailhead there's a side spur to the left signposted Emmons 
-Moraine. Skipping this would cut out 2 miles and 500' elevation gain, but 
-it's well worth exploring. Emmons Glacier is a monster (largest surface area 
-of any glacier in the contiguous United States!) and this is the perfect 
-place to see it from. You can usually also see a lake filled by Emmons 
-meltwater, which is colored turquoise by suspended glacial silt. I find it 
-amazing to think how this water was only recently liberated from hundreds of 
-years of deep freeze within a glacier, during which time it was slowly 
-grinding rock down to ever finer grades of silt.
+Many copper mining claims were registered here in the 1890s, and Peter 
+Storbo incorporated the Mount Rainier Mining Company in 1904. Despite 
+ongoing disagreements with the park that led to surrendering 32 of their 41 
+claims, by 1920 they had dug several tunnels and constructed buildings 
+including a barn, power plant, sawmill, and hotel. The current Glacier Basin 
+trail owes its width in places to a rough road built by these miners, but 
+the mine never became profitable due to the short working season, high cost 
+of maintaining the access road, and most importantly, lack of enough copper 
+to be dug. After the company continued to raise funds from shareholders via 
+increasingly implausible claims, Storbo was imprisoned for fraud in 1930, 
+and the last remnants of the mine were bought out by the government in 1984. 
+The full story is told in
+<a href="https://www.nps.gov/mora/learn/historyculture/upload/2017-mining-glacier-basin-burtchard_web.pdf">Mining Glacier Basin</a>.
 
-Better still, after you reach the end of the official trail at the entrance 
-to Glacier Basin, an unofficial but easy to follow climber's trail continues 
-upward through the basin. It passes a small moraine on its way to the foot 
-of the Inter Glacier, at which point it becomes a summit climbing route 
-requiring special equipment and skills. Don't venture onto the glacier if 
-you lack these, but do continue up the basin as far as you want. It's super 
-cool: my favorite part of this trail.
-
-Many copper and silver mining claims were registered here in 1898, and a guy 
-called Peter Storbo formed the Mount Rainier Mining Company in 1904. Despite 
-ongoing disagreement with the park that led to surrendering 32 of the 41 
-claims, by the late 1920's they'd dug several tunnels and constructed multiple 
-buildings including a sawmill. The current Glacier Basin trail owes its width 
-in places to a rough road built by these miners, but the mine never became 
-profitable. Storbo was imprisoned for fraud in 1930, and the last remnants of 
-the mine were bought out by the government in 1984.
-
-The Glacier Basin trail also forms part of the [GlacierBasinLoop].
+The Glacier Basin trail also forms part of the [EmmonsMoraine] trail and 
+[GlacierBasinLoop].
