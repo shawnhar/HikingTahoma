@@ -56,5 +56,5 @@ Other options:
     north, which gives the figures shown at the top of this article, or north to south, 
     which has you rolling downhill the entire way.</li>
 
-    <li>Extend it via the Eastside Loop or [EastsidePCTLoop].</li>
+    <li>Extend it via the [EastsideLoop] or [EastsidePCTLoop].</li>
 </ul>
