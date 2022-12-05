@@ -43,8 +43,8 @@ namespace builder
                 // Process all the hikes.
                 var hikes = (await sourceFolder.GetFoldersAsync())
                             .Where(folder => Path.GetFileName(folder.Path) != "Animals" &&
-                                             Path.GetFileName(folder.Path) != "Tracy" &&
-                                             Path.GetFileName(folder.Path) != "Overlays")
+                                             Path.GetFileName(folder.Path) != "Overlays" &&
+                                             Path.GetFileName(folder.Path) != "Photos")
                             .Select(folder => new Hike(folder.Path, imageProcessor))
                             .ToList();
 
@@ -77,7 +77,7 @@ namespace builder
                 if (processHikes.Length == 0)
                 {
                     await ProcessAnimals(sourceFolder.Path, outFolder.Path, imageProcessor);
-                    await ProcessExtraPhotos("Tracy", sourceFolder.Path, outFolder.Path, imageProcessor);
+                    await ProcessExtraPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
 
                     // Generate map overlay images for the distances planning tool.
                     await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
@@ -366,12 +366,12 @@ namespace builder
         }
 
 
-        async Task ProcessExtraPhotos(string folderName, string sourcePath, string outPath, ImageProcessor imageProcessor)
+        async Task ProcessExtraPhotos(string sourcePath, string outPath, ImageProcessor imageProcessor)
         {
             using (new Profiler("WebsiteBuilder.ProcessExtraPhotos"))
             {
-                sourcePath = Path.Combine(sourcePath, folderName);
-                outPath = Path.Combine(outPath, folderName);
+                sourcePath = Path.Combine(sourcePath, "Photos");
+                outPath = Path.Combine(outPath, "Photos");
 
                 Directory.CreateDirectory(outPath);
 

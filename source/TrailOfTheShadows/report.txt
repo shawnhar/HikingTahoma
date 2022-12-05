@@ -10,6 +10,7 @@ none
 [Melted.jpg] The marshy area remains melted in winter, even with snow all around, thanks to warm water from the volcanic springs
 [HotSprings.jpg] Back in the day the Longmire family built stonework around several mineral springs along the Trail of the Shadows, hoping to establish a spa. Their venture failed, but their construction remains. The springs aren't exactly hot, but warm enough to clear a gap in the snow
 [Cabin.jpg] Historic cabin built by the Longmire family in 1888. Note the iron deposits and melted snow due to a mineral spring behind the cabin
+[Rainier.jpg] Wintry evening summit view, from Trail of the Shadows
 
 This easy trail circles through old growth forest around a marsh, past 
 several mineral springs and remnants of the historical Longmire Springs 
