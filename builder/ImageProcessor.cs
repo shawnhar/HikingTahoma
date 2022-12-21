@@ -14,7 +14,7 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 342;
+        const float totalLengthOfAllTrails = 344;
 
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }

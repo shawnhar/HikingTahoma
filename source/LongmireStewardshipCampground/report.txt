@@ -1,0 +1,50 @@
+Longmire Stewardship Campground
+easy
+3.2 480 3040
+Longmire
+none
+2022
+
+[NisquallySuspensionBridge.jpg] Wooden suspension bridge over the Nisqually River was built in 1923-24, reconstructed to support heavier vehicles in 1951, and reconstructed again in 2005
+[NF5230-012.jpg] The north end of road NF 5230-012 would feature a stunning summit view on a clearer day
+[NisquallyUseArea.jpg] Parts of the Stewardship Campground are reserved for Nisqually tribal use
+[WaterTanks.jpg] I believe these water tanks are the main supply for Longmire
+[Snowshoe.jpg] Lovely off-the-beaten-path snowshoeing route heads south from the water tanks
+
+Across the Nisqually River from the main Longmire complex lies the Longmire Stewardship 
+Campground. This used to be a car campground, but was closed to the public in 1989. 
+Camping here is reserved for seasonal employees of the National Park, official volunteers 
+doing work in the park, and Nisqually Tribal Members. The historic Community Building is 
+also now closed to the public, but still used by federal employees for meetings and 
+training classes.
+
+Visiting in summer would be kind of a dick move because you'd be intruding on others 
+(volunteer for the park if you want to camp here!) but in the winter it's a delightfully 
+quiet place to snowshoe. There are several options for distance and difficulty:
+
+<ul>
+    <li>
+        Over the Nisqually Suspension Bridge, past the [EaglePeak] trailhead and the 
+        Community Building, around the campsites and back is ~2 miles with minimal 
+        elevation gain.
+    </li>
+    <li>
+        Continuing down Forest Road NF 5230-012 to the National Park boundary (not shown 
+        on the map above) would be 3.2 miles roundtrip, still mostly flat. This road is a 
+        spur off of NF 5230, which in turn is a spur off NF 52 aka Skate Creek Road which 
+        connects Ashford to Packwood.
+    </li>
+    <li>
+        Immediately past the Community Building an unmarked service road, which I cannot 
+        find on any maps, heads east and uphill for 0.3 miles to a pair of water tanks 
+        which I believe are the main supply for Longmire. Just before the tanks I noticed 
+        a flagged path heading south, and I followed this for 0.2 miles (shown on the map 
+        above). TODO: return and explore further to find out where this goes! It occurred 
+        to me that the park might not want people recreating in an area which appears to 
+        be a water source, but:
+        <ol>
+            <li>I saw no signs saying to keep out...</li>
+            <li>I checked with the NPS who replied <i>"yes that is totally fine to explore and hike around"</i></li>
+        </ol>
+    </li>
+</ul>
