@@ -725,7 +725,7 @@ backpacking permit, many sections also make fantastic day hikes:
   </tr>
   <tr>
     <td><a href="../SprayPark/"><img src="../SprayPark/EnteringSprayPark-small.jpg" width="253" height="190" /><p>Spray Park</p></a></td>
-    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/NaradaFalls-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
+    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/UpTheNisqually-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
   </tr>
   <tr>
     <td><a href="../WhiteRiverToSunrise/"><img src="../WhiteRiverToSunrise/WhiteRiver-small.jpg" width="253" height="190" /><p>White River to Sunrise</p></a></td>
