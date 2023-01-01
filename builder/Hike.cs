@@ -104,12 +104,15 @@ namespace builder
         }
 
 
-        public async Task Load()
+        public async Task Load(bool loadMap)
         {
             ParseReport();
             ValidatePhotos();
 
-            await Map.Load(sourcePath, FirstHiked);
+            if (loadMap)
+            {
+                await Map.Load(sourcePath, FirstHiked);
+            }
         }
 
 

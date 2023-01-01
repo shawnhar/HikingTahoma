@@ -11,8 +11,8 @@ namespace builder
 {
     class WebsiteBuilder
     {
-        const bool processMap = true;
-        readonly string[] processHikes = { };
+        bool processMap = true;
+        string[] processHikes = { };
 
 
         public async Task<string> Build()
@@ -33,6 +33,17 @@ namespace builder
 
             StorageFolder outFolder = await cacheFolder.CreateFolderAsync("out", CreationCollisionOption.ReplaceExisting);
 
+            // Are there instructions indicating to only build a subset of the trails?
+            var whatToBuild = Path.Combine(cacheFolder.Path, "build.txt");
+
+            if (File.Exists(whatToBuild))
+            {
+                var entries = string.Join(' ', File.ReadAllLines(whatToBuild)).Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                processMap = entries.Contains("map");
+                processHikes = entries.Where(entry => entry != "map").ToArray();
+            }
+
             using (new Profiler("WebsiteBuilder.Build"))
             {
                 // Load the master map. 
@@ -50,7 +61,9 @@ namespace builder
 
                 foreach (var hike in hikes)
                 {
-                    await hike.Load();
+                    bool loadMap = processMap || shouldProcessHike(hike);
+
+                    await hike.Load(loadMap);
                 }
 
                 if (processMap)
@@ -66,20 +79,15 @@ namespace builder
                 }
 
                 // Process the individual hikes and photos.
-                foreach (var hike in hikes.Where(hike => !hike.IsHidden))
+                foreach (var hike in hikes.Where(hike => !hike.IsHidden && shouldProcessHike(hike)))
                 {
-                    if (processHikes.Length == 0 || processHikes.Contains(hike.FolderName))
-                    {
-                        await hike.WriteOutput(hikes, outFolder.Path);
-                    }
+                    await hike.WriteOutput(hikes, outFolder.Path);
                 }
 
                 if (processHikes.Length == 0)
                 {
                     await ProcessAnimals(sourceFolder.Path, outFolder.Path, imageProcessor);
                     await ProcessExtraPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
-
-                    // Generate map overlay images for the distances planning tool.
                     await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
                 }
 
@@ -111,6 +119,12 @@ namespace builder
             Profiler.OutputResults();
 
             return outFolder.Path;
+        }
+
+
+        bool shouldProcessHike(Hike hike)
+        {
+            return processHikes.Length == 0 || processHikes.Contains(hike.FolderName);
         }
 
 
