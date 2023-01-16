@@ -133,7 +133,7 @@ Lakes camp in August this way, which formed the basis of a 3 day [EastsidePCTLoo
 
 If you're really dedicated it can be worth checking back as the season progresses, 
 because people sometimes find themselves unable to go on a trip they had booked. If they 
-cancel their reservation or fail to activate the permit by noon of the first day, the 
+cancel their reservation or fail to activate their permit by noon of its first day, the 
 unused camps become available for others.
 
 Speaking of which: if you have a reservation that you're unable to use, please cancel it 
@@ -577,8 +577,8 @@ Another source of flexibility can be found in substituting other trails for unav
 sections of the Wonderland. If none of Dick Creek, Mystic Camp, or Granite Creek are 
 available, you could detour via the [NorthernLoop] and stay at James Camp or Fire Creek 
 instead. If Summerland and Indian Bar are fully booked, hop over to the [EastsideTrail] 
-via [OwyhighLakesFromWhiteRiverRoad], [OwyhighLakesFromDeerCreek], and the 
-[CowlitzDivideTrail], camping at Tamanos Creek, Deer Creek, and Olallie Creek. This 
+via <a href="../OwyhighLakesFromWhiteRiverRoad/">Owyhigh Lakes</a> and the 
+[CowlitzDivideTrail], camping at Tamanos Creek, Deer Creek, or Olallie Creek. This 
 eastside detour can be particularly useful because Summerland and Indian Bar tend to fill 
 up early, so they often end up being the limiting factor in putting together a full 
 circuit.
