@@ -11,8 +11,13 @@ namespace builder
 {
     class WebsiteBuilder
     {
-        bool processMap = true;
-        string[] processHikes = { };
+        string[] whatToBuild = { };
+
+
+        bool WantToBuild(string name)
+        {
+            return whatToBuild.Contains(name) || !whatToBuild.Any();
+        }
 
 
         public async Task<string> Build()
@@ -34,14 +39,13 @@ namespace builder
             StorageFolder outFolder = await cacheFolder.CreateFolderAsync("out", CreationCollisionOption.ReplaceExisting);
 
             // Are there instructions indicating to only build a subset of the trails?
-            var whatToBuild = Path.Combine(cacheFolder.Path, "build.txt");
-
-            if (File.Exists(whatToBuild))
+            var buildTxt = Path.Combine(cacheFolder.Path, "build.txt");
+            
+            if (File.Exists(buildTxt))
             {
-                var entries = string.Join(' ', File.ReadAllLines(whatToBuild)).Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                var separators = new char[] { ' ', '\r', '\n' };
 
-                processMap = entries.Contains("map");
-                processHikes = entries.Where(entry => entry != "map").ToArray();
+                whatToBuild = File.ReadAllText(buildTxt).Split(separators, StringSplitOptions.RemoveEmptyEntries);
             }
 
             using (new Profiler("WebsiteBuilder.Build"))
@@ -61,12 +65,12 @@ namespace builder
 
                 foreach (var hike in hikes)
                 {
-                    bool loadMap = processMap || shouldProcessHike(hike);
+                    bool loadMap = WantToBuild(hike.FolderName) || WantToBuild("map");
 
                     await hike.Load(loadMap);
                 }
 
-                if (processMap)
+                if (WantToBuild("map"))
                 {
                     var doneHikes = hikes.Where(hike => !hike.IsFuture && !hike.IsNever).ToList();
 
@@ -79,15 +83,19 @@ namespace builder
                 }
 
                 // Process the individual hikes and photos.
-                foreach (var hike in hikes.Where(hike => !hike.IsHidden && shouldProcessHike(hike)))
+                foreach (var hike in hikes.Where(hike => !hike.IsHidden && WantToBuild(hike.FolderName)))
                 {
                     await hike.WriteOutput(hikes, outFolder.Path);
                 }
 
-                if (processHikes.Length == 0)
+                if (WantToBuild("photos"))
                 {
                     await ProcessAnimals(sourceFolder.Path, outFolder.Path, imageProcessor);
                     await ProcessExtraPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
+                }
+
+                if (WantToBuild("overlays"))
+                {
                     await ProcessMapOverlays(sourceFolder.Path, outFolder.Path, imageProcessor);
                 }
 
@@ -119,12 +127,6 @@ namespace builder
             Profiler.OutputResults();
 
             return outFolder.Path;
-        }
-
-
-        bool shouldProcessHike(Hike hike)
-        {
-            return processHikes.Length == 0 || processHikes.Contains(hike.FolderName);
         }
 
 
