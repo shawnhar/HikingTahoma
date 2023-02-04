@@ -122,6 +122,8 @@ namespace builder
                 // Combine all the text for all the hikes, so a spell check can easily be run over the whole thing.
                 LogHikeTextForSpellCheck(outFolder.Path, hikes);
 #endif
+
+                imageProcessor.ThrowIfBadAspectRatios();
             }
 
             Profiler.OutputResults();

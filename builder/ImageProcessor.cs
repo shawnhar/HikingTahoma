@@ -3,6 +3,7 @@ using Microsoft.Graphics.Canvas.Effects;
 using Microsoft.Graphics.Canvas.Text;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -24,6 +25,8 @@ namespace builder
 
         public int MapWidth => 1200;
         public int MapHeight => (int)(MasterMap.SizeInPixels.Height * MapWidth / MasterMap.SizeInPixels.Width);
+
+        readonly List<string> badAspectRatios = new List<string>();
 
 
         public async Task Initialize(string sourceFolder)
@@ -112,7 +115,7 @@ namespace builder
                     expandedSize.Height += MapTop.Size.Height;
                     expandedSize.Height += MapBottom.Size.Height;
 
-                    var expandedOffset = new Vector2(0, (float)MapTop.Size.Height);                    
+                    var expandedOffset = new Vector2(0, (float)MapTop.Size.Height);
 
                     using (var trailsHiked = new CanvasRenderTarget(allTrails, expandedSize))
                     using (var trailsTodo = new CanvasRenderTarget(allTrails, allTrails.Size))
@@ -344,6 +347,14 @@ namespace builder
 
                 using (var bitmap = await LoadImage(sourcePath, photo.Filename))
                 {
+                    // Check the aspect ratio.
+                    if (!photo.IsPanorama &&
+                        (bitmap.Size.Width != bitmap.Size.Height * 4 / 3) &&
+                        (bitmap.Size.Height != bitmap.Size.Width * 4 / 3))
+                    {
+                        badAspectRatios.Add(Path.Combine(Path.GetFileName(outPath), photo.Filename));
+                    }
+
                     if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
                     {
                         // Resize if the source is excessively large.
@@ -369,6 +380,20 @@ namespace builder
                         }
                     }
                 }
+            }
+        }
+
+
+        public void ThrowIfBadAspectRatios()
+        {
+            if (badAspectRatios.Any())
+            {
+                foreach (var filename in badAspectRatios)
+                {
+                    Debug.WriteLine("Photo has bad aspect ratio: " + filename);
+                }
+
+                throw new Exception("Some photos have incorrect aspect ratios. See debugger output for details.");
             }
         }
     }
