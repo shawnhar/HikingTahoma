@@ -2,7 +2,7 @@
 
 namespace builder
 {
-    class HikeSection
+    class ArticleSection
     {
         public string Title { get; private set; }
         public string LongTitle { get; private set; }
@@ -15,11 +15,11 @@ namespace builder
         public readonly List<string> Descriptions = new List<string>();
 
 
-        public void SetTitle(string sectionTitle, string hikeName)
+        public void SetTitle(string sectionTitle, string articleName)
         {
             // Possible parameter forms:
             //  "<short title>|<long title>"
-            //  "<short title>" (in which case the long title is <hikename> <shorttitle>)
+            //  "<short title>" (in which case the long title is <articleName> <shorttitle>)
 
             var substring = sectionTitle.IndexOf('|');
 
@@ -31,7 +31,7 @@ namespace builder
             else
             {
                 Title = sectionTitle;
-                LongTitle = hikeName + " " + sectionTitle;
+                LongTitle = articleName + " " + sectionTitle;
             }
 
             // If title is in the form "Day 1: Sunrise to Mystic", the URL is just "Day1".

@@ -1,0 +1,60 @@
+Future Plans
+
+I have completed my goal of hiking every maintained trail inside Mount Rainier National 
+Park, but am far from finished with Tahoma. There are several trails that I've already 
+hiked, but want to revisit because this website lacks sufficiently representative photos. 
+It is the nature of trails to change with weather, season, and time of day, but I want 
+this site to accurately represent the typical character of each. Places I feel I haven't 
+yet achieved that are:
+
+<ul class="tight">
+  <li>[BurroughsMountain]</li>
+  <li>[CarbonGlacier]</li>
+  <li><a href="VanTrumpPark/">Christine Falls and Van Trump Park</a></li>
+  <li>[GlacierBasinLoop]</li>
+  <li>[GrandPark]</li>
+  <li><a href="SprayParkLoop/">Ipsut Pass</a></li>
+  <li><a href="NorthPuyallup/">Klapatche Point</a></li>
+  <li>[MoraineTrail]</li>
+  <li>[NaradaFallsLoop]</li>
+  <li>[PaulPeakTrail]</li>
+  <li>[SourdoughGap]</li>
+</ul>
+
+I need to add good photos of the Paradise Inn.
+
+There are a couple of loop routes which I've hiked all the pieces of at different times, 
+but want to someday repeat all in one go:
+
+<ul class="tight">
+  <li>[EastsideLoop]</li>
+  <li>[HuckleberryGrandParkLoop]</li>
+</ul>
+
+The dividing line between trails and unofficial routes is infinitely blurry. Rainier is 
+covered with climber's paths, abandoned historic trails, and off-trail scrambles. Some of 
+these will undoubtably prove beyond me, but places I'm interested in exploring 
+include:
+
+<ul class="tight">
+  <li>Andrew Benchmark?</li>
+  <li>Aurora Peak?</li>
+  <li>Bald Rock?</li>
+  <li>Banshee Peak?</li>
+  <li>Brown Peak?</li>
+  <li>Copper Mountain?</li>
+  <li>Crescent Lake?</li>
+  <li>Elysian Fields?</li>
+  <li>Green Park?</li>
+  <li>Goat Island Mountain?</li>
+  <li>Mist Park?</li>
+  <li>Mount Ararat?</li>
+  <li>North Backbone Ridge?</li>
+  <li>Pyramid Peak?</li>
+  <li>Satulick Mountain?</li>
+  <li>Sunset Park lookout site and benchmark?</li>
+  <li>Tyee Peak?</li>
+</ul>
+
+If you know of any hikeable places (not climbing or scrambling routes) that I am missing, 
+please <a href="mailto:shawnhargreaves@hotmail.com">let me know</a>!

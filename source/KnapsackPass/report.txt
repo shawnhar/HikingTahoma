@@ -18,41 +18,48 @@ Mowich Lake, Eagle's Roost
 This has got to be the most varied hike on Rainier:
 
 <ul>
-
-<li>Start up an old, unmaintained trail from the ranger cabin at Mowich Lake (facing from 
-the lake toward the front steps of the cabin, it's to your left, and to the left of the 
-path that accesses the ranger outhouse). It's steep, rooty, and rough: a good way to get 
-most of the elevation gain of this hike out of the way early.</li>
-
-<li>Enjoy as the terrain opens from forest into a world of meadows, streams and small 
-waterfalls. It feels like an older cousin of Spray Park that grew up on the wrong side of 
-the tracks: you can tell they are related, but this one hasn't shaved for a few days and 
-you wouldn't want to get on the wrong side of them.</li>
-
-<li>Arrive at Knapsack Pass, which is a true take-your-breath-away moment. If you started 
-early in the morning like me, you'll have been climbing in shadow this whole time, and 
-without Rainier views. All of a sudden there's sun on your face and a volcano right in 
-front of you!</li>
-
-<li>The descent to the east of Knapsack Pass is an adventure. It's steep, and consists of 
-loose scree where the path may not be obvious. When I visited the bottom 30 feet of this 
-slope was still covered in snow, but it had a nice safe runout, perfect for a 
-glissade.</li>
-
-<li>Turning south you'll traverse below East Fay Peak, which is the source of a large 
-talus field. Snowfields linger here through most of the year, so you may be clambering 
-over boulders, hiking over snow, or both.</li>
-
-<li>After skirting around the east flank of Mount Pleasant you'll enter upper Spray Park, 
-which is a wonderland of wildflower meadows, summit views, meltwater ponds, and views to 
-the north over Mist Park.</li>
-
-<li>The Knapsack Pass trail ends upon joining the [SprayPark] trail. Turn right here and 
-enjoy the glories of Spray Park on the way back to your car: some of the finest 
-wildflower meadows on this planet followed by a descent into lush forest and the 
-spectacular Spray Falls, on trail that's no longer unmaintained or lacking crowds of 
-other hikers :-)</li>
-
+    <li>
+        Start up an old, unmaintained trail from the ranger cabin at Mowich Lake 
+        (facing from the lake toward the front steps of the cabin, it's to your left, and 
+        to the left of the path that accesses the ranger outhouse). It's steep, rooty, 
+        and rough: a good way to get most of the elevation gain of this hike out of the 
+        way early.
+    </li>
+    <li>
+        Enjoy as the terrain opens from forest into a world of meadows, streams and 
+        small waterfalls. It feels like an older cousin of Spray Park that grew up on the 
+        wrong side of the tracks: you can tell they are related, but this one hasn't 
+        shaved for a few days and you wouldn't want to get on the wrong side of them.
+    </li>
+    <li>
+        Arrive at Knapsack Pass, which is a true take-your-breath-away moment. If you 
+        started early in the morning like me, you'll have been climbing in shadow this 
+        whole time, and without Rainier views. All of a sudden there's sun on your face 
+        and a volcano right in front of you!
+    </li>
+    <li>
+        The descent to the east of Knapsack Pass is an adventure. It's steep, and 
+        consists of loose scree where the path may not be obvious. When I visited the 
+        bottom 30 feet of this slope was still covered in snow, but it had a nice safe 
+        runout, perfect for a glissade.
+    </li>
+    <li>
+        Turning south you'll traverse below East Fay Peak, which is the source of a 
+        large talus field. Snowfields linger here through most of the year, so you may be 
+        clambering over boulders, hiking over snow, or both.
+    </li>
+    <li>
+        After skirting around the east flank of Mount Pleasant you'll enter upper 
+        Spray Park, which is a wonderland of wildflower meadows, summit views, meltwater 
+        ponds, and views to the north over Mist Park.
+    </li>
+    <li>
+        The Knapsack Pass trail ends upon joining the [SprayPark] trail. Turn right 
+        here and enjoy the glories of Spray Park on the way back to your car: some of the 
+        finest wildflower meadows on this planet followed by a descent into lush forest 
+        and the spectacular Spray Falls, on trail that's no longer unmaintained or 
+        lacking crowds of other hikers :-)
+    </li>
 </ul>
 
 This is a hike, not a scramble, but it's on the scramblier end of things that count as 

@@ -1,181 +1,143 @@
-<html>
-  <head>
-    <title>Hiking Tahoma: Wonderland Itinerary Planner</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="./siteicon.png"/>
-    <link rel="apple-touch-icon" href="./siteicon-192x192.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Shows distance and elevation change between your choice of Mount Rainier trailheads and campsites."/>
-  </head>
-  <body>
-    <div class="fixedwidth">
-      <table class="title">
-        <tr>
-          <td>
-            <div class="backlink"><a href="./">Hiking Tahoma</a></div>
-            <div class="subtitle">Documenting my Rainier obsession</div>
-          </td>
-          <td>
-            <table class="about">
-              <tr>
-                <td><a href="./AboutRainier.html">about Mount Rainier</a></td>
-                <td><a href="./WhereToStart.html">where to start</a></td>
-              </tr>
-              <tr>
-                <td><a href="./AboutThisSite.html">about this site</a></td>
-                <td><a href="./FuturePlans.html">future plans</a></td>
-              </tr>
-              <tr>
-                <td><a href="./Planner.html">itinerary planner</a></td>
-                <td><a href="./Wonderland/How.html">permits</a></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-      <p class="heading">Wonderland Itinerary Planner</p>
-    </div>
-    <br/>
-    <table class="planneroptions">
-      <tr>
-        <td>
-          Trip duration: 
-          <select id="tripduration" onChange="TripDurationChanged(this.value)">
-            <option value="2">2 days</option>
-            <option value="3">3 days</option>
-            <option value="4">4 days</option>
-            <option value="5">5 days</option>
-            <option value="6">6 days</option>
-            <option value="7">7 days</option>
-            <option value="8" selected>8 days</option>
-            <option value="9">9 days</option>
-            <option value="10">10 days</option>
-            <option value="11">11 days</option>
-            <option value="12">12 days</option>
-            <option value="13">13 days</option>
-            <option value="14">14 days</option>
-            <option value="15">15 days</option>
-          </select>
-        </td>
-        <td>
-          Use group campsites:
-          <input id="usegroupsites" type="checkbox" onChange="UseGroupSitesChanged(this.checked)"
-        </td>
-      </tr>
-    </table>
-    <table id="table" class="planner"></table>
-    <div class="fixedwidth">
-      <span id="totals" class="plannertotal"></span>
-      <div class="plannerbuttons">
-        <button onClick="ExportTrip()">Export</button>
-        <button onClick="ImportTrip()">Import</button>
-        <button onClick="ShareTrip()">Share</button>
-        <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this)">
-        <button onClick="ResetTrip()">Reset</button>
-        <button onClick="GenerateItinerary(false)">Auto CW</button>
-        <button onClick="GenerateItinerary(true)">Auto CCW</button>
-      </div>
-      <div class="plannerhelp">
-        <span id="cougarrock" class="tooltip">
-          about Cougar Rock
-          <span class="tip">
-            Cougar Rock is a frontcountry car campground, so it doesn't use the Rainier 
-            backcountry campsite reservation system.
-          </span>
-          <span class="plannerhelpsplitter">|</span>
-          <br class="plannerhelpbreak" />
-        </span>
-        <span id="deweylake" class="tooltip">
-          about Dewey Lake
-          <span class="tip">
-            Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use the 
-            Rainier campsite reservation system. It's included as an option here because 
-            camping somewhere along that section of the PCT can be useful for making a 
-            loop by connecting the Laughingwater Creek trail at Three Lakes to the 
-            northern end of the Eastside Trail at Tipsoo Lake.
-          </span>
-          <span class="plannerhelpsplitter">|</span>
-          <br class="plannerhelpbreak" />
-        </span>
-        <span id="longmire" class="tooltip">
-          about Longmire
-          <span class="tip">
-            There are no campsites at Longmire, but you could book a night at the 
-            National Park Inn if you fancy staying here to enjoy a hot shower and 
-            restaurant meal.
-          </span>
-          <span class="plannerhelpsplitter">|</span>
-          <br class="plannerhelpbreak" />
-        </span>
-        <span class="tooltip">
-          about alternate routes
-          <span class="tip">
-            If there is more than one route between two locations, this page will measure 
-            the shortest one, except for trail segments in the northwest corner of the 
-            park (around Mowich Lake / Ipsut Pass / Spray Park / Carbon River) where 
-            choice of route is determined by the <i>via Spray Park</i> option.
-            <br/><br/>
-            For finer control over alternate route selection, you can choose a different 
-            <i>via</i> option for each day of your trip.
-            <br/><br/>
-            To check which way was measured, move your cursor over or tap on the distance 
-            for a day, and you'll see a tooltip listing all the locations along that 
-            day's trail.
-          </span>
-          <span class="plannerhelpsplitter">|</span>
-          <br class="plannerhelpbreak" />
-        </span>
-        <span class="tooltip">
-          about the Auto buttons
-          <span class="tip">
-            Clicking the <b>Auto CW</b> or <b>Auto CCW</b> button will generate a 
-            suggested clockwise or counter-clockwise Wonderland itinerary using your 
-            current trip duration, start trailhead, finish trailhead, and <i>via Spray 
-            Park</i> settings. Campsites will be spaced as evenly as possible around the 
-            loop in the chosen direction.
-            <br/><br/>
-            This feature only supports full or partial Wonderland circuits, not other 
-            trails such as the Northern Loop or Eastside Loop. If you pick trailheads 
-            that are not on the Wonderland, it will choose a route that connects from 
-            them to the Wonderland.
-          </span>
-        </span>
-      </div>
-    </div>
-    <div class="map" id="map">
-      <img class="mapbase" src="mapbase.jpg" width="600" height="506" />
-    </div>
-    <svg height="0">
-      <filter id="filterPlannerMapDay1">
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
-          <feFuncG type="linear" slope="0" intercept="0.216"></feFuncG>
-          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
-        </feComponentTransfer>
-      </filter>
-      <filter id="filterPlannerMapDay2">
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
-          <feFuncG type="linear" slope="0" intercept="0.63"></feFuncG>
-          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
-        </feComponentTransfer>
-      </filter>
-      <filter id="filterPlannerMapDay3">
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="0" intercept="1"></feFuncR>
-          <feFuncG type="linear" slope="0" intercept="1"></feFuncG>
-          <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
-        </feComponentTransfer>
-      </filter>
-      <filter id="filterPlannerMapHighlighted">
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
-          <feFuncG type="linear" slope="0" intercept="0"></feFuncG>
-          <feFuncB type="linear" slope="0" intercept="1"></feFuncB>
-          <feFuncA type="linear" slope="128" intercept="0"></feFuncA>
-        </feComponentTransfer>
-      </filter>
-    </svg>
-    <script src="Planner.js"></script>
-  </body>
-</html>
+<p class="heading fixedwidth">Wonderland Itinerary Planner</p>
+<br/>
+<table class="planneroptions">
+  <tr>
+    <td>
+      Trip duration: 
+      <select id="tripduration" onChange="TripDurationChanged(this.value)">
+        <option value="2">2 days</option>
+        <option value="3">3 days</option>
+        <option value="4">4 days</option>
+        <option value="5">5 days</option>
+        <option value="6">6 days</option>
+        <option value="7">7 days</option>
+        <option value="8" selected>8 days</option>
+        <option value="9">9 days</option>
+        <option value="10">10 days</option>
+        <option value="11">11 days</option>
+        <option value="12">12 days</option>
+        <option value="13">13 days</option>
+        <option value="14">14 days</option>
+        <option value="15">15 days</option>
+      </select>
+    </td>
+    <td>
+      Use group campsites:
+      <input id="usegroupsites" type="checkbox" onChange="UseGroupSitesChanged(this.checked)">
+    </td>
+  </tr>
+</table>
+<table id="table" class="planner"></table>
+<div class="fixedwidth">
+  <span id="totals" class="plannertotal"></span>
+  <div class="plannerbuttons">
+    <button onClick="ExportTrip()">Export</button>
+    <button onClick="ImportTrip()">Import</button>
+    <button onClick="ShareTrip()">Share</button>
+    <input id="fileselector" type="file" accept=".txt" style="display:none" onChange="ImportChanged(this)">
+    <button onClick="ResetTrip()">Reset</button>
+    <button onClick="GenerateItinerary(false)">Auto CW</button>
+    <button onClick="GenerateItinerary(true)">Auto CCW</button>
+  </div>
+  <div class="plannerhelp">
+    <span id="cougarrock" class="tooltip">
+      about Cougar Rock
+      <span class="tip">
+        Cougar Rock is a frontcountry car campground, so it doesn't use the Rainier 
+        backcountry campsite reservation system.
+      </span>
+      <span class="plannerhelpsplitter">|</span>
+      <br class="plannerhelpbreak" />
+    </span>
+    <span id="deweylake" class="tooltip">
+      about Dewey Lake
+      <span class="tip">
+        Dewey Lake lies outside of Mount Rainier National Park, so it doesn't use the 
+        Rainier campsite reservation system. It's included as an option here because 
+        camping somewhere along that section of the PCT can be useful for making a 
+        loop by connecting the Laughingwater Creek trail at Three Lakes to the 
+        northern end of the Eastside Trail at Tipsoo Lake.
+      </span>
+      <span class="plannerhelpsplitter">|</span>
+      <br class="plannerhelpbreak" />
+    </span>
+    <span id="longmire" class="tooltip">
+      about Longmire
+      <span class="tip">
+        There are no campsites at Longmire, but you could book a night at the 
+        National Park Inn if you fancy staying here to enjoy a hot shower and 
+        restaurant meal.
+      </span>
+      <span class="plannerhelpsplitter">|</span>
+      <br class="plannerhelpbreak" />
+    </span>
+    <span class="tooltip">
+      about alternate routes
+      <span class="tip">
+        If there is more than one route between two locations, this page will measure 
+        the shortest one, except for trail segments in the northwest corner of the 
+        park (around Mowich Lake / Ipsut Pass / Spray Park / Carbon River) where 
+        choice of route is determined by the <i>via Spray Park</i> option.
+        <br/><br/>
+        For finer control over alternate route selection, you can choose a different 
+        <i>via</i> option for each day of your trip.
+        <br/><br/>
+        To check which way was measured, move your cursor over or tap on the distance 
+        for a day, and you'll see a tooltip listing all the locations along that 
+        day's trail.
+      </span>
+      <span class="plannerhelpsplitter">|</span>
+      <br class="plannerhelpbreak" />
+    </span>
+    <span class="tooltip">
+      about the Auto buttons
+      <span class="tip">
+        Clicking the <b>Auto CW</b> or <b>Auto CCW</b> button will generate a 
+        suggested clockwise or counter-clockwise Wonderland itinerary using your 
+        current trip duration, start trailhead, finish trailhead, and <i>via Spray 
+        Park</i> settings. Campsites will be spaced as evenly as possible around the 
+        loop in the chosen direction.
+        <br/><br/>
+        This feature only supports full or partial Wonderland circuits, not other 
+        trails such as the Northern Loop or Eastside Loop. If you pick trailheads 
+        that are not on the Wonderland, it will choose a route that connects from 
+        them to the Wonderland.
+      </span>
+    </span>
+  </div>
+</div>
+<div class="map" id="map">
+  <img class="mapbase" src="mapbase.jpg" width="600" height="506" />
+</div>
+<svg height="0">
+  <filter id="filterPlannerMapDay1">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+      <feFuncG type="linear" slope="0" intercept="0.216"></feFuncG>
+      <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+    </feComponentTransfer>
+  </filter>
+  <filter id="filterPlannerMapDay2">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+      <feFuncG type="linear" slope="0" intercept="0.63"></feFuncG>
+      <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+    </feComponentTransfer>
+  </filter>
+  <filter id="filterPlannerMapDay3">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0" intercept="1"></feFuncR>
+      <feFuncG type="linear" slope="0" intercept="1"></feFuncG>
+      <feFuncB type="linear" slope="0" intercept="0"></feFuncB>
+    </feComponentTransfer>
+  </filter>
+  <filter id="filterPlannerMapHighlighted">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0" intercept="0"></feFuncR>
+      <feFuncG type="linear" slope="0" intercept="0"></feFuncG>
+      <feFuncB type="linear" slope="0" intercept="1"></feFuncB>
+      <feFuncA type="linear" slope="128" intercept="0"></feFuncA>
+    </feComponentTransfer>
+  </filter>
+</svg>
+<script src="Planner.js"></script>

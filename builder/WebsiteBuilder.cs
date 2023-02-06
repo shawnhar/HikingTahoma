@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -82,11 +83,22 @@ namespace builder
                     await imageProcessor.WriteMasterMap(outFolder.Path, doneHikes);
                 }
 
-                // Process the individual hikes and photos.
+                // Write the individual hike pages and photos.
                 foreach (var hike in hikes.Where(hike => !hike.IsHidden && WantToBuild(hike.FolderName)))
                 {
                     await hike.WriteOutput(hikes, outFolder.Path);
                 }
+
+                // Write additional photos and whatnot.
+                await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "AboutRainier");
+                await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "AboutThisSite");
+                await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "FuturePlans");
+                await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "WhereToStart");
+
+                ProcessStandaloneHtml(sourceFolder.Path, outFolder.Path,
+                    "Planner.html",
+                    "Wonderland Itinerary Planner",
+                    "Shows distance and elevation change between your choice of Mount Rainier trailheads and campsites.");
 
                 if (WantToBuild("photos"))
                 {
@@ -103,11 +115,6 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "style.css");
                 CopyFile(sourceFolder.Path, outFolder.Path, "siteicon.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, "siteicon-192x192.png");
-                CopyFile(sourceFolder.Path, outFolder.Path, "AboutRainier.html");
-                CopyFile(sourceFolder.Path, outFolder.Path, "AboutThisSite.html");
-                CopyFile(sourceFolder.Path, outFolder.Path, "WhereToStart.html");
-                CopyFile(sourceFolder.Path, outFolder.Path, "FuturePlans.html");
-                CopyFile(sourceFolder.Path, outFolder.Path, "Planner.html");
                 CopyFile(sourceFolder.Path, outFolder.Path, "Planner.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "index.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
@@ -297,6 +304,32 @@ namespace builder
             writer.WriteLine("        </tr>");
             writer.WriteLine("      </table>");
             writer.WriteLine("    </div>");
+        }
+
+
+        async Task ProcessArticle(string sourcePath, string outPath, List<Hike> hikes, string filename)
+        {
+            var article = new Article(sourcePath + "/", filename + ".txt", filename + ".html");
+
+            await article.WriteOutput(hikes, outPath);
+        }
+
+
+        void ProcessStandaloneHtml(string sourcePath, string outPath, string filename, string title, string description)
+        {
+            using (var file = File.OpenWrite(Path.Combine(outPath, filename)))
+            using (var writer = new StreamWriter(file))
+            {
+                WebsiteBuilder.WriteHtmlHeader(writer, title, "./", description);
+
+                foreach (var line in File.ReadAllLines(Path.Combine(sourcePath, filename)))
+                {
+                    writer.WriteLine("    {0}", line);
+                }
+
+                writer.WriteLine("  </body>");
+                writer.WriteLine("</html>");
+            }
         }
 
 
