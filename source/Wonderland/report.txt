@@ -749,7 +749,7 @@ permits, but less time and commitment than hiking the full trail:
   </tr>
   <tr>
     <td><a href="../NorthPuyallup/"><img src="../NorthPuyallup/Descent-small.jpg" width="253" height="190" /><p>Westside Road to North Puyallup River</p></a></td>
-    <td><a href="../CarbonGlacier/"><img src="../CarbonGlacier/SuspensionBridge-small.jpg" width="253" height="190" /><p>Carbon Glacier</p></a></td>
+    <td><a href="../CarbonGlacier/"><img src="../CarbonGlacier/CarbonGlacier-small.jpg" width="253" height="190" /><p>Carbon Glacier</p></a></td>
   </tr>
 </table>
 
