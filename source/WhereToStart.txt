@@ -143,6 +143,6 @@ deep snow at other times of year.
   </tr>
   <tr>
     <td><a href="SprayParkLoop/"><img src="SprayParkLoop/Summit-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
-    <td><a href="NorthernLoop/"><img src="NorthernLoop/2-NaturalBridge-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
+    <td><a href="NorthernLoop/"><img src="NorthernLoop/3-CarbonGlacier-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
   </tr>
 </table>
