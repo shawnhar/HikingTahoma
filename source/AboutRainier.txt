@@ -17,6 +17,23 @@ cougar encounter though! Before you panic about those last two: Rainier animals 
 to hikers, and negative encounters vanishingly rare. Treat them with respect, avoid 
 surprising them, keep your food out of their way, and you won't have any trouble.
 
+This region is overflowing with history. Starting with the name of the mountain itself, 
+there is <a href="https://www.mountaineers.org/blog/the-case-for-tahoma">debate</a>
+over whether it should be Rainier, Tacoma, or Tahoma. Within the park there are 
+beautiful place names (Mowich Lake, Ohanapecosh River, Wauhaukaupauken Falls) and 
+also some that make me cringe (Indian Bar, Indian Henry's Hunting Grounds). A 
+lovely lake that used to be named after a racist label for Native women was 
+renamed to Kiya Lake (meaning 'grandmother' in Lushootseed) in 2022 after the 
+Department of the Interior finally got around to declaring Sq___ a derogatory 
+term.
+
+
+## Wildlife|Wildlife Of Mount Rainier
+
+[!Animals/Deer.jpg]
+
+<br/>
+
 <table class="photos showlinks">
   <tr>
     <td><a href="Animals/Deer.html"><img src="Animals/Deer-small.jpg" width="253" height="190" /><p>Black-tailed Deer</p></a></td>
@@ -55,18 +72,11 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
 </table>
 
-This region is overflowing with history. Starting with the name of the mountain itself, 
-there is <a href="https://www.mountaineers.org/blog/the-case-for-tahoma">debate</a>
-over whether it should be Rainier, Tacoma, or Tahoma. Within the park there are 
-beautiful place names (Mowich Lake, Ohanapecosh River, Wauhaukaupauken Falls) and 
-also some that make me cringe (Indian Bar, Indian Henry's Hunting Grounds). A 
-lovely lake that used to be named after a racist label for Native women was 
-renamed to Kiya Lake (meaning 'grandmother' in Lushootseed) in 2022 after the 
-Department of the Interior finally got around to declaring Sq___ a derogatory 
-term.
 
+## Logistics|Logistics
 
-<p class="heading">Hiking</p>
+[Photos/NationalParkInn.jpg] National Park Inn, Longmire
+[!Photos/NationalParkInn2.jpg] Evening light catching the summit behind the National Park Inn
 
 Hiking trails vary from easy to access and popular (aka crowded...) to obscure and 
 remote. Trails are generally well maintained and signposted, so navigation is not 
@@ -153,15 +163,10 @@ meal. The restaurant food is expensive and limited in variety, so if you are sta
 than one night I'd recommend augmenting it by bringing a cooler with supplies of your 
 own.
 
-<table class="photos">
-  <tr>
-    <td><a href="Photos/NationalParkInn.jpg"><img src="Photos/NationalParkInn-small.jpg" width="253" height="190" /><p>National Park Inn, Longmire</p></a></td>
-    <td><a href="Photos/NationalParkInn2.jpg"><img src="Photos/NationalParkInn2-small.jpg" width="253" height="190" /><p>Evening light catching the summit behind the National Park Inn</p></a></td>
-  </tr>
-</table>
 
+## Learning More|Learning More
 
-<p class="heading">Learning More</p>
+[!Photos/Resources.jpg]
 
 The Longmire Museum is small but worth visiting. It has an impressive taxidermy 
 collection, from bygone days when it was considered appropriate to respond to seeing a 

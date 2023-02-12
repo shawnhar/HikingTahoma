@@ -430,7 +430,9 @@ namespace builder
                 {
                     var photo = new Photo(filename, string.Empty);
 
-                    await imageProcessor.WritePhoto(photo, sourcePath, outPath);
+                    bool thumbnailOnly = filename.Contains("-.jpg");
+
+                    await imageProcessor.WritePhoto(photo, sourcePath, outPath, true, !thumbnailOnly);
                 }
             }
         }

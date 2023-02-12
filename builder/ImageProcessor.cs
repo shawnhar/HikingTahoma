@@ -336,7 +336,7 @@ namespace builder
         }
 
 
-        public async Task WritePhoto(Photo photo, string sourcePath, string outPath, bool generateThumbnail = true)
+        public async Task WritePhoto(Photo photo, string sourcePath, string outPath, bool generateThumbnail = true, bool generateFullSize = true)
         {
             using (new Profiler("ImageProcessor.WritePhoto"))
             {
@@ -355,18 +355,21 @@ namespace builder
                         badAspectRatios.Add(Path.Combine(Path.GetFileName(outPath), photo.Filename));
                     }
 
-                    if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
+                    if (generateFullSize)
                     {
-                        // Resize if the source is excessively large.
-                        using (var sensibleSize = ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                        if (bitmap.Size.Width > maxPhotoSize || bitmap.Size.Height > maxPhotoSize)
                         {
-                            await SaveImage(sensibleSize, outPath, photo.Filename);
+                            // Resize if the source is excessively large.
+                            using (var sensibleSize = ResizeImage(bitmap, maxPhotoSize, maxPhotoSize))
+                            {
+                                await SaveImage(sensibleSize, outPath, photo.Filename);
+                            }
                         }
-                    }
-                    else
-                    {
-                        // If the size is ok, just copy it directly over.
-                        File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
+                        else
+                        {
+                            // If the size is ok, just copy it directly over.
+                            File.Copy(Path.Combine(sourcePath, photo.Filename), Path.Combine(outPath, photo.Filename));
+                        }
                     }
 
                     // Also create thumbnail versions.

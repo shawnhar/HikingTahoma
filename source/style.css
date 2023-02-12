@@ -237,6 +237,11 @@ a:link, a:visited {
   font-style: italic;
 }
 
+.description .photos {
+  margin-left: -12;
+  margin-right: -12;
+}
+
 .tight li {
   margin-top: 0;
 }
@@ -299,6 +304,11 @@ a:link, a:visited {
 
 .photos p {
   font-style: italic;
+  max-width: 253;
+}
+
+.photos .panorama p {
+  max-width: 550;
 }
 
 .photos:not(.showlinks) a:link, a:visited {
@@ -313,6 +323,7 @@ a:link, a:visited {
 }
 
 .wheretostart .heading {
+  max-width: 253;
   vertical-align: middle;
 }
 

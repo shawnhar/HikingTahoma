@@ -210,7 +210,7 @@ namespace builder
                     writer.WriteLine("        <a href=\"{0}\">prev</a> -", prev.Url);
                 }
 
-                writer.WriteLine("        <a href=\"./\">up</a>");
+                writer.WriteLine("        <a href=\"{0}\">up</a>", htmlFilename == "index.html" ? "./" : htmlFilename);
 
                 if (next != null)
                 {
@@ -243,6 +243,7 @@ namespace builder
                 if (line.StartsWith("<p") ||
                     line.StartsWith("<ul") ||
                     line.StartsWith("<ol") ||
+                    line.StartsWith("<br") ||
                     line.StartsWith("<hr") ||
                     line.StartsWith("<img") ||
                     line.StartsWith("<table"))
@@ -319,13 +320,15 @@ namespace builder
             writer.WriteLine("      </div>");
 
             // Photos.
-            if (section.Photos.Any())
+            var photos = section.Photos.Where(photo => !string.IsNullOrEmpty(photo.Description) || !photo.IsFeatured);
+
+            if (photos.Any())
             {
                 writer.WriteLine("      <table class=\"photos\">");
 
                 int photoCount = 0;
 
-                foreach (var photo in section.Photos)
+                foreach (var photo in photos)
                 {
                     if ((photoCount & 1) == 0)
                     {
@@ -347,8 +350,22 @@ namespace builder
                         writer.WriteLine("          <td>");
                     }
 
+                    var thumbnailWidth = photo.ThumbnailSize.Width / 2;
+                    var thumbnailHeight = photo.ThumbnailSize.Height / 2;
+
+                    if (thumbnailWidth == 0)
+                    {
+                        if (!photo.Filename.Contains('/'))
+                        {
+                            throw new Exception("Unknown size thumbnail only allowed when referencing photos from elsewhere: " + photo.Filename);
+                        }
+
+                        thumbnailWidth = 253;
+                        thumbnailHeight = 190;
+                    }
+
                     writer.WriteLine("            <a href=\"{0}\">", photo.Filename);
-                    writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, photo.ThumbnailSize.Width / 2, photo.ThumbnailSize.Height / 2);
+                    writer.WriteLine("              <img src=\"{0}\" width=\"{1}\" height=\"{2}\" />", photo.Thumbnail, thumbnailWidth, thumbnailHeight);
                     writer.WriteLine("              <p>{0}</p>", photo.Description);
                     writer.WriteLine("            </a>");
                     writer.WriteLine("          </td>");

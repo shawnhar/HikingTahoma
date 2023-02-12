@@ -11,7 +11,8 @@ namespace builder
         public readonly bool IsPanorama;
         public readonly bool IsFeatured;
 
-        public string Thumbnail => Path.GetFileNameWithoutExtension(Filename) + "-small.jpg";
+        public string Thumbnail => Path.Combine(Path.GetDirectoryName(Filename),
+                                                Path.GetFileNameWithoutExtension(Filename).TrimEnd('-')) + "-small.jpg";
 
         public BitmapSize ThumbnailSize;
 
