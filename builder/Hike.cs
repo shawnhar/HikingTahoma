@@ -148,6 +148,7 @@ namespace builder
             {
                 var photoNames = from section in Sections
                                  from photo in section.Photos
+                                 where !photo.IsReference
                                  select photo.Filename;
 
                 var jpegs = Directory.GetFiles(sourcePath, "*.jpg").Select(Path.GetFileName);
@@ -165,13 +166,23 @@ namespace builder
                 {
                     throw new Exception("Unreferenced photos in " + FolderName + ": " + string.Join(", ", unreferenced));
                 }
+
+                var duplicates = photoNames.GroupBy(name => name)
+                                           .Where(group => group.Count() > 1)
+                                           .Select(group => group.Key);
+
+                if (duplicates.Any())
+                {
+                    throw new Exception("Duplicate photo references in " + FolderName + ": " + string.Join(", ", duplicates));
+                }
             }
         }
 
 
         override protected async Task WritePhotos(string outPath)
         {
-            foreach (var photo in Sections.SelectMany(section => section.Photos))
+            foreach (var photo in Sections.SelectMany(section => section.Photos)
+                                          .Where(photo => !photo.IsReference))
             {
                 await imageProcessor.WritePhoto(photo, sourcePath, outPath);
             }

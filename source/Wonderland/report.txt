@@ -26,6 +26,9 @@ for 'rainier infinity loop'.
 
 ## How?|How To Get A Wonderland Permit
 
+[Permit.jpg] My first ever Rainier backpacking permit was this walkup for an overnight at Ipsut Creek Camp (and no, I have no idea why the issuing ranger corrected the permit number in pen :-)
+[Permit2.jpg] In 2020, permits were emailed to be printed at home rather than activated at a ranger station in the usual way
+
 You can't just camp wherever you like on Mount Rainier. There are designated backcountry 
 campsites, with pit toilets and bear poles for hanging your food, and you need a permit 
 that lists exactly what dates and camps you will stay at.
@@ -199,6 +202,11 @@ while others would struggle to fit more than 4 or 5 2-person tents.
 
 ## When?|When To Hike The Wonderland Trail
 
+[../KlapatchePark/StAndrewsLake.jpg] Early season: St. Andrews Lake on July 11, 2020
+[../KlapatchePark/StAndrewsLake2.jpg] Catching a late season weather window: St. Andrews Lake on October 9, 2020, just one day before a storm brought winter to the mountain
+[+5-CairnsInTheMist.jpg] Spray Park on September 10, 2021: this mountain makes its own weather so be prepared for rain, snow, or white-outs at any time of year
+[../WhiteRiverToSunrise/Sunrise.jpg] Sunrise got snowy on September 29, 2019
+
 The Wonderland Trail is most commonly hiked during the months of July, August, and 
 September:
 
@@ -229,6 +237,8 @@ greatly increase the odds of encountering winter conditions or dangerous river c
 
 
 ## Where?|Where To Go On A Wonderland Circuit
+
+[WonderlandSign.jpg]
 
 First question is where to start? There are multiple trailheads around the Wonderland:
 
@@ -586,13 +596,20 @@ circuit.
 
 ## Caching Supplies|Caching Supplies Around The Wonderland
 
+[+8-Resupply.jpg] Picking up my cache at White River
+[+4-Resupply.jpg] Enjoying heavy, bulky treats from my cache at Mowich Lake
+[+BearPole.jpg] Food on the bear pole
+
 If you don't fancy the idea of carrying all the supplies for your entire trip, you can 
 cache food and fuel at Longmire, Mowich Lake, Sunrise, and White River. Caches must be 
-stored in rodent-proof containers: typically a 5 gallon plastic bucket. Food 
-caches can be mailed or delivered by hand, while fuel caches must be hand-delivered. See
+stored in rodent-proof containers, typically a 5 gallon plastic bucket. Food caches can 
+be mailed or delivered by hand, while fuel caches must be hand-delivered. See
 <a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
-for details, and note that caches for pickup at Mowich Lake should be delivered to the 
+for details. Note that caches for pickup at Mowich Lake should be delivered to the 
 Carbon River Ranger Station instead.
+
+The Longmire cache location is inside the Wilderness Information Center, which is only 
+open between 7:30 am and 5:00 pm. Other locations are self-serve at any time.
 
 Sunrise and White River are close enough together that it doesn't make sense to cache at 
 both. Use White River if you are going clockwise, or Sunrise if counterclockwise, to 
@@ -618,6 +635,18 @@ taken down during the off-season.
 
 
 ## Hazards
+
+[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section
+[+9-ApproachingPanhandle.jpg] Panhandle Gap was pleasingly melted out on September 14, 2021 (this is not fun when icy)
+[../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
+[+5-Snowfields.jpg] The top of Spray Park can be navigationally challenging in poor visibility
+[+1-PyramidCreek.jpg] Pyramid Creek crossing
+[+4-SouthMowichRiver.jpg] South Mowich River crossing, luckily with bridge in place that day
+[../PaulPeakTrail/NorthMowichRiver.jpg] North Mowich River crossing
+[../CarbonGlacier/Bridge.jpg] The lower (non-suspension-bridge) Carbon River crossing
+[../NorthernLoop/4-Bridge.jpg] Winthrop Creek crossing
+[+8-WhiteRiverBridge.jpg] White River crossing
+[+11-NisquallyRiver.jpg] Nisqually River crossing
 
 By far the greatest danger of the Wonderland Trail is the many glacial river crossings. 
 Some rivers have sturdy wooden bridges over them while others are spanned by cool 
@@ -693,6 +722,10 @@ crossings to be aware of include:
     White River (leaving White River campground heading toward Fryingpan Creek) is also 
     washed out at the time of this writing. If you can't cross safely here, detour down 
     the road and hop back onto the Wonderland shortly after crossing the road bridge.
+  </li>
+  <li>
+    If the Nisqually bridge near Cougar Rock is missing, you'll have to detour on the 
+    road between Cougar Rock and Narada Falls.
   </li>
 </ul>
 

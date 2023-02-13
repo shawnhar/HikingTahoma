@@ -355,7 +355,7 @@ namespace builder
 
                     if (thumbnailWidth == 0)
                     {
-                        if (!photo.Filename.Contains('/'))
+                        if (!photo.IsReference)
                         {
                             throw new Exception("Unknown size thumbnail only allowed when referencing photos from elsewhere: " + photo.Filename);
                         }
