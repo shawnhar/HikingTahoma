@@ -1,0 +1,13 @@
+Townsend's Chipmunk
+
+The Townsend's chipmunk is found in dense wooded areas of the Pacific Northwest. They are 
+solitary and territorial, living in individual burrows up to 30 feet long. They eat a 
+wide range of fungi, berries, and seeds, and will forage as far as half a mile from their 
+burrows, carrying back food in their cheek pouches.
+
+Chipmunk decoder ring:
+<ul class="tight">
+<li>No stripes on the face: <a href="GroundSquirrel.html">golden-mantled ground squirrel</a></li>
+<li>Dark stripes from nose to eye: <a href="YellowPineChipmunk.html">yellow pine chipmunk</a></li>
+<li>Dark stripes don't extend to the nose: that's this one!</li>
+</ul>
