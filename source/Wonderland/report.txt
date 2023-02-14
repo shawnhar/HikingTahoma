@@ -339,186 +339,190 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
 
 <table class="campstable">
   <tr>
-    <th/>
-    <th>Individual Sites</th>
-    <th>Group Site</th>
-    <th>Elevation</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
     <td>Pyramid Creek</td>
-    <td>3</td>
-    <td>no</td>
-    <td>3800'</td>
-    <td></td>
+    <td>
+      <p>3800', 3 sites</p>
+    </td>
+    <td/>
   </tr>
   <tr>
     <td>Devil's Dream</td>
-    <td>7</td>
-    <td>yes</td>
-    <td>5100'</td>
-    <td>Notoriously buggy in summer</td>
+    <td>
+      <p>5100', 7 sites + group</p>
+      <p>Notoriously buggy in summer.</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[1-Camp.jpg]</td>
   </tr>
   <tr>
     <td>South Puyallup River</td>
-    <td>4</td>
-    <td>yes</td>
-    <td>4000'</td>
-    <td>Don't miss the columnar andesite rock formation opposite the toilet</td>
+    <td>
+      <p>4000', 4 sites + group</p>
+      <p>Don't miss the columnar andesite rock formation opposite the toilet.</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[2-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Klapatche Park</td>
-    <td>4</td>
-    <td>no</td>
-    <td>5500'</td>
     <td>
-      Water source is Aurora Lake, which tends to dry up later in the season. Carry water 
-      from St. Andrews Lake (if you're heading north) or uphill from North Puyallup River 
-      (if heading south)
+      <p>5500', 4 sites</p>
+      <p>Water source is Aurora Lake, which tends to dry up later in the season. Carry water from St. Andrews Lake (if you're heading north) or uphill from North Puyallup River (if heading south).</p>
     </td>
+    <td class="photos">[../Photos/CampKlapatche.jpg]</td>
   </tr>
   <tr>
     <td>North Puyallup River</td>
-    <td>3</td>
-    <td>yes</td>
-    <td>3700'</td>
     <td>
-      Unique and romantically spooky group site is made from the end of an abandoned road
+      <p>3700', 3 sites + group</p>
+      <p>Unique and romantically spooky group site is made from the end of an abandoned road.</p>
+      <p>Photo shows group site.</p>
     </td>
+    <td class="photos">[../Photos/CampNorthPuyallup.jpg]</td>
   </tr>
   <tr>
     <td>Golden Lakes</td>
-    <td>5</td>
-    <td>yes</td>
-    <td>5100'</td>
-    <td>Great place to watch the sunset</td>
+    <td>
+      <p>5100', 5 sites + group</p>
+      <p>Great place to watch the sunset.</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[3-Camp.jpg]</td>
   </tr>
   <tr>
     <td>South Mowich River</td>
-    <td>3</td>
-    <td>yes</td>
-    <td>2600'</td>
-    <td></td>
+    <td>
+      <p>2600', 3 sites + group</p>
+      <p>Primordially damp and mossy riverside camp.</p>
+    </td>
+    <td/>
   </tr>
   <tr>
     <td>Mowich Lake</td>
-    <td>10</td>
-    <td>yes according to the booking system, but not really in practice: you'll just have to squish tents in wherever they can fit</td>
-    <td>4900'</td>
     <td>
-      Doubles as a popular frontcountry car camping site, so lacks privacy and is often 
-      noisy, but having resupply cache and picnic tables right by camp is a huge plus
+      <p>4900', 10 sites plus booking system allows groups but there aren't dedicated group platforms so you'll just have to squish tents in wherever they can fit</p>
+      <p>Doubles as a popular frontcountry car camping site, so lacks privacy and is often noisy, but having resupply cache and picnic tables right by camp is a huge plus.</p>
     </td>
+    <td class="photos">[4-Camp.jpg]</td>
   </tr>
   <tr>
-    <td>Ipsut Creek</td>
-    <td>12</td>
-    <td>yes</td>
-    <td>2400'</td>
     <td>
-      <i>(if not going over Spray Park)</i>
-      Former car campsite, now reclaimed as wilderness due to road closure
+      <p>Ipsut Creek</p>
+      <p>(if not going over Spray Park)</p>
     </td>
+    <td>
+      <p>2400', 12 sites + group</p>
+      <p>Former car campsite, now reclaimed as wilderness due to road closure.</p>
+    </td>
+    <td class="photos">[../Photos/CampIpsut.jpg]</td>
   </tr>
   <tr>
-    <td>Eagle's Roost</td>
-    <td>7</td>
-    <td>no</td>
-    <td>4900'</td>
-    <td><i>(if taking Spray Park)</i></td>
+    <td>
+      <p>Eagle's Roost</p>
+      <p>(if taking Spray Park)</p>
+    </td>
+    <td>
+      <p>4900', 7 sites</p>
+    </td>
+    <td/>
   </tr>
   <tr>
-    <td>Cataract Valley</td>
-    <td>6</td>
-    <td>yes</td>
-    <td>4600'</td>
     <td>
-      <i>(if taking Spray Park)</i>
-      Situated below a talus field, so pika will likely join in your campsite conversations
+      <p>Cataract Valley</p>
+      <p>(if taking Spray Park)</p>
     </td>
+    <td>
+      <p>4600', 6 sites + group</p>
+      <p>Situated below a talus field, so pika will likely join in your campsite conversations.</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[5-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Carbon River Camp</td>
-    <td>4</td>
-    <td>yes</td>
-    <td>3200'</td>
-    <td></td>
+    <td/>
+      <p>3200', 4 sites + group</p>
+    <td class="photos">[../NorthernLoop/2-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Dick Creek</td>
-    <td>2</td>
-    <td>no</td>
-    <td>4200'</td>
-    <td>Cool site overlooking the Carbon Glacier</td>
+    <td>
+      <p>4200', 2 sites</p>
+      <p>Cool site overlooking the Carbon Glacier.</p>
+    </td>
+    <td/>
   </tr>
   <tr>
     <td>Mystic Camp</td>
-    <td>7</td>
-    <td>yes</td>
-    <td>5600'</td>
     <td>
-      Mystic Lake (a short walk from the camp) is where I want my ashes scattered when my 
-      time comes (I suppose I should get to work on becoming close friends with some 
-      strong hikers a few decades younger than me, then? :-)
+      <p>5600', 7 sites + group</p>
+      <p>Mystic Lake (a short walk from the camp) is where I want my ashes scattered when my time comes. I suppose I should get to work on becoming close friends with some strong hikers a few decades younger than me, then :-)</p>
     </td>
+    <td class="photos">[../NorthernLoop/3-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Granite Creek</td>
-    <td>3</td>
-    <td>yes</td>
-    <td>5800'</td>
-    <td></td>
+    <td>
+      <p>5800', 3 sites + group</p>
+    </td>
+    <td/>
   </tr>
   <tr>
     <td>Sunrise Camp</td>
-    <td>8</td>
-    <td>yes</td>
-    <td>6200'</td>
-    <td></td>
+    <td>
+      <p>6200', 8 sites + group</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[7-Camp.jpg]</td>
   </tr>
   <tr>
     <td>White River</td>
-    <td>4</td>
-    <td>yes</td>
-    <td>4200'</td>
     <td>
-      This doubles as a frontcountry car camping site, but has more quiet &amp; privacy than Mowich Lake
+      <p>4200', 4 sites + group</p>
+      <p>This doubles as a frontcountry car camping site, but has more quiet &amp; privacy than Mowich Lake.</p>
     </td>
+    <td/>
   </tr>
   <tr>
     <td>Summerland</td>
-    <td>5</td>
-    <td>yes</td>
-    <td>5900'</td>
-    <td>Stunning alpine meadows, famous for bear encounters</td>
+    <td>
+      <p>5900', 5 sites + group</p>
+      <p>Stunning alpine meadows, famous for bear encounters.</p>
+      <p>Photo shows the group site, which is a stone shelter built by the CCC.</p>
+    </td>
+    <td class="photos">[8-CanISleepHere.jpg]</td>
   </tr>
   <tr>
     <td>Indian Bar</td>
-    <td>4</td>
-    <td>yes</td>
-    <td>5100'</td>
-    <td>One of the prettiest places on the mountain</td>
+    <td>
+      <p>5100', 4 sites + group</p>
+      <p>One of the prettiest places on the mountain.</p>
+      <p>Photo shows the group site, which is a stone shelter built by the CCC.</p>
+    </td>
+    <td class="photos">[9-GroupShelter.jpg]</td>
   </tr>
   <tr>
     <td>Nickel Creek</td>
-    <td>3</td>
-    <td>yes</td>
-    <td>3400'</td>
-    <td></td>
+    <td>
+      <p>3400', 3 sites + group</p>
+    </td>
+    <td/>
   </tr>
   <tr>
     <td>Maple Creek</td>
-    <td>4</td>
-    <td>yes</td>
-    <td>2800'</td>
-    <td>Pretty forest camp, but suffers occasional road noise</td>
+    <td>
+      <p>2800', 4 sites + group</p>
+      <p>Pretty forest camp, but suffers occasional road noise.</p>
+      <p>Photo shows group site.</p>
+    </td>
+    <td class="photos">[10-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Paradise River</td>
-    <td>3</td>
-    <td>yes</td>
-    <td>3800'</td>
-    <td></td>
+    <td>
+      <p>3800', 3 sites + group</p>
+    </td>
+    <td/>
   </tr>
 </table>
 
@@ -533,52 +537,38 @@ still available. There are many such possibilities, including:
 
 <table class="campstable">
   <tr>
-    <th/>
-    <th>Individual Sites</th>
-    <th>Group Site</th>
-    <th>Elevation</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
     <td>Berkeley Park</td>
-    <td>2</td>
-    <td>yes</td>
-    <td>5400'</td>
-    <td>1.5 miles off the Wonderland, between Granite Creek and Frozen Lake</td>
+    <td>
+      <p>5400', 2 sites + group</p>
+      <p>1.5 miles off the Wonderland, between Granite Creek and Frozen Lake.</p>
+    </td>
   </tr>
   <tr>
     <td>Forest Lake</td>
-    <td>yes</td>
-    <td>no</td>
-    <td>5700'</td>
-    <td>1.8 miles off the Wonderland, between Frozen Lake and Sunrise</td>
+    <td>
+      <p>5700', 1 site</p>
+      <p>1.8 miles off the Wonderland, between Frozen Lake and Sunrise.</p>
+    </td>
   </tr>
   <tr>
     <td>Glacier Basin</td>
-    <td>5</td>
-    <td>yes</td>
-    <td>6000'</td>
     <td>
-      4.2 miles from Frozen Lake and 3.6 from White River, which may seem a lot but it 
-      only adds 3.3 miles total distance if you substitute this in place of going past 
-      Sunrise (and it's a much nicer place than White River to camp...)
+      <p>6000', 5 sites + group</p>
+      <p>4.2 miles from Frozen Lake and 3.6 from White River, which may seem a lot but it only adds 3.3 miles total distance if you substitute this in place of going past Sunrise (and it's a much nicer place than White River to camp...)</p>
     </td>
   </tr>
   <tr>
     <td>Olallie Creek</td>
-    <td>2</td>
-    <td>yes</td>
-    <td>3900'</td>
-    <td>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek</td>
+    <td>
+      <p>3900', 2 sites + group</p>
+      <p>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek.</p>
+    </td>
   </tr>
   <tr>
     <td>Snow Lake</td>
-    <td>2</td>
-    <td>no</td>
-    <td>4700'</td>
     <td>
-      1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and 
-      Reflection Lakes
+      <p>4700', 2 sites</p>
+      <p>1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and Reflection Lakes.</p>
     </td>
   </tr>
 </table>

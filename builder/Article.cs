@@ -383,15 +383,25 @@ namespace builder
         }
 
 
-        static Regex linkRegex = new Regex(@"\[(\w+)\]");
+        static Regex hikeLinkRegex = new Regex(@"\[(\w+)\]");
+        static Regex photoLinkRegex = new Regex(@"\[([\w\.\-/]+\.jpg)\]");
 
 
         string ExpandLinks(string line, IEnumerable<Hike> allHikes)
         {
-            for (var match = linkRegex.Match(line); match.Success; match = linkRegex.Match(line))
+            line = ExpandLinks(line, hikeLinkRegex, name => ExpandHikeLink(name, allHikes));
+            line = ExpandLinks(line, photoLinkRegex, ExpandPhotoLink);
+
+            return line;
+        }
+
+
+        static string ExpandLinks(string line, Regex regex, Func<string, string> expandFunction)
+        {
+            for (var match = regex.Match(line); match.Success; match = regex.Match(line))
             {
                 line = line.Substring(0, match.Index) +
-                       ExpandLink(match.Groups[1].Value, allHikes) +
+                       expandFunction(match.Groups[1].Value) +
                        line.Substring(match.Index + match.Length);
             }
 
@@ -399,7 +409,7 @@ namespace builder
         }
 
 
-        string ExpandLink(string name, IEnumerable<Hike> allHikes)
+        string ExpandHikeLink(string name, IEnumerable<Hike> allHikes)
         {
             var target = allHikes.FirstOrDefault(hike => hike.FolderName == name);
 
@@ -409,6 +419,14 @@ namespace builder
             }
 
             return string.Format("<a href=\"{0}{1}/\">{2}</a>", RootPrefix, target.FolderName, target.HikeName);
+        }
+
+
+        static string ExpandPhotoLink(string name)
+        {
+            var smallName = name.Replace(".jpg", "-small.jpg");
+
+            return string.Format("<a href=\"{0}\"><img src=\"{1}\" width=\"253\" height=\"190\" /></a>", name, smallName);
         }
     }
 }
