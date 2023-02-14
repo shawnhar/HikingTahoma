@@ -36,40 +36,40 @@ term.
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="Animals/Deer.html"><img src="Animals/Deer-small.jpg" width="253" height="190" /><p>Black-tailed Deer</p></a></td>
-    <td><a href="Animals/Elk.html"><img src="Animals/Elk-small.jpg" width="253" height="190" /><p>Elk</p></a></td>
+    <td>[Animals/Deer.html|Black-tailed Deer]</td>
+    <td>[Animals/Elk.html|Elk]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Goat.html"><img src="Animals/Goat-small.jpg" width="253" height="190" /><p>Mountain Goat</p></a></td>
-    <td><a href="Animals/Fox.html"><img src="Animals/Fox-small.jpg" width="253" height="190" /><p>Cascade Red Fox</p></a></td>
+    <td>[Animals/Goat.html|Mountain Goat]</td>
+    <td>[Animals/Fox.html|Cascade Red Fox]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Bear.html"><img src="Animals/Bear-small.jpg" width="253" height="190" /><p>Black Bear</p></a></td>
-    <td><a href="Animals/Marmot.html"><img src="Animals/Marmot-small.jpg" width="253" height="190" /><p>Hoary Marmot</p></a></td>
+    <td>[Animals/Bear.html|Black Bear]</td>
+    <td>[Animals/Marmot.html|Hoary Marmot]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Pika.html"><img src="Animals/Pika-small.jpg" width="253" height="190" /><p>Pika</p></a></td>
-    <td><a href="Animals/GroundSquirrel.html"><img src="Animals/GroundSquirrel-small.jpg" width="253" height="190" /><p>Golden-mantled Ground Squirrel</p></a></td>
+    <td>[Animals/Pika.html|Pika]</td>
+    <td>[Animals/GroundSquirrel.html|Golden-mantled Ground Squirrel]</td>
   </tr>
   <tr>
-    <td><a href="Animals/YellowPineChipmunk.html"><img src="Animals/YellowPineChipmunk-small.jpg" width="253" height="190" /><p>Yellow Pine Chipmunk</p></a></td>
-    <td><a href="Animals/TownsendsChipmunk.html"><img src="Animals/TownsendsChipmunk-small.jpg" width="253" height="190" /><p>Townsend's Chipmunk</p></a></td>
+    <td>[Animals/YellowPineChipmunk.html|Yellow Pine Chipmunk]</td>
+    <td>[Animals/TownsendsChipmunk.html|Townsend's Chipmunk]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Mouse.html"><img src="Animals/Mouse-small.jpg" width="253" height="190" /><p>Deer Mouse</p></a></td>
-    <td><a href="Animals/Owl.html"><img src="Animals/Owl-small.jpg" width="253" height="190" /><p>Spotted Owl</p></a></td>
+    <td>[Animals/Mouse.html|Deer Mouse]</td>
+    <td>[Animals/Owl.html|Spotted Owl]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Grouse.html"><img src="Animals/Grouse-small.jpg" width="253" height="190" /><p>Sooty Grouse</p></a></td>
-    <td><a href="Animals/Nutcracker.html"><img src="Animals/Nutcracker-small.jpg" width="253" height="190" /><p>Clark's Nutcracker</p></a></td>
+    <td>[Animals/Grouse.html|Sooty Grouse]</td>
+    <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Stellers.html"><img src="Animals/Stellers-small.jpg" width="253" height="190" /><p>Steller's Jay</p></a></td>
-    <td><a href="Animals/Grayjay.html"><img src="Animals/Grayjay-small.jpg" width="253" height="190" /><p>Gray Jay</p></a></td>
+    <td>[Animals/Stellers.html|Steller's Jay]</td>
+    <td>[Animals/Grayjay.html|Gray Jay]</td>
   </tr>
   <tr>
-    <td><a href="Animals/Woodpecker.html"><img src="Animals/Woodpecker-small.jpg" width="253" height="190" /><p>Hairy Woodpecker</p></a></td>
-    <td><a href="Animals/Trout.html"><img src="Animals/Trout-small.jpg" width="253" height="190" /><p>Trout</p></a></td>
+    <td>[Animals/Woodpecker.html|Hairy Woodpecker]</td>
+    <td>[Animals/Trout.html|Trout]</td>
   </tr>
 </table>
 
