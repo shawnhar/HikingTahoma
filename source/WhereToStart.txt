@@ -24,11 +24,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Epic views</td>
-    <td><a href="BurroughsMountain/"><img src="BurroughsMountain/Burroughs-small.jpg" width="253" height="190" /><p>Burroughs Mountain</p></a></td>
+    <td>[BurroughsMountain/Burroughs.jpg|.|Burroughs Mountain]</td>
   </tr>
   <tr>
-    <td><a href="PanoramaPoint/"><img src="PanoramaPoint/FallColors-small.jpg" width="253" height="190" /><p>Panorama Point and Skyline Trail</p></a></td>
-    <td><a href="PanhandleGap/"><img src="PanhandleGap/PanhandleGap-small.jpg" width="253" height="190" /><p>Summerland and Panhandle Gap</p></a></td>
+    <td>[PanoramaPoint/FallColors.jpg|.|Panorama Point and Skyline Trail]</td>
+    <td>[PanhandleGap/PanhandleGap.jpg|.|Summerland and Panhandle Gap]</td>
   </tr>
 </table>
 
@@ -37,11 +37,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Waterfalls</td>
-    <td><a href="VanTrumpPark/"><img src="VanTrumpPark/CometFalls-small.jpg" width="253" height="190" /><p>Comet Falls</p></a></td>
+    <td>[VanTrumpPark/CometFalls.jpg|.|Comet Falls]</td>
   </tr>
   <tr>
-    <td><a href="GroveOfThePatriarchs/"><img src="GroveOfThePatriarchs/SilverFalls-small.jpg" width="253" height="190" /><p>Silver Falls</p></a></td>
-    <td><a href="SprayPark/"><img src="SprayPark/SprayFalls-small.jpg" width="253" height="190" /><p>Spray Falls</p></a></td>
+    <td>[GroveOfThePatriarchs/SilverFalls.jpg|.|Silver Falls]</td>
+    <td>[SprayPark/SprayFalls.jpg|.|Spray Falls]</td>
   </tr>
 </table>
 
@@ -50,11 +50,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Wildflowers</td>
-    <td><a href="PalisadesLakes/"><img src="PalisadesLakes/Pond-small.jpg" width="253" height="190" /><p>Palisades Lakes</p></a></td>
+    <td>[PalisadesLakes/Pond.jpg|.|Palisades Lakes]</td>
   </tr>
   <tr>
-    <td><a href="PanoramaPoint/"><img src="PanoramaPoint/Flowers-small.jpg" width="253" height="190" /><p>Panorama Point and Skyline Trail</p></a></td>
-    <td><a href="SprayPark/"><img src="SprayPark/Wildflowers-small.jpg" width="253" height="190" /><p>Spray Park</p></a></td>
+    <td>[PanoramaPoint/Flowers.jpg|.|Panorama Point and Skyline Trail]</td>
+    <td>[SprayPark/Wildflowers.jpg|.|Spray Park]</td>
   </tr>
 </table>
 
@@ -65,8 +65,8 @@ deep snow at other times of year.
     <td class="heading">Fantastic forests</td>
   </tr>
   <tr>
-    <td><a href="CarbonRiver/"><img src="CarbonRiver/Rainforest-small.jpg" width="253" height="190" /><p>Carbon River to Ipsut Falls</p></a></td>
-    <td><a href="GroveOfThePatriarchs/"><img src="GroveOfThePatriarchs/ForScale-small.jpg" width="253" height="190" /><p>Grove of the Patriarchs</p></a></td>
+    <td>[CarbonRiver/Rainforest.jpg|.|Carbon River to Ipsut Falls]</td>
+    <td>[GroveOfThePatriarchs/ForScale.jpg|.|Grove of the Patriarchs]</td>
   </tr>
 </table>
 
@@ -75,11 +75,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Sunrise or sunset</td>
-    <td><a href="DegePeakFromSunrise/"><img src="DegePeakFromSunrise/Sunrise-small.jpg" width="253" height="190" /><p>Dege Peak from Sunrise</p></a></td>
+    <td>[DegePeakFromSunrise/Sunrise.jpg|.|Dege Peak from Sunrise]</td>
   </tr>
   <tr>
-    <td><a href="FremontLookout/"><img src="FremontLookout/Dawn-small.jpg" width="253" height="190" /><p>Fremont Lookout</p></a></td>
-    <td><a href="TolmiePeak/"><img src="TolmiePeak/RiversOfCloud-small.jpg" width="253" height="190" /><p>Tolmie Peak</p></a></td>
+    <td>[FremontLookout/Dawn.jpg|.|Fremont Lookout]</td>
+    <td>[TolmiePeak/RiversOfCloud.jpg|.|Tolmie Peak]</td>
   </tr>
 </table>
 
@@ -88,11 +88,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Seeking solitude</td>
-    <td><a href="LaughingwaterCreek/"><img src="LaughingwaterCreek/BearGrass-small.jpg" width="253" height="190" /><p>Laughingwater Creek</p></a></td>
+    <td>[LaughingwaterCreek/BearGrass.jpg|.|Laughingwater Creek]</td>
   </tr>
   <tr>
-    <td><a href="MoraineTrail/"><img src="MoraineTrail/Moraine-small.jpg" width="253" height="190" /><p>Moraine Trail</p></a></td>
-    <td><a href="PaulPeakTrail/"><img src="PaulPeakTrail/SouthMowichRiver-small.jpg" width="253" height="190" /><p>Paul Peak Trail</p></a></td>
+    <td>[MoraineTrail/Moraine.jpg|.|Moraine Trail]</td>
+    <td>[PaulPeakTrail/SouthMowichRiver.jpg|.|Paul Peak Trail]</td>
   </tr>
 </table>
 
@@ -101,11 +101,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Off-season or snowshoe</td>
-    <td><a href="GreenLake/"><img src="GreenLake/Reflection-small.jpg" width="253" height="190" /><p>Green Lake</p></a></td>
+    <td>[GreenLake/Reflection.jpg|.|Green Lake]</td>
   </tr>
   <tr>
-    <td><a href="LakesLoop/"><img src="LakesLoop/Tatoosh-small.jpg" width="253" height="190" /><p>Lakes Loop</p></a></td>
-    <td><a href="RampartRidge/"><img src="RampartRidge/Beware-small.jpg" width="253" height="190" /><p>Rampart Ridge Loop</p></a></td>
+    <td>[LakesLoop/Tatoosh.jpg|.|Lakes Loop]</td>
+    <td>[RampartRidge/Beware.jpg|.|Rampart Ridge Loop]</td>
   </tr>
 </table>
 
@@ -114,11 +114,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Wheelchair accessible</td>
-    <td><a href="MyrtleFalls/"><img src="MyrtleFalls/Push-small.jpg" width="253" height="190" /><p>Myrtle Falls</p></a></td>
+    <td>[MyrtleFalls/Push.jpg|.|Myrtle Falls]</td>
   </tr>
   <tr>
-    <td><a href="NisquallyVista/"><img src="NisquallyVista/Trail-small.jpg" width="253" height="190" /><p>Nisqually Vista</p></a></td>
-    <td><a href="TrailOfTheShadows/"><img src="TrailOfTheShadows/Accessible-small.jpg" width="253" height="190" /><p>Trail of the Shadows</p></a> (partially)</td>
+    <td>[NisquallyVista/Trail.jpg|.|Nisqually Vista]</td>
+    <td>[TrailOfTheShadows/Accessible.jpg|.|Trail of the Shadows] (partially)</td>
   </tr>
 </table>
 
@@ -127,11 +127,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Challenge yourself</td>
-    <td><a href="IndianHenrysFromLongmire/"><img src="IndianHenrysFromLongmire/PatrolCabin-small.jpg" width="253" height="190" /><p>Indian Henry's from Longmire</p></a></td>
+    <td>[IndianHenrysFromLongmire/PatrolCabin.jpg|.|Indian Henry's from Longmire]</td>
   </tr>
   <tr>
-    <td><a href="IndianBar/"><img src="IndianBar/IndianBar-small.jpg" width="253" height="190" /><p>Indian Bar</p></a></td>
-    <td><a href="CampMuir/"><img src="CampMuir/Onwards-small.jpg" width="253" height="190" /><p>Camp Muir</p></a></td>
+    <td>[IndianBar/IndianBar.jpg|.|Indian Bar]</td>
+    <td>[CampMuir/Onwards.jpg|.|Camp Muir]</td>
   </tr>
 </table>
 
@@ -142,7 +142,7 @@ deep snow at other times of year.
     <td class="heading">Backpacking</td>
   </tr>
   <tr>
-    <td><a href="SprayParkLoop/"><img src="SprayParkLoop/Summit-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
-    <td><a href="NorthernLoop/"><img src="NorthernLoop/3-CarbonGlacier-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
+    <td>[SprayParkLoop/Summit.jpg|.|Spray Park Loop]</td>
+    <td>[NorthernLoop/3-CarbonGlacier.jpg|.|Northern Loop]</td>
   </tr>
 </table>

@@ -10,11 +10,11 @@ have separately visited all the pieces of it at different times:
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="../HuckleberryCreek/"><img src="../HuckleberryCreek/Meadows-small.jpg" width="253" height="190" /><p>Huckleberry Creek</p></a></td>
-    <td><a href="../GrandPark/"><img src="../GrandPark/RainierFromGrandPark-small.jpg" width="253" height="190" /><p>Grand Park from Sunrise</p></a></td>
+    <td>[../HuckleberryCreek/Meadows.jpg|.|Huckleberry Creek]</td>
+    <td>[../GrandPark/RainierFromGrandPark.jpg|.|Grand Park from Sunrise]</td>
   </tr>
   <tr>
-    <td><a href="../GrandParkViaLakeEleanor/"><img src="../GrandParkViaLakeEleanor/LowerPark-small.jpg" width="253" height="190" /><p>Grand Park via Lake Eleanor</p></a></td>
+    <td>[../GrandParkViaLakeEleanor/LowerPark.jpg|.|Grand Park via Lake Eleanor]</td>
   </tr>
 </table>
 

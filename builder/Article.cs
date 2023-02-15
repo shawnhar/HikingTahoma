@@ -383,10 +383,6 @@ namespace builder
         }
 
 
-        static Regex hikeLinkRegex = new Regex(@"\[(\w+)\]");
-        static Regex photoLinkRegex = new Regex(@"\[([\w\.\-/]+\.(jpg|html))(\|([^\]]+))?\]");
-
-
         string ExpandLinks(string line, IEnumerable<Hike> allHikes)
         {
             line = ExpandLinks(line, hikeLinkRegex, match => ExpandHikeLink(match.Groups[1].Value, allHikes));
@@ -409,6 +405,9 @@ namespace builder
         }
 
 
+        static Regex hikeLinkRegex = new Regex(@"\[(\w+)\]");
+
+
         string ExpandHikeLink(string name, IEnumerable<Hike> allHikes)
         {
             var target = allHikes.FirstOrDefault(hike => hike.FolderName == name);
@@ -422,21 +421,33 @@ namespace builder
         }
 
 
+        static Regex photoLinkRegex = new Regex(@"\[([\w\.\-/]+\.(jpg|html))(\|([^|\]]+(?=\|)))?(\|([^\]]+))?\]");
+
+
         static string ExpandPhotoLink(Match match)
         {
             var linkTarget = match.Groups[1].Value;
             var linkExtension = match.Groups[2].Value;
+            var explicitTarget = match.Groups[4].Value;
+            var linkLabel = match.Groups[6].Value;
 
             var smallPhoto = linkTarget.Replace("." + linkExtension, "-small.jpg");
 
-            var label = match.Groups[4].Value;
-
-            if (!string.IsNullOrEmpty(label))
+            if (explicitTarget == ".")
             {
-                label = "<p>" + label + "</p>";
+                linkTarget = Path.GetDirectoryName(linkTarget).Replace('\\', '/') + "/";
+            }
+            else if (!string.IsNullOrEmpty(explicitTarget))
+            {
+                linkTarget = explicitTarget;
             }
 
-            return string.Format("<a href=\"{0}\"><img src=\"{1}\" width=\"253\" height=\"190\" />{2}</a>", linkTarget, smallPhoto, label);
+            if (!string.IsNullOrEmpty(linkLabel))
+            {
+                linkLabel = "<p>" + linkLabel + "</p>";
+            }
+
+            return string.Format("<a href=\"{0}\"><img src=\"{1}\" width=\"253\" height=\"190\" />{2}</a>", linkTarget, smallPhoto, linkLabel);
         }
     }
 }

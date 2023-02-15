@@ -742,19 +742,19 @@ backpacking permit, many sections also make fantastic day hikes:
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="../PanhandleGap/"><img src="../PanhandleGap/PanhandleGap-small.jpg" width="253" height="190" /><p>Summerland and Panhandle Gap</p></a></td>
-    <td><a href="../IndianBar/"><img src="../IndianBar/IndianBar-small.jpg" width="253" height="190" /><p>Indian Bar</p></a></td>
+    <td>[../PanhandleGap/PanhandleGap.jpg|.|Summerland and Panhandle Gap]</td>
+    <td>[../IndianBar/IndianBar.jpg|.|Indian Bar]</td>
   </tr>
   <tr>
-    <td><a href="../IndianHenrysFromLongmire/"><img src="../IndianHenrysFromLongmire/PatrolCabin-small.jpg" width="253" height="190" /><p>Indian Henry's from Longmire</p></a></td>
-    <td><a href="../SkyscraperMountain/"><img src="../SkyscraperMountain/Burroughs-small.jpg" width="253" height="190" /><p>Skyscraper Mountain</p></a></td>
+    <td>[../IndianHenrysFromLongmire/PatrolCabin.jpg|.|Indian Henry's from Longmire]</td>
+    <td>[../SkyscraperMountain/Burroughs.jpg|.|Skyscraper Mountain]</td>
   </tr>
   <tr>
-    <td><a href="../SprayPark/"><img src="../SprayPark/EnteringSprayPark-small.jpg" width="253" height="190" /><p>Spray Park</p></a></td>
-    <td><a href="../LongmireToReflectionLakes/"><img src="../LongmireToReflectionLakes/UpTheNisqually-small.jpg" width="253" height="190" /><p>Longmire to Reflection Lakes</p></a></td>
+    <td>[../SprayPark/EnteringSprayPark.jpg|.|Spray Park]</td>
+    <td>[../LongmireToReflectionLakes/UpTheNisqually.jpg|.|Longmire to Reflection Lakes]</td>
   </tr>
   <tr>
-    <td><a href="../WhiteRiverToSunrise/"><img src="../WhiteRiverToSunrise/WhiteRiver-small.jpg" width="253" height="190" /><p>White River to Sunrise</p></a></td>
+    <td>[../WhiteRiverToSunrise/WhiteRiver.jpg|.|White River to Sunrise]</td>
   </tr>
 </table>
 
@@ -763,16 +763,16 @@ permits, but less time and commitment than hiking the full trail:
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="../SprayParkLoop/"><img src="../SprayParkLoop/Summit-small.jpg" width="253" height="190" /><p>Spray Park Loop</p></a></td>
-    <td><a href="../NorthernLoop/"><img src="../NorthernLoop/3-CarbonGlacier-small.jpg" width="253" height="190" /><p>Northern Loop</p></a></td>
+    <td>[../SprayParkLoop/Summit.jpg|.|Spray Park Loop]</td>
+    <td>[../NorthernLoop/3-CarbonGlacier.jpg|.|Northern Loop]</td>
   </tr>
   <tr>
-    <td><a href="../EastsideLoop/"><img src="../OwyhighLakesFromDeerCreek/CowlitzChimneys-small.jpg" width="253" height="190" /><p>Eastside Loop</p></a></td>
-    <td><a href="../KlapatchePark/"><img src="../KlapatchePark/AuroraLake2-small.jpg" width="253" height="190" /><p>Klapatche Park</p></a></td>
+    <td>[../OwyhighLakesFromDeerCreek/CowlitzChimneys.jpg|../EastsideLoop/|Eastside Loop]</td>
+    <td>[../KlapatchePark/AuroraLake2.jpg|.|Klapatche Park]</td>
   </tr>
   <tr>
-    <td><a href="../NorthPuyallup/"><img src="../NorthPuyallup/Descent-small.jpg" width="253" height="190" /><p>Westside Road to North Puyallup River</p></a></td>
-    <td><a href="../CarbonGlacier/"><img src="../CarbonGlacier/CarbonGlacier-small.jpg" width="253" height="190" /><p>Carbon Glacier</p></a></td>
+    <td>[../NorthPuyallup/Descent.jpg|.|Westside Road to North Puyallup River]</td>
+    <td>[../CarbonGlacier/CarbonGlacier.jpg|.|Carbon Glacier]</td>
   </tr>
 </table>
 

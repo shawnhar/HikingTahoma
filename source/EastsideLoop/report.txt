@@ -10,19 +10,19 @@ have separately visited all the pieces of it at different times:
 
 <table class="photos showlinks">
   <tr>
-    <td><a href="../OwyhighLakesFromWhiteRiverRoad/"><img src="../OwyhighLakesFromWhiteRiverRoad/Flowers-small.jpg" width="253" height="190" /><p>Owyhigh Lakes from White River Road</p></a></td>
-    <td><a href="../OwyhighLakesFromDeerCreek/"><img src="../OwyhighLakesFromDeerCreek/CowlitzChimneys-small.jpg" width="253" height="190" /><p>Owyhigh Lakes from Deer Creek</p></a></td>
+    <td>[../OwyhighLakesFromWhiteRiverRoad/Flowers.jpg|.|Owyhigh Lakes from White River Road]</td>
+    <td>[../OwyhighLakesFromDeerCreek/CowlitzChimneys.jpg|.|Owyhigh Lakes from Deer Creek]</td>
   </tr>
   <tr>
-    <td><a href="../EastsideTrail/"><img src="../EastsideTrail/ForestOfGreenAndRed-small.jpg" width="253" height="190" /><p>Eastside Trail</p></a></td>
-    <td><a href="../CowlitzDivideTrail/"><img src="../CowlitzDivideTrail/GlowingMoss-small.jpg" width="253" height="190" /><p>Cowlitz Divide Trail</p></a></td>
+    <td>[../EastsideTrail/ForestOfGreenAndRed.jpg|.|Eastside Trail]</td>
+    <td>[../CowlitzDivideTrail/GlowingMoss.jpg|.|Cowlitz Divide Trail]</td>
   </tr>
   <tr>
-    <td><a href="../IndianBar/"><img src="../IndianBar/IndianBar-small.jpg" width="253" height="190" /><p>Indian Bar</p></a></td>
-    <td><a href="../Wonderland/Day9.html"><img src="../Wonderland/9-OhanapecoshPark-small.jpg" width="253" height="190" /><p>Ohanapecosh Park</p></a></td>
+    <td>[../IndianBar/IndianBar.jpg|.|Indian Bar]</td>
+    <td>[../Wonderland/9-OhanapecoshPark.jpg|../Wonderland/Day9.html|Ohanapecosh Park]</td>
   </tr>
   <tr>
-    <td><a href="../PanhandleGap/"><img src="../PanhandleGap/PanhandleGap-small.jpg" width="253" height="190" /><p>Summerland and Panhandle Gap</p></a></td>
+    <td>[../PanhandleGap/PanhandleGap.jpg|.|Summerland and Panhandle Gap]</td>
   </tr>
 </table>
 
