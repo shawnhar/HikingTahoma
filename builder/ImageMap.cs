@@ -150,7 +150,7 @@ namespace builder
                 {
                     if (cells[x, y] != null)
                     {
-                        writer.WriteLine("      <a href=\"{0}/\"><span class=\"imagemap\" style=\"left:{1}%; top:{2}%; right:{3}%; bottom:{4}%\" onMouseEnter=\"OnEnterImage(document, '{0}')\" onMouseLeave=\"OnLeaveImage(document, '{0}')\" /></a>",
+                        writer.WriteLine("      <a href=\"{0}/\"><span class=\"imagemap\" style=\"left:{1}%; top:{2}%; right:{3}%; bottom:{4}%\" onMouseEnter=\"OnEnterImage(document, '{0}')\" onMouseLeave=\"OnLeaveImage(document, '{0}')\"></span></a>",
                                          cells[x, y].Hike.FolderName,
                                          (float)x / subdiv * 100,
                                          (float)y / subdiv * 100,
