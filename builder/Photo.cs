@@ -13,7 +13,8 @@ namespace builder
         public readonly bool IsReference;
 
         public string Thumbnail => Path.Combine(Path.GetDirectoryName(Filename),
-                                                Path.GetFileNameWithoutExtension(Filename).TrimEnd('-')) + "-small.jpg";
+                                                Path.GetFileNameWithoutExtension(Filename).TrimEnd('-') + "-small.jpg")
+                                       .Replace('\\', '/');
 
         public BitmapSize ThumbnailSize;
 
