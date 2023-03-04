@@ -216,7 +216,7 @@ from the valley above the town of Orting.
 <p class="heading">Placenames</p>
 
 The Nisqually, Puyallup, and Cowlitz tribes share their names with the rivers where they 
-lived, which are also the names of the glaciers that feed these rivers and various 
+lived, which are also the names of the glaciers that feed these rivers and of various 
 adjacent geographic features (<a href="IndianBar/">Cowlitz Divide</a>, Puyallup Cleaver, 
 etc.) It is meaningless to ask which of <i>"people who live along the Nisqually 
 River"</i> or <i>"river inhabited by the Nisqually people"</i> came first.
