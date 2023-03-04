@@ -19,7 +19,8 @@ namespace builder
         {
             // Possible parameter forms:
             //  "<short title>|<long title>"
-            //  "<short title>" (in which case the long title is <articleName> <shorttitle>)
+            //  "<short title>|" (in which case the long title is <short title>)
+            //  "<short title>" (in which case the long title is <articleName> <short title>)
 
             var substring = sectionTitle.IndexOf('|');
 
@@ -27,6 +28,11 @@ namespace builder
             {
                 Title = sectionTitle.Substring(0, substring);
                 LongTitle = sectionTitle.Substring(substring + 1);
+
+                if (string.IsNullOrEmpty(LongTitle))
+                {
+                    LongTitle = Title;
+                }
             }
             else
             {

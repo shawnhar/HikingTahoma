@@ -343,6 +343,19 @@ a:link, a:visited {
   max-width: 40%;
 }
 
+.inlinephoto {
+  float: right;
+  clear: right;
+  padding: 16;
+  padding-right: 0;
+  max-width: 60%;
+}
+
+.inlinephoto td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .tooltip {
   position: relative;
 }

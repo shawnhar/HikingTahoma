@@ -119,6 +119,7 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "index.js");
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
+                CopyFile(sourceFolder.Path, outFolder.Path, "tribes.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "bucket.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, ".htaccess");
 
