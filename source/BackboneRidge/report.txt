@@ -10,6 +10,7 @@ Backbone Lake (unofficial, outside MRNP)
 [Trail.jpg] Lovely forested trail
 [BackboneLake.jpg] Backbone Lake
 [Trail2.jpg] More lovely trail
+[OpenSection.jpg] A brief open section of trail while descending Backbone Ridge
 [OldRoad.jpg] Old trailhead on what was once Forest Road 1270, now rapidly becoming a lovely trail in its own right
 [CowlitzRiver.jpg] The Cowlitz River, where there was once a bridge
 
