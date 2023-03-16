@@ -61,8 +61,9 @@ This site includes a <a href="Planner.html">Wonderland Itinerary Planner</a> whi
 distance and elevation change between your choice of trailheads and campsites, and 
 information about <a href="Wonderland/How.html">how to get a Wonderland permit</a>.
 
-Hiking Tahoma is dedicated to my wife Tracy, who has varyingly tolerated, supported, 
-encouraged, and joined in with my Rainier hiking obsession:
+Hiking Tahoma is dedicated to my wife Tracy, who varyingly tolerated, supported, 
+encouraged, and joined in with my Rainier hiking obsession. She died of pancreatic cancer 
+in 2023.
 
 <table class="photos">
   <tr>
