@@ -15,7 +15,7 @@ namespace builder
     class ImageProcessor
     {
         // Manually measured using CalTopo. Does not double count any overlaps or out-and-back.
-        const float totalLengthOfAllTrails = 344;
+        const float totalLengthOfAllTrails = 347;
 
         public CanvasDevice Device { get; private set; }
         public CanvasBitmap MasterMap { get; private set; }
@@ -205,6 +205,7 @@ namespace builder
                     { "2020",  Color.FromArgb(0xFF, 0xFF, 0xFF, 0x00) },
                     { "2021",  Color.FromArgb(0xFF, 0xFF, 0xA0, 0x00) },
                     { "2022",  Color.FromArgb(0xFF, 0xFF, 0x60, 0xFF) },
+                    { "newer", Color.FromArgb(0xFF, 0x00, 0xA0, 0xFF) },
                 };
 
                 using (var result = new CanvasRenderTarget(Device, MapWidth, MapHeight, 96))
@@ -215,17 +216,19 @@ namespace builder
                         drawingSession.DrawImage(MasterMap, result.Bounds, MasterMap.Bounds, 1, CanvasImageInterpolation.HighQualityCubic);
 
                         // Overlay trail routes, sorted by year.
+                        Func<string, string> yearSortKey = year => char.IsDigit(year[0]) ? year : "0";
+
                         var hikesByYear = from hike in hikes
                                           from year in hike.Map.YearsHiked
                                           group hike by year into years
-                                          orderby char.IsDigit(years.Key[0]) ? years.Key : "0" descending
+                                          orderby yearSortKey(years.Key) descending
                                           select years;
 
                         foreach (var year in hikesByYear)
                         {
                             Color color;
 
-                            if (!yearColors.TryGetValue(year.Key, out color))
+                            if (!yearColors.TryGetValue(Hike.MergeRecentYears(year.Key), out color))
                             {
                                 throw new Exception("Unknown year " + year.Key);
                             }
@@ -253,15 +256,15 @@ namespace builder
                         textRect.Width -= 16;
                         textRect.Y += 16;
 
-                        borderRect.X = borderRect.Right - 104;
+                        borderRect.X = borderRect.Right - 116;
                         borderRect.Height = 26 + yearColors.Count * 46;
 
                         drawingSession.FillRectangle(borderRect, Color.FromArgb(0x80, 0xB0, 0xB0, 0xB0));
                         drawingSession.DrawRectangle(borderRect, Color.FromArgb(0xFF, 0x95, 0xC0, 0xE0));
 
-                        foreach (var year in hikesByYear)
+                        foreach (var year in hikesByYear.Select(year => Hike.MergeRecentYears(year.Key)).Distinct())
                         {
-                            drawingSession.DrawText(year.Key, textRect, yearColors[year.Key], textFormat);
+                            drawingSession.DrawText(year, textRect, yearColors[year], textFormat);
 
                             textRect.Y += 46;
                         }

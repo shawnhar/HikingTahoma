@@ -209,7 +209,7 @@ namespace builder
                     {
                         var difficulty = hike.DifficultyCategory;
                         var region = hike.Region;
-                        var firstHiked = hike.FirstHiked;
+                        var firstHiked = Hike.MergeRecentYears(hike.FirstHiked);
 
                         var firstHikedKey = firstHiked.Replace("older", "0lder")
                                                       .Replace("never", "znever");

@@ -31,6 +31,12 @@ namespace builder
         override protected string RootPrefix => "../";
 
 
+        public static string MergeRecentYears(string year)
+        {
+            return char.IsDigit(year[0]) && int.Parse(year) > 2022 ? "newer" : year;
+        }
+
+
         public Tuple<string, string> DifficultyCategory
         {
             get
