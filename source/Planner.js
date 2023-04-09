@@ -177,7 +177,6 @@ const viaModeNearTo = {
 const isResupply = {
   'Longmire':    true,
   'Mowich Lake': true,
-  'Sunrise':     true,
   'White River': true
 };
 
