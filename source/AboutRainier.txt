@@ -50,18 +50,19 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Mouse.html|Deer Mouse]</td>
   </tr>
   <tr>
-    <td>[Animals/Owl.html|Spotted Owl]</td>
     <td>[Animals/Grouse.html|Sooty Grouse]</td>
+    <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
   </tr>
   <tr>
-    <td>[Animals/Woodpecker.html|Hairy Woodpecker]</td>
-    <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
+    <td>[Animals/PileatedWoodpecker.html|Pileated Woodpecker]</td>
+    <td>[Animals/HairyWoodpecker.html|Hairy Woodpecker]</td>
   </tr>
   <tr>
     <td>[Animals/Stellers.html|Steller's Jay]</td>
     <td>[Animals/Grayjay.html|Gray Jay]</td>
   </tr>
   <tr>
+    <td>[Animals/Owl.html|Spotted Owl]</td>
     <td>[Animals/Trout.html|Trout]</td>
   </tr>
 </table>
