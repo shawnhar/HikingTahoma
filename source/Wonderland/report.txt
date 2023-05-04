@@ -768,7 +768,7 @@ permits, but less time and commitment than hiking the full trail:
     <td>[../KlapatchePark/AuroraLake2.jpg|.|Klapatche Park]</td>
   </tr>
   <tr>
-    <td>[../NorthPuyallup/Descent.jpg|.|Westside Road to North Puyallup River]</td>
+    <td>[../NorthPuyallup/Descent.jpg|.|Westside Road to North Puyallup]</td>
     <td>[../CarbonGlacier/CarbonGlacier.jpg|.|Carbon Glacier]</td>
   </tr>
 </table>
