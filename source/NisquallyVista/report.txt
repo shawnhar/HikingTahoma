@@ -6,9 +6,11 @@ none
 2020
 
 [Trail.jpg] Lollipop loop along the paved trail
+[Snowshoe.jpg] Same trail, different time of year
 [NisquallyVista.jpg] Viewpoint overlooking the snout of the Nisqually Glacier
-[Lupin.jpg] Mountain behind a field of lupin
+[WinterVista.jpg] Same viewpoint seen from a winter snowshoe
 [AvalancheLilies.jpg] Avalanche lilies
+[Lupin.jpg] Mountain behind a field of lupin
 
 Depending on your perspective, this is either a wheelchair accessible trail that's 
 slightly more challenging than [MyrtleFalls], or a way to experience the Nisqually 
@@ -18,3 +20,6 @@ series of (safely fenced) viewpoints along a cliff overlooking the Nisqually Val
 here you have a great view of the mountain, the crevassed upper reaches of the glacier, 
 its rock-covered lower section, the river flowing from its mouth, and the dramatic valley 
 where the glacier used to be before retreating nearly a mile over the last 150 years.
+
+In winter, rangers mark the route which makes a good beginner snowshoe, but only as 
+an out-and-back rather than lollipop loop.
