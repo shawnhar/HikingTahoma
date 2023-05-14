@@ -10,7 +10,7 @@ yet achieved that are:
 <ul class="tight">
   <li>[BurroughsMountain]</li>
   <li>[CarbonGlacier]</li>
-  <li><a href="VanTrumpPark/">Christine Falls and Van Trump Park</a></li>
+  <li><a href="VanTrumpPark/">Van Trump Park</a></li>
   <li>[GlacierBasinLoop]</li>
   <li>[GrandPark]</li>
   <li><a href="SprayParkLoop/">Ipsut Pass</a></li>
