@@ -594,7 +594,7 @@ Examples can be seen all over the mountain.
 
 <table class="photos">
   <tr>
-    <td>[TrailOfTheShadows/Marsh.jpg|Classic ice-cooled-lava cliffs at Rampart Ridge, created 380,000 years ago when lava was channeled between the Kautz and Nisqually glaciers, each over 1000 feet deep at the time]</td>
+    <td>[TrailOfTheShadows/Marsh.jpg|Classic ice-cooled lava cliffs at Rampart Ridge, created 380,000 years ago when lava was channeled between the Kautz and Nisqually glaciers, each over 1000 feet deep at the time]</td>
     <td>[SouthPuyallupPipeOrgan/PipeOrgan.jpg|The Devil's Pipe Organ: columnar andesite near South Puyallup River Camp]</td>
   </tr>
 </table>
