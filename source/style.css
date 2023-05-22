@@ -348,7 +348,7 @@ a:link, a:visited {
   clear: right;
   padding: 16;
   padding-right: 0;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .inlinephoto td {

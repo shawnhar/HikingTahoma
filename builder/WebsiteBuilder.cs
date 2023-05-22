@@ -120,6 +120,8 @@ namespace builder
                 CopyFile(sourceFolder.Path, outFolder.Path, "mapbase.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "me.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, "tribes.jpg");
+                CopyFile(sourceFolder.Path, outFolder.Path, "plates.jpg");
+                CopyFile(sourceFolder.Path, outFolder.Path, "lahars.jpg");
                 CopyFile(sourceFolder.Path, outFolder.Path, "bucket.png");
                 CopyFile(sourceFolder.Path, outFolder.Path, ".htaccess");
 

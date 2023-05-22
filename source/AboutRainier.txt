@@ -18,7 +18,7 @@ to hikers, and negative encounters vanishingly rare. Treat them with respect, av
 surprising them, keep your food out of their way, and you won't have any trouble.
 
 
-## Wildlife|Wildlife Of Mount Rainier
+## Wildlife|Wildlife of Mount Rainier
 
 [!Animals/Deer.jpg]
 
@@ -128,7 +128,7 @@ Closest to the mountain, the Nisqually had permanent villages near what are now
 Eatonville and Elbe, the Puyallup near modern Orting, and the Muckleshoot around Buckley 
 and Enumclaw.
 
-<img class="inlinephoto" src="tribes.jpg" />
+<img class="inlinephoto" style="max-width:60%" src="tribes.jpg" />
 
 East of the Cascade Crest were the migratory plateau tribes: Yakama, Kittitas, and 
 Klickitat. They spoke Sahaptin and rode horses. The Yakama crossed mountain passes to 
@@ -351,6 +351,377 @@ The debate continued past a pro-Rainier 1890 ruling by the US Board of Geographi
 Teddy Roosevelt chimed in favoring an indigenous name, and in 1917 the state legislature 
 passed a resolution to rename, but the effort stalled. Perhaps conditions are ripe for 
 another try soon?
+
+
+## Geology|Geology of Mount Rainier
+
+[!Wonderland/2-ColumnarAndesite.jpg]
+
+The geological history of Mount Tahoma is a tale of fire, ice, and flood. She's an active stratovolcano, chosen for special study as one of 16 Decade Volcanoes due to a history of destructive activity, high probability of eruptions in the near future, and proximity to densely populated areas. Like a slumbering giant being crawled over by ants, she occasionally twitches in her sleep, sending hikers and trail repair crews scurrying. One day she may snore or roll over, which would instantly render all the information on this website obsolete.
+
+
+<p class="heading">Fire</p>
+
+Tahoma exists because of plate tectonics. The Juan de Fuca Plate, which is a small one in 
+the scale of such things, lies beneath the Pacific Ocean off the coasts of British 
+Columbia, Washington, Oregon, and northern California. It is moving northeast at a speed 
+of one inch per year. Meanwhile the North American Plate is moving west around half an 
+inch per year. Where they meet, the Juan de Fuca Plate is subducting (sinking) below the 
+North American Plate. This causes several interesting things to happen:
+
+<img class="inlinephoto" src="plates.jpg" />
+
+<ul>
+<li>
+    At the leading edge of the collision, any bumps (seamounts, islands) that were 
+    carried along with the Juan de Fuca Plate get scraped off onto the edge of the North 
+    American Plate. Hence the Olympic Mountains.
+</li>
+<li>
+    A bit further inland, force of the impact causes the North American Plate to crumple 
+    and fold, uplifting the Cascade Range.
+</li>
+<li>
+    As the Juan de Fuca Plate sinks below the North American Plate, water is carried 
+    downward along with what was until recently surface rock. 50 miles below the surface, 
+    pressure and geothermal heat separate this water from the subducting plate. Water 
+    escapes into the hot but dry mantle above, lowering the melting point of that rock, 
+    which melts to form magma. Wherever a weakness in the crust above allows, the magma 
+    rises and sometimes bursts free to terrify humans and form stratovolcanoes.
+</li>
+</ul>
+
+Tahoma is a stratovolcano, which comes from the Latin word stratum, meaning layers. 
+Today's mountain began forming half a million years ago with a series of lava flows that 
+produced mostly andesite, which is a volcanic rock containing an intermediate amount of 
+silica. Andesite lava is viscous, but not <i>too</i> viscous, so it can flow, but not 
+flow <i>too</i> far. Over time, repeated eruptions will form a giant mound with layers 
+poured over the top of other layers, like one of those challenges from the Great British 
+Bake Off where they have to assemble a cake from hundreds of individually cooked 
+millimeter thick layers of sponge.
+
+Had Tahoma's lava contained less silica, it would have flowed much further before cooling 
+into basalt, forming a wider but less steep shield volcano. Had there been more silica, 
+it'd be rhyolite, an extremely viscous lava that cannot flow far and tends to plug up its 
+vents, building up pressure that leads to explosions.
+
+Which brings us to: some eruptions are explosive rather than producing a gradual flow of 
+lava. When lava is flung high in the air, rapid cooling creates tephra such as volcanic 
+ash (finely powdered rock), glass particles, and pumice. Being light, these materials can 
+be blown much further than lava could flow. If tephra explosions were the only type of 
+eruption they would create a small cinder cone volcano, but when they alternate with 
+andesite lava flows like at Tahoma, a much larger stratovolcano can alternate andesite 
+with tephra layers.
+
+Amazingly, not all of the tephra layers on Tahoma were erupted by this volcano at all! In 
+one analysis of a location containing 40 tephra layers, 10 of the layers, including one 
+20 inches thick, came from Mount St. Helens, which is 50 miles away. Most of Tahoma is 
+covered by a 2 inch tephra layer that flew 250 miles to get there, all the way from Mount 
+Mazama. If you're wondering why you've never heard of Mount Mazama before, it's because 
+these days she's known as Crater Lake. The reason she changed identity from mountain to 
+lake, which is also the reason there is 2 inches of her spread across Mount Tahoma, is 
+that she went kittyboom 7,700 years ago.
+
+Tahoma has erupted countless times over her lifetime, and will do so again although it is 
+impossible to say when. She could emit lava, ash, pumice, or gasses, in amounts small or 
+large, and these eruptions could trigger massive landslides.
+
+Her first eruptive stage, half a million years ago, included the lava flows that form 
+Burroughs Mountain, the Sunrise area, Grand Park, and Old Desolate. The Colonnade was 
+created shortly afterward. Rampart Ridge is a lava flow from 380,000 years ago. The white 
+pumice layer seen in the middle of Sunset Amphitheater is from an eruption 190,000 years 
+ago. 100,000 years ago, vents on the northwest flank of the mountain, which are visible 
+today as the cinder cones Echo Rock and Observation Rock, produced the basaltic andesite 
+that covers Spray Park and Mist Park.
+
+<table class="photos">
+  <tr>
+    <td>[BurroughsMountain/Burroughs.jpg|Burroughs Mountain is a lava flow from the earliest days of Tahoma, nearly half a million years ago]</td>
+    <td>[IndianHenrysFromKautzCreek/SunsetAmphitheater.jpg|The white pumice layer in the middle of Sunset Amphitheater erupted 190,000 years ago]</td>
+  </tr>
+  <tr>
+    <td>[Photos/EchoAndObservation.jpg|Echo Rock and Observation Rock are cinder cones formed around the vents which, 100,000 years ago, covered Spray Park with basaltic andesite]</td>
+  </tr>
+</table>
+
+The most recent known small eruptions occurred between 1820 and 1854, when pumice was 
+scattered six miles from the summit. In November 1894 Seattle newspapers excitedly 
+reported seeing clouds of smoke, and a fresh eruption was speculated, but the summit was 
+inaccessible at that time of year and these reports remain unproven.
+
+A complicating factor is that even if the current volcano did not exist, there would 
+still be interesting mountains here. Tectonic uplift would still have created the crest 
+of the Cascades, which runs only 15 miles east of Tahoma's summit and reaches elevations 
+up to 6500'. When you hike the [NachesPeakLoop] or climb [ShrinerPeak] you're standing on 
+the results of uplift, not a stratovolcano. A few of these uplifted and folded rocks are 
+sedimentary deposits from a coastal plain of 60 million years ago, but they're mostly 
+remnants of earlier eras of volcanic activity.
+
+Plate subduction has been happening in this area for a LONG time now. Today's Tahoma is 
+only half a million years old, but the first volcanoes started to erupt in this area more 
+like 36 million years ago. This is long enough for multiple cycles of mountains growing 
+large only to be eroded back down to nothing. The exact shape of mountains in ancient 
+times is unknowable, but geologists have identified major periods of activity as the 
+Ohanapecosh Formation (andesite lava flows and lahars between 37 and 27 million years 
+ago), Steven's Ridge Formation (ash flows and tephra deposits 26 million years ago), and 
+the Fifes Peak Formation (basaltic to andesitic lava flows, 25 to 22 million years ago).
+
+Rocks of the Ohanapecosh Formation are exposed at Silver Falls, while eruptive centers 
+from that time are visible as the Cowlitz Chimneys. It is tempting to imagine how lava 
+from today's Cowlitz Chimneys could have flowed down to Silver Falls, but that is 
+entirely the wrong mental model as the landscape then was unrecognizable vs. today. Bear 
+in mind that uplift of the Cascades only started 7 million years ago, so some of the 
+Ohanapecosh eruptions were taking place underwater! Innumerable cycles of uplift, 
+folding, faulting, and erosion have occurred since, using older rocks as raw material to 
+make new things.
+
+<table class="photos">
+  <tr>
+    <td>[TamanosMountain/CowlitzChimneys.jpg|The Cowlitz Chimneys are rhyolite remnants of an ancient volcanic plug from an eruptive center of the Ohanapecosh Formation, 37 to 27 million years ago]</td>
+    <td>[GroveOfThePatriarchs/SilverFalls2.jpg|Silver Falls exposes ancient rocks of the Ohanapecosh Formation]</td>
+  </tr>
+</table>
+
+The Tatoosh Range sits on an intrusive igneous pluton that was formed when a bubble of 
+magma neared the surface between 26 and 14 million years ago without managing to break 
+free. Cooling slowly underground, it formed large crystals and hardened into 
+granodiorite. Capped with an older layer of tephra from the Stevens Ridge Formation, this 
+was later uplifted, and softer surrounding rocks were eroded away. Unicorn Peak is made 
+entirely of granodiorite, while other Tatoosh summits consist of Stevens Ridge Formation 
+sitting on granodiorite bases.
+
+<table class="photos">
+  <tr>
+    <td>[LakesLoop/Tatoosh.jpg|The Tatoosh Range sits on a pluton of intrusive granitic rock, formed when magma hardened below the surface 26 to 14 million years ago]</td>
+    <td>[NaradaFallsLoop/NaradaFalls.jpg|At Narada Falls, the 40,000 year old lava flow that makes up Ricksecker Point sits atop exposed granodiorite of the Tatoosh pluton]</td>
+  </tr>
+</table>
+
+1.4 million years ago, another similarly sized volcano stood in roughly the same place as 
+Tahoma today. During an extended lull between eruptions, Tahoma Prime was eroded away 
+before volcanic activity resumed and today's mountain began to form. Deposits of lahars 
+from this ancestor mountain, known as the Lily Creek Formation, have been found in the 
+Cascade foothills west of Tahoma. They match lava remnants near Panhandle Gap that date 
+from the same period.
+
+The Goat Rocks Wilderness, 30 miles southeast of Tahoma, is all that remains of another 
+large stratovolcano that formed between 3.2 and 1 million years ago before being eroded 
+away.
+
+
+<p class="heading">Ice</p>
+
+Lava flows alone would have produced a symmetrical cone where [Wonderland] hikers could 
+enjoy sauntering around a relatively level cross section. But in reality, 
+circumnavigating this mountain involves an endless sequence of big climbs up to ridges 
+followed by big descents into valleys. The knees and quads of hikers here get good 
+workouts thanks to the impact of ice.
+
+Tahoma is heavily glaciated, with 25 major glaciers that cover 35 square miles and hold 5 
+times as much ice as all the other Cascade volcanos combined. The Carbon Glacier is the 
+longest (6 miles) and thickest (700'), while the Emmons Glacier has the largest surface 
+area.
+
+<table class="photos">
+  <tr>
+    <td>[Wonderland/6-CarbonGlacier.jpg|Carbon Glacier]</td>
+    <td>[BurroughsMountain/EmmonsGlacier.jpg|Emmons Glacier]</td>
+  </tr>
+  <tr>
+    <td>[NorthernLoop/4-Glacier.jpg|Snout of the Winthrop Glacier]</td>
+    <td>[CowlitzGap/CowlitzAndIngrahamGlaciers.jpg|Cowlitz Glacier (left) and Ingraham Glacier (right) join up below Cathedral Rocks]</td>
+  </tr>
+</table>
+
+Glaciers are constantly moving: creaking, cracking, scouring, and shoving. The Nisqually 
+Glacier flows downhill around one foot per day. As glaciers move, they carry rocks that 
+have been ground up by their passing or fallen onto their surface from cliffs above. At 
+the snout, where the glacier melts away to nothing, these rocks are deposited to form a 
+terminal moraine. Other rocks are pushed off the sides of glaciers to form lateral 
+moraines. Moraines abound on Tahoma, including less obvious ones like the 11,000 year old 
+terminal moraines that dam Tipsoo Lake and Mystic Lake.
+
+Tahoma's glaciers have retreated in recent years. When the road to Paradise was built in 
+1910, the Nisqually Glacier extended to within 300 feet of the bridge. Today its snout is 
+a mile uphill from there. The ice caves of the Paradise Glacier, once a popular tourist 
+destination, became unsafe before collapsing entirely. Today there is no glacier at all 
+where the caves used to be.
+
+<table class="photos">
+  <tr>
+    <td>[EmmonsMoraine/EmmonsMoraine.jpg|Standing on a lateral moraine of the Emmons Glacier]</td>
+    <td>[MoraineTrail/Moraine.jpg|On a lateral moraine of the Nisqually Glacier, looking down the mile of valley where it has retreated over the last 100 years]</td>
+  </tr>
+  <tr>
+    <td>[Wonderland/7-DescendingMoraines.jpg|The Wonderland Trail descends a series of moraines between Mystic Lake and the Winthrop Glacier]</td>
+    <td>[GlacierBasin/Moraine.jpg|A moraine in upper Glacier Basin]</td>
+  </tr>
+</table>
+
+Most of Tahoma's history occurred during ice ages when the glaciers were much thicker and 
+extended further than today. During the most recent ice age, 25,000 to 10,000 years ago, 
+ice was 3000' deep at White River and 1500' at Elbe.
+
+One obvious sign of past glaciation is the shape of valleys. The Nisqually, Puyallup, 
+Mowich, Carbon, White River, and Cowlitz valleys retain wide U shapes far beyond the 
+National Park boundary, which indicates the work of glaciers as opposed to the V shape of 
+river erosion.
+
+Another remnant of past ice ages is the many cirques (rounded bowls) left where glaciers 
+once began. Many of Tahoma's lakes occupy cirques: Mowich Lake, Hidden Lake, Deadwood 
+Lakes, Lake Eleanor, and Lake George to name just a few.
+
+<table class="photos">
+  <tr>
+    <td>[Photos/Cirque.jpg|St. Andrews Lake occupies a classic glacial cirque]</td>
+    <td>[HuckleberryCreek/Cirque.jpg|The top of the Huckleberry Creek trail descends through a (lakeless) cirque]</td>
+  </tr>
+</table>
+
+Tahoma is surrounded by ridges where multiple flows of lava have incrementally added to 
+the top of the ridge. At one time this presented a mystery: why did lava flow along the 
+ridgetops rather than down the valleys? As recently as the 1960s it was hypothesized that 
+perhaps what today are ridges used to be the valleys, but then subsequent erosion 
+inverted the topology by removing softer old ridges while leaving newer valley lava 
+flows. Turns out, nope. What actually happened is that during ice ages the valleys were 
+full of ice. I'm sure the drama was intense when lava hit ice, but the end result was the 
+lava cooled fast and did not continue to flow. Only along the tops of ridges that 
+protruded above the ice could lava flows continue.
+
+Where lava came into contact with ice it created vertical lava cliffs, glassy zones from 
+extremely fast cooling, and sometimes crystallized into distinctive columnar structures. 
+Examples can be seen all over the mountain.
+
+<table class="photos">
+  <tr>
+    <td>[TrailOfTheShadows/Marsh.jpg|Classic ice-cooled-lava cliffs at Rampart Ridge, created 380,000 years ago when lava was channeled between the Kautz and Nisqually glaciers, each over 1000 feet deep at the time]</td>
+    <td>[SouthPuyallupPipeOrgan/PipeOrgan.jpg|The Devil's Pipe Organ: columnar andesite near South Puyallup River Camp]</td>
+  </tr>
+</table>
+
+
+<p class="heading">Flood</p>
+
+Lava flows plus glaciers would have produced a symmetrical cone scoured by deep grooves 
+radiating outward. But it only takes one glance at Tahoma to notice that she is neither 
+symmetrical nor a cone. Look at the shape of Mount Fuji, or Mount St. Helens prior to 
+1980. That's a classic stratovolcano: perfectly symmetrical. Tahoma is differently shaped 
+because the Osceola Mudflow is missing from her forehead.
+
+<table class="photos inlinephoto">
+  <tr><td>[Photos/Osceola.jpg|One cubic mile of Osceola Mudflow is missing from Tahoma's head]</td></tr>
+</table>
+
+The importance of lahars was not understood until surprisingly recently, when geologists 
+realized just how much of the danger of volcanoes comes from existing material sliding 
+down them rather than new lava being erupted. The word comes from Javanese.
+
+Let us imagine a couple of geologists doing research on the Enumclaw Plateau in the early 
+1950s:
+
+<blockquote>
+"It just doesn't add up for this to be residue of a retreating glacier like we'd assumed."
+
+"Yeah, but this layer of recently deposited foreign material had to come from 
+<i>somewhere</i>..."
+
+"Where could that be?"
+
+(looks up at nearby volcano that has its top rather obviously missing)
+
+"Uhh..."
+
+"Are you thinking what I'm thinking?"
+</blockquote>
+
+Once we knew what to look for, evidence was everywhere. Deposits from more than 60 
+different lahars have been identified in the strata of valleys downstream of Tahoma. 
+Deeply buried layers of thousand year old stumps and broken tree trunks have been found 
+while excavating locations 60 miles from the mountain. It turns out that major lahars 
+have occurred roughly every 500 to 1000 years, and smaller ones several times per century.
+
+Lahars vary in scale and root cause:
+
+<ul>
+<li>
+    At the lower end, water builds up inside the crevasses of a glacier, then is released 
+    by heavy rainfall, warm weather, or one of the ~30 small earthquakes that occur every 
+    year on Tahoma.
+</li>
+<li>
+    In the mid range, a volcanic eruption melts part of the cubic mile of ice that's held 
+    frozen on the upper mountain.
+</li>
+<li>
+    At the high end, over time rock + water + volcanic heat = clay. This hydrothermal 
+    reaction gradually turns the solid interior of the mountain into slushy goop.
+</li>
+</ul>
+
+Common to all these causes is that a bunch of stuff comes rushing down the mountain, 
+building volume as it goes. Water, steam, ice, clay, rocks from lower down, trees, 
+unlucky hikers, all increase the volume of the lahar. Most lahars follow existing 
+watersheds, but large ones have permanently changed the landscape by demolishing barriers 
+and damming what used to be valleys, leaving rivers in entirely different places.
+
+The Osceola Mudflow occurred 5600 years ago when an eruption caused hydrothermally 
+altered clay to collapse from the northeast side of the mountain. It is one the largest 
+lahars known anywhere in the world. Nearly a cubic mile of material fell from the upper 
+mountain, reducing Tahoma's height from an estimated 16,000' to 14,100'. This left a 
+horseshoe shaped crater 1.1 miles across, open to the northeast and probably not 
+dissimilar to the current incarnation of Mount St. Helens. The crater has since been 
+partially refilled as ongoing volcanic activity rebuilt the summit cone. The mudflow 
+travelled at 50 miles an hour, 500 feet deep as it passed what is today the White River 
+campground, carried boulders three feet across fifty miles from the mountain, spread out 
+over the Enumclaw Plateau ultimately burying an area of 100 square miles to depths as 
+great as 70 feet, and continued moving underwater for more than 10 miles after flowing 
+into Puget Sound. Yikes.
+
+The Osceola may be the biggest, but it is far from the only. 2600 years ago, the Round 
+Pass Mudflow, again consisting of hydrothermally altered clay, collapsed from Sunset 
+Amphitheater and the headwall of the Tahoma Glacier, breaching the west side of the 
+crater wall that the Osceola Mudflow had left between Liberty Cap and Point Success. 
+Deposits left in valley bottoms are sometimes 100 feet deep. Above Round Pass, remnants 
+of this lahar have been found along the trail to Lake George, 1000' above the valley 
+bottom. If you're thinking isn't the word "pass" typically a clue that such places tend 
+to be higher up, well yes. Puts in grim perspective the advice to seek higher ground if 
+you hear a lahar coming, doesn't it? :-)
+
+<img class="inlinephoto" src="lahars.jpg" />
+
+2500 years ago, the not-clay-this-time National Lahar was triggered by massive melting 
+during an eruption. It flowed down the Nisqually River and into Puget Sound.
+
+500 years ago, the Electron Mudflow was another hydrothermal clay collapse from Sunset 
+Amphitheater on the western side of the mountain. It travelled 50 miles down the Puyallup 
+River valley and buried what is now the town of Orting under 15 feet of mud and rock.
+
+Longmire sits on top of a different lahar deposit from around this same time.
+
+Within the last century, Kautz Creek shows the devastation of a debris flow that was 
+triggered by heavy rain in 1947. Where the road to Longmire crosses it, the wide main 
+channel now lacks a river because Kautz Creek shifted a quarter mile to the east during a 
+November 2006 rainstorm.
+
+In December 1963, 12 million cubic yards of rock fell from Little Tahoma onto the Emmons 
+Glacier, then travelled downhill at over 90 miles an hour, sliding over a layer of 
+compressed air (same principle as a hovercraft) to within half a mile of the White River 
+campground. Thankfully, White River was unoccupied at the time so nobody was hurt. This 
+is believed to have been caused by a steam explosion near the base of Little Tahoma.
+
+The Westside Road is currently closed to vehicles due to frequent small lahars 
+originating from the Tahoma Glacier.
+
+<table class="photos">
+  <tr>
+    <td>[Wonderland/1-Evening.jpg|Sunset Amphitheater (left) and the headwall of the Tahoma Glacier (right) were the source of the Round Pass and Electron mudflows, and today there's just sorta nothing in between them where the summit ought to be]</td>
+    <td>[IndianHenrysFromLongmire/Erosion.jpg|Kautz Creek still shows the damage from a rain-triggered 1947 debris flow]</td>
+  </tr>
+  <tr>
+    <td>[EmmonsMoraine/LittleTahoma.jpg|In 1963 Little Tahoma (center) dropped a huge amount of rock onto the Emmons Glacier (lower right)]</td>
+    <td>[SouthPuyallupPipeOrgan/Lahar.jpg|Remains of a small recent lahar along the Westside Road]</td></tr>
+  </tr>
+</table>
 
 
 ## Logistics|
