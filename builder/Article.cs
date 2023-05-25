@@ -246,6 +246,7 @@ namespace builder
                     line.StartsWith("<br") ||
                     line.StartsWith("<hr") ||
                     line.StartsWith("<img") ||
+                    line.StartsWith("<blockquote") ||
                     line.StartsWith("<table"))
                 {
                     writer.WriteLine("        {0}", expandedLinks);

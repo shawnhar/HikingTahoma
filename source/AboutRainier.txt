@@ -208,7 +208,7 @@ sitting on granodiorite bases.
 <table class="photos">
   <tr>
     <td>[LakesLoop/Tatoosh.jpg|The Tatoosh Range sits on a pluton of intrusive granitic rock, formed when magma hardened below the surface 26 to 14 million years ago]</td>
-    <td>[NaradaFallsLoop/NaradaFalls.jpg|At Narada Falls, the 40,000 year old lava flow that makes up Ricksecker Point sits atop exposed granodiorite of the Tatoosh pluton]</td>
+    <td><a href="NaradaFallsLoop/NaradaFalls.jpg"><img src="NaradaFallsLoop/NaradaFalls-small.jpg" width="142" height="190" /><p>At Narada Falls, the 40,000 year old lava flow that makes up Ricksecker Point sits atop exposed granodiorite of the Tatoosh pluton</p></a></td>
   </tr>
 </table>
 
@@ -334,20 +334,12 @@ down them rather than new lava being erupted. The word comes from Javanese.
 Let us imagine a couple of geologists doing research on the Enumclaw Plateau in the early 
 1950s:
 
-<blockquote>
-"It just doesn't add up for this to be residue of a retreating glacier like we'd assumed."
-
-"Yeah, but this layer of recently deposited foreign material had to come from 
-<i>somewhere</i>..."
-
-"Where could that be?"
-
-(looks up at nearby volcano that has its top rather obviously missing)
-
-"Uhh..."
-
-"Are you thinking what I'm thinking?"
-</blockquote>
+<blockquote>"It just doesn't add up for this to be residue of a retreating glacier like we'd assumed."</blockquote>
+<blockquote>"Yeah, but this layer of recently deposited foreign material had to come from <i>somewhere</i>..."</blockquote>
+<blockquote>"Where could that be?"</blockquote>
+<blockquote>(looks up at nearby volcano that has its top rather obviously missing)</blockquote>
+<blockquote>"Uhh..."</blockquote>
+<blockquote>"Are you thinking what I'm thinking?"</blockquote>
 
 Once we knew what to look for, evidence was everywhere. Deposits from more than 60 
 different lahars have been identified in the strata of valleys downstream of Tahoma. 
@@ -434,7 +426,7 @@ originating from the Tahoma Glacier.
   </tr>
   <tr>
     <td>[EmmonsMoraine/LittleTahoma.jpg|In 1963 Little Tahoma (center) dropped a huge amount of rock onto the Emmons Glacier (lower right)]</td>
-    <td>[SouthPuyallupPipeOrgan/Lahar.jpg|Remains of a small recent lahar along the Westside Road]</td></tr>
+    <td>[SouthPuyallupPipeOrgan/Lahar.jpg|Remains of a small recent lahar along the Westside Road]</td>
   </tr>
 </table>
 
