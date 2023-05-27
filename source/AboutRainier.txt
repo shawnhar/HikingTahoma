@@ -243,8 +243,8 @@ area.
     <td>[BurroughsMountain/EmmonsGlacier.jpg|Emmons Glacier]</td>
   </tr>
   <tr>
+    <td>[MoraineTrail/Mountain.jpg|Nisqually Glacier]</td>
     <td>[NorthernLoop/4-Glacier.jpg|Snout of the Winthrop Glacier]</td>
-    <td>[CowlitzGap/CowlitzAndIngrahamGlaciers.jpg|Cowlitz Glacier (left) and Ingraham Glacier (right) join up below Cathedral Rocks]</td>
   </tr>
 </table>
 
