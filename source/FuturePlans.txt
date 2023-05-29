@@ -14,7 +14,6 @@ yet achieved that are:
   <li>[GlacierBasinLoop]</li>
   <li>[GrandPark]</li>
   <li><a href="SprayParkLoop/">Ipsut Pass</a></li>
-  <li><a href="NorthPuyallup/">Klapatche Point</a></li>
   <li>[MoraineTrail]</li>
   <li>[NaradaFallsLoop]</li>
   <li>[PaulPeakTrail]</li>
