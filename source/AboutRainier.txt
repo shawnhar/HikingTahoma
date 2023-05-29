@@ -428,6 +428,9 @@ originating from the Tahoma Glacier.
     <td>[EmmonsMoraine/LittleTahoma.jpg|In 1963 Little Tahoma (center) dropped a huge amount of rock onto the Emmons Glacier (lower right)]</td>
     <td>[SouthPuyallupPipeOrgan/Lahar.jpg|Remains of a small recent lahar along the Westside Road]</td>
   </tr>
+  <tr>
+    <td>[GobblersKnob/TahomaCreek.jpg|Tahoma Creek is a spooky place, with trees still standing after being killed by small lahars that piled rocks over their root systems]</td>
+  </tr>
 </table>
 
 
