@@ -375,7 +375,7 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>North Puyallup River</td>
     <td>
       <p>3700', 3 sites + group</p>
-      <p>Unique and romantically spooky group site is made from the end of an abandoned road.</p>
+      <p>Unique and romantically spooky group site is made from the end of an abandoned road. Individual sites are on the other side of the river, which is annoyingly far away from the toilet that's by the group site.</p>
       <p>Photo shows group site.</p>
     </td>
     <td class="photos">[../Photos/CampNorthPuyallup.jpg]</td>
