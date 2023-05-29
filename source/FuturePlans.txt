@@ -16,7 +16,6 @@ yet achieved that are:
   <li><a href="SprayParkLoop/">Ipsut Pass</a></li>
   <li><a href="NorthPuyallup/">Klapatche Point</a></li>
   <li>[MoraineTrail]</li>
-  <li><a href="SouthPuyallupPipeOrgan/">Mount Wow</a></li>
   <li>[NaradaFallsLoop]</li>
   <li>[PaulPeakTrail]</li>
   <li>[SourdoughGap]</li>
