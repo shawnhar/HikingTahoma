@@ -479,9 +479,9 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>White River</td>
     <td>
       <p>4200', 4 sites + group</p>
-      <p>This doubles as a frontcountry car camping site, but has more quiet &amp; privacy than Mowich Lake.</p>
+      <p>This is also a frontcountry car camping site, but dedicated backcountry sites are tucked away near where the trail heads uphill toward Sunrise, so there's more quiet &amp; privacy than Mowich Lake.</p>
     </td>
-    <td/>
+    <td class="photos">[../Photos/CampWhiteRiver.jpg]</td>
   </tr>
   <tr>
     <td>Summerland</td>
