@@ -240,7 +240,7 @@ area.
 <table class="photos">
   <tr>
     <td>[Wonderland/6-CarbonGlacier.jpg|Carbon Glacier]</td>
-    <td>[BurroughsMountain/EmmonsGlacier.jpg|Emmons Glacier]</td>
+    <td>[EmmonsMoraine/EmmonsGlacier.jpg|Emmons Glacier, covered with snow higher up but rocks lower down]</td>
   </tr>
   <tr>
     <td>[MoraineTrail/Mountain.jpg|Nisqually Glacier]</td>
