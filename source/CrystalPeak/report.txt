@@ -8,7 +8,7 @@ none
 [Trail.jpg] The only patch of snow left along the trail when I hiked it
 [NearSummit.jpg] Final approach to the summit
 [FromSummit.jpg] The summit has spectacular views in all directions
-[SourdoughGap.jpg] Looking down on still-frozen Upper Crystal Lake, and across at Sourdough Gap
+[UpperCrystalLake.jpg] Looking down on still-frozen Upper Crystal Lake
 [AdamsAndHood.jpg] Volcanoes #1 and #2: Mount Adams and Mount Hood (50 and 100 miles south respectively)
 [Helens.jpg] Volcano #3: Mount St. Helens (60 miles southwest)
 [Baker.jpg] Volcano #4: Mount Baker (130 miles north)
@@ -34,7 +34,6 @@ followed by a final steep (but nontechnical) section of ridge to the summit.
 From here you can see not 'just' six volcanoes, but also fantastic detail of the east 
 side of Rainier: Dege Peak, Old Desolate, Burroughs, the White River valley, Goat Island 
 Mountain, the Cowlitz Chimneys, and all the way across to Unicorn Peak at the east of the 
-Tatoosh Range. Or turn around for equally dramatic views over Upper Crystal Lake to 
-Sourdough Gap.
+Tatoosh Range. Or turn around for equally dramatic views over Upper Crystal Lake.
 
 This peak was home to a fire lookout between 1934 and the 1960s.

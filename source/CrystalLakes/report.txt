@@ -32,6 +32,6 @@ lake is unsigned. Head left regardless, because the best of this hike is yet to 
 
 As you climb above the lake, Rainier's summit comes into view behind you. You'll want to 
 turn around every few paces to marvel at how it continues to grow as you continue to 
-ascend. Sourdough Gap is a dramatic place of jagged rocks, near which you'll pass a sign 
-marking the edge of Mount Rainier National Park. Congratulations, you've joined up with 
-the [SourdoughGap] trail!
+ascend. Sourdough Gap is a dramatic place of jagged rocks and a big view down the valley 
+of Morse Creek, before which you'll pass a sign marking the edge of Mount Rainier 
+National Park. Congratulations, you've joined up with the [SourdoughGap] trail!

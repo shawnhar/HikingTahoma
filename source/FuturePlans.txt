@@ -17,7 +17,6 @@ yet achieved that are:
   <li>[MoraineTrail]</li>
   <li>[NaradaFallsLoop]</li>
   <li>[PaulPeakTrail]</li>
-  <li>[SourdoughGap]</li>
 </ul>
 
 There are a couple of loop routes which I've hiked all the pieces of at different times, 
