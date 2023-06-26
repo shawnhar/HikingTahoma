@@ -6,13 +6,14 @@ Sunrise
 2020
 
 [Dawn.jpg] Dawn light hits the mountain (from Sourdough Ridge)
-[LittleTahoma.jpg] Little Tahoma glowing in the dawn
 [FrozenLake.jpg] Frozen Lake, with Mount Fremont behind it
 [FremontTrail.jpg] Along the trail to the Fremont Lookout, with the West Fork White River visible below, and Puget Sound in the far distance
 [Rainier.jpg] Looking back at Rainier (center) and Little Tahoma (left), with Burroughs Mountain hulking in shadow below them
+[Mystery.jpg] I dare anyone not to want to find out where this trail goes to
 [Lookout.jpg] Approaching the lookout
 [Baker.jpg] I can see Mount Baker! Not to mention a goodly chunk of the Cascades, and Grand Park right below me
 [RainierFromLookout.jpg] Rainier, from the Fremont Lookout
+[-Panorama.jpg] My god she is so beautiful
 
 This is the easiest to reach of Rainier's four remaining fire lookouts (the others being 
 [GobblersKnob], [ShrinerPeak], and [TolmiePeak]) and I think offers the best views of 
@@ -46,3 +47,7 @@ There are great views the whole way along this hike, but those from the lookout 
 silly. There's Rainier behind you of course, but also Grand Park and the valley of the 
 West Fork White River spread out below, and on a clear day you can see all of Mount 
 Baker, the North Cascades, Puget Sound, and the Olympic Mountains.
+
+This trail melts out before others around Sunrise, so another way to have the place to 
+yourself is to hike up via [WhiteRiverToSunrise] before the road to Sunrise opens for the 
+season.
