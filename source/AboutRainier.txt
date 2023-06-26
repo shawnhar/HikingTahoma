@@ -240,7 +240,7 @@ area.
 <table class="photos">
   <tr>
     <td>[Wonderland/6-CarbonGlacier.jpg|Carbon Glacier]</td>
-    <td>[EmmonsMoraine/EmmonsGlacier.jpg|Emmons Glacier, covered with snow higher up but rocks lower down]</td>
+    <td>[WhiteRiverToSunrise/View.jpg|Emmons Glacier, covered with snow higher up but rocks lower down]</td>
   </tr>
   <tr>
     <td>[MoraineTrail/Mountain.jpg|Nisqually Glacier]</td>
@@ -446,7 +446,7 @@ originating from the Tahoma Glacier.
     <td>[IndianHenrysFromLongmire/Erosion.jpg|Kautz Creek still shows the damage from a rain-triggered 1947 debris flow]</td>
   </tr>
   <tr>
-    <td>[EmmonsMoraine/LittleTahoma.jpg|In 1963 Little Tahoma (center) dropped a huge amount of rock onto the Emmons Glacier (lower right)]</td>
+    <td>[EmmonsMoraine/EmmonsGlacier.jpg|In 1963 Little Tahoma (center) dropped a huge amount of rock onto the Emmons Glacier (lower right)]</td>
     <td>[SouthPuyallupPipeOrgan/Lahar.jpg|Remains of a small recent lahar along the Westside Road]</td>
   </tr>
   <tr>
