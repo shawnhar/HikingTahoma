@@ -13,7 +13,6 @@ yet achieved that are:
   <li><a href="VanTrumpPark/">Van Trump Park</a></li>
   <li>[GlacierBasinLoop]</li>
   <li>[GrandPark]</li>
-  <li><a href="SprayParkLoop/">Ipsut Pass</a></li>
   <li>[MoraineTrail]</li>
   <li>[NaradaFallsLoop]</li>
   <li>[PaulPeakTrail]</li>
