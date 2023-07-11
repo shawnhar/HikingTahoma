@@ -1148,9 +1148,12 @@ function UpdateMapOverlays()
   for (var i = 0; i < trip.Duration; i++) {
     var isHighlighted = highlightedDays & (1 << i);
 
-    // Use either two or three colors, depending on whether trip duration is even or odd.
-    // This way loops will always have different adjacent colors.
-    var colorForDay = 1 + ((trip.Duration & 1) ? i % 3 : i % 2);
+    var colorForDay = 1 + (i % 3);
+
+    // Make sure loops have different adjacent colors.
+    if (i == trip.Duration - 1 && colorForDay == 1) {
+      colorForDay = 2;
+    }
 
     var className = isHighlighted ? 'plannermaphighlighted' :
                                     'plannermapday' + colorForDay;
