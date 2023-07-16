@@ -12,7 +12,6 @@ yet achieved that are:
   <li>[CarbonGlacier]</li>
   <li>[GlacierBasinLoop]</li>
   <li>[MoraineTrail]</li>
-  <li>[NaradaFallsLoop]</li>
   <li>[PaulPeakTrail]</li>
 </ul>
 
