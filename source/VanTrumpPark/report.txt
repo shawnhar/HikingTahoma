@@ -5,16 +5,17 @@ Longmire
 none
 2019
 
-[ChristineFalls.jpg] Christine Falls is not strictly speaking part of this hike, but this roadside viewpoint is close to the trailhead
 [CometFalls2.jpg] Comet Falls
 [CometFalls.jpg] Closeup on Comet Falls
 [ForestClimb.jpg] Climbing through the forest
-[FromMildredPoint.jpg] The view from Mildred Point
-[MistyMountains.jpg] Misty Mountains (from Mildred Point)
 [VanTrumpPark.jpg] Entering Van Trump Park
 [FromVanTrumpPark.jpg] Looking south from Van Trump Park
 [VanTrumpHigherUp.jpg] Higher up in the unmaintained trail portion of Van Trump Park
 [VanTrumpBackward.jpg] Looking south from high in Van Trump Park, over the Tatoosh Range (Chinook Jargon for 'nourishing breast') to Mount Adams
+[Creek.jpg] Creek crossing above the top of Comet Falls, on the way to Mildred Point
+[FromMildredPoint.jpg] Big view from Mildred Point
+[MistyMountains.jpg] Misty Mountains (from Mildred Point)
+[ChristineFalls.jpg] Christine Falls is not strictly speaking part of this hike, but this roadside viewpoint is close to the trailhead
 
 On sale, great deals, three for the price of one!
 
@@ -53,8 +54,8 @@ uphill and deeply rutted in places. This is a glorious open meadow area
 which transitions to alpine tundra as you gain altitude, with views of 
 Rainier to the north plus Adams and St. Helens to the south. I saw mountain 
 goats. The distances shown above and solid line on the map only cover the 
-officially maintained trail, although I went 0.8 mile and 800' up the 
-unmaintained trail portion, which is shown by the dotted line on the map. 
+officially maintained trail, but I went nearly a mile and 800' further
+up the unmaintained portion, shown by the dotted line on the map. 
 It's possible to continue further, but I'm told views do not improve higher 
 up.
 
