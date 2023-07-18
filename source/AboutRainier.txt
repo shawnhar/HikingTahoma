@@ -746,6 +746,7 @@ another try soon?
 [!Photos/NationalParkInn2.jpg] Evening light catching the summit behind the National Park Inn
 [!Photos/ParadiseInn.jpg] Paradise Inn
 [!Photos/ParadiseInn2.jpg] Tatoosh Range behind the Paradise Inn
+[!Photos/ParadiseInnside.jpg] Inside the Paradise Inn
 
 Hiking trails vary from easy to access and popular (aka crowded...) to obscure and 
 remote. Trails are generally well maintained and signposted, so navigation is not 
