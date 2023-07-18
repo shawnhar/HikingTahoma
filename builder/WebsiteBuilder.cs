@@ -60,7 +60,8 @@ namespace builder
                 var hikes = (await sourceFolder.GetFoldersAsync())
                             .Where(folder => Path.GetFileName(folder.Path) != "Animals" &&
                                              Path.GetFileName(folder.Path) != "Overlays" &&
-                                             Path.GetFileName(folder.Path) != "Photos")
+                                             Path.GetFileName(folder.Path) != "Photos" &&
+                                             Path.GetFileName(folder.Path) != "Flowers")
                             .Select(folder => new Hike(folder.Path, imageProcessor))
                             .ToList();
 
@@ -103,7 +104,12 @@ namespace builder
                 if (WantToBuild("photos"))
                 {
                     await ProcessAnimals(sourceFolder.Path, outFolder.Path, imageProcessor);
-                    await ProcessExtraPhotos(sourceFolder.Path, outFolder.Path, imageProcessor);
+                    await ProcessExtraPhotos("Photos", sourceFolder.Path, outFolder.Path, imageProcessor);
+                }
+
+                if (WantToBuild("flowers"))
+                {
+                    await ProcessExtraPhotos("Flowers", sourceFolder.Path, outFolder.Path, imageProcessor);
                 }
 
                 if (WantToBuild("overlays"))
@@ -420,12 +426,12 @@ namespace builder
         }
 
 
-        async Task ProcessExtraPhotos(string sourcePath, string outPath, ImageProcessor imageProcessor)
+        async Task ProcessExtraPhotos(string folderName, string sourcePath, string outPath, ImageProcessor imageProcessor)
         {
             using (new Profiler("WebsiteBuilder.ProcessExtraPhotos"))
             {
-                sourcePath = Path.Combine(sourcePath, "Photos");
-                outPath = Path.Combine(outPath, "Photos");
+                sourcePath = Path.Combine(sourcePath, folderName);
+                outPath = Path.Combine(outPath, folderName);
 
                 Directory.CreateDirectory(outPath);
 

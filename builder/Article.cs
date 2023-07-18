@@ -241,6 +241,7 @@ namespace builder
                 var expandedLinks = ExpandLinks(line, allHikes);
 
                 if (line.StartsWith("<p") ||
+                    line.StartsWith("<div") ||
                     line.StartsWith("<ul") ||
                     line.StartsWith("<ol") ||
                     line.StartsWith("<br") ||

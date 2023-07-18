@@ -22,7 +22,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 
 [!Animals/Deer.jpg]
 
-<br/>
+<div class="description" style="padding-top:0"></div>
 
 <table class="photos showlinks">
   <tr>
@@ -66,6 +66,51 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Trout.html|Trout]</td>
   </tr>
 </table>
+
+
+## Wildflowers|Wildflowers of Mount Rainier
+
+[Flowers/GlacierLily.jpg] Glacier Lily (erythronium grandiflorum)
+[NisquallyVista/AvalancheLilies.jpg] Avalanche Lily (erythronium montanum)
+[Flowers/SpreadingPhlox.jpg] Spreading Phlox (phlox diffusa)
+[Flowers/PinkMountainHeather.jpg] Pink Mountain Heather (phyllodoce empetriformis)
+[Flowers/Pasqueflower.jpg] Pasqueflower, aka Western Anemone (xerophyllum tenax)
+[Flowers/PasqueflowerSeedhead.jpg] Pasqueflower seedhead, aka "mouse-on-a-stick"
+[!Flowers/Lupin.jpg] Lupin (lupinus latifolius)
+[GrandPark/BearGrass.jpg] Bear grass (xerophyllum tenax)
+[Flowers/MagentaPaintbrush.jpg] Magenta Paintbrush (castilleja parviflora)
+[Flowers/ScarletPaintbrush.jpg] Scarlet Paintbrush (castilleja miniata)
+[Flowers/SitkaValerian.jpg] Sitka Valerian (valeriana sitchensis)
+[Flowers/RosySpirea.jpg] Rosy Spirea (spirea splendens)
+[Flowers/CascadeAster.jpg] Cascade Aster (eucephallus ledophyllus)
+[Flowers/GraysLovage.jpg] Gray's Lovage (ligusticum grayi)
+[Flowers/JeffreysShootingStar.jpg] Jeffreys Shooting Star (dodecatheon jeffreyi)
+[Flowers/MenziesPenstemon.jpg] Menzies Penstemon (penstemon davidsonii var. menziesii)
+[Flowers/MountainMonkeyflower.jpg] Mountain Monkeyflower (mimulus tilingii)
+[Flowers/PinkMonkeyflower.jpg] Pink Monkeyflower (mimulus lewisii)
+[Flowers/YellowMonkeyflower.jpg] Yellow Monkeyflower (erythranthe guttata)
+[Flowers/WanderingFleabane.jpg] Wandering Fleabane (erigeron glacialis)
+[Flowers/AlpineLakeAgoseris.jpg] Alpine Lake Agoseris (nothocalais alpestris)
+[Flowers/HairyArnica.jpg] Hairy Arnica (arnica mollis)
+[Flowers/PearlyEverlasting.jpg] Pearly Everlasting (anaphalis margaritacea)
+[Flowers/CrimsonColumbine.jpg] Crimson Columbine (aquilegia formosa)
+[Flowers/CreepingButtercup.jpg] Creeping Buttercup (ranunculus repens)
+[Flowers/Fireweed.jpg] Fireweed (chamerion angustifolium)
+[Flowers/ElephantsHead.jpg] Elephants Head (pedicularis groenlandica)
+[Flowers/MountRainierLousewort.jpg] Mount Rainier Lousewort (pedicularis rainierensis)
+[Flowers/PacificCoralroot.jpg] Pacific Coralroot (corallorhiza mertensiana)
+[Flowers/Foamflower.jpg] Foamflower (tiarella trifoliata)
+[Flowers/NorthernBluebells.jpg] Northern Bluebells (mertensia paniculata)
+[Flowers/QueensCup.jpg] Queen's Cup (clintonia uniflora)
+[Flowers/Bunchberry.jpg] Bunchberry, aka Dwarf Dogwood (cornus canadensis)
+[Flowers/WildStrawberry.jpg] Wild Strawberry (fragaria vesca)
+[Flowers/FalseBugbane.jpg] False Bugbane, aka Tassel Rue (trautvetteria caroliniensis)
+[Flowers/GoatsBeard.jpg] Goat's Beard (aruncus dioicus)
+[Flowers/CowParsnip.jpg] Cow Parsnip (heracleum lanatum)
+[Flowers/Salmonberry.jpg] Salmonberry (rubus spectabilis)
+[Flowers/RedElderberry.jpg] Red Elderberry (sambucus racemosa)
+[Flowers/SitkaMountainAsh.jpg] Sitka Mountain Ash (sorbus sitchensis)
+[Flowers/WhiteRhododendron.jpg] White Rhododendron (rhododendron albiflorum)
 
 
 ## Geology|Geology of Mount Rainier
@@ -743,10 +788,10 @@ another try soon?
 ## Logistics|
 
 [!Photos/NationalParkInn.jpg] National Park Inn, Longmire
-[!Photos/NationalParkInn2.jpg] Evening light catching the summit behind the National Park Inn
-[!Photos/ParadiseInn.jpg] Paradise Inn
-[!Photos/ParadiseInn2.jpg] Tatoosh Range behind the Paradise Inn
-[!Photos/ParadiseInnside.jpg] Inside the Paradise Inn
+[Photos/NationalParkInn2.jpg] Evening light catching the summit behind the National Park Inn
+[Photos/ParadiseInn.jpg] Paradise Inn
+[Photos/ParadiseInn2.jpg] Tatoosh Range behind the Paradise Inn
+[Photos/ParadiseInnside.jpg] Inside the Paradise Inn
 
 Hiking trails vary from easy to access and popular (aka crowded...) to obscure and 
 remote. Trails are generally well maintained and signposted, so navigation is not 
