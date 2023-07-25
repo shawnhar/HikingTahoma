@@ -63,6 +63,9 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
   <tr>
     <td>[Animals/Owl.html|Spotted Owl]</td>
+    <td>[Animals/CascadesFrog.html|Cascades Frog]</td>
+  </tr>
+  <tr>
     <td>[Animals/Trout.html|Trout]</td>
   </tr>
 </table>
