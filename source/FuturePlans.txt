@@ -9,7 +9,6 @@ yet achieved that are:
 
 <ul class="tight">
   <li>[BurroughsMountain]</li>
-  <li>[CarbonGlacier]</li>
   <li>[GlacierBasinLoop]</li>
   <li>[PaulPeakTrail]</li>
 </ul>

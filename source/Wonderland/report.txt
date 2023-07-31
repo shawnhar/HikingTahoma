@@ -770,7 +770,7 @@ permits, but less time and commitment than hiking the full trail:
   </tr>
   <tr>
     <td>[../NorthPuyallup/Descent.jpg|.|Westside Road to North Puyallup]</td>
-    <td>[../CarbonGlacier/CarbonGlacier.jpg|.|Carbon Glacier]</td>
+    <td>[../CarbonGlacier/Tease.jpg|.|Carbon Glacier]</td>
   </tr>
 </table>
 
