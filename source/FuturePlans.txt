@@ -28,7 +28,6 @@ include:
 
 <ul class="tight">
   <li>Andrew Benchmark?</li>
-  <li>Bald Rock?</li>
   <li>Banshee Peak?</li>
   <li>Brown Peak?</li>
   <li>Copper Mountain?</li>
