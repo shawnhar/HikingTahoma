@@ -13,13 +13,17 @@ yet achieved that are:
   <li>[PaulPeakTrail]</li>
 </ul>
 
-There are a couple of loop routes which I've hiked all the pieces of at different times, 
+There is one loop route which I've hiked all the pieces of at different times, 
 but want to someday repeat all in one go:
 
 <ul class="tight">
-  <li>[EastsideLoop]</li>
   <li>[HuckleberryGrandParkLoop]</li>
 </ul>
+
+My <a href="Wonderland/Campsites.html">Wonderland Trail Campsites</a> page should have 
+photos of all the relevant sites. Still needed: Pyramid Creek, South Mowich River, 
+Eagle's Roost, Dick Creek, Granite Creek, Nickel Creek, Paradise River, Berkeley Park, 
+Forest Lake, Glacier Basin, Snow Lake.
 
 The dividing line between trails and unofficial routes is infinitely blurry. Rainier is 
 covered with climber's paths, abandoned historic trails, and off-trail scrambles. Some of 

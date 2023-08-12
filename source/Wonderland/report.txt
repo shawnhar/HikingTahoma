@@ -488,18 +488,18 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>
       <p>5900', 5 sites + group</p>
       <p>Stunning alpine meadows, famous for bear encounters.</p>
-      <p>Photo shows the group site, which is a stone shelter built by the CCC.</p>
+      <p>Photos show an individual site, plus the group site which is a stone shelter built by the CCC.</p>
     </td>
-    <td class="photos">[8-CanISleepHere.jpg]</td>
+    <td class="photos">[../Photos/CampSummerland.jpg]<br/><br/>[8-CanISleepHere.jpg]</td>
   </tr>
   <tr>
     <td>Indian Bar</td>
     <td>
       <p>5100', 4 sites + group</p>
       <p>One of the prettiest places on the mountain.</p>
-      <p>Photo shows the group site, which is a stone shelter built by the CCC.</p>
+      <p>Photos show an individual site, plus the group site which is a stone shelter built by the CCC.</p>
     </td>
-    <td class="photos">[9-GroupShelter.jpg]</td>
+    <td class="photos">[../EastsideLoop/2-Camp.jpg]<br/><br/>[9-GroupShelter.jpg]</td>
   </tr>
   <tr>
     <td>Nickel Creek</td>
@@ -561,8 +561,9 @@ still available. There are many such possibilities, including:
     <td>Olallie Creek</td>
     <td>
       <p>3900', 2 sites + group</p>
-      <p>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek.</p>
+      <p>1.2 miles off the Wonderland, between Indian Bar and Nickel Creek. Pleasant creek sounds suffuse the camp, but can be buggy.</p>
     </td>
+    <td class="photos">[../Photos/CampOlallieCreek.jpg]</td>
   </tr>
   <tr>
     <td>Snow Lake</td>
@@ -625,7 +626,7 @@ taken down during the off-season.
 
 [+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section (as of 2021)
 [../WhiteRiverToSunrise/Waterfall.jpg] Slide area and waterfall crossing between White River and Sunrise is no big deal as long as snow bridges have melted and flow rate isn't too high (as of 2023)
-[+9-ApproachingPanhandle.jpg] Panhandle Gap was pleasingly melted out on September 14, 2021 (this is not fun when icy)
+[../EastsideLoop/2-ApproachingPanhandle.jpg] The approach to Panhandle Gap was almost completely melted as of August 7, 2023
 [../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
 [+5-Snowfields.jpg] The top of Spray Park can be navigationally challenging in poor visibility
 [+1-PyramidCreek.jpg] Pyramid Creek crossing (as of 2021)

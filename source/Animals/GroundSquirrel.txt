@@ -1,6 +1,6 @@
 Golden-mantled Ground Squirrel
 
-[GroundSquirrel2.jpg]
+[../EastsideLoop/1-GroundSquirrel.jpg]
 
 These charming little rascals are often mistaken for
 <a href="YellowPineChipmunk.html">chipmunks</a>, but this is actually a golden-mantled 

@@ -2,32 +2,212 @@ Eastside Loop
 moderate 4 days
 35 9000 6785
 Ohanapecosh
-Tamanos Creek, Deer Creek, Olallie Creek, Indian Bar, Summerland
-not yet
+Summerland, Indian Bar, Olallie Creek, Deer Creek, Tamanos Creek
+2023
 
-I have not yet hiked this as a single combined loop, which I'd like to do someday, but I 
-have separately visited all the pieces of it at different times:
+This loop hike is formed by combining the trails to [PanhandleGap],
+<a href="../Wonderland/Day9.html">Ohanapecosh Park</a>, [IndianBar], 
+[CowlitzDivideTrail], [EastsideTrail], [OwyhighLakesFromDeerCreek], and 
+[OwyhighLakesFromWhiteRiverRoad]. Its lower, eastern half consists of quiet 
+trails-less-travelled through primordial old growth forest, while its western half 
+doubles as one of the most spectacular high alpine portions of the Wonderland. Closing 
+the loop involves walking 3/4 mile along the road, which is included in the distance 
+shown above.
 
-<table class="photos showlinks">
-  <tr>
-    <td>[../OwyhighLakesFromWhiteRiverRoad/Flowers.jpg|.|Owyhigh Lakes from White River Road]</td>
-    <td>[../OwyhighLakesFromDeerCreek/CowlitzChimneys.jpg|.|Owyhigh Lakes from Deer Creek]</td>
-  </tr>
-  <tr>
-    <td>[../EastsideTrail/ForestOfGreenAndRed.jpg|.|Eastside Trail]</td>
-    <td>[../CowlitzDivideTrail/GlowingMoss.jpg|.|Cowlitz Divide Trail]</td>
-  </tr>
-  <tr>
-    <td>[../IndianBar/IndianBar.jpg|.|Indian Bar]</td>
-    <td>[../Wonderland/9-OhanapecoshPark.jpg|../Wonderland/Day9.html|Ohanapecosh Park]</td>
-  </tr>
-  <tr>
-    <td>[../PanhandleGap/PanhandleGap.jpg|.|Summerland and Panhandle Gap]</td>
-  </tr>
-</table>
+I hiked it on a leisurely 5-day itinerary, which left plenty of time for side 
+excursions along the way.
 
-The lower, eastern half of this loop consists of quiet trails-less-travelled through 
-primordial old growth forest. Its western half doubles as one of the most spectacular 
-high alpine portions of the Wonderland, taking in the Cowlitz Divide, Ohanapecosh Park, 
-and Summerland. Closing the loop involves walking 3/4 mile along the road, which is 
-included in the distance shown above.
+
+## Day 1: Upper Owyhigh trailhead to Summerland
+
+[1-Forest.jpg] Setting out through majestic big tree forest
+[1-FryingpanCreek.jpg] A few years ago Fryingpan Creek used to flow entirely under this bridge, but it has spread out so now there's a rock hop to reach the bridge over the main channel
+[1-Flowers.jpg] First wildflowers and first view
+[1-MeanyCrest.jpg] I try to avoid crudeness on this website, but come on whoever named Meany Crest: it should obviously be called Mammaries Mountain, or perhaps the Twin Titties
+[1-Monkeyflower.jpg] Monkeyflower blooming along the stream that's the water source for Summerland camp
+[1-Marmot.jpg] Marmot is not practicing Leave No Trace: quit eating the wildflowers, dude!
+[1-GroundSquirrel.jpg] Leave No Trace violation #2, this time with Golden Mantled Ground Squirrel as the perp
+[1-Summerland.jpg] Summerland
+[!1-Sunset.jpg] Sunset comes to Summerland
+[1-Camp.jpg] What an incredible place to camp
+
+<p class="subheading">5.2 miles, 2400' gain, 200' descent</p>
+
+I began tentatively, because my back had seized up the afternoon before my trip started. 
+It felt looser today, but I needed that problem to stay gone for this trip to be a 
+success. I was walking carefully up the wide trail through the first stretch of majestic 
+forest, loosening things up, seeking my groove.
+
+After crossing Fryingpan Creek, the forest opened up as I got my first views and first 
+wildflowers. Also an ego-boosting comment from a pair of passing day hikers who 
+encountered me sitting on a rock to eat lunch: "you look like something out of an REI 
+advert, with that big pack surrounded by flowers and the mountain behind you".
+
+Onto the switchbacks, I made quick work of the climb up to Summerland. Ah, Summerland. 
+The name is romantic, and the place even more so. I spent the rest of the afternoon 
+wandering lazily from meadow to meadow, enjoying the huge variety of views, flowers, 
+changing light, friendly marmots and ground squirrels.
+
+
+## Day 2: Summerland to Indian Bar
+
+[2-Bridge.jpg] I love the perfect minimalism of this bridge: exactly what is required but no more, simple, sufficient
+[2-Meltwater.jpg] Snowfield and meltwater pool
+[2-ApproachingPanhandle.jpg] Boulder scramble (steeper than it looks in this pic) around a small remaining patch of snow on the approach to Panhandle Gap
+[!2-Panhandle.jpg] Standing at Panhandle Gap, the highest point of the entire Wonderland Trail
+[2-Cloudy.jpg] Misty, moody, no big views along this section
+[2-Clearing.jpg] Clouds began to clear as I descended toward Indian Bar
+[2-Descending.jpg] Approaching Indian Bar
+[2-IndianBar.jpg] Indian Bar
+[2-PrivateView.jpg] Private viewpoint from behind my campsite
+[2-Camp.jpg] Camped at Indian Bar
+
+<p class="subheading">4.7 miles, 1200' gain, 2100' descent</br></br>(7.6 miles including my [BansheePeak] side trip)</p>
+
+The climb from Summerland up to Panhandle Gap is one of my favorite sections of trail in 
+the whole world (although, see later). It quickly leaves the rich wildflower meadows, 
+entering an otherworldly realm of barren rock, snowfields, streams, and meltwater pools.
+
+The section of trail immediately before Panhandle Gap crosses a north facing snowfield 
+that often remains challenging until late in the season. I visited right at the 
+transition point where this had not yet entirely melted, but was small enough that folk 
+were clambering around below it rather than attempting to cross the remaining patch of 
+snow. It was a steep boulder scramble, thankfully short.
+
+Today, Panhandle Gap was a weather divide. I had climbed in sunshine but found dense 
+clouds to the south. Would my planned side trip that starts from here be worthwhile if 
+socked in? I decided to take the chance: see my article on [BansheePeak] for details 
+(spoiler, it was worth it).
+
+Back on the Wonderland, the traverse across the high alpine of Ohanapecosh Park and then 
+descent to Indian Bar was a misty, moody experience with much subtle shading of grey and 
+rock but no big views to be had this day.
+
+Indian Bar is, much like Summerland, just an absolute delight of a place. It's such a 
+privilege to be able to spend a night here. The wide river valley is surrounded by 
+waterfalls descending cliffs, and I had my own private viewpoint overlooking this from 
+immediately behind my campsite.
+
+
+## Day 3: Indian Bar to Olallie Creek
+
+[3-WauhaukaupaukenFalls.jpg] On my way out of Indian Bar, today the bridge over Wauhaukaupauken Falls only has a wire railing on one of its sides, and one of the slats is missing: eek!
+[3-LeavingIndianBar.jpg] Looking behind me while climbing up from Indian Bar
+[!3-Adams.jpg] Mount Adams
+[3-Tahoma.jpg] Mount Tahoma
+[3-Ridgeline.jpg] Ridgeline trails are the best
+[3-Tatoosh.jpg] The Tatoosh Range (Tatoosh means 'nourishing breast' in the Chinook Jargon)
+[3-CowlitzChimneys.jpg] The Cowlitz Chimneys
+[3-Marmot.jpg] Sunbathing marmot is so bored with that view, they've turned their back on it
+[3-Water.jpg] I need water! But the stream is dry :-(
+[3-Camp.jpg] Camped at Olallie Creek
+
+<p class="subheading">6.1 miles, 1400' gain, 2500' descent</br></br>(7.8 miles including my [BaldRock] side trip)</p>
+
+The sun was out. The views were big. The trail was magnificent. The day was great.
+
+Remember how I said earlier that the section from Summerland to Panhandle Gap is my 
+favorite of them all? I am reconsidering. It's possible that this part of the Wonderland, 
+running along the top of the Cowlitz Divide, might be even finer.
+
+First a climb, with beautiful views backward over the basin of Indian Bar. The summit of 
+Rainier gradually came into sight behind me. Then all of a sudden, it's Mount Adams to 
+the south! And the Tatoosh Range to my right, and the Cowlitz Chimneys to my left. Ridge 
+hikes are the best, and this is a long ridge with a long trail running all the way down 
+it. Undulations aplenty along the way, with always so much to see in every direction.
+
+As this was a relatively short day, I decided to include a side trip to check out 
+[BaldRock].
+
+Back on the Wonderland, I descended into the forest, turned off onto the 
+[CowlitzDivideTrail], and became thirsty. I knew there would be no water sources from 
+Indian Bar to shortly before Olallie Creek, so had made sure to fill my full 3 liter 
+carrying capacity that morning, but I sweated a lot during the scramble to Bald Rock and 
+had drunk it all. By the time I made it to the first tiny trickle of a stream crossing 
+the path, I was acting like the hero of an H. Rider Haggard novel who had reached the 
+oasis after crossing the desert, flinging himself to the ground crying "Water! Water! 
+It's not a mirage, we are saved after all!"
+
+Olallie Creek camp is a quiet spot in the forest. The creek is small and visually 
+unspectacular but runs right next to the campsites, providing a beautifully babbling 
+background beside which to &lt;can't think of a synonym for sleep that alliterates here&gt;
+
+
+## Day 4: Olallie Creek to Deer Creek
+
+[4-Descending.jpg] Descending the Cowlitz Divide Trail
+[4-OhanapecoshRiver.jpg] Hello again, old friend the Ohanapecosh River! Last time I saw you was up at Indian Bar
+[4-Patriarchs.jpg] Enjoying a sneaky visit to the Grove of the Patriarchs
+[4-BigTrees.jpg] Big trees along the Eastside Trail
+[4-OhanapecoshFalls.jpg] Bridge over Ohanapecosh Falls
+[4-RightAngle.jpg] I feel like this tree is trying to set me some kind of high school geometry puzzle
+[4-Cedar.jpg] Love the smell of rotting cedar
+[!4-BrokenBridge.jpg] Oh you poor little damaged bent bridge
+[4-SwimmingSpot.jpg] Perfect swimming spot in Chinook Creek, immediately below the Deer Creek campsite
+[4-Camp.jpg] Camped at Deer Creek
+
+<p class="subheading">10.2 miles, 1300' gain, 2400' descent</p>
+
+Every long trip has to have one day when you just aren't feeling it, and today started 
+out trying to be that day for me. I was tired, and probably still a bit dehydrated from 
+yesterday. I had a headache. I didn't sleep well last night. My camera broke. 
+On paper this trail is just my kind of thing, deep dark primordial forest, but my mood 
+was not where it needed to be.
+
+Down the lower part of the [CowlitzDivideTrail] I went, to where it intersects the 
+popular [GroveOfThePatriarchs] trail. I encountered odor-free day hiking families, and 
+heard my first motor engine for 4 days. What a strange, unnatural sound that is.
+
+A realization hit me. Grove of the Patriarchs has been inaccessible for a couple of years 
+after a flood damaged the suspension bridge used to access it, but the level of the 
+Ohanapecosh River was <i>really</i> low right now. Perhaps I could ford it? I scouted 
+around. There were a couple of spots where others had obviously done that, but I didn't 
+feel great about either of them. One shallow crossing spot would require damaging 
+undergrowth to get from the Eastside Trail to the riverbank, while another offered easy 
+damage-free access to the river but would take me into the Grove at a spot of dense brush 
+where I'd have to damage plants to reach the big trees. Then I figured it out: enter the 
+river at the lower location, walk up its bed for a few hundred feet, then exit at the 
+higher crossing spot. I was in in the Grove, and I successfully Left No Trace while 
+getting here! It's a truly special place, made even more so during this time of 
+inaccessibility.
+
+My mood was restored. Miraculously, my camera started working again.
+
+Back on the Eastside Trail, the rest of the day was a long but oh so gentle uphill. 
+Trees. Waterfalls. The big views of my first three days were replaced by closeup zooms 
+onto small things and fine details. The color palette is reduced to endless shades of 
+green plus brownish reds.
+
+Trip reports from earlier in the year indicated many blowdowns affecting the Cowlitz 
+Divide and Eastside trails, but they had all been cleared by the time I visited. All 
+praise the repair crews for their endless labor keeping these trails in good condition!
+
+Deer Creek camp is another quiet forested spot, and I had the camp to myself. It has the 
+joy of being right next to several spectacular bathing spots at the confluence of Deer 
+Creek, Chinook Creek, and Needle Creek.
+
+
+## Day 5: Deer Creek to Upper Owyhigh trailhead
+
+[5-Opening.jpg] First sign of the terrain starting to open up as I climb through forest
+[5-Forest.jpg] Big forest climb
+[5-Misty.jpg] A misty, moody day
+[5-Emerging.jpg] Emerging out of the forest
+[5-Meadow.jpg] Misty meadows
+[5-View.jpg] On a clearer day, this would be a glorious view of the Cowlitz Chimneys
+[!5-Seedheads.jpg] Pasqueflower seedheads, aka "mouse-on-a-stick"
+[5-TheEnd.jpg] Final descent back to my car
+
+<p class="subheading">8.6 miles, 2700' gain, 1800' descent</p>
+
+This day was foggy, chill, and damp. The kind of weather where it's not exactly raining 
+but everything gets wet nevertheless. Perfect conditions for a big climb through forest. 
+I don't know how much it was due to the weather, getting a good night's sleep, or having 
+the end in my sights, but I was feeling great, moving fast, found the right rhythm and 
+just powered through the uphill.
+
+The area around Owyhigh Lakes was beautiful in spite of the lack of views. I was sorry 
+not to get to see the Cowlitz Chimneys one last time, but loving the variety of 
+wildflowers I found up there.
+
+A quick descent through a final stretch of forest, and... huh, that's my car!

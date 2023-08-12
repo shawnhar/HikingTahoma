@@ -4,6 +4,8 @@ Hoary Marmot
 [Marmot3.jpg]
 [../SkyscraperMountain/Marmots.jpg]
 [../Wonderland/7-MarmotLookout.jpg]
+[../EastsideLoop/1-Marmot.jpg]
+[../EastsideLoop/3-Marmot.jpg]
 
 Hoary marmots are also known as whistle pigs, due to the calls used by sentry marmots to 
 alert the rest of their colonies to possible danger.
