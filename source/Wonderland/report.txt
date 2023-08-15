@@ -763,15 +763,15 @@ permits, but less time and commitment than hiking the full trail:
 <table class="photos showlinks">
   <tr>
     <td>[../SprayParkLoop/Summit.jpg|.|Spray Park Loop]</td>
-    <td>[../NorthernLoop/3-CarbonGlacier.jpg|.|Northern Loop]</td>
+    <td>[../NorthernLoop/4-Rainier.jpg|.|Northern Loop]</td>
   </tr>
   <tr>
-    <td>[../OwyhighLakesFromDeerCreek/CowlitzChimneys.jpg|../EastsideLoop/|Eastside Loop]</td>
+    <td>[../EastsideLoop/3-Adams.jpg|../EastsideLoop/|Eastside Loop]</td>
     <td>[../KlapatchePark/AuroraLake2.jpg|.|Klapatche Park]</td>
   </tr>
   <tr>
     <td>[../NorthPuyallup/Descent.jpg|.|Westside Road to North Puyallup]</td>
-    <td>[../CarbonGlacier/Tease.jpg|.|Carbon Glacier]</td>
+    <td>[../CarbonGlacier/CarbonGlacier.jpg|.|Carbon Glacier]</td>
   </tr>
 </table>
 

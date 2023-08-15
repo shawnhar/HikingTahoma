@@ -143,6 +143,6 @@ deep snow at other times of year.
   </tr>
   <tr>
     <td>[SprayParkLoop/Summit.jpg|.|Spray Park Loop]</td>
-    <td>[NorthernLoop/3-CarbonGlacier.jpg|.|Northern Loop]</td>
+    <td>[NorthernLoop/4-Rainier.jpg|.|Northern Loop]</td>
   </tr>
 </table>
