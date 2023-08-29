@@ -32,11 +32,9 @@ include:
 
 <ul class="tight">
   <li>Andrew Benchmark?</li>
-  <li>Brown Peak?</li>
   <li>Copper Mountain?</li>
   <li>Crescent Lake?</li>
-  <li>Elysian Fields?</li>
-  <li>Green Park?</li>
+  <li>Elysian Fields??!?</li>
   <li>Goat Island Mountain?</li>
   <li>Mist Park?</li>
   <li>Mount Ararat?</li>
