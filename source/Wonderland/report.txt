@@ -686,12 +686,14 @@ crossings to be aware of include:
   <li>
     South Mowich River (by South Mowich Camp, between Golden Lakes and Mowich Lake) has 
     multiple forks that frequently change their course. Sometimes there are log bridges 
-    over them, or there may be fallen trees you can cross on. This is probably the most 
-    dangerous and unpredictable of the rivers, combining remote location with lack of 
-    alternatives if you can't find a good way across it.
+    over them, or there may be fallen trees you can cross on. This is a dangerous and 
+    unpredictable river, combining remote location with lack of alternatives if you can't 
+    find a good way across it.
   </li>
   <li>
-    The North Mowich River may also be tricky if its bridge is missing.
+    The North Mowich River may also be tricky if its bridge is missing. In 2023 the main 
+    channel of the South Mowich River shifted course and merged into the North Mowich 
+    River upstream of the Wonderland, making this a larger crossing than before.
   </li>
   <li>
     The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) happens 
