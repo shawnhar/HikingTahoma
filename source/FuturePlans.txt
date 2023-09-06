@@ -36,6 +36,7 @@ include:
   <li>Crescent Lake?</li>
   <li>Elysian Fields??!?</li>
   <li>Goat Island Mountain?</li>
+  <li>Larrupin and Ethania Falls?</li>
   <li>Mist Park?</li>
   <li>Mount Ararat?</li>
   <li>North Backbone Ridge?</li>
