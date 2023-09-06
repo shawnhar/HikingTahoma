@@ -165,6 +165,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/DevilsClubBerries.jpg] Devil's Club - berries (oplopanax horridus)
 [Flowers/LyallsAngelica.jpg] Lyall's Angelica (angelica arguta)
 [Flowers/CowParsnip.jpg] Cow Parsnip (heracleum lanatum)
+[Flowers/LargeleafAvens.jpg] Largeleaf Avens (geum macrophyllum)
 [Flowers/WallLettuce.jpg] Wall Lettuce (mycelis muralis)
 [Flowers/PinkWintergreen.jpg] Pink Wintergreen (pyrola asarifolia)
 [Flowers/PacificCoralroot.jpg] Pacific Coralroot (corallorhiza mertensiana)
