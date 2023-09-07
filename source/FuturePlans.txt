@@ -42,7 +42,6 @@ include:
   <li>North Backbone Ridge?</li>
   <li>Pyramid Peak?</li>
   <li>Satulick Mountain?</li>
-  <li>Sunset Park lookout site and benchmark?</li>
   <li>Tyee Peak?</li>
 </ul>
 
