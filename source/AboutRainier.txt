@@ -69,6 +69,9 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Salamander.html|Salamander]</td>
     <td>[Animals/Trout.html|Trout]</td>
   </tr>
+  <tr>
+    <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
+  </tr>
 </table>
 
 
