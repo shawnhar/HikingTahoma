@@ -854,6 +854,7 @@ another try soon?
 [Photos/NationalParkInn2.jpg] Evening light catching the summit behind the National Park Inn
 [Photos/ParadiseInn.jpg] Paradise Inn
 [Photos/ParadiseInn2.jpg] Tatoosh Range behind the Paradise Inn
+[Photos/NationalParkInnside.jpg] Inside the National Park Inn
 [Photos/ParadiseInnside.jpg] Inside the Paradise Inn
 
 Hiking trails vary from easy to access and popular (aka crowded...) to obscure and 
@@ -936,10 +937,10 @@ October. Both make lovely bases from which to explore their surrounding areas. R
 small by modern standards, without AC, and many lack private bathrooms, but they do the 
 job. A stay here is about location, ambiance, and history rather than modern hotel 
 luxury. The Paradise Inn is busier and more architecturally impressive, while the 
-National Park Inn boasts a mellow porch where Wonderlanders often stop by to enjoy a hot 
-meal. The restaurant food is expensive and limited in variety, so if you are staying more 
-than one night I'd recommend augmenting it by bringing a cooler with supplies of your 
-own.
+National Park Inn boasts a mellow porch where Wonderlanders often stop by to enjoy a 
+snack. The restaurant food is expensive and limited in variety, so if you are staying 
+more than one night I'd recommend augmenting it by bringing a cooler with supplies of 
+your own.
 
 
 ## Learning More|
