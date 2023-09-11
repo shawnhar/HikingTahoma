@@ -24,7 +24,7 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Epic views</td>
-    <td>[BurroughsMountain/Burroughs.jpg|.|Burroughs Mountain]</td>
+    <td>[BurroughsMountain/BurroughsTwo.jpg|.|Burroughs Mountain]</td>
   </tr>
   <tr>
     <td>[PanoramaPoint/FallColors.jpg|.|Panorama Point and Skyline Trail]</td>
