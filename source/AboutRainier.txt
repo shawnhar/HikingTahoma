@@ -259,7 +259,7 @@ that covers Spray Park and Mist Park.
 
 <table class="photos">
   <tr>
-    <td>[BurroughsMountain/Burroughs.jpg|Burroughs Mountain is a lava flow from the earliest days of Tahoma, nearly half a million years ago]</td>
+    <td>[BurroughsMountain/BurroughsTwo.jpg|Burroughs Mountain is a lava flow from the earliest days of Tahoma, nearly half a million years ago]</td>
     <td>[IndianHenrysFromKautzCreek/SunsetAmphitheater.jpg|The white pumice layer in the middle of Sunset Amphitheater erupted 190,000 years ago]</td>
   </tr>
   <tr>
