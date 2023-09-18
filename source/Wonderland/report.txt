@@ -556,6 +556,7 @@ still available. There are many such possibilities, including:
       <p>6000', 5 sites + group</p>
       <p>4.2 miles from Frozen Lake and 3.6 from White River, which may seem a lot but it only adds 3.3 miles total distance if you substitute this in place of going past Sunrise (and it's a much nicer place than White River to camp...)</p>
     </td>
+    <td class="photos">[../Photos/CampGlacierBasin.jpg]</td>
   </tr>
   <tr>
     <td>Olallie Creek</td>
