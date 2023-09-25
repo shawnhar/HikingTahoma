@@ -8,17 +8,48 @@ none
 [BigBridge.jpg] Big bridge carries the Westside Road over St. Andrews Creek
 [LittleBridge.jpg] Fun little bridge carries hikers over St. Andrews Creek
 [DenmanFalls.jpg] Denman Falls
+[NurseryLog.jpg] Along the lower, abandoned portion of the trail, the trees starting their lives on this nursery log are going to get an unpleasant surprise when it eventually rots enough to collapse
 
-15 miles is an awfully long way for any waterfall, especially one like this where much of 
-the distance is fairly boring closed-to-cars road, plus the viewpoint of the falls is 
-partially obstructed! Visiting here is more practical if you bike up the Westside Road, or 
-if you already happen to be passing by on your way to [KlapatchePark] or [NorthPuyallup].
+15 miles is an awfully long way to go for any waterfall, especially one like this where much of 
+the distance is fairly boring closed-to-cars road, not to mention the viewpoint of the 
+falls is partially obstructed! Visiting here is more practical if you bike up the 
+Westside Road or already happen to be passing by on your way to [KlapatchePark] or 
+[NorthPuyallup].
 
-The falls are reached along a pleasant 1/4 mile forested loop trail, the two ends of 
+Denman Falls is reached along a pleasant 1/4 mile forested loop trail, the two ends of 
 which start from the Westside Road either side of where it crosses St. Andrews Creek. 
 This is presumably a remnant of when the road used to be open to cars, at which time 
 Denman Falls was an easily accessible family destination, because simply viewing the 
 falls did not require bothering to build the trail as a loop.
 
-An abandoned but still visible path continues past the Denman Falls viewpoint, I believe 
-down to Larrupin and Ethania Falls. I was tired, so left exploring that for another day.
+Just past Denman Falls you will find a sign stating <i>"End Of Maintained Trail. Travel 
+Safely. Leave No Trace"</i>. Signs like this usually mark where official trails 
+transition to climber's paths (e.g. at Glacier Basin, Mirror Lake) or to unmaintained but 
+tolerated-by-the-park routes (Moraine Trail, Van Trump Park). So I wondered, why is one 
+located here?
+
+Research suggested that this trail might head downhill to Larrupin Falls and Ethania 
+Falls, and could even have been the original route of the [Wonderland]. A
+<a href="http://npshistory.com/brochures/mora/1919.pdf">1919 park brochure</a> includes a 
+map that shows the Wonderland heading down toward the South Puyallup river valley at this 
+location.
+
+I explored the abandoned trail to Larrupin and Ethania Falls in 2023, and I have to say, 
+you should not bother coming here if you're chasing waterfalls. They are treed-in, and I 
+did not find good enough viewpoints to get any photos worth sharing here. Parts of the 
+old trail still exist, but it is overgrown with trees in many places and covered with 
+blowdowns in others. Navigationally challenging and not at all easy going. This part is 
+shown as the dotted line on the map above, and not included in the distance or elevation 
+gain.
+
+Having visited the abandoned portion of this trail, I now strongly suspect that it is 
+indeed the original route of the Wonderland. The remaining sections of old trail were 
+clearly abandoned a long time ago (fallen trees covering the path are in some cases so 
+rotted that they disintegrate into sawdust the moment your foot touches them) yet the 
+path was once wide and it switchbacks down the hillside with a gentle gradient. I've 
+hiked enough unofficial trails to know that climber's and fisherman's paths are much more 
+direct about their ascents than this one. An old trail would only have been constructed 
+with this kind of switchback is if it was intended for pack animals such as the horses 
+that
+<a href="https://www.mountaineers.org/about/history/the-mountaineer-annuals/indexes-annuals-maps/the-mountaineer-1915">early Wonderland circuits</a>
+depended on.
