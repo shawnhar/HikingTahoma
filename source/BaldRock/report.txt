@@ -10,9 +10,9 @@ Nickel Creek
 [Open.jpg] The hike is mostly forest, but there are occasional open patches
 [Summit.jpg] Tahoma, from Bald Rock
 
-This is an off-trail route. Only come here if your navigation is up to the task of 
-finding your way where there are no trails to follow, and practice Leave No Trace to 
-avoid damaging fragile terrain.
+<span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
+up to the task of finding your way where there are no trails to follow, and practice 
+Leave No Trace to avoid damaging fragile terrain.</span>
 
 Most of the distance and elevation gain shown above comes from hiking up the [Wonderland] 
 from Box Canyon toward [IndianBar]. If you already happen to be passing here, adding in 

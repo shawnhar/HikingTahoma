@@ -14,9 +14,9 @@ North Puyallup River (if you come from the south) or South Mowich River + Golden
 [Benchmark.jpg] Approaching Sunset Benchmark
 [Ridge.jpg] Ridge heads further upward, to Peak 6719, Peak 6982, and Colonnade
 
-This is an off-trail route. Only come here if your navigation is up to the task of 
-finding your way where there are no trails to follow, and practice Leave No Trace to 
-avoid damaging fragile terrain.
+<span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
+up to the task of finding your way where there are no trails to follow, and practice 
+Leave No Trace to avoid damaging fragile terrain.</span>
 
 I can't decide which of two possible stories to frame this article with, so how about I 
 just use them both?

@@ -13,9 +13,9 @@ none
 [Tarn.jpg] Tarn near the top of Green Park
 [GreenPark.jpg] Looking east over the lower portions of Green Park
 
-This is an off-trail route. Only come here if your navigation is up to the task of 
-finding your way where there are no trails to follow, and practice Leave No Trace to 
-avoid damaging fragile terrain.
+<span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
+up to the task of finding your way where there are no trails to follow, and practice 
+Leave No Trace to avoid damaging fragile terrain.</span>
 
 Follow the [PalisadesLakes] trail to Hidden Lake. Here you will find a sign that states:
 

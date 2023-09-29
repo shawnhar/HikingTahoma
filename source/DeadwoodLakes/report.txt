@@ -12,6 +12,9 @@ none
 [UpperLake.jpg] Upper Deadwood Lake
 [LowerLake.jpg] Lower Deadwood Lake
 
+<span class="trailinfo">This is an unofficial route. Only come here if your navigation is 
+up to the task, and practice Leave No Trace to avoid damaging fragile terrain.</span>
+
 I can find this unofficial trail on no maps, and it's not mentioned in most 
 books, but it does have an entry on the Washington Trails Association 
 website. I learned about it from the excellent but little-known book, "Mt. 

@@ -12,6 +12,10 @@ none
 [Boundary.jpg] The National Park boundary
 [MossyTrees.jpg] Mossy trees must have been taking fashion tips from Dr. Seuss
 
+<span class="trailinfo">This is an abandoned trail. Only come here if your navigation is 
+up to the task of finding your way where there is no path to follow, and practice Leave 
+No Trace to avoid damaging fragile terrain.</span>
+
 First a clarification: Chenuis Falls itself is a family-friendly side trip along the 
 [CarbonRiver] hike. This entry refers to an old trail that heads northeast past the 
 falls, switchbacking steeply upward with no views before petering out. Paul Hodge's book 

@@ -13,6 +13,10 @@ none
 [RiverBedTrail.jpg] Hiking over glacial silt where the river has taken out part of the trail
 [WestForkWhiteRiver.jpg] West Fork White River, with Redstone Peak center frame
 
+<span class="trailinfo">This is an abandoned trail. Only come here if your navigation is 
+up to the task of finding your way where there is no path to follow, and practice Leave 
+No Trace to avoid damaging fragile terrain.</span>
+
 On paper this abandoned trail looks like it might be an easy (couple of miles, not too 
 steep) way to sneak in the backdoor from a forest road outside Mount Rainier National 
 Park, ending at an intersection with a remote part of the [NorthernLoop].

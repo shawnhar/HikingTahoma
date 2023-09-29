@@ -8,8 +8,8 @@ never
 [Trailhead.jpg] Unmarked trailhead where the road turns to the left away from Tahoma Creek
 [HereBeDragons.jpg] It's almost like the Park Service doesn't want people to hike here...
 
-Unlike every other trail listed on this website, I have not hiked Tahoma Creek, and never 
-will. I have added it to this site in order to explain why not.
+<span class="trailinfo">Unlike every other trail listed on this website, I have not hiked 
+Tahoma Creek, and never will. I have added it to this site in order to explain why not.</span>
 
 The Park Service makes their opinion on the Tahoma Creek trail extremely clear:
 

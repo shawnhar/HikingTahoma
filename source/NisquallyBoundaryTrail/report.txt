@@ -13,6 +13,10 @@ none
 [Ridge.jpg] My turnaround point at the ridge
 [SunshinePoint.jpg] Abandoned car campsite at Sunshine Point, now separated from the road by a side channel of the Nisqually River
 
+<span class="trailinfo">This is an abandoned trail. Only come here if your navigation is 
+up to the task of finding your way where there is no path to follow, and practice Leave 
+No Trace to avoid damaging fragile terrain.</span>
+
 I've always loved entering Mount Rainier National Park at Nisqually. It's an instant hit 
 of over-the-top verdancy, flamboyant in its lushness. Always struck me as a shame to just 
 drive past this area on my way to Longmire or Paradise.

@@ -14,6 +14,9 @@ none
 [StHelens.jpg] Mount St. Helens, from the false summit
 [Rainier.jpg] Rainier, from the false summit, with Tolmie lookout visible near the center
 
+<span class="trailinfo">This is an unofficial route. Only come here if your navigation is 
+up to the task, and practice Leave No Trace to avoid damaging fragile terrain.</span>
+
 This is a grouchy, cantankerous trail. Hikers from the Seattle area will know what 
 I mean when I say it partakes of much the same spirit as Mailbox Old Trail:
 

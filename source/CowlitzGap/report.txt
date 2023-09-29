@@ -13,9 +13,9 @@ none
 [CowlitzAndIngrahamGlaciers.jpg] The Cowlitz (left) and Ingraham (right) glaciers, below Little Tahoma, viewed from Cowlitz Gap
 [CowlitzRocks.jpg] Looking up at the Cowlitz Rocks, from Cowlitz Gap
 
-This is an off-trail route. Only come here if your navigation is up to the task of 
-finding your way where there are no trails to follow, and practice Leave No Trace to 
-avoid damaging fragile terrain.
+<span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
+up to the task of finding your way where there are no trails to follow, and practice 
+Leave No Trace to avoid damaging fragile terrain.</span>
 
 If you enjoy the barren moonscape of the [ParadiseGlacier] trail, where a glacier has 
 recently retreated and the landscape has not yet adapted to that change, then this hike 

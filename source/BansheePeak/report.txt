@@ -13,9 +13,9 @@ Summerland
 [Alpine.jpg] Fragile alpine soil and vegetation
 [CowlitzChimneys.jpg] The Cowlitz Chimneys, from just below the top of Banshee
 
-This is an off-trail route. Only come here if your navigation is up to the task of 
-finding your way where there are no trails to follow, and practice Leave No Trace to 
-avoid damaging fragile terrain.
+<span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
+up to the task of finding your way where there are no trails to follow, and practice 
+Leave No Trace to avoid damaging fragile terrain.</span>
 
 Much of the distance and elevation gain shown above comes from hiking the [Wonderland] 
 section to [PanhandleGap]. If you already happen to be at Panhandle Gap, adding in the 
