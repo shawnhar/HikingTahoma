@@ -8,7 +8,6 @@ this site to accurately represent the typical character of each. Places I feel I
 yet achieved that are:
 
 <ul class="tight">
-  <li>[GlacierBasinLoop]</li>
   <li>[PaulPeakTrail]</li>
 </ul>
 
