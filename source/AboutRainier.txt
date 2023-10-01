@@ -35,23 +35,27 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
   <tr>
     <td>[Animals/Bear.html|Black Bear]</td>
+    <td>[Animals/Cougar.html|Cougar]</td>
+  </tr>
+  <tr>
     <td>[Animals/Marmot.html|Hoary Marmot]</td>
-  </tr>
-  <tr>
     <td>[Animals/Pika.html|Pika]</td>
+  </tr>
+  <tr>
     <td>[Animals/DouglasSquirrel.html|Douglas Squirrel]</td>
-  </tr>
-  <tr>
     <td>[Animals/GroundSquirrel.html|Golden-mantled Ground Squirrel]</td>
+  </tr>
+  <tr>
     <td>[Animals/YellowPineChipmunk.html|Yellow Pine Chipmunk]</td>
-  </tr>
-  <tr>
     <td>[Animals/TownsendsChipmunk.html|Townsend's Chipmunk]</td>
-    <td>[Animals/Mouse.html|Deer Mouse]</td>
   </tr>
   <tr>
+    <td>[Animals/Mouse.html|Deer Mouse]</td>
     <td>[Animals/Grouse.html|Sooty Grouse]</td>
+  </tr>
+  <tr>
     <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
+    <td>[Animals/Owl.html|Spotted Owl]</td>
   </tr>
   <tr>
     <td>[Animals/PileatedWoodpecker.html|Pileated Woodpecker]</td>
@@ -62,14 +66,11 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Grayjay.html|Gray Jay]</td>
   </tr>
   <tr>
-    <td>[Animals/Owl.html|Spotted Owl]</td>
     <td>[Animals/CascadesFrog.html|Cascades Frog]</td>
-  </tr>
-  <tr>
     <td>[Animals/Salamander.html|Salamander]</td>
-    <td>[Animals/Trout.html|Trout]</td>
   </tr>
   <tr>
+    <td>[Animals/Trout.html|Trout]</td>
     <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
   </tr>
 </table>
