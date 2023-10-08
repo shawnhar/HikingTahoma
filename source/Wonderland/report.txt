@@ -756,6 +756,7 @@ backpacking permit, many sections also make fantastic day hikes:
     <td>[../LongmireToReflectionLakes/UpTheNisqually.jpg|.|Longmire to Reflection Lakes]</td>
   </tr>
   <tr>
+    <td>[../StevensCanyon/StevensCanyon.jpg|.|Stevens Canyon]</td>
     <td>[../WhiteRiverToSunrise/View.jpg|.|White River to Sunrise]</td>
   </tr>
 </table>
