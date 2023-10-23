@@ -63,10 +63,11 @@ deep snow at other times of year.
 <table class="photos showlinks">
   <tr>
     <td class="heading">Fantastic forests</td>
+    <td>[CarbonRiver/Rainforest.jpg|.|Carbon River to Ipsut Falls]</td>
   </tr>
   <tr>
-    <td>[CarbonRiver/Rainforest.jpg|.|Carbon River to Ipsut Falls]</td>
     <td>[GroveOfThePatriarchs/ForScale.jpg|.|Grove of the Patriarchs]</td>
+    <td>[TwinFirsLoop/TreesInCloud.jpg|.|Twin Firs Loop]</td>
   </tr>
 </table>
 

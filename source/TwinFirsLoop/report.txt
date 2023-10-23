@@ -5,8 +5,12 @@ Longmire
 none
 2020
 
+[Ferny.jpg] A ferny forest
+[TallTrees.jpg] Tall trees
 [BigTree.jpg] A really big tree
 [TwinTrees.jpg] A pair of big trees
+[Mossy.jpg] Mossy roots
+[TreesInCloud.jpg] Tops of the trees are vanishing into the cloud
 
 This short loop trail, located near Longmire, offers lush rainforest 
 featuring giant trees, mosses, and nursery logs. I have only two nitpicks 
@@ -16,6 +20,6 @@ about it:
     <li>Being short, and located near the busy Longmire/Paradise road, 
     there's no respite from traffic noise.</li>
 
-    <li>What's with the name? There are dozens of magnificent firs along 
+    <li>What's with the name? There are many magnificent trees along 
     this trail, not just two!</li>
 </ul>
