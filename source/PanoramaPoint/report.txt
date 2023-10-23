@@ -1,6 +1,6 @@
 Panorama Point and Skyline Trail
 moderate
-5.5 1850 7000
+6 1850 7040
 Paradise
 none
 older
@@ -10,7 +10,7 @@ older
 [Volcanic.jpg] Volcanic rock formations
 [PhotoFrame.jpg] The gap between these trees (approaching Panorama Point from the west) makes a perfect frame for a selfie!
 [SnowBridge.jpg] Mostly melted remnants of a former snow bridge
-[Trail.jpg] Along the Skyline Trail
+[InversionLayer.jpg] Hiking above a cloud inversion layer
 [Flowers.jpg] Spring flowers along the Golden Gate trail
 [FallColors.jpg] Fall colors
 [EdithCreek.jpg] Edith Creek
@@ -49,21 +49,19 @@ volcanoes Mount Adams and St. Helens. It's a perfect spot for lunch.
 
 Tatoosh means 'nourishing breast' in the Chinook Jargon.
 
-Past Panorama Point you have two choices (or I guess three, as you could just 
-go back the way you came). The Low Skyline trail heads east across a slope 
-that can be snow covered until late in the season, and is sometimes roped 
-off by the Park Service due to avalanche hazard. Alternatively the High 
-Skyline heads north, then east, then back south again, adding some distance 
-and an extra 250' elevation gain, but is safer in snowy conditions. Just 
-don't keep walking north forever, or you'll end up at [CampMuir]!
+Past Panorama Point, the High Skyline trail heads north, then east, then back 
+south again. Just don't keep walking north forever, or you'll end up at 
+[CampMuir]! It's called the High Skyline because there used to be a Low Skyline 
+alternative route here, which the park has closed due to safety concerns (it 
+crossed a steep slope that remains snow covered until late in the season).
 
-After the High and Low Skyline trails rejoin, head downhill to the south before 
-arriving at one last decision point: turn southwest along the Golden Gate trail 
-for the shortest route home, or southeast, remaining on the official Skyline 
-trail, for a longer hike passing near the inaccessible Sluiskin Falls (which 
-can be viewed from the road but not reached by trail). Shortly before the falls 
-comes the option of further extending your hike by adding in the 
-[ParadiseGlacier] trail.
+After passing the junction where the High Skyline rejoins the now-closed Low 
+Skyline trail, head downhill to the south before arriving at one last decision 
+point: turn southwest along the Golden Gate trail for the shortest route home, 
+or southeast, remaining on the official Skyline trail, for a longer hike 
+passing near the inaccessible Sluiskin Falls (which can be viewed from the road 
+but not reached by trail). Shortly before the falls comes the option of further 
+extending your hike by adding in the [ParadiseGlacier] trail.
 
 Near Sluiskin Falls, a bench marks the area where Sluiskin, a Taidnapam guide, 
 waited while Hazard Stevens and Philemon van Trump made the first documented 
