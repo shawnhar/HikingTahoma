@@ -8,6 +8,7 @@ this site to accurately represent the typical character of each. Places I feel I
 yet achieved that are:
 
 <ul class="tight">
+  <li><a href="SnowLake/">Bench Lake</a></li>
   <li>[PaulPeakTrail]</li>
 </ul>
 
