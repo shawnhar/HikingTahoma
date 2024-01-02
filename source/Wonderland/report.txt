@@ -52,7 +52,7 @@ The permit system is quite complicated, but in summary: 2/3 of capacity is avail
 be reserved in advance, with an annual lottery for early access to the booking system, 
 while 1/3 is reserved for last minute walkups. Details can vary from year to year, so check 
 <a href="https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm">https://www.nps.gov/mora/planyourvisit/wilderness-permit.htm</a>
-for the latest information. What follows is accurate as of 2023.
+for the latest information. What follows is accurate as of 2024.
 
 
 <p class="heading">Early Access Lottery</p>
@@ -64,7 +64,7 @@ booking system. It's important to understand that winning the lottery does NOT
 automatically give you a Wonderland permit! You are competing for the chance to attempt 
 booking your trip before everyone else gets access, not directly for the trip itself.
 
-In 2023, the lottery accepts applications from February 21 to March 7, with results 
+In 2024, the lottery accepts applications from February 12 to March 4, with results 
 available on March 14. Exactly when within this period you enter makes no difference to 
 your chances. The lottery allows one entry per person, and at this point there's no need 
 to specify what route you are hoping to hike, dates you want to go, or who else will be 
@@ -73,7 +73,7 @@ in your party.
 
 <p class="heading">Early Access Reservations</p>
 
-Congrats, so you won the lottery! You will be issued a date and time, which in 2023 
+Congrats, so you won the lottery! You will be issued a date and time, which in 2024 
 ranges from March 21 to April 19, when you along with a few others will gain access to 
 the self-serve
 <a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> booking system. 
@@ -125,7 +125,7 @@ circuit or a single night in the wilderness is entirely up to you.
 
 After all the early access winners have had their chance to book trips, the same 
 self-serve <a href="https://www.recreation.gov/permits/4675317">recreation.gov</a> site 
-opens to everyone. In 2023 this occurs on April 25. After this date there is no limit on 
+opens to everyone. In 2024 this occurs on April 25. After this date there is no limit on 
 how many trips a person can book, and those who won early access can come back and try to 
 book more trips if they want.
 
