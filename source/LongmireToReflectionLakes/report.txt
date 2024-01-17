@@ -38,4 +38,6 @@ a great easy snowshoe: 3.6 miles roundtrip with 440' elevation gain. From
 Cougar Rock to Carter Falls is 2.7 miles roundtrip with 570' gain. Be careful 
 crossing the Nisqually both in winter (when the log bridge may be icy) and 
 summer (when it sometimes gets washed away). Above Narada Falls the trail 
-crosses steep slopes that will be unsafe when snow is deep enough to avalanche.
+crosses steep slopes that are unsafe when the snow gets deep enough to slide, in 
+which case you can hop across onto the [NaradaFallsLoop] and [LakesLoop] to 
+reach Reflection Lakes via an alternate route with less avalanche risk.
