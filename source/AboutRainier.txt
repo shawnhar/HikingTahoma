@@ -66,11 +66,14 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Grayjay.html|Gray Jay]</td>
   </tr>
   <tr>
+    <td>[Animals/Robin.html|American Robin]</td>
     <td>[Animals/CascadesFrog.html|Cascades Frog]</td>
-    <td>[Animals/Salamander.html|Salamander]</td>
   </tr>
   <tr>
+    <td>[Animals/Salamander.html|Salamander]</td>
     <td>[Animals/Trout.html|Trout]</td>
+  </tr>
+  <tr>
     <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
   </tr>
 </table>
