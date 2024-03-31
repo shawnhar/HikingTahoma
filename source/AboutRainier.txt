@@ -175,6 +175,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/PacificCoralroot.jpg] Pacific Coralroot (corallorhiza mertensiana)
 [Flowers/Pinedrops.jpg] Pinedrops (pterospora andromedea)
 [Flowers/Pinesap.jpg] Pinesap (monotropa hypopithys)
+[Flowers/SkunkCabbage.jpg] Western Skunk Cabbage (lysichiton americanus)
 
 
 ## Geology|Geology of Mount Rainier
