@@ -7,9 +7,10 @@ South Mowich River
 
 [Trailhead.jpg] A snowy trailhead
 [HighForest.jpg] Setting out through a wintry forest
+[MeadowCreek.jpg] Crossing Meadow Creek
 [MidForest.jpg] Halfway down, the forest character has changed completely
-[LowForest.jpg] At lower elevation the forest becomes mossy and lush
 [PeekAView.jpg] Peek-a-view
+[LowForest.jpg] At lower elevation the forest becomes mossy and lush
 [SouthMowichRiver.jpg] View over the South Mowich River
 [NorthMowichRiver.jpg] North Mowich River (my turnaround spot)
 

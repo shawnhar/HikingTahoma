@@ -9,7 +9,6 @@ yet achieved that are:
 
 <ul class="tight">
   <li><a href="SnowLake/">Bench Lake</a></li>
-  <li>[PaulPeakTrail]</li>
 </ul>
 
 There is one loop route which I've hiked all the pieces of at different times, 
