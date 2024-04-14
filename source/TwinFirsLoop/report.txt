@@ -6,10 +6,9 @@ none
 2020
 
 [Ferny.jpg] A ferny forest
-[TallTrees.jpg] Tall trees
+[Mossy.jpg] Mossy roots
 [BigTree.jpg] A really big tree
 [TwinTrees.jpg] A pair of big trees
-[Mossy.jpg] Mossy roots
 [TreesInCloud.jpg] Tops of the trees are vanishing into the cloud
 
 This short loop trail, located near Longmire, offers lush rainforest 
