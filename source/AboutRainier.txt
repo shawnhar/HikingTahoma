@@ -157,7 +157,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/Salal.jpg] Salal (gaultheria shallon)
 [Flowers/OregonGrape.jpg] Oregon Grape (berberis nervosa)
 [Flowers/Twinflower.jpg] Twinflower (linnaea borealis)
-[Flowers/Sorrel.jpg] Trillium-Leaved Sorrel (oxalis trilliifolia)
+[Flowers/Sorrel.jpg] Redwood Sorrel (oxalis oregana)
 [Flowers/WildStrawberry.jpg] Wild Strawberry (fragaria vesca)
 [Flowers/Thimbleberry.jpg] Thimbleberry (rubus parviflorus)
 [Flowers/ThimbleberryBerries.jpg] Thimbleberry - berries (rubus parviflorus)
