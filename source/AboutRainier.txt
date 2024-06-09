@@ -81,8 +81,8 @@ surprising them, keep your food out of their way, and you won't have any trouble
 
 ## Wildflowers|Wildflowers of Mount Rainier
 
-[Flowers/GlacierLily.jpg] Glacier Lily (erythronium grandiflorum)
 [NisquallyVista/AvalancheLilies.jpg] Avalanche Lily (erythronium montanum)
+[Flowers/GlacierLily.jpg] Glacier Lily, aka Yellow Avalanche Lily (erythronium grandiflorum)
 [Flowers/PinkMountainHeather.jpg] Pink Mountain Heather (phyllodoce empetriformis)
 [Flowers/WhiteMountainHeather.jpg] White Mountain Heather (cassiope mertensiana)
 [Flowers/SpreadingPhlox.jpg] Spreading Phlox (phlox diffusa)
