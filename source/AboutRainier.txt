@@ -143,6 +143,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/YellowCoralbells.jpg] Yellow Coralbells (elmera racemosa)
 [Flowers/PearlyEverlastingBuds.jpg] Pearly Everlasting - buds (anaphalis margaritacea)
 [Flowers/PearlyEverlasting.jpg] Pearly Everlasting (anaphalis margaritacea)
+[Flowers/MarshMarigold.jpg] Marsh Marigold (caltha leptosepala)
 [Flowers/Yarrow.jpg] Yarrow (achillea millefolium)
 [Flowers/Candyflower.jpg] Candyflower, aka Siberian Miner's Lettuce (claytonia sibirica)
 [Flowers/FalseBugbane.jpg] False Bugbane, aka Tassel Rue (trautvetteria caroliniensis)
@@ -156,8 +157,13 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/Pipsissewa.jpg] Pipsissewa (chimaphila umbellata)
 [Flowers/Salal.jpg] Salal (gaultheria shallon)
 [Flowers/OregonGrape.jpg] Oregon Grape (berberis nervosa)
+[Flowers/FairyBells.jpg] Hooker's Fairy Bells (prosartes hookeri)
+[Flowers/FalseSolomonsSeal.jpg] False Solomon's Seal (maianthemum racemosum)
 [Flowers/Twinflower.jpg] Twinflower (linnaea borealis)
+[Flowers/Twayblade.jpg] Heartleaf Twayblade (neottia cordata)
+[Flowers/Starflower.jpg] Starflower (lysimachia latifolia)
 [Flowers/Sorrel.jpg] Redwood Sorrel (oxalis oregana)
+[Flowers/VanillaLeaf.jpg] Vanilla Leaf (achlys triphylla)
 [Flowers/WildStrawberry.jpg] Wild Strawberry (fragaria vesca)
 [Flowers/Thimbleberry.jpg] Thimbleberry (rubus parviflorus)
 [Flowers/ThimbleberryBerries.jpg] Thimbleberry - berries (rubus parviflorus)
@@ -187,6 +193,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/Pinedrops.jpg] Pinedrops (pterospora andromedea)
 [Flowers/Pinesap.jpg] Pinesap (monotropa hypopithys)
 [Flowers/SkunkCabbage.jpg] Western Skunk Cabbage (lysichiton americanus)
+
 
 ## Geology|Geology of Mount Rainier
 
