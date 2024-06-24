@@ -13,6 +13,7 @@ Backbone Lake (unofficial, outside MRNP)
 [OpenSection.jpg] A brief open section of trail while descending Backbone Ridge
 [OldRoad.jpg] Old trailhead on what was once Forest Road 1270, now rapidly becoming a lovely trail in its own right
 [CowlitzRiver.jpg] The Cowlitz River, where there was once a bridge
+[Camped.jpg] Camped at Backbone Lake
 
 <span class="trailinfo">This is an abandoned trail. Only come here if your navigation is 
 up to the task of finding your way where there is no path to follow, and practice Leave 
