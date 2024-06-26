@@ -10,7 +10,7 @@ Ohanapecosh
 [Bridge.jpg] Bridge over the Ohanapecosh River, immediately below Silver Falls
 [SilverFalls.jpg] Silver Falls
 [SilverFalls2.jpg] More Silver Falls
-[SuspensionBridge.jpg] Grove of the Patriarchs is reached by crossing the Ohanapecosh River on a suspension bridge
+[SuspensionBridge.jpg] Grove of the Patriarchs was reached by crossing the Ohanapecosh River on a suspension bridge, which washed out in 2022 leaving the Grove inaccessible
 [ForScale.jpg] Hiking poles and pack for scale
 [Patriarchs.jpg] Patriarchs, in a grove
 [Patriarchs2.jpg] Patriarchs, of a more furry species
@@ -19,7 +19,7 @@ Ohanapecosh
 [HotSpring.jpg] Hot(ish) springs
 
 <span class="trailinfo">2022 update: Grove of the Patriarchs is inaccessible because a 
-flood damaged the suspension bridge. No ETA for repair. The Silver Falls part of this 
+flood destroyed the suspension bridge. No ETA for replacement. The Silver Falls part of this 
 hike is fine.</span>
 
 This hike has the highest awesomeness/difficulty ratio of any at Rainier. It 

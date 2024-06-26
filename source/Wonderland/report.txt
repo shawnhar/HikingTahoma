@@ -293,10 +293,6 @@ as long as you remember to turn around occasionally. Minor factors to consider a
     staying at Klapatche Park, which often dries up later in the season.
   </li>
   <li>
-    The washed out section of trail along Stevens Canyon is easier to traverse 
-    going clockwise.
-  </li>
-  <li>
     Some claim that going counterclockwise has steeper uphills vs. clockwise where the 
     descents are steeper, but I'm not convinced. Seems to me there is plenty of both in 
     either direction!
@@ -625,7 +621,7 @@ taken down during the off-season.
 
 ## Hazards
 
-[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section (as of 2021)
+[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section as of 2021 - this is reportedly much worse in 2024
 [../WhiteRiverToSunrise/Waterfall.jpg] Slide area and waterfall crossing between White River and Sunrise is no big deal as long as snow bridges have melted and flow rate isn't too high (as of 2023)
 [../EastsideLoop/2-ApproachingPanhandle.jpg] The approach to Panhandle Gap was almost completely melted as of August 7, 2023
 [../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
@@ -733,8 +729,9 @@ just rocks and snow patches with cairns to mark the way, so it'd be easy to lose
 during bad weather.
 
 One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
-where the trail crosses a washout with loose, unstable footing. I am told this is 
-particularly unpleasant in wet conditions.
+where the trail crosses a washout with loose, unstable footing. As of 2024, rangers are 
+advising against crossing the slide, and have reportedly flagged an alternate scrambling 
+route around it.
 
 
 ## Section Hiking|Section Hiking The Wonderland Trail
