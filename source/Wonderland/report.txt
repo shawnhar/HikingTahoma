@@ -622,6 +622,7 @@ taken down during the off-season.
 ## Hazards
 
 [+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section as of 2021 - this is reportedly much worse in 2024
+[../EmeraldRidge/Washout.jpg] Emerald Ridge washout as of 2024
 [../WhiteRiverToSunrise/Waterfall.jpg] Slide area and waterfall crossing between White River and Sunrise is no big deal as long as snow bridges have melted and flow rate isn't too high (as of 2023)
 [../EastsideLoop/2-ApproachingPanhandle.jpg] The approach to Panhandle Gap was almost completely melted as of August 7, 2023
 [../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
@@ -728,10 +729,28 @@ Wonderland Trail is obvious to follow, but Panhandle Gap and the top of Spray Pa
 just rocks and snow patches with cairns to mark the way, so it'd be easy to lose your way 
 during bad weather.
 
-One final hazard lies along Stevens Canyon, between Maple Creek and Reflection Lakes, 
-where the trail crosses a washout with loose, unstable footing. As of 2024, rangers are 
-advising against crossing the slide, and have reportedly flagged an alternate scrambling 
-route around it.
+Final hazard category: washouts where a landslide takes out part of the trail. These can 
+occur pretty much anywhere at any time, but notable locations are:
+
+<ul>
+  <li>
+    Along Stevens Canyon, between Maple Creek and Reflection Lakes, the trail crosses a 
+    washout with loose, unstable footing that has existed for many years. As of 2024, 
+    rangers are advising against crossing the slide, and have reportedly flagged an 
+    alternate scrambling route around it.
+  </li>
+  <li>
+    Approaching Emerald Ridge from the north, a short washout with a long way to fall if 
+    it gave out on you has been encroaching on the trail for several years. As of 2024, 
+    the remaining trail was narrower than I felt comfortable with (others may differ) but 
+    I was able to bypass this by scrambling over the top of the ridge.
+  </li>
+  <li>
+    Between White River and Sunrise, the trail crosses a slide area and waterfall that is 
+    no big deal during normal Wonderland hiking season, but can be dangerous in early 
+    season when flow is high and snow bridges remain.
+  </li>
+</ul>
 
 
 ## Section Hiking|Section Hiking The Wonderland Trail
