@@ -9,7 +9,8 @@ none
 [Marsh.jpg] Open marshy area, with the cliffs of Rampart Ridge behind
 [Cabin.jpg] Historic cabin built by the Longmire family in 1888. Note the iron deposits and melted snow due to a mineral spring behind the cabin
 [HotSprings.jpg] Back in the day the Longmire family built stonework around several mineral springs along the Trail of the Shadows, hoping to establish a spa. Their venture failed, but their construction remains. The springs aren't exactly hot, but warm enough to clear a gap in the snow
-[Healthy.jpg] It's healthy to bathe in these springs, they said - but in that case why will nothing grow where the volcanic water flows?
+[Healthy.jpg] It's healthy to bathe in these springs, they said - but in that case why will nothing grow where the volcanic water bubbles?
+[Monster.jpg] A gnarly forest monster
 [Rainier.jpg] Wintry evening summit view, from Trail of the Shadows
 
 This easy trail circles through old growth forest around a marsh, past 
