@@ -1,15 +1,7 @@
 Future Plans
 
 I have completed my goal of hiking every maintained trail inside Mount Rainier National 
-Park, but am far from finished with Tahoma. There are several trails that I've already 
-hiked, but want to revisit because this website lacks sufficiently representative photos. 
-It is the nature of trails to change with weather, season, and time of day, but I want 
-this site to accurately represent the typical character of each. Places I feel I haven't 
-yet achieved that are:
-
-<ul class="tight">
-  <li><a href="SnowLake/">Bench Lake</a></li>
-</ul>
+Park, but am far from finished with Tahoma.
 
 There is one loop route which I've hiked all the pieces of at different times, 
 but want to someday repeat all in one go:
