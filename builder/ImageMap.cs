@@ -59,6 +59,9 @@ namespace builder
             if (previousHike == null)
                 return true;
 
+            if (hike.FolderName == "NorthBackboneRidge")
+                return false;
+
             if (coverage > previousHike.Coverage * 7 / 4)
                 return true;
 

@@ -85,6 +85,7 @@ namespace builder
                     return MapEdge.Top;
 
                 case "BackboneRidge":
+                case "NorthBackboneRidge":
                     return MapEdge.Bottom;
 
                 case "GlacierViewWilderness":

@@ -32,7 +32,6 @@ include:
   <li>Goat Island Mountain?</li>
   <li>Mist Park?</li>
   <li>Mount Ararat?</li>
-  <li>North Backbone Ridge?</li>
   <li>Pyramid Peak?</li>
   <li>Satulick Mountain?</li>
   <li>Tyee Peak?</li>
