@@ -28,10 +28,8 @@ include:
   <li>Copper Mountain?</li>
   <li>Crescent Lake?</li>
   <li>Curtis Ridge?</li>
-  <li>Elysian Fields??!?</li>
   <li>Goat Island Mountain?</li>
   <li>Mist Park?</li>
-  <li>Mount Ararat?</li>
   <li>Pyramid Peak?</li>
   <li>Satulick Mountain?</li>
   <li>Tyee Peak?</li>
