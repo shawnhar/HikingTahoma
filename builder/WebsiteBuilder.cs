@@ -226,7 +226,7 @@ namespace builder
                         regions[region] = region;
                         years[firstHikedKey] = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(firstHiked);
 
-                        var oneWay = hike.IsOneWay && hike.FolderName != "NorthBackboneRidge" ? " data-one-way=\"true\"" : "";
+                        var oneWay = string.IsNullOrEmpty(hike.OneWay) ? "" : " data-one-way=\"" + hike.OneWay + "\"";
 
                         var eventHandler = string.Format(" onMouseEnter=\"OnEnterLink(document, '{0}')\" onMouseLeave=\"OnLeaveLink(document, '{0}')\"", hike.FolderName);
 

@@ -108,13 +108,17 @@ function UpdateHikeList(order)
   }
   else if (order == 'steepness') {
     getKey = function(item) {
-      var result = toNumber(item.getAttribute('data-elevation-gain')) / toNumber(item.getAttribute('data-length'));
+      var result = toNumber(item.getAttribute('data-elevation-gain'));
 
-      if (item.getAttribute('data-one-way')) {
-        result /= 2;
+      // Adjust one-way hikes to account for elevation loss as well as gain,
+      // but only over half the distance as the trail is not hiked twice.
+      var oneway = item.getAttribute('data-one-way');
+
+      if (oneway) {
+        result = (result + toNumber(oneway)) / 2;
       }
 
-      return Math.round(result);
+      return Math.round(result / toNumber(item.getAttribute('data-length')));
     };
   }
   else {

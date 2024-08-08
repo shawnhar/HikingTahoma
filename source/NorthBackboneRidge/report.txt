@@ -1,6 +1,6 @@
 North Backbone Ridge
 strenuous, unmaintained, and overgrown
-6.2.oneway 2620 5120
+6.2.oneway(1260) 2620 5120
 Ohanapecosh
 none
 2024

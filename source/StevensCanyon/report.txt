@@ -1,6 +1,6 @@
 Stevens Canyon
 moderate
-7.4.oneway 2800 4890
+7.4.oneway(640) 2800 4890
 Ohanapecosh
 Maple Creek
 2021
