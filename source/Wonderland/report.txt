@@ -621,8 +621,8 @@ taken down during the off-season.
 
 ## Hazards
 
-[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section as of 2021 - this is reportedly much worse in 2024
-[../EmeraldRidge/Washout.jpg] Emerald Ridge washout as of 2024
+[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section as of 2021 - this got worse in 2024 and the trail has now been rerouted down to the river
+[../EmeraldRidge/Washout.jpg] Emerald Ridge washout as of July 2024 - this has since been rerouted
 [../WhiteRiverToSunrise/Waterfall.jpg] Slide area and waterfall crossing between White River and Sunrise is no big deal as long as snow bridges have melted and flow rate isn't too high (as of 2023)
 [../EastsideLoop/2-ApproachingPanhandle.jpg] The approach to Panhandle Gap was almost completely melted as of August 7, 2023
 [../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
@@ -677,6 +677,10 @@ With the caveat that even minor streams may be problematic at times of high flow
 crossings to be aware of include:
 
 <ul>
+  <li>
+    Kautz Creek reportedly requires fording fast moving water as of 2024, 
+    although I found this spot trivial in previous years.
+  </li>
   <li>
     Pyramid Creek (between Pyramid Creek Camp and Devil's Dream) is a substantial river 
     crossed by log bridge with railing.
@@ -736,14 +740,14 @@ occur pretty much anywhere at any time, but notable locations are:
   <li>
     Along Stevens Canyon, between Maple Creek and Reflection Lakes, the trail crosses a 
     washout with loose, unstable footing that has existed for many years. As of 2024, 
-    rangers are advising against crossing the slide, and have reportedly flagged an 
-    alternate scrambling route around it.
+    rangers are advising against crossing the slide, and an alternate route down to the 
+    river has been constructed to replace it.
   </li>
   <li>
     Approaching Emerald Ridge from the north, a short washout with a long way to fall if 
-    it gave out on you has been encroaching on the trail for several years. As of 2024, 
-    the remaining trail was narrower than I felt comfortable with (others may differ) but 
-    I was able to bypass this by scrambling over the top of the ridge.
+    it gave out on you has been encroaching on the trail for several years. As of July 
+    2024, the remaining trail was narrower than I felt comfortable with, but this has 
+    since been rerouted.
   </li>
   <li>
     Between White River and Sunrise, the trail crosses a slide area and waterfall that is 
