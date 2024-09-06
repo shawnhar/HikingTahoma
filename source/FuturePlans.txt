@@ -24,7 +24,6 @@ these will undoubtably prove beyond me, but places I'm interested in exploring
 include:
 
 <ul class="tight">
-  <li>Andrew Benchmark?</li>
   <li>Copper Mountain?</li>
   <li>Crescent Lake?</li>
   <li>Curtis Ridge?</li>
