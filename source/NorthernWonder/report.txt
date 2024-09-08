@@ -237,7 +237,7 @@ and forth between our tents as they are pummeled by falling ice.
 [7-SunsetPark.jpg] Sunset Park
 [7-TahomaFromSunset.jpg] Tahoma from Sunset Park
 [7-NorthPuyallup.jpg] View from our lunch spot near North Puyallup Camp
-[7-NorthPuyallupRiver.jpg]. The North Puyallup River
+[7-NorthPuyallupRiver.jpg] The North Puyallup River
 [7-Roots.jpg] Frank for scale
 [7-Climb1.jpg] View as we climb
 [7-Climb2.jpg] Climbing higher
@@ -551,6 +551,8 @@ excitement are focused in other directions. Instead, the trail felt warm, rich, 
 familiar. It was quality time spent with an old friend. Even when the mountain threw bad 
 weather at us, that never felt hostile, just that she was in a cranky mood that day and 
 we hoped she'd cheer up soon.
+
+Problems that weren't: bugs, smoke, blisters, boredom.
 
 Frank was great company. A strong hiker with a deep knowledge of the trail. This was his 
 eighth completed Wonderland circuit! Things I learned from Frank:
