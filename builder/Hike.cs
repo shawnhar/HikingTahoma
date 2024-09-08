@@ -21,6 +21,7 @@ namespace builder
         public string MapThumbnail => FolderName + "-map-small.jpg";
         public string OverlayName => FolderName + "-overlay.png";
         public bool IsHidden => HikeName == "misc";
+        public bool DontIndex => FolderName == "NorthernWonder";
         public bool IsFuture => FirstHiked == "not yet";
         public bool IsNever => FirstHiked == "never";
 

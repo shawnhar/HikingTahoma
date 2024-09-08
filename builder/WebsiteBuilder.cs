@@ -159,7 +159,7 @@ namespace builder
         {
             using (new Profiler("WebsiteBuilder.WriteIndex"))
             {
-                var sortedHikes = hikes.Where(hike => !hike.IsHidden)
+                var sortedHikes = hikes.Where(hike => !hike.IsHidden && !hike.DontIndex)
                                        .OrderBy(hike => hike.HikeName);
 
                 var doneHikes = sortedHikes.Where(hike => !hike.IsNever);
