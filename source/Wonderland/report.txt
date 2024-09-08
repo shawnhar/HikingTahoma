@@ -1418,3 +1418,15 @@ pack weight of 20lb.
   <li>Paperback novel</li>
   <li>Credit card, driver's license, cash &amp; car keys</li>
 </ul>
+
+
+# Revisits
+
+In 2024 I completed a second Wonderland circuit, this time in combination with the 
+[NorthernLoop] trail.
+
+<table class="photos showlinks">
+  <tr>
+    <td>[../NorthernWonder/9-EmeraldRidge.jpg|.|Wonderland / Northern Loop Combo]</td>
+  </tr>
+</table>
