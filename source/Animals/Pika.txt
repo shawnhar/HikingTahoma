@@ -2,6 +2,7 @@ Pika
 
 [Pika2.jpg]
 [Pika3.jpg]
+[../NorthernWonder/4-Pika.jpg]
 [../LouiseLake/Pika.jpg]
 
 Pika do not hibernate, instead spending the summer cutting choice foliage, spreading it 
