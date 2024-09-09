@@ -636,19 +636,24 @@ taken down during the off-season.
 
 ## Hazards
 
-[+11-Washout.jpg] Sketchy washed out Stevens Canyon trail section as of 2021 - this got worse in 2024 and the trail has now been rerouted down to the river
+[../NorthernWonder/11-Descent.jpg] Stevens Canyon washout reroute as of 2024 - descent down a scree slope
+[../NorthernWonder/11-RiverBed.jpg] Stevens Canyon washout reroute as of 2024 - along the riverbed
+[../NorthernWonder/11-Ascent.jpg] Stevens Canyon washout reroute as of 2024 - short climb back up to the main trail
 [../EmeraldRidge/Washout.jpg] Emerald Ridge washout as of July 2024 - this has since been rerouted
 [../WhiteRiverToSunrise/Waterfall.jpg] Slide area and waterfall crossing between White River and Sunrise is no big deal as long as snow bridges have melted and flow rate isn't too high (as of 2023)
 [../EastsideLoop/2-ApproachingPanhandle.jpg] The approach to Panhandle Gap was almost completely melted as of August 7, 2023
 [../SkyscraperMountain/Snowfield.jpg] Approaching Skyscraper Pass on July 24, 2022
 [+5-Snowfields.jpg] The top of Spray Park can be navigationally challenging in poor visibility
+[../NorthernWonder/10-KautzCreek.jpg] Kautz Creek had no bridge (as of 2024)
 [+1-PyramidCreek.jpg] Pyramid Creek crossing (as of 2021)
-[+4-SouthMowichRiver.jpg] South Mowich River crossing, luckily with bridge in place that day (as of 2021)
-[../PaulPeakTrail/NorthMowichRiver.jpg] North Mowich River crossing (as of 2024)
+[../NorthernWonder/6-SouthMowich2.jpg] South Mowich River crossing, first fork (as of 2024)
+[../NorthernWonder/6-SouthMowich1.jpg] South Mowich River crossing, second fork (as of 2024)
+[../NorthernWonder/5-NorthMowichRiver.jpg] North Mowich River crossing (as of 2024)
 [../CarbonGlacier/Bridge.jpg] The lower (non-suspension-bridge) Carbon River crossing (as of 2023)
 [../NorthernLoop/4-Bridge.jpg] Winthrop Creek crossing (as of 2020)
 [+8-WhiteRiverBridge.jpg] White River crossing (as of 2021)
-[+11-NisquallyRiver.jpg] Nisqually River crossing (as of 2021)
+[../NorthernWonder/11-MapleCreek.jpg] Maple Creek (as of 2024)
+[../NorthernWonder/10-NisquallyBridge.jpg] Nisqually River crossing (as of 2024)
 
 By far the greatest danger of the Wonderland Trail is the many glacial river crossings. 
 Some rivers have sturdy wooden bridges over them while others are spanned by cool 
@@ -693,8 +698,9 @@ crossings to be aware of include:
 
 <ul>
   <li>
-    Kautz Creek reportedly requires fording fast moving water as of 2024, 
-    although I found this spot trivial in previous years.
+    Kautz Creek as of 2024 consisted of two main channels, fairly narrow but fast flowing 
+    and without a bridge. Something must have recently changed upstream to send more 
+    water this way, because I found little to no flow here in previous years.
   </li>
   <li>
     Pyramid Creek (between Pyramid Creek Camp and Devil's Dream) is a substantial river 
@@ -710,7 +716,8 @@ crossings to be aware of include:
   <li>
     The North Mowich River may also be tricky if its bridge is missing. In 2023 the main 
     channel of the South Mowich River shifted course and merged into the North Mowich 
-    River upstream of the Wonderland, making this a larger crossing than before.
+    River upstream of the Wonderland, making this a larger crossing than before. As of 
+    2024 that water is back in its previous place.
   </li>
   <li>
     The lower Carbon River crossing (between Ipsut Creek and Carbon River Camp) happens 
@@ -730,6 +737,11 @@ crossings to be aware of include:
     White River (leaving White River campground heading toward Fryingpan Creek) is also 
     washed out at the time of this writing. If you can't cross safely here, detour down 
     the road and hop back onto the Wonderland shortly after crossing the road bridge.
+  </li>
+  <li>
+    Maple Creek used to be spanned by a series of three log bridges, but in 2024 I found 
+    only two there. Proof that the area undergoes substantial rearrangement at times of 
+    high flow.
   </li>
   <li>
     If the Nisqually bridge near Cougar Rock is missing, you'll have to detour on the 
@@ -754,9 +766,10 @@ occur pretty much anywhere at any time, but notable locations are:
 <ul>
   <li>
     Along Stevens Canyon, between Maple Creek and Reflection Lakes, the trail crosses a 
-    washout with loose, unstable footing that has existed for many years. As of 2024, 
-    rangers are advising against crossing the slide, and an alternate route down to the 
-    river has been constructed to replace it.
+    washout with loose, unstable footing that has existed for many years. As of 2024, the 
+    park is advising against crossing the slide, and a reroute down to the river has been 
+    constructed to replace it. This is currently quite scrambly, yet felt safe to me. I 
+    expect it will improve over time.
   </li>
   <li>
     Approaching Emerald Ridge from the north, a short washout with a long way to fall if 
