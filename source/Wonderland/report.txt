@@ -529,7 +529,7 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>Paradise River</td>
     <td>
       <p>3800', 3 sites + group</p>
-      <p>Understated forest camp that suffers occassional road noise.</p>
+      <p>Understated forest camp that suffers occasional road noise.</p>
       <p>Water source is the creek a short distance east of camp.</p>
     </td>
     <td class="photos">[../NorthernWonder/10-Camped.jpg]</td>
