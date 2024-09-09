@@ -11,9 +11,8 @@ but want to someday repeat all in one go:
 </ul>
 
 My <a href="Wonderland/Campsites.html">Wonderland Trail Campsites</a> page should have 
-photos of all the relevant sites. Still needed: Pyramid Creek, South Mowich River, 
-Eagle's Roost, Dick Creek, Granite Creek, Nickel Creek, Paradise River, Berkeley Park, 
-Forest Lake, Snow Lake.
+photos of all the relevant sites. Still needed: Dick Creek, Granite Creek, Forest Lake, 
+Snow Lake.
 
 My <a href="Wildflowers.html">Wildflowers</a> page doesn't have a clearly defined end 
 goal, but it should at least have photos of Kinnikinnick and Wild Ginger.

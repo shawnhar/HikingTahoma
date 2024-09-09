@@ -338,14 +338,16 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>Pyramid Creek</td>
     <td>
       <p>3800', 3 sites</p>
+	  <p>Understated forest camp.</p>
+	  <p>Pyramid Creek itself is too silty to be a good water source, but there's a clear stream just past it to the north.</p>
     </td>
-    <td/>
+    <td class="photos">[../NorthernWonder/9-Camped.jpg]</td>
   </tr>
   <tr>
     <td>Devil's Dream</td>
     <td>
       <p>5100', 7 sites + group</p>
-      <p>Notoriously buggy in summer.</p>
+      <p>When water dries up late in the season, the closest source is half a mile north, past Kiya Lake.</p>
       <p>Photo shows group site.</p>
     </td>
     <td class="photos">[1-Camp.jpg]</td>
@@ -355,15 +357,16 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>
       <p>4000', 4 sites + group</p>
       <p>Don't miss the columnar andesite rock formation opposite the toilet.</p>
-      <p>Photo shows group site.</p>
+      <p>When water dries up late in the season, there's a good source a quarter mile toward Emerald Ridge.</p>
+      <p>Photos show an individual site plus the group site.</p>
     </td>
-    <td class="photos">[2-Camp.jpg]</td>
+    <td class="photos">[../NorthernWonder/8-Camped.jpg]<br/><br/>[2-Camp.jpg]</td>
   </tr>
   <tr>
     <td>Klapatche Park</td>
     <td>
       <p>5500', 4 sites</p>
-      <p>Water source is Aurora Lake, which tends to dry up later in the season. Carry water from St. Andrews Lake (if you're heading north) or uphill from North Puyallup River (if heading south).</p>
+      <p>Water source and stunning spot for dinner with sunset views is Aurora Lake, which tends to dry up later in the season. Carry water from St. Andrews Lake (if you're heading north) or uphill from North Puyallup River (if heading south).</p>
     </td>
     <td class="photos">[../Photos/CampKlapatche.jpg]</td>
   </tr>
@@ -371,7 +374,7 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>North Puyallup River</td>
     <td>
       <p>3700', 3 sites + group</p>
-      <p>Unique and romantically spooky group site is made from the end of an abandoned road. Individual sites are on the other side of the river, which is annoyingly far away from the toilet that's by the group site.</p>
+      <p>Unique and romantically spooky group site is made from the end of an abandoned road. Individual sites and water source are on the other side of the river, which is annoyingly far away from the toilet that's by the group site.</p>
       <p>Photo shows group site.</p>
     </td>
     <td class="photos">[../Photos/CampNorthPuyallup.jpg]</td>
@@ -381,17 +384,20 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>
       <p>5100', 5 sites + group</p>
       <p>Great place to watch the sunset.</p>
-      <p>Photo shows group site.</p>
+      <p>Best place to filter water and swim is over the rocky outcrop to the left of the ranger cabin.</p>
+      <p>Photos show an individual site plus the group site.</p>
     </td>
-    <td class="photos">[3-Camp.jpg]</td>
+    <td class="photos">[../NorthernWonder/6-Camped.jpg]<br/><br/>[3-Camp.jpg]</td>
   </tr>
   <tr>
     <td>South Mowich River</td>
     <td>
       <p>2600', 3 sites + group</p>
       <p>Primordially damp and mossy riverside camp.</p>
+      <p>Site #1 is a log shelter.</p>
+      <p>There's a silt-free water source on the far side of the South Mowich River.</p>
     </td>
-    <td/>
+    <td class="photos">[../NorthernWonder/5-Camped.jpg]</td>
   </tr>
   <tr>
     <td>Mowich Lake</td>
@@ -419,8 +425,9 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     </td>
     <td>
       <p>4900', 7 sites</p>
+      <p>Water can be found a short distance along the trail toward Spray Falls.</p>
     </td>
-    <td/>
+    <td class="photos">[../NorthernWonder/4-Camped.jpg]</td>
   </tr>
   <tr>
     <td>
@@ -436,8 +443,9 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
   </tr>
   <tr>
     <td>Carbon River Camp</td>
-    <td/>
+    <td>
       <p>3200', 4 sites + group</p>
+	</td>
     <td class="photos">[../NorthernLoop/2-Camp.jpg]</td>
   </tr>
   <tr>
@@ -467,6 +475,7 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>Sunrise Camp</td>
     <td>
       <p>6200', 8 sites + group</p>
+      <p>Water source is Shadow Lake.</p>
       <p>Photo shows group site.</p>
     </td>
     <td class="photos">[7-Camp.jpg]</td>
@@ -484,6 +493,7 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>
       <p>5900', 5 sites + group</p>
       <p>Stunning alpine meadows, famous for bear encounters.</p>
+      <p>Water source is a short distance along the trail toward Panhandle Gap.</p>
       <p>Photos show an individual site, plus the group site which is a stone shelter built by the CCC.</p>
     </td>
     <td class="photos">[../Photos/CampSummerland.jpg]<br/><br/>[8-CanISleepHere.jpg]</td>
@@ -495,14 +505,16 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
       <p>One of the prettiest places on the mountain.</p>
       <p>Photos show an individual site, plus the group site which is a stone shelter built by the CCC.</p>
     </td>
-    <td class="photos">[../EastsideLoop/2-Camp.jpg]<br/><br/>[9-GroupShelter.jpg]</td>
+    <td class="photos">[../NorthernWonder/12-Camped.jpg]<br/><br/>[9-GroupShelter.jpg]</td>
   </tr>
   <tr>
     <td>Nickel Creek</td>
     <td>
       <p>3400', 3 sites + group</p>
+      <p>Understated forest camp.</p>
+      <p>Water source is the creek a short distance below the camp.</p>
     </td>
-    <td/>
+    <td class="photos">[../NorthernWonder/11-Camped.jpg]</td>
   </tr>
   <tr>
     <td>Maple Creek</td>
@@ -517,8 +529,10 @@ Going clockwise from Longmire, campsites along the Wonderland Trail are:
     <td>Paradise River</td>
     <td>
       <p>3800', 3 sites + group</p>
+      <p>Understated forest camp that suffers occassional road noise.</p>
+      <p>Water source is the creek a short distance east of camp.</p>
     </td>
-    <td/>
+    <td class="photos">[../NorthernWonder/10-Camped.jpg]</td>
   </tr>
 </table>
 
@@ -538,6 +552,7 @@ still available. There are many such possibilities, including:
       <p>5400', 2 sites + group</p>
       <p>1.5 miles off the Wonderland, between Granite Creek and Frozen Lake.</p>
     </td>
+    <td class="photos">[../NorthernWonder/1-Camped.jpg]</td>
   </tr>
   <tr>
     <td>Forest Lake</td>
@@ -566,7 +581,7 @@ still available. There are many such possibilities, including:
     <td>Snow Lake</td>
     <td>
       <p>4700', 2 sites</p>
-      <p>1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and Reflection Lakes.</p>
+      <p>1.5 miles off the Wonderland (including 0.4 miles of road), between Maple Creek and Reflection Lakes. Ridiculously pretty.</p>
     </td>
   </tr>
 </table>
