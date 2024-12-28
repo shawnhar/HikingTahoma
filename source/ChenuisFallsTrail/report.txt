@@ -5,12 +5,13 @@ Carbon River
 none
 2022
 
+[Bridge.jpg] Bridge over the Carbon River to Chenuis Falls was in as of December 2024
 [ChenuisFalls.jpg] Chenuis Falls
 [Blowdown.jpg] A pile of blowdowns where the trail ought to be
 [PrettyBlowdown.jpg] An unusually pretty blowdown
 [BigBlowdown.jpg] A really big blowdown
-[Boundary.jpg] The National Park boundary
 [MossyTrees.jpg] Mossy trees must have been taking fashion tips from Dr. Seuss
+[Boundary.jpg] The National Park boundary
 
 <span class="trailinfo">This is an abandoned trail. Only come here if your navigation is 
 up to the task of finding your way where there is no path to follow, and practice Leave 
