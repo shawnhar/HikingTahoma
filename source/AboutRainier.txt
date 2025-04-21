@@ -51,10 +51,10 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
   <tr>
     <td>[Animals/Mouse.html|Deer Mouse]</td>
-    <td>[Animals/Grouse.html|Sooty Grouse]</td>
+    <td>[Animals/Beaver.html|Beaver]</td>
   </tr>
   <tr>
-    <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
+    <td>[Animals/Grouse.html|Sooty Grouse]</td>
     <td>[Animals/Owl.html|Spotted Owl]</td>
   </tr>
   <tr>
@@ -66,8 +66,12 @@ surprising them, keep your food out of their way, and you won't have any trouble
     <td>[Animals/Grayjay.html|Gray Jay]</td>
   </tr>
   <tr>
+    <td>[Animals/Nutcracker.html|Clark's Nutcracker]</td>
     <td>[Animals/Raven.html|Raven]</td>
+  </tr>
+  <tr>
     <td>[Animals/Robin.html|American Robin]</td>
+    <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
   </tr>
   <tr>
     <td>[Animals/CascadesFrog.html|Cascades Frog]</td>
@@ -75,7 +79,6 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
   <tr>
     <td>[Animals/Trout.html|Trout]</td>
-    <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
   </tr>
 </table>
 
@@ -203,6 +206,7 @@ surprising them, keep your food out of their way, and you won't have any trouble
 [Flowers/FoolsHuckleberry.jpg] Fool's Huckleberry, aka Mock Azalea (menziesia ferruginea)
 [Flowers/LyallsAngelica.jpg] Lyall's Angelica (angelica arguta)
 [Flowers/CowParsnip.jpg] Cow Parsnip (heracleum lanatum)
+[Flowers/Coltsfoot.jpg] Arctic Sweet Coltsfoot, aka Arctic Butterbur (petasites frigidus)
 [Flowers/LargeleafAvens.jpg] Largeleaf Avens (geum macrophyllum)
 [Flowers/WallLettuce.jpg] Wall Lettuce (mycelis muralis)
 [Flowers/PinkWintergreen.jpg] Pink Wintergreen (pyrola asarifolia)
