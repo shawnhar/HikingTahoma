@@ -176,7 +176,7 @@ const viaModeNearTo = {
 
 const isResupply = {
   'Longmire':    true,
-  'Mowich Lake': true,
+  // disabled while figuring out Fairfax Bridge closure implications: 'Mowich Lake': true,
   'White River': true
 };
 
@@ -988,6 +988,7 @@ function RecreateUIElements()
   UpdateTotals();
   UpdateMapOverlays();
   ShowOrHideSelectedCampDetails();
+  ShowOrHideFairfaxClosureDetails();
 }
 
 
@@ -1030,6 +1031,23 @@ function ShowOrHideSelectedCampDetails()
   document.getElementById('cougarrock').style.display = cougarDisplay;
   document.getElementById('deweylake').style.display = deweyDisplay;
   document.getElementById('longmire').style.display = longmireDisplay;
+}
+
+
+function ShowOrHideFairfaxClosureDetails()
+{
+  var display = 'none';
+
+  if ((trip.StartTrailhead == 'Mowich Lake')       ||
+      (trip.EndTrailhead   == 'Mowich Lake')       ||
+      (trip.StartTrailhead == 'Carbon River trhd') ||
+      (trip.EndTrailhead   == 'Carbon River trhd') ||
+      (trip.StartTrailhead == 'Paul Peak trhd')    ||
+      (trip.EndTrailhead   == 'Paul Peak trhd')) {
+    display = 'inline';
+  }
+
+  document.getElementById('fairfaxclosure').style.display = display;
 }
 
 
@@ -1084,6 +1102,7 @@ function StartTrailheadChanged(newValue)
   UpdateDistance(0);
   UpdateTotals();
   UpdateMapOverlays();
+  ShowOrHideFairfaxClosureDetails();
   SaveTrip();
 }
 
@@ -1095,6 +1114,7 @@ function EndTrailheadChanged(newValue)
   UpdateDistance(trip.Duration - 1);
   UpdateTotals();
   UpdateMapOverlays();
+  ShowOrHideFairfaxClosureDetails();
   SaveTrip();
 }
 

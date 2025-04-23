@@ -942,8 +942,13 @@ information about <a href="Wonderland/How.html">how to get a Wonderland permit</
 
 There are four main ways into the park: the Nisqually entrance (which leads to Longmire 
 and Paradise) at the southwest, a northeast entrance leading to White River and Sunrise, 
-the less developed Carbon River and Mowich Lake on the northwest side, and the southeast 
+<s>the less developed Carbon River and Mowich Lake on the northwest side</s>, and the southeast 
 Stevens Canyon / Ohanapecosh entrance.
+
+<span class="trailinfo">The Carbon River and Mowich Lake area is currently inaccessible 
+because Fairfax Bridge (where SR165 crosses the Carbon River) was permanently closed in 
+April 2025. WSDOT is evaluating next steps, but has no funding or ETA for a 
+replacement.</span>
 
 A fee is required to enter the National Park. If you plan on visiting more than once, 
 it's much cheaper to buy an annual pass. Or if you only plan on visiting once, WHAT IS 

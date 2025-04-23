@@ -261,8 +261,8 @@ First question is where to start? There are multiple trailheads around the Wonde
     road to Sunrise is closed. There is running water here, but no other amenities.
   </li>
   <li>
-    Mowich Lake (northwest side) has only pit toilets, and lies at the end of a long, 
-    dusty, potholed road. It may be closed due to snow early or late in the season.
+    <s>Mowich Lake (northwest side) has only pit toilets, and lies at the end of a long, 
+    dusty, potholed road. It may be closed due to snow early or late in the season.</s>
   </li>
   <li>
     Box Canyon (southeast side) has plenty of parking space but as of 2024 no longer 
@@ -273,11 +273,16 @@ First question is where to start? There are multiple trailheads around the Wonde
     particularly desirable due to limited parking and lack of amenities.
   </li>
   <li>
-    The Paul Peak and Carbon River trailheads are not on the Wonderland Trail at all, but 
+    <s>The Paul Peak and Carbon River trailheads are not on the Wonderland Trail at all, but 
     can be useful access points when Mowich Lake is closed due to snow. Or bailout points 
-    if your trip goes poorly :-(
+    if your trip goes poorly :-(</s>
   </li>
 </ul>
+
+<span class="trailinfo">The Mowich Lake, Paul Peak and Carbon River trailheads are 
+currently inaccessible because Fairfax Bridge (where SR165 crosses the Carbon River) was 
+permanently closed in April 2025. WSDOT is evaluating next steps, but has no funding or 
+ETA for a replacement.</span>
 
 Whichever of Longmire or Sunrise you don't start at, the cafe there may offer a pleasant 
 mid-trip lunch break. The National Park Inn at Longmire serves a range of meals, while 
@@ -605,14 +610,19 @@ circuit.
 [+BearPole.jpg] Food on the bear pole
 
 If you don't fancy the idea of carrying all the supplies for your entire trip, you can 
-cache food and fuel at Longmire, Mowich Lake, and White River. Caches must be 
+cache food and fuel at Longmire, <s>Mowich Lake</s>, and White River. Caches must be 
 stored in rodent-proof containers, typically a 5 gallon plastic bucket. Food caches can 
 be mailed or delivered by hand, while fuel caches must be hand-delivered. See
 <a href="https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm">https://www.nps.gov/mora/planyourvisit/caching-food-and-fuel.htm</a>
 for details.
 
-Note that caches for pickup at Mowich Lake should be delivered to the 
-Carbon River Ranger Station instead.
+<s>Note that caches for pickup at Mowich Lake should be delivered to the 
+Carbon River Ranger Station instead.</s>
+
+<span class="trailinfo">Mowich Lake and the Carbon River Ranger Station are currently 
+inaccessible because Fairfax Bridge (where SR165 crosses the Carbon River) was 
+permanently closed in April 2025. WSDOT is evaluating next steps, but has no funding or 
+ETA for a replacement.</span>
 
 The Longmire cache location is inside the Wilderness Information Center, which is only 
 open between 7:30 am and 5:00 pm. Other locations are self-serve at any time.

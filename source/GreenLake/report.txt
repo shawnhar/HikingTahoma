@@ -13,6 +13,11 @@ none
 [Reflection.jpg] A perfect place to sit and gaze into reflections
 [-NotGreen.jpg] Not so green in late November :-) That's Arthur Peak to the right, Irish Cabin Peak to the left, and Tolmie Peak in the distance between them
 
+<span class="trailinfo">This area is currently inaccessible because Fairfax Bridge (where 
+SR165 crosses the Carbon River) was permanently closed in April 2025. WSDOT is evaluating 
+next steps, but has no funding or ETA for a replacement. There is no other public access 
+to the area :-(</span>
+
 Hike or bike along the relatively flat [CarbonRiver] trail for 3 miles, 
 through magnificent old growth rainforest. Then turn right and climb on foot 
 for 1.5 miles, past the impressive Ranger Falls, to Green Lake.
