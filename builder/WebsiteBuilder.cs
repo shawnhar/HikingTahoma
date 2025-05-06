@@ -95,6 +95,7 @@ namespace builder
                 await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "AboutThisSite");
                 await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "FuturePlans");
                 await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "WhereToStart");
+                await ProcessArticle(sourceFolder.Path, outFolder.Path, hikes, "FairfaxBridge");
 
                 ProcessStandaloneHtml(sourceFolder.Path, outFolder.Path,
                     "Planner.html",
