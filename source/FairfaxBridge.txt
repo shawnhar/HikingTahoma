@@ -9,7 +9,7 @@ increasing weight restrictions, WSDOT permanently closed the bridge in April 202
 
 <table class="photos">
   <tr>
-    <td>[photos/FairfaxBridge.jpg|The Fairfax Bridge, built in 1921, now rusted away to unsafety]</td>
+    <td>[Photos/FairfaxBridge.jpg|The Fairfax Bridge, built in 1921, now rusted away to unsafety]</td>
   </tr>
 </table>
 
@@ -45,7 +45,7 @@ hikers won't be aided if those deciding on a final solution come to view us as
 rulebreakers who have antagonized the local community.
 
 Some have suggested could the Park Service drive food caches up to Mowich from somewhere 
-else? Perhaps if they were betted funded, but not in the current climate with their 
+else? Perhaps if they were better funded, but not in the current climate with their 
 current resources.
 
 Others have suggested could you drop a cache in some unofficial location, perhaps North 
@@ -70,8 +70,8 @@ and decide to close it too.
 
 <table class="photos">
   <tr>
-    <td>[photos/FairfaxBike.jpg|Biking up the Melmont Ghost Town trail]</td>
-    <td>[photos/FairfaxMud.jpg|Mud patch along the Melmont Ghost Town trail]</td>
+    <td>[Photos/FairfaxBike.jpg|Biking up the Melmont Ghost Town trail]</td>
+    <td>[Photos/FairfaxMud.jpg|Mud patch along the Melmont Ghost Town trail]</td>
   </tr>
 </table>
 
@@ -118,6 +118,6 @@ any moment by her slightest snoring twitch.
 
 <table class="photos">
   <tr>
-    <td>[photos/FairfaxGlacier.jpg|The Carbon Glacier: a 7 mile hike in 2005, or 18 miles in 2010, or 41 miles in 2025]</td>
+    <td>[Photos/FairfaxGlacier.jpg|The Carbon Glacier: a 7 mile hike in 2005, or 18 miles in 2010, or 41 miles in 2025]</td>
   </tr>
 </table>
