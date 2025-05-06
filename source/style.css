@@ -237,6 +237,10 @@ a:link, a:visited {
   font-style: italic;
 }
 
+.trailinfo a:link, .trailinfo a:visited {
+  color: #FF0000;
+}
+
 .description .photos {
   margin-left: -12;
   margin-right: -12;

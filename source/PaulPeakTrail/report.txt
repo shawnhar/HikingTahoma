@@ -14,10 +14,7 @@ South Mowich River
 [LowForest.jpg] At lower elevation the forest becomes mossy and lush
 [NorthMowichRiver.jpg] North Mowich River (my turnaround spot)
 
-<span class="trailinfo">This area is currently inaccessible because Fairfax Bridge (where 
-SR165 crosses the Carbon River) was permanently closed in April 2025. WSDOT is evaluating 
-next steps, but has no funding or ETA for a replacement. There is no other public access 
-to the area :-(</span>
+<span class="trailinfo">This area is currently inaccessible due to the <a href="../FairfaxBridge.html">closure of Fairfax Bridge</a>.</span>
 
 Most visitors to the Mowich Lake area drive right past the Paul Peak trailhead on their 
 way to the glories of [SprayPark] or [TolmiePeak]. It's the trail less travelled, a 

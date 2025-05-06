@@ -15,10 +15,7 @@ Mowich Lake
 [EuniceLake.jpg] Eunice Lake, with the Tolmie fire lookout on the ridge behind it
 [-FromTolmiePeak.jpg] Rainier from Tolmie Peak, with Eunice Lake in the foreground
 
-<span class="trailinfo">This area is currently inaccessible because Fairfax Bridge (where 
-SR165 crosses the Carbon River) was permanently closed in April 2025. WSDOT is evaluating 
-next steps, but has no funding or ETA for a replacement. There is no other public access 
-to the area :-(</span>
+<span class="trailinfo">This area is currently inaccessible due to the <a href="../FairfaxBridge.html">closure of Fairfax Bridge</a>.</span>
 
 The trail to the old fire lookout at Tolmie Peak is popular, which is a 
 polite way of saying crowded. It's easy to see why: this is steep enough to 

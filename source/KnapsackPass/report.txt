@@ -15,10 +15,7 @@ Mowich Lake, Eagle's Roost
 [MistPark.jpg] View over Mist Park
 [-Panorama.jpg] Panoramic view of upper Spray Park from the Knapsack Pass trail
 
-<span class="trailinfo">This area is currently inaccessible because Fairfax Bridge (where 
-SR165 crosses the Carbon River) was permanently closed in April 2025. WSDOT is evaluating 
-next steps, but has no funding or ETA for a replacement. There is no other public access 
-to the area :-(</span>
+<span class="trailinfo">This area is currently inaccessible due to the <a href="../FairfaxBridge.html">closure of Fairfax Bridge</a>.</span>
 
 <span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
 up to the task of finding your way where there are no trails to follow, and practice 

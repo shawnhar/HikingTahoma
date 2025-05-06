@@ -17,14 +17,11 @@ all, but a 16 mile path which both starts and ends at junctions with the
 Wonderland Trail. It is most commonly combined with the northern section of 
 the Wonderland, forming a 27 mile loop. There are no trailheads directly 
 along this circuit, which is most easily accessed from Sunrise, adding 4.3 
-miles out and back. Alternative access points are Lake Eleanor (+8.2 miles), 
-<s>Carbon River (+14.5 miles), or if you combine this with the [SprayParkLoop] 
-to form a figure-eight, Mowich Lake</s>.
+miles out and back. An alternative access point is Lake Eleanor (+8.2 miles).
 
-<span class="trailinfo">The Carbon River and Mowich Lake access points are currently 
-inaccessible because Fairfax Bridge (where SR165 crosses the Carbon River) was 
-permanently closed in April 2025. WSDOT is evaluating next steps, but has no funding or 
-ETA for a replacement.</span>
+Prior to the <a href="../FairfaxBridge.html">closure of Fairfax Bridge</a>, additional 
+access points were Carbon River (+14.5 miles), or if you combined this with the 
+[SprayParkLoop] to form a figure-eight, Mowich Lake.
 
 There are two potentially dangerous river crossings along this hike: West Fork 
 White River and Winthrop Creek. Both were the site of fatalities in 2018. Do 
