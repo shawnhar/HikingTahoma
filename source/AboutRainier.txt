@@ -71,14 +71,15 @@ surprising them, keep your food out of their way, and you won't have any trouble
   </tr>
   <tr>
     <td>[Animals/Robin.html|American Robin]</td>
-    <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
+    <td>[Animals/Trout.html|Trout]</td>
   </tr>
   <tr>
     <td>[Animals/CascadesFrog.html|Cascades Frog]</td>
     <td>[Animals/Salamander.html|Salamander]</td>
   </tr>
+    <td>[Animals/Dragonfly.html|Dragonfly]</td>
+    <td>[Animals/BananaSlug.html|Pacific Banana Slug]</td>
   <tr>
-    <td>[Animals/Trout.html|Trout]</td>
   </tr>
 </table>
 
