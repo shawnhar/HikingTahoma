@@ -954,14 +954,13 @@ A fee is required to enter the National Park. If you plan on visiting more than 
 it's much cheaper to buy an annual pass. Or if you only plan on visiting once, WHAT IS 
 WRONG WITH YOU??? :-)
 
-Starting in 2024, in an attempt to manage overcrowding,
-<a href="https://www.nps.gov/mora/planyourvisit/timed-entry-reservations.htm">advance 
-reservations</a> are required to access the most popular areas during the busy summer 
-months. In 2025, this only applies to the White River / Sunrise entrance. Plan your trip 
-ahead of time to secure a timed entry slot, or arrive before 7 AM to skip the crowds and 
-boost your chances of seeing wildlife. Some of my most treasured memories are from hikes 
-where I arrived at Sunrise as early as 4 AM, then watched the sun come up around me while 
-already on the trail.
+During 2024 and 2025, in an attempt to manage overcrowding, advance reservations were 
+required to access the most popular areas during the busy summer months. This is no 
+longer the case as of 2026, but on a sunny weekend afternoon the line of cars waiting 
+outside park entrances can stretch for miles and take hours to get through. I recommend 
+arriving early to skip the crowds and boost your chances of seeing wildlife. Some of my 
+most treasured memories are from hikes where I arrived at Sunrise as early as 4 AM, then 
+watched the sun come up around me while already on the trail.
 
 If you are visiting from out of state, you'll probably want to rent a car. Mount Rainier 
 is not accessible by public transport, and although you could take a taxi or private 
@@ -1018,7 +1017,7 @@ official Naturalist.
 is a fascinating historical record of the first ever circuit of the Wonderland Trail, by 
 The Mountaineers in 1915.
 
-<a href="http://npshistory.com/brochures/mora/1919.pdf">Park brochure from 1919</a>
+<a href="https://npshistory.com/publications/mora/brochures/1919.pdf">Park brochure from 1919</a>
 includes a map that shows trails notably different from those of today. Sunrise 
 did not yet exist, and the Wonderland went via St. Elmo Pass and part of what is 
 now the Westside Road.
@@ -1026,12 +1025,12 @@ now the Westside Road.
 <a href="https://fortress.wa.gov/dnr/geologydata/Publications/ic107_mt_rainier_road_guide.pdf">Roadside Geology of Mount Rainier National Park</a>
 describes the fire, ice, and floods that created this landscape.
 
-<a href="https://www.nps.gov/parkhistory/online_books/mora/adhi/">An Administrative History of Mount Rainier National Park</a>
+<a href="https://archive.org/details/doi-report_i-292m-86-r-6/page/425/mode/2up">An Administrative History of Mount Rainier National Park</a>
 details (in arguably a bit TOO much detail :-) the politics of how the park was developed 
 and policies changed over time. I find it interesting to consider how different this 
 mountain could be today, had these past decisions gone in different directions.
 
-<a href="https://www.nps.gov/mora/learn/historyculture/upload/2017-mining-glacier-basin-burtchard_web.pdf">Mining Glacier Basin</a>
+<a href="https://www.morageology.com/pubs/300.pdf">Mining Glacier Basin</a>
 covers Rainier's history of failed mining efforts.
 
 <a href="https://www.earlyeatonvillewashington.com/p/soo-too-lick-indian-henry-and-mashel.html">Soo Too Lick: Indian Henry and the Mashel Prairie</a> 
