@@ -23,12 +23,9 @@ these will undoubtably prove beyond me, but places I'm interested in exploring
 include:
 
 <ul class="tight">
-  <li>Copper Mountain?</li>
   <li>Crescent Lake?</li>
   <li>Curtis Ridge?</li>
-  <li>Elysian Fields??!?</li>
   <li>Goat Island Mountain?</li>
-  <li>Last Laugh Mountain?</li>
   <li>Mist Park?</li>
   <li>Observation Rock?</li>
   <li>Pyramid Peak?</li>
