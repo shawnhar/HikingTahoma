@@ -11,6 +11,7 @@ none
 [Meltwater.jpg] A small meltwater pond
 [ParadiseGlacier.jpg] The upper remnant of the Paradise Glacier, viewed from near Cowlitz Gap
 [CowlitzAndIngrahamGlaciers.jpg] The Cowlitz (left) and Ingraham (right) glaciers, below Little Tahoma, viewed from Cowlitz Gap
+[LittleTahoma.jpg] Little Tahoma, from Cowlitz Gap
 [CowlitzRocks.jpg] Looking up at the Cowlitz Rocks, from Cowlitz Gap
 
 <span class="trailinfo">This is an off-trail route. Only come here if your navigation is 
