@@ -27,7 +27,6 @@ include:
   <li>Curtis Ridge?</li>
   <li>Goat Island Mountain?</li>
   <li>Mist Park?</li>
-  <li>Observation Rock?</li>
   <li>Pyramid Peak?</li>
   <li>Tyee Peak?</li>
 </ul>
