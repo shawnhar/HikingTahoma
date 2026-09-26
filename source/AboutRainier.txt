@@ -809,7 +809,7 @@ There are also some places named after individuals:
 
 <ul class="tight">
 <li><a href="OwyhighLakesFromWhiteRiverRoad/">Owyhigh Lakes</a> are named after Chief Owhi of the Yakama.</li>
-<li>Satulick Mountain and the meadows known as <a href="IndianHenrysFromLongmire/">Indian Henry's Hunting Grounds</a> are named after So-to-lick, aka Indian Henry, a Taidnapam/Yakama farmer and guide who hunted in this area.</li>
+<li><a href="SatulickMountain/">Satulick Mountain</a> and the meadows known as <a href="IndianHenrysFromLongmire/">Indian Henry's Hunting Grounds</a> are named after So-to-lick, aka Indian Henry, a Taidnapam/Yakama farmer and guide who hunted in this area.</li>
 <li><a href="PanoramaPoint/">Sluiskin Falls</a> is named after a Taidnapam guide from the first documented ascent of Tahoma in 1870.</li>
 <li>Wahpenayo Peak is named after a chief who was related to So-to-lick by marriage.</li>
 <li>Wapowety Cleaver is named after the Nisqually guide of an unsuccessful 1857 summit attempt.</li>
